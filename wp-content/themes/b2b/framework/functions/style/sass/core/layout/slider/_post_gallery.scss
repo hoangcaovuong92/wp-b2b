@@ -1,0 +1,24 @@
+.wd-slider-wrap--post-gallery{
+    ul.slick-dots{
+        bottom: 20px;
+        position: absolute;
+        z-index: 9;
+    }
+    button{
+        &.slick-prev, &.slick-next{
+            z-index: 2;
+            &:before{
+                color: #282828;
+                background: #ffffff;
+                padding: 10px 3px;
+                @include border-radius(2px);
+            }
+        }
+        &.slick-prev{
+            left: 10px;
+        }
+        &.slick-next{
+            right: 10px;
+        }
+    }
+}

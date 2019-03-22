@@ -1,0 +1,152 @@
+.fancybox-overlay{
+    z-index: 100000;
+}
+.fancybox-opened{
+    z-index: 100001;
+}
+
+.popup {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1043;
+    position: fixed;
+    outline: none !important;
+    -webkit-backface-visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    .wrapper-popup {
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 0 8px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        max-width: 1000px;
+        right: 0;
+        margin: auto;
+        .video-frame {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 900px;
+            width: 100%;
+            z-index: 1045;
+            .video-content {
+                width: 100%;
+                height: 0;
+                overflow: hidden;
+                padding-top: 56.25%;
+                iframe {
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: black;
+                    @include box-shadow(0, 0, 8px, rgba($border-color-dark, 0.6));
+                }
+                .close {
+                    top: 0;
+                    right: 0;
+                    font-size: 0;
+                    color: #fff;
+                    position: fixed;
+                    opacity: 0.95;
+                    width: 44px;
+                    height: 44px;
+                    z-index: 1046;
+                    float: none;
+                    background: #000;   
+                    &:before, &:after{
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background-color: #fff;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }   
+                    &:before{
+                        @include rotate(45);
+                    }   
+                    &:after{
+                        @include rotate(-45);
+                    }
+                }   
+            }   
+        }   
+    }
+}
+
+/* Custom modal bootstrap */
+.modal{
+    z-index: 9999;
+}
+.wd-modal-responsive{
+    .modal-dialog{
+        overflow-y: initial; 
+        max-height:85%;  
+        margin-top: 50px; 
+        margin-bottom:50px;
+    }
+    .modal-header{
+        position: relative;
+        button.close{
+            position: absolute;
+            right: 10px;
+            top: 0;
+            &:hover{
+                border: none;
+            }
+        }
+    }
+    .modal-body{
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+    }
+}
+
+.vertical-alignment-helper {
+	display:table;
+	height: 100%;
+	width: 100%;
+	pointer-events:none;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events:all;
+}
+
+@include breakpoint('max', 'desktop') {
+    div.pp_woocommerce .pp_close::before {
+        font-size: 14px !important;
+    }
+}
+
+@include breakpoint('max', 'tablet') {
+    .pp_pic_holder.pp_woocommerce {
+        .pp_content_container {
+            padding: 20px;
+        }
+    }
+}

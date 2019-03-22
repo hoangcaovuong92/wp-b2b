@@ -1,0 +1,140 @@
+html{
+    overflow-x: hidden;
+}
+body {
+	position: relative;
+	font-family: fontFamily('body-font');
+    font-size: fontSize("root");
+    font-weight: fontWeight("normal");
+	line-height:1.6666;
+	color: $color-textBase;
+	background-color: $background-body-color;
+	&.logged-in{
+		padding-top: 0 !important;
+	}
+    h1{
+        font-size: fontSize("largest");
+    }
+    h2{
+        font-size: fontSize("larger");
+    }
+    h3{
+        font-size: fontSize("large");
+    }
+    h4{
+        font-size: fontSize("small");
+    }
+    h5{
+        font-size: fontSize("smaller");
+    }
+    h6{
+        font-size: fontSize("smallest");
+    }
+	a{
+		vertical-align:top;
+		@include transition;
+		@include link_style(primary);
+		&:hover,&:active,&:focus{
+			text-decoration: none;
+			outline: none;
+		}
+	}
+	select::-ms-expand {
+		display: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+
+	ul, ol{
+		padding:0;
+		ul, ol{
+			padding-left: 20px;
+		}
+	}
+	img{
+		max-width:100%;
+	}
+	table {
+		border-bottom: 1px solid $border-color-light;
+		border-collapse: collapse;
+		border-spacing: 0;
+		font-size: 14px;
+		line-height: 2;
+		margin: 0 0 20px;
+		width: 100%;
+		tbody th,td {
+			border-top: 1px solid $border-color-light;
+			padding:0;
+		}
+		&.wd-table{
+			th{
+				color: $table-heading-color;
+				background-color: $table-heading-background-color;
+			}
+			tr{
+				&:nth-of-type(odd){
+					color: $table-row-odd-color;
+					background-color: $table-row-odd-background-color;
+				}
+				&:nth-of-type(even){
+					color: $table-row-even-color;
+					background-color: $table-row-even-background-color;
+				}
+			}
+		}
+	}
+
+	label input[type="radio"], label input[type="checkbox"] {
+	    margin-top: 0px;
+	    vertical-align: middle;
+	}
+
+	button, 
+	.button, 
+	input#submit, 
+	input[type="submit"],
+	input[type="button"],
+	input[type="reset"]{
+		@include button_style('default');
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	input[type='tel'],
+	textarea {
+	    color: $color-textBase;
+		background-color:transparent;
+		border: 1px solid $border-color-light;
+		height:35px;
+		padding:0 20px;
+		width:100%;
+		@include transition;
+		@include border-radius(0);
+		&:hover,&:focus,&:active{
+			border-color: darken($border-color-dark, 20%);
+			outline: 0; 
+		}
+	}
+	input, textarea{
+		&::placeholder{
+			color: $color-text-secondary;
+		}
+	}
+	textarea,.woocommerce #reviews #comment{ 
+		height: 30px;
+	}
+	textarea{
+		min-height: 190px; 
+		padding: 20px;
+	}
+	input.input-text{
+		min-height: 28px;
+	}
+}

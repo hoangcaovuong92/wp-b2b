@@ -1,0 +1,5088 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Feellio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-30 15:06+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-5.0.2"
+
+#: framework/functions/wd_blog.php:745
+msgid " / "
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:617
+#: framework/functions/theme_guide/manager.php:649
+msgid " Theme - Get Started"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:603
+msgid " Theme Install - Get Started"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:131
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: comments.php:17
+#, php-format
+msgid "%s comment"
+msgid_plural "%s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/wd_comment_form.php:162
+#, php-format
+msgid "%s Comment on \"%s\""
+msgid_plural "%s Comments on \"%s\""
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product/rating.php:37
+#: framework/functions/woocommerce/parts/functions.php:678
+#, php-format
+msgid "%s customer review"
+msgid_plural "%s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/woocommerce/parts/functions.php:709
+#, php-format
+msgid "%s in stock"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:33
+#, php-format
+msgid "%s review for %s%s%s"
+msgid_plural "%s reviews for %s%s%s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/woocommerce/parts/functions.php:717
+msgid "(backorders allowed)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:42
+#: framework/functions/theme_option/parts/options_accessibility.php:75
+#: framework/functions/theme_option/parts/options_accessibility.php:141
+#: framework/functions/theme_option/parts/options_accessibility.php:174
+#: framework/functions/theme_option/parts/options_accessibility.php:241
+#: framework/functions/theme_option/parts/options_accessibility.php:274
+#: framework/functions/theme_option/parts/options_accessibility.php:341
+#: framework/functions/theme_option/parts/options_accessibility.php:374
+#: framework/functions/theme_option/parts/options_accessibility.php:441
+#: framework/functions/theme_option/parts/options_accessibility.php:474
+#: framework/functions/theme_option/parts/options_accessibility.php:905
+#: framework/functions/theme_option/parts/options_page.php:110
+#: framework/functions/theme_option/parts/options_page.php:255
+#, php-format
+msgid "(Default: %s)."
+msgstr ""
+
+#: framework/functions/wd_blog.php:779
+msgid ", "
+msgstr ""
+
+#: framework/functions/wd_pagination.php:147
+#: framework/functions/wd_pagination.php:163
+msgid "..."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:141
+#: framework/functions/theme_customize/parts/wd_customize_page.php:309
+msgid "1 Column"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:376
+#: framework/functions/theme_guide/manager.php:401
+msgid ""
+"1/ Import XML data: go to <strong>Tools</strong> &gt; <strong>Import</strong>"
+" &gt; and choose <strong>WordPress</strong> &gt; select the XML file which "
+"you want to import."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:142
+#: framework/functions/theme_customize/parts/wd_customize_page.php:310
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:503
+#: framework/functions/woocommerce/parts/functions.php:1265
+msgid "2 Columns"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:377
+#: framework/functions/theme_guide/manager.php:402
+msgid ""
+"2/ Import WIE data: go to <strong>Tools</strong> &gt; <strong>Widget "
+"Importer & Exporter</strong> &gt; and select the WIE file which you want to "
+"import."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:143
+#: framework/functions/theme_customize/parts/wd_customize_page.php:311
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:504
+#: framework/functions/woocommerce/parts/functions.php:1266
+msgid "3 Columns"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:144
+#: framework/functions/theme_customize/parts/wd_customize_page.php:312
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:505
+#: framework/functions/woocommerce/parts/functions.php:1267
+msgid "4 Columns"
+msgstr ""
+
+#: 404.php:39
+msgid "404"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:90
+msgid "404 Page"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:371
+#: framework/functions/theme_guide/manager.php:396
+#, php-format
+msgid "<code>%1s</code> for %2s"
+msgstr ""
+
+#: framework/functions/theme_option/manager.php:343
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1936
+msgid ""
+"<p class=\"description\">This Section should be visible only in "
+"Customizer</p>"
+msgstr ""
+
+#: framework/functions/theme_option/manager.php:208
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:170
+#: framework/functions/wd_comment_form.php:203
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:139
+#, php-format
+msgid "<strong>%s</strong> Item On Your Cart"
+msgid_plural "<strong>%s</strong> Items On Your Cart"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1065
+msgid "A preview of the selected image will appear underneath the select box."
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:131
+msgid "a3 Lazy Load"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:27
+msgid "Access Your Account"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:3
+msgid "Accessibility"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:283
+msgid "ACE Editor"
+msgstr ""
+
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:392
+msgid "Add"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:69
+msgid "Add a review"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:253
+msgid "Add the selected products to the cart"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:302
+#: framework/functions/woocommerce/parts/functions.php:222
+msgid "Add To Cart"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:64
+msgid "Add to cart"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:647
+msgid "Add/Edit Gallery"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:182
+#, php-format
+msgid "Added on : %s"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1497
+msgid "Additional Types"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:991
+msgid "Addthis Button Class"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:297
+#: framework/functions/theme_option/parts/options_accessibility.php:981
+msgid "Addthis Profile ID"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1611
+msgid "Advanced Features"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:239
+msgid "After Content Detail"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:338
+#: framework/functions/theme_option/parts/options_page.php:305
+msgid "Ajax"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1756
+msgid "All HTML will be stripped"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:177
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:281
+msgid "All recommended plugins are already activated"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:425
+msgid "All recommended widgets are already registered"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:312
+msgid "All sample Slider Revolution are already imported"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:331
+msgid "All sample Smart Sliders 3 are already imported"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:592
+#: framework/functions/theme_option/parts/demo_data.php:617
+msgid "Allow your users to choose the spacing or margin they want."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:544
+#: framework/functions/theme_option/parts/demo_data.php:557
+msgid "Allow your users to choose width, height, and/or unit."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:969
+#: framework/functions/theme_option/parts/demo_data.php:978
+msgid "Also called a \"fold\" parent."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:877
+msgid "And now you can add more fields below and outside of the indent."
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:105
+msgid "Anti-spam"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1057
+#: framework/functions/woocommerce/parts/functions.php:1090
+#: framework/functions/woocommerce/parts/functions.php:1124
+#: framework/functions/woocommerce/parts/functions.php:1159
+msgid "Apartment, suite, unit etc. (optional)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:103
+msgid "App ID"
+msgstr ""
+
+#: woocommerce/cart/cart.php:195
+msgid "Apply coupon"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:25
+msgid "Archive Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:24
+#: framework/functions/theme_option/parts/options_woocommerce.php:236
+msgid "Archive Product"
+msgstr ""
+
+#: woocommerce/cart/cart.php:183
+#: framework/functions/woocommerce/parts/minicart.php:199
+msgid "Are you sure you want to empty shopping cart?"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:167
+msgid "Articles posted by "
+msgstr ""
+
+#: woocommerce/wishlist-view.php:261 woocommerce/wishlist-view.php:307
+msgid "Ask for an estimate"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:302
+#: framework/functions/theme_option/parts/options_blog.php:277
+msgid "Author Information"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:323
+#: framework/functions/theme_option/parts/options_page.php:295
+msgid "Autocomplete"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:188
+msgid "Automatically log me in when i return"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:300
+#: framework/functions/woocommerce/parts/functions.php:220
+#: framework/functions/woocommerce/parts/functions.php:756
+msgid "Availability"
+msgstr ""
+
+#: woocommerce/cart/cart.php:85
+#: framework/functions/woocommerce/parts/functions.php:723
+#: framework/functions/woocommerce/parts/functions.php:736
+msgid "Available on backorder"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:92
+msgid "Average"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:155
+#: framework/functions/theme_option/parts/options_page.php:150
+msgid "Back To Home Button"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:167
+msgid "Back To Homepage"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:509
+msgid "Back To Top"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:19
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:153
+msgid "Back To Top Button"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:471
+#: framework/functions/theme_option/parts/options_accessibility.php:51
+#: framework/functions/theme_option/parts/options_accessibility.php:150
+#: framework/functions/theme_option/parts/options_accessibility.php:250
+#: framework/functions/theme_option/parts/options_accessibility.php:350
+#: framework/functions/theme_option/parts/options_accessibility.php:450
+#: framework/functions/theme_option/parts/options_general.php:52
+msgid "Background"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:72
+msgid "Background Body"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:202
+#: framework/functions/wd_set_default.php:435
+#: framework/functions/wd_set_default.php:457
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:216
+#: framework/functions/theme_customize/parts/wd_customize_page.php:91
+#: framework/functions/theme_customize/parts/wd_customize_page.php:258
+#: framework/functions/theme_option/parts/options_accessibility.php:41
+#: framework/functions/theme_option/parts/options_accessibility.php:140
+#: framework/functions/theme_option/parts/options_accessibility.php:240
+#: framework/functions/theme_option/parts/options_accessibility.php:340
+#: framework/functions/theme_option/parts/options_accessibility.php:440
+#: framework/functions/theme_option/parts/options_accessibility.php:540
+#: framework/functions/theme_option/parts/options_accessibility.php:904
+#: framework/functions/theme_option/parts/options_page.php:109
+#: framework/functions/theme_option/parts/options_page.php:254
+msgid "Background Color"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:203
+#: framework/functions/wd_set_default.php:434
+#: framework/functions/wd_set_default.php:456
+#: framework/functions/metabox/manager.php:324
+#: framework/functions/theme_customize/parts/wd_customize_page.php:90
+#: framework/functions/theme_customize/parts/wd_customize_page.php:257
+#: framework/functions/theme_option/parts/options_page.php:119
+#: framework/functions/theme_option/parts/options_page.php:264
+msgid "Background Image"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:85
+#: framework/functions/theme_customize/parts/wd_customize_page.php:252
+msgid "Background Image Or Color"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:227
+#: framework/functions/theme_option/parts/options_accessibility.php:575
+msgid "Background Shape"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:99
+#: framework/functions/theme_option/parts/options_page.php:244
+msgid "Background Style"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:730
+msgid "Banner"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:77
+msgid "Banner Breadcrumb"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:3
+msgid "Basic Fields"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:667
+#: framework/functions/theme_option/parts/demo_data.php:701
+msgid "Basic media uploader with disabled URL input field."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:69
+#, php-format
+msgid "Be the first to review &ldquo;%s&rdquo;"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:240
+msgid "Before Content Detail"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:174
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/require_plugins/manager.php:173
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/theme_guide/manager.php:477
+#: framework/functions/theme_guide/manager.php:493
+msgid "Below instruction will teach you configure a static page as homepage:"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:27
+#: woocommerce/myaccount/my-address.php:32
+msgid "Billing address"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:208
+msgid "Block"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:110
+#: framework/functions/theme_option/parts/options_blog.php:189
+msgid "Blog Archive"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:107
+msgid "Blog Author"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:118
+msgid "Blog Category"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:11
+#: framework/functions/theme_option/parts/options_blog.php:11
+msgid "Blog Config"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:78
+msgid "Blog Date"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:18
+msgid "Blog Default"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:343
+msgid "Blog Default Layout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:158
+msgid "Blog Excerpt"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:88
+msgid "Blog Meta"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:98
+msgid "Blog Meta Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:3
+msgid "Blog Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:238
+msgid "Blog Single"
+msgstr ""
+
+#. Name of the template
+msgid "Blog Template"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:30
+msgid "Blog Thumbnail"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:40
+msgid "Blog Thumbnail Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:20
+msgid "Blog Title"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:479
+msgid "Body Background"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:480
+msgid "Body background with image, color, etc."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1447
+msgid "Body Font"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:489
+msgid "Border"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:566
+msgid "Border Color"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:294
+#: framework/functions/theme_option/parts/options_accessibility.php:633
+#: framework/functions/theme_option/parts/options_accessibility.php:884
+msgid "Bottom"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:11
+msgid "Breadcrumb"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:12
+msgid "Breadcrumb Config"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:329
+msgid "Breadcrumb Style:"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:84
+#: framework/functions/theme_option/parts/options_woocommerce.php:42
+msgid "Button Position"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:895
+msgid "Button Set"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:903
+msgid "Button Set Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:917
+msgid "Button Set, Multi Select"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:159
+msgid "Button Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:818
+msgid "Button Text"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1617
+msgid "Callback"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:45
+msgid "Cancel"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:271
+msgid "Cancel reply"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1203
+msgid "Capabilities Select Option"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:110
+msgid "Cart"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:335
+msgid "Cart Icon"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:337
+msgid "Cart Item"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:472
+msgid "Cart Page"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:336
+msgid "Cart Text"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:338
+msgid "Cart Total"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:303
+#: framework/functions/woocommerce/parts/functions.php:223
+msgid "Categories"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1091
+msgid "Categories Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1082
+msgid "Categories Select Option"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:769
+msgid "Categories: "
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:221
+msgid "Check your email address for you new password."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:21
+msgid "Checkbox"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:12
+#: framework/functions/theme_option/parts/demo_data.php:30
+msgid "Checkbox Option"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:212
+msgid "Checkout"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:212
+msgid "Checkout Page"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:529
+msgid "Choose an option"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:185
+#: framework/functions/theme_option/parts/options_page.php:179
+msgid "Class Button"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:136
+msgid "Classic Editor"
+msgstr ""
+
+#: woocommerce/cart/cart.php:183
+msgid "Clear all"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:566
+msgid "Clear selection"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:620
+msgid "Click here"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:335
+msgid "Color"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:254
+msgid "Color Border"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:363
+msgid "Color Breadcrumb:"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:230
+msgid "Color Button"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:287
+msgid "Color Footer"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:359
+msgid "Color Gradient"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:275
+msgid "Color Icons"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:317
+msgid "Color Nav Pages"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:305
+msgid "Color Nav User"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:378
+#: framework/functions/theme_option/parts/demo_data.php:386
+msgid "Color RGBA"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:328
+msgid "Color Selection"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:213
+msgid "Color Text"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:265
+msgid "Color Woocommerce"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:370
+#: framework/functions/theme_option/parts/options_blog.php:326
+#: framework/functions/theme_option/parts/options_page.php:284
+#: framework/functions/theme_option/parts/options_woocommerce.php:284
+msgid "Columns"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:498
+msgid "Columns Product"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:235
+msgid "Comment"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:13
+msgid "Comment Form"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:59
+msgid "Comment Mode"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:3
+#: framework/functions/woocommerce/parts/functions.php:629
+msgid "Comments"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:210
+msgid "Comments are closed."
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1049
+#: framework/functions/woocommerce/parts/functions.php:1082
+#: framework/functions/woocommerce/parts/functions.php:1116
+#: framework/functions/woocommerce/parts/functions.php:1151
+msgid "Company name"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:117
+#: framework/functions/theme_option/parts/options_woocommerce.php:64
+msgid "Compare Button Default"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:119
+msgid "Compile CSS"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:59
+msgid "Confirm new password"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:383
+#: framework/functions/theme_guide/manager.php:408
+msgid "Confirm you got it"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:111
+msgid "Contact Form 7"
+msgstr ""
+
+#: framework/functions/wd_blog.php:265
+#, php-format
+msgid "Continue reading<span class=\"wd-screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: woocommerce/cart/cart.php:185
+msgid "Continue Shopping"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:179
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:33
+#, php-format
+msgid "Copyright %s. All rights reserved."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:42
+msgid ""
+"Copyright or other text to be displayed in the site footer. HTML allowed."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:42
+msgid "Copyright Text"
+msgstr ""
+
+#: woocommerce/cart/cart.php:195
+msgid "Coupon code"
+msgstr ""
+
+#: woocommerce/cart/cart.php:195
+msgid "Coupon:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:648
+msgid ""
+"Create a new Gallery by selecting existing or uploading new images using the "
+"WordPress native uploader"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:103
+msgid "Create account now?"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:103
+msgid "Create new acccount"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:262
+msgid "Create New Account"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:292
+msgid "CSS Code"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:51
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:25
+msgid "Custom archive product page"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_styling.php:7
+msgid "Custom body, color in website."
+msgstr ""
+
+#: framework/functions/metabox/manager.php:85
+msgid "CUSTOM CLASS/ID"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:373
+msgid "Custom Classes:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_color.php:3
+msgid "Custom Color"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:520
+#: framework/functions/theme_option/parts/options_accessibility.php:752
+#: framework/functions/theme_option/parts/options_page.php:196
+#: framework/functions/theme_option/parts/options_woocommerce.php:293
+#: framework/functions/theme_option/parts/options_woocommerce.php:379
+#: framework/functions/theme_option/parts/options_woocommerce.php:463
+#: framework/functions/theme_option/parts/options_woocommerce.php:489
+msgid "Custom Content"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:362
+msgid ""
+"Custom content layout for single product template. Define and reorder these "
+"however you want."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:519
+msgid ""
+"Custom content will appear below the content of Archive Product page. You "
+"can create a shortcode from the new page creation interface."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:575
+msgid ""
+"Custom content will appear below the content of the page use Woocommerce "
+"Template. You can create a shortcode from the new page creation interface."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:371
+msgid "Custom content will appear below the Product Summary section"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:436
+msgid ""
+"Custom content will appear below the Product Summary section. You can create "
+"a shortcode from the new page creation interface."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1625
+msgid "Custom Field Callback"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_font.php:3
+msgid "Custom Font"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_font.php:7
+msgid "Custom font in website."
+msgstr ""
+
+#: framework/functions/metabox/manager.php:257
+msgid "Custom Footer: "
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_styling.php:17
+msgid "Custom General Color"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_styling.php:18
+msgid "Custom general color"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:7
+msgid "Custom header site."
+msgstr ""
+
+#: framework/functions/metabox/manager.php:237
+msgid "Custom Header: "
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:753
+msgid "Custom HTML / Shortcode"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1774
+msgid "Custom HTML Allowed (wp_kses)"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:381
+msgid "Custom ID:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:31
+#: framework/functions/theme_option/parts/options_header.php:42
+msgid "Custom Logo"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:43
+msgid "Custom page cart product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_styling.php:12
+msgid "Custom primary color all theme"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_custom.php:3
+msgid "Custom Script"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:432
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:515
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:571
+msgid "Custom Shortcode"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:31
+msgid "Custom single product page"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:119
+#: framework/functions/theme_option/parts/options_accessibility.php:218
+#: framework/functions/theme_option/parts/options_accessibility.php:319
+#: framework/functions/theme_option/parts/options_accessibility.php:419
+msgid "Customize"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:255
+msgid "Customize border color."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:231
+msgid "Customize button color."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:334
+msgid "Customize font family."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:346
+msgid "Customize font size."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:379
+msgid "Customize font weight."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:288
+msgid "Customize footer color."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:276
+msgid "Customize icons color."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:392
+msgid "Customize letter spacing."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:363
+msgid "Customize line height."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:318
+msgid "Customize nav pages color (menu)."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:306
+msgid "Customize nav user color (icons)."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:419
+msgid "Customize screen size on different devices (Unit: px)."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:433
+msgid "Customize screen width grid."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:214
+msgid "Customize text color."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:54
+msgid "Customize the background image for the body tag."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:266
+msgid "Customize woocommerce/product color."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:406
+msgid "Customize z-index."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1935
+msgid "Customizer Only"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1942
+msgid "Customizer Only Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:37
+msgid "Database"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1521
+msgid "Date"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1529
+msgid "Date Option"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:51
+msgid "Date:"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:948
+msgid "Day"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:275
+msgid "Default"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:323
+msgid "Default (Customize)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:893
+msgid "Default Layout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:51
+msgid "Default Page"
+msgstr ""
+
+#: framework/functions/theme_customize/libs/add-control-custom-radio-image.php:85
+msgid "Default Template"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:113
+#: framework/functions/theme_option/parts/demo_data.php:127
+#: framework/functions/theme_option/parts/options_comments.php:14
+#: framework/functions/theme_option/parts/options_woocommerce.php:509
+msgid "Define and reorder these however you want."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:711
+msgid "Delay Time"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1595
+#: framework/functions/theme_option/parts/demo_data.php:1604
+#: framework/functions/theme_option/parts/options_accessibility.php:800
+msgid "Description"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:721
+msgid "Description Here"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:464
+msgid "Design Fields"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:533
+msgid "Dimensions"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:556
+msgid "Dimensions (Width) Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:543
+msgid "Dimensions (Width/Height) Option"
+msgstr ""
+
+#. Name of the template
+msgid "Disable Header/Footer"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:111
+#: framework/functions/theme_option/parts/options_accessibility.php:411
+msgid "Disable this if you want to use the settings in the General section"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:329
+#: framework/functions/theme_customize/parts/wd_customize_page.php:344
+msgid "Disabled"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:609
+#: framework/functions/theme_guide/manager.php:623
+msgid "Dismiss this forever!"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:119
+msgid "Dismiss this notice"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:280
+#: framework/functions/theme_option/parts/options_accessibility.php:518
+#: framework/functions/theme_option/parts/options_accessibility.php:681
+#: framework/functions/theme_option/parts/options_accessibility.php:839
+#: framework/functions/theme_option/parts/options_accessibility.php:961
+msgid "Display"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:61
+msgid "Display Background Image"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:67
+#: framework/functions/theme_option/parts/options_woocommerce.php:22
+msgid "Display Buttons"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:133
+msgid "Display only on header menu mobile"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:142
+msgid "Display widgets on footer default template"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:737
+msgid "Divide"
+msgstr ""
+
+#: framework/functions/theme_option/manager.php:227
+msgid "Documentation"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:339
+msgid ""
+"Each sample slider is a zip file in the directory <code>sample-data/demo-"
+"smart-slider/</code> inside the zip file <strong>\"All files and "
+"documentation\"</strong>, you should have downloaded it when you purchased "
+"the theme."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:320
+msgid ""
+"Each sample slider is a zip file in the directory <code>sample-"
+"data/revslider/</code> inside the zip file <strong>\"All files and "
+"documentation\"</strong>, you should have downloaded it when you purchased "
+"the theme."
+msgstr ""
+
+#: framework/functions/wd_blog.php:821 woocommerce/myaccount/my-address.php:53
+msgid "Edit"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:247
+#: framework/functions/metabox/manager.php:267
+msgid "Edit Template"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:32
+msgid "Edit title"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:252
+msgid "Editor"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:275
+msgid "Editor - Full Width"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:259
+msgid "Editor w/o Media Button"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:236
+msgid "Editors"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1211
+msgid "Elusive Icons Select Option"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:75
+#: framework/functions/wd_comment_form.php:233
+msgid "Email"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:91
+#: framework/functions/woocommerce/parts/functions.php:1072
+#: framework/functions/woocommerce/parts/functions.php:1139
+msgid "Email address"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:43
+msgid "Email address *"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:185
+msgid "Email Address / Username"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:672
+msgid "Email Subscriber Popup"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:141
+msgid "Email Subscribers"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:255
+msgid "Email:"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:199
+msgid "Empty Cart"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:328
+#: framework/functions/theme_customize/parts/wd_customize_page.php:343
+msgid "Enable"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:266
+#: framework/functions/theme_option/parts/options_woocommerce.php:174
+msgid ""
+"Enable / Disable popup display mini cart info after add to cart with ajax."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:284
+#: framework/functions/theme_option/parts/options_woocommerce.php:218
+msgid ""
+"Enable / Disable thumbnail change effect when hover product image. Effects "
+"disabled on mobile devices."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:79
+#: framework/functions/theme_option/parts/options_blog.php:50
+msgid ""
+"Enable to display posts by post format (video, audio, quote, gallery ...)"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:281
+#: framework/functions/theme_option/parts/options_accessibility.php:962
+msgid "Enable/Disable all social share button in website."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:682
+msgid "Enable/Disable email subscriber popup in website."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:702
+msgid "Enable/Disable email subscriber popup on mobile devices."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:691
+msgid "Enable/Disable email subscriber popup only on homepage."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:840
+msgid "Enable/Disable facebook chatbox in website."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:246
+#: framework/functions/theme_option/parts/options_accessibility.php:653
+msgid "Enable/Disable loading effect in website."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:154
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:171
+msgid "Enable/Disable scroll button in website"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:519
+msgid "Enable/Disable scroll button in website."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:263
+#: framework/functions/theme_option/parts/options_accessibility.php:662
+msgid "Enable/Disable sidebar fixed effect in website."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:972
+msgid "Enable/Disable title."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1733
+msgid ""
+"Enter <code>1</code> and click <strong>Save Changes</strong> for an error "
+"message, or enter <code>2</code> and click <strong>Save Changes</strong> for "
+"a warning message."
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:187
+msgid "Enter a username or e-mail address.."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:97
+msgid "Enter the facebook id of the administrator"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:13
+#: framework/functions/theme_option/parts/options_replace_url.php:22
+msgid "Enter URL without '/' at the end"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:849
+msgid "Enter your fanpage facebook url..."
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:187
+#: framework/functions/woocommerce/parts/myaccount.php:258
+msgid "Enter your password..."
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:165
+msgid "Error 404"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:218
+msgid "Error when sending email..."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:301
+#: framework/functions/woocommerce/parts/functions.php:221
+msgid "Excerpt"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:86
+msgid "Facebook API"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:830
+msgid "Facebook Chatbox"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:585
+msgid "Facebook Comment"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:33
+msgid "Facebook Comment Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:848
+msgid "Fanpage URL"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:50
+#: framework/functions/theme_option/parts/options_general.php:32
+#: framework/functions/theme_option/parts/options_general.php:42
+msgid "Favicon"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:53
+#: framework/functions/theme_option/parts/options_general.php:34
+msgid ""
+"Favicon is the little icon that browsers display next to a page's title on a "
+"browser tab, or in the address bar next to its URL."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:519
+msgid "Feedburner Form"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:763
+msgid "Feedburner ID"
+msgstr ""
+
+#. Name of the theme
+msgid "Feellio"
+msgstr ""
+
+#: framework/functions/wd_required_version.php:84
+#, php-format
+msgid ""
+"feellio requires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: framework/functions/wd_required_version.php:57
+#: framework/functions/wd_required_version.php:69
+#, php-format
+msgid ""
+"feelliorequires at least WordPress version %s. You are running version %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:194
+msgid "Field Decription"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:156
+#: framework/functions/theme_option/parts/demo_data.php:164
+#: framework/functions/theme_option/parts/demo_data.php:176
+msgid "Field Description"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1801
+msgid "Field Required / Linking"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:861
+#: framework/functions/theme_option/parts/demo_data.php:867
+msgid "Field Subtitle"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:193
+msgid "Field subtitle"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:860
+#: framework/functions/theme_option/parts/demo_data.php:866
+msgid "Field Title"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1635
+msgid "Field Validation"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:514
+msgid "Finish guide"
+msgstr ""
+
+#: framework/functions/wd_pagination.php:142
+msgid "First"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1043
+#: framework/functions/woocommerce/parts/functions.php:1076
+#: framework/functions/woocommerce/parts/functions.php:1110
+#: framework/functions/woocommerce/parts/functions.php:1145
+msgid "First name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:33
+msgid "First name *"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:333
+msgid "Font Family"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:345
+msgid "Font Size"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:378
+msgid "Font Weight"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:3
+msgid "Footer"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:351
+msgid "Footer Background Color"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:38
+msgid "Footer copyright text"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:20
+msgid "Footer Default Settings"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:54
+msgid "Footer logo is only visible to the default footer template."
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:140
+msgid "Footer Social"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:287
+msgid "For full documentation on the this field, visit: "
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:25
+#: framework/functions/theme_option/parts/demo_data.php:77
+#: framework/functions/theme_option/parts/demo_data.php:107
+#: framework/functions/theme_option/parts/demo_data.php:146
+#: framework/functions/theme_option/parts/demo_data.php:186
+#: framework/functions/theme_option/parts/demo_data.php:201
+#: framework/functions/theme_option/parts/demo_data.php:220
+#: framework/functions/theme_option/parts/demo_data.php:246
+#: framework/functions/theme_option/parts/demo_data.php:279
+#: framework/functions/theme_option/parts/demo_data.php:337
+#: framework/functions/theme_option/parts/demo_data.php:360
+#: framework/functions/theme_option/parts/demo_data.php:379
+#: framework/functions/theme_option/parts/demo_data.php:400
+#: framework/functions/theme_option/parts/demo_data.php:425
+#: framework/functions/theme_option/parts/demo_data.php:485
+#: framework/functions/theme_option/parts/demo_data.php:491
+#: framework/functions/theme_option/parts/demo_data.php:535
+#: framework/functions/theme_option/parts/demo_data.php:571
+#: framework/functions/theme_option/parts/demo_data.php:641
+#: framework/functions/theme_option/parts/demo_data.php:657
+#: framework/functions/theme_option/parts/demo_data.php:710
+#: framework/functions/theme_option/parts/demo_data.php:739
+#: framework/functions/theme_option/parts/demo_data.php:752
+#: framework/functions/theme_option/parts/demo_data.php:847
+#: framework/functions/theme_option/parts/demo_data.php:897
+#: framework/functions/theme_option/parts/demo_data.php:936
+#: framework/functions/theme_option/parts/demo_data.php:995
+#: framework/functions/theme_option/parts/demo_data.php:1228
+#: framework/functions/theme_option/parts/demo_data.php:1323
+#: framework/functions/theme_option/parts/demo_data.php:1357
+#: framework/functions/theme_option/parts/demo_data.php:1421
+#: framework/functions/theme_option/parts/demo_data.php:1441
+#: framework/functions/theme_option/parts/demo_data.php:1523
+#: framework/functions/theme_option/parts/demo_data.php:1539
+#: framework/functions/theme_option/parts/demo_data.php:1587
+#: framework/functions/theme_option/parts/demo_data.php:1619
+msgid "For full documentation on this field, visit: "
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1637
+#: framework/functions/theme_option/parts/demo_data.php:1803
+msgid "For full documentation on validation, visit: "
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:40
+msgid "Forgot Password Page"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:102
+msgid "Forgot password?"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:167
+msgid "Free!"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:415
+msgid "Full Content Detail"
+msgstr ""
+
+#. Name of the template
+msgid "FullPage Template"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:276
+msgid "Fullwidth"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:395
+msgid "Fullwidth Layout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:639
+msgid "Gallery"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:21
+#: framework/functions/theme_option/parts/options_general.php:3
+msgid "General"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:13
+msgid "General Product Config"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:330
+msgid "Get New Password"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:722
+msgid "Give us a link!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:387
+msgid "Gives you the RGBA color."
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:222
+msgid "Go Shopping"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:479
+#: framework/functions/theme_guide/manager.php:495
+msgid ""
+"Go to <strong>Settings</strong> &gt; <strong>Reading</strong> &gt; choose "
+"<strong>Front page displays</strong> option is <strong>A static page</strong>"
+". Then select a page in the dropdown option <strong>Front page</strong>. "
+"Click <strong>Save Changes</strong> button to save."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:293
+msgid "Go to Install Plugins"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:484
+#: framework/functions/theme_guide/manager.php:500
+msgid "Go to Setting Reading Page"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:322
+msgid "Go to Slider Revolution"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:341
+msgid "Go to Smart Slider 3"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:91
+msgid "Good"
+msgstr ""
+
+#: framework/functions/theme_customize/libs/wd-add-control-custom-font.php:54
+msgid "Google Fonts"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:395
+#: framework/functions/wd_set_default.php:406
+#: framework/functions/wd_set_default.php:420
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:430
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:488
+msgid "Grid"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1278
+msgid "Grid view"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:32
+msgid "Group Button Settings"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:96
+msgid "GTranslate"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_header.php:3
+msgid "Header"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:121
+#: framework/functions/theme_option/parts/options_page.php:130
+msgid "Header & Footer"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:497
+#: framework/functions/theme_option/parts/demo_data.php:514
+msgid "Header Border Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_header.php:20
+msgid "Header Default Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:367
+msgid "Header Gradient Color Option"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:131
+msgid "Header Information"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:65
+msgid "Header logo is only visible to the default header template."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:88
+#: framework/functions/theme_option/parts/options_accessibility.php:64
+#: framework/functions/theme_option/parts/options_accessibility.php:163
+#: framework/functions/theme_option/parts/options_accessibility.php:263
+#: framework/functions/theme_option/parts/options_accessibility.php:363
+#: framework/functions/theme_option/parts/options_accessibility.php:463
+#: framework/functions/theme_option/parts/options_accessibility.php:615
+#: framework/functions/theme_option/parts/options_accessibility.php:781
+#: framework/functions/theme_option/parts/options_accessibility.php:866
+#: framework/functions/theme_option/parts/options_woocommerce.php:200
+msgid "Height"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1213
+msgid "Here's a list of all the elusive icons by name and icon."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:549
+#: framework/functions/theme_customize/parts/wd_customize_page.php:127
+msgid "Hide"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:165
+#: framework/functions/theme_option/parts/options_woocommerce.php:104
+msgid ""
+"Hide Product Description may not work with some cases: list view mode in the "
+"shop page, shortcode single product detail..."
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:160
+#: framework/functions/woocommerce/parts/functions.php:1245
+msgid "Home"
+msgstr ""
+
+#. Name of the template
+msgid "Home Template"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:913
+msgid "Hot"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:953
+msgid "Hours"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1054
+#: framework/functions/woocommerce/parts/functions.php:1087
+#: framework/functions/woocommerce/parts/functions.php:1121
+#: framework/functions/woocommerce/parts/functions.php:1156
+msgid "House number and street name"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:283
+#: framework/functions/theme_option/parts/options_woocommerce.php:217
+msgid "Hover Change Thumbnail"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1765
+msgid "HTML Allowed (wp_kses)"
+msgstr ""
+
+#: framework/functions/wd_html_block.php:147
+msgid "HTML Block - "
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:464
+msgid ""
+"HTML/Shortcode will be displayed at the bottom of the page use Woocommerce "
+"Template."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:294
+msgid "HTML/Shortcode will be displayed at the bottom of the product archive."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:380
+msgid "HTML/Shortcode will display after single product summary."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:197
+msgid "HTML/Shortcode will display below 404 page content."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:490
+msgid "HTML/Shortcode will display below cart content."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:482
+msgid "HTML/Shortcode will display on the left Cart Total."
+msgstr ""
+
+#. URI of the theme
+msgid "http://wpdance.com"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://wpdance.com/services.html"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:934
+msgid "Hurry Up! Offer ends in:"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:261
+msgid "I agree to the Terms of Service!"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:480
+msgid "Icon & Background"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:205
+#: framework/functions/theme_option/parts/options_accessibility.php:598
+msgid "Icon Color"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:479
+msgid "Icon Only"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:34
+msgid ""
+"If no image is selected, the footer will use Logo in the general settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_header.php:45
+msgid ""
+"If no image is selected, the header will use Logo in the general settings"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:291
+msgid ""
+"If plugin is <strong>commercial</strong> and <strong>not included</strong> "
+"in the theme you can ignore it."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:437
+#: framework/functions/theme_guide/manager.php:448
+msgid ""
+"If widget is <strong>commercial</strong> and <strong>not included</strong> "
+"in the theme you can ignore it."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1663
+msgid ""
+"If you enter an invalid color it will be removed. Try using the text "
+"\"blue\" as a color.  ;)"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:419
+msgid "If you want full width detail, you must select layout the full width"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:342
+msgid "Image Breadcrumb:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1226
+msgid "Image Select"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1280
+msgid "Images Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1271
+msgid "Images Option (with tiles => true)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1235
+msgid "Images Option for Layout"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:316
+msgid "Import sample Slider Revolution come with the theme"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:335
+msgid "Import sample Smart Sliders 3 come with the theme"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:381
+#: framework/functions/theme_guide/manager.php:406
+msgid "Import WIE Tool"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:379
+#: framework/functions/theme_guide/manager.php:404
+msgid "Import XML Tool"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:700
+#: framework/functions/style_manager/sass/manager.php:784
+msgid ""
+"IMPORTANT: If you change the values in this section, please recompile CSS "
+"for changes to be applied. To do it, please reload the page and click on the "
+"\"Compile CSS\" link in the notification section."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:118
+#: framework/functions/theme_option/parts/options_woocommerce.php:65
+msgid ""
+"In some cases, the layout will have surplus compare buttons on single "
+"product page. Disable them to avoid errors."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:102
+#: framework/functions/theme_option/parts/options_woocommerce.php:54
+msgid ""
+"In some cases, the layout will have surplus wishlist buttons on single "
+"product page. Disable them to avoid errors."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:173
+msgid "In Stock"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:701
+#: framework/functions/woocommerce/parts/functions.php:706
+#: framework/functions/woocommerce/parts/functions.php:726
+#: framework/functions/woocommerce/parts/functions.php:746
+msgid "In stock"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:750
+msgid "Info"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:207
+msgid "Inline"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:285
+msgid "Install and activate all recommended plugins"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:162
+msgid "Install Plugins"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:161
+msgid "Install Required Plugins"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:163
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:390
+msgid "Instruction for importing sample data"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:189
+msgid "Invalid username or e-mail address."
+msgstr ""
+
+#: template-parts/content-none.php:12
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:970
+#: framework/functions/theme_option/parts/demo_data.php:979
+msgid ""
+"Items set with a fold to this ID will hide unless this is set to the "
+"appropriate value."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1428
+msgid ""
+"JQuery UI spinner description. Min:20, max: 100, step:20, default value: 40"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1427
+msgid "JQuery UI Spinner Example 1"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:302
+#: framework/functions/theme_option/parts/options_custom.php:22
+msgid "JS Code"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1792
+msgid "JS will be escaped"
+msgstr ""
+
+#: framework/functions/wd_pagination.php:169
+msgid "Last"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1046
+#: framework/functions/woocommerce/parts/functions.php:1079
+#: framework/functions/woocommerce/parts/functions.php:1113
+#: framework/functions/woocommerce/parts/functions.php:1148
+msgid "Last name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:37
+msgid "Last name *"
+msgstr ""
+
+#: template-parts/related.php:42
+msgid "Lastest News"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:23
+#: framework/functions/theme_option/parts/options_woocommerce.php:508
+msgid "Layout"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:76
+msgid "LAYOUT CONFIGURATION"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:424
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:482
+#: framework/functions/theme_option/parts/options_blog.php:228
+#: framework/functions/theme_option/parts/options_blog.php:382
+msgid "Layout Style"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:283
+msgid "Layout:"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:269
+msgid "Leave a comment"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:70
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:270
+#, php-format
+msgid "Leave a reply to %s"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:21
+msgid "Leave blank if you want to use Site URL"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:13
+#: framework/functions/theme_option/parts/options_header.php:13
+msgid "Leave blank to use default template"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:188
+#: framework/functions/wd_set_default.php:293
+#: framework/functions/theme_customize/parts/wd_customize_header.php:100
+msgid "Left"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:279
+msgid "Left & Right Sidebar"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:76
+#: framework/functions/metabox/manager.php:277
+msgid "Left Sidebar"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:114
+msgid "Left Sidebar for shop page"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:96
+msgid "Left Sidebar for single product"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:94
+msgid "Left Sidebar Product"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:112
+msgid "Left Sidebar Shop"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:299
+msgid "Left Sidebar:"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:269
+msgid "Let's get started now"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:391
+msgid "Letter Spacing"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:362
+msgid "Line Height"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:932
+msgid "Link Caption"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:399
+msgid "Link Color"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:941
+msgid "Link URL"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:407
+msgid "Links Color Option"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:394
+#: framework/functions/wd_set_default.php:405
+#: framework/functions/wd_set_default.php:419
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:429
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:487
+msgid "List"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1275
+msgid "List view"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:306
+msgid "Load content with ajax."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:245
+#: framework/functions/theme_option/parts/options_accessibility.php:652
+msgid "Loading Effect"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:264
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:37
+#: woocommerce/myaccount/form-login.php:56
+msgid "Login"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:398
+msgid "Login / Register"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:76
+msgid "Login / Sign in"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:397
+msgid "Login or Register"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:20
+msgid "Login Page"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:108
+msgid "Login successful, redirecting..."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:51
+#: framework/functions/theme_customize/parts/wd_customize_header.php:62
+#: framework/functions/theme_option/parts/options_accessibility.php:913
+#: framework/functions/theme_option/parts/options_general.php:11
+#: framework/functions/theme_option/parts/options_general.php:21
+msgid "Logo"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:116
+#: framework/functions/woocommerce/parts/myaccount.php:393
+#: framework/functions/woocommerce/parts/myaccount.php:394
+msgid "Logout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:944
+#: framework/functions/theme_option/parts/demo_data.php:951
+msgid "Look, it's on!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:959
+msgid "Look, it's on! Also hidden child elements!"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:62
+msgid "Lost your password?"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:78
+msgid "Main sidebar that appears on the left."
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:87
+msgid "Main sidebar that appears on the right."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:618
+msgid ""
+"Many issues need to be installed before using this theme. Come WPDance Guide "
+"page on admin panel to check it!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:655
+msgid "Media"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:686
+msgid "Media No Preview"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:631
+msgid "Media Uploads"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:664
+msgid "Media w/ URL"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:678
+msgid "Media w/o URL"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:306
+msgid "Member registration is disabled!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_menu.php:3
+msgid "Menu"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1142
+msgid "Menus Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1133
+msgid "Menus Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:498
+msgid "Mini Cart"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:957
+msgid "Mins"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:701
+msgid "Mobile"
+msgstr ""
+
+#: framework/abstract.php:193 framework/functions/wd_set_default.php:164
+#: framework/functions/theme_customize/parts/wd_customize_header.php:83
+msgid "Mobile Menu"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:944
+msgid "Month"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:194
+msgid "Move"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:38
+msgid "Multi Checkbox Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:57
+msgid "Multi Checkbox Option (with menu data)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:65
+msgid "Multi Checkbox Option (with sidebar data)"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:588
+msgid "Multi Domain"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1049
+msgid "Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:184
+msgid "Multi Text"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:192
+msgid "Multi Text Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1661
+msgid "Multi Text Option - Color Validated"
+msgstr ""
+
+#: woocommerce/myaccount/navigation.php:27
+#: framework/functions/woocommerce/parts/myaccount.php:84
+#: framework/functions/woocommerce/parts/myaccount.php:390
+#: framework/functions/woocommerce/parts/myaccount.php:391
+msgid "My Account"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:35
+msgid "My account"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:113
+msgid "My Download"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:113
+msgid "My Downloads"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:111
+msgid "My Order"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:111
+msgid "My Orders"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:73
+#: framework/functions/wd_comment_form.php:232
+msgid "Name"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:55
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:20
+msgid "New URL String"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:171
+#: framework/functions/wd_comment_form.php:204
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: framework/functions/wd_slider.php:53
+msgid "Next"
+msgstr ""
+
+#: framework/functions/wd_blog.php:580
+#: framework/functions/wd_pagination.php:168
+msgid "Next Post"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:204
+#: framework/functions/metabox/manager.php:325
+msgid "No Breadcrumb"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:104
+msgid "No products in the cart."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:236
+msgid "No products were added to the wishlist"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:13
+#: framework/functions/theme_option/parts/demo_data.php:31
+#: framework/functions/theme_option/parts/demo_data.php:39
+#: framework/functions/theme_option/parts/demo_data.php:58
+#: framework/functions/theme_option/parts/demo_data.php:66
+#: framework/functions/theme_option/parts/demo_data.php:83
+#: framework/functions/theme_option/parts/demo_data.php:97
+#: framework/functions/theme_option/parts/demo_data.php:904
+#: framework/functions/theme_option/parts/demo_data.php:918
+#: framework/functions/theme_option/parts/demo_data.php:1003
+#: framework/functions/theme_option/parts/demo_data.php:1025
+#: framework/functions/theme_option/parts/demo_data.php:1050
+#: framework/functions/theme_option/parts/demo_data.php:1083
+#: framework/functions/theme_option/parts/demo_data.php:1092
+#: framework/functions/theme_option/parts/demo_data.php:1100
+#: framework/functions/theme_option/parts/demo_data.php:1109
+#: framework/functions/theme_option/parts/demo_data.php:1117
+#: framework/functions/theme_option/parts/demo_data.php:1126
+#: framework/functions/theme_option/parts/demo_data.php:1134
+#: framework/functions/theme_option/parts/demo_data.php:1143
+#: framework/functions/theme_option/parts/demo_data.php:1151
+#: framework/functions/theme_option/parts/demo_data.php:1160
+#: framework/functions/theme_option/parts/demo_data.php:1178
+#: framework/functions/theme_option/parts/demo_data.php:1187
+#: framework/functions/theme_option/parts/demo_data.php:1195
+#: framework/functions/theme_option/parts/demo_data.php:1204
+#: framework/functions/theme_option/parts/demo_data.php:1212
+#: framework/functions/theme_option/parts/demo_data.php:1220
+#: framework/functions/theme_option/parts/demo_data.php:1236
+#: framework/functions/theme_option/parts/demo_data.php:1281
+#: framework/functions/theme_option/parts/demo_data.php:1530
+msgid "No validation can be done on this field type"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:593
+msgid "Normal"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:93
+msgid "Not that bad"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1103
+msgid "Notes about your order, e.g. special notes for delivery."
+msgstr ""
+
+#: template-parts/content-none.php:3
+msgid "Nothing Found"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:129
+msgid "Number Comment"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:51
+msgid "Number Comment Display"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:181
+msgid "Number Description Word"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:113
+msgid "Number Description Words"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:247
+#: framework/functions/theme_option/parts/options_blog.php:168
+msgid "Number Excerpt Word"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:327
+msgid "Number of columns displayed with slider"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:487
+msgid "Number Product Of Page"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:277
+msgid "Number products display on each page"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:151
+msgid "Number Title Word"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:93
+msgid "Number Title Words"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:12
+msgid "Old URL String"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:706
+#, php-format
+msgid "Only %s left in stock"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:368
+#: framework/functions/theme_option/parts/demo_data.php:408
+#: framework/functions/theme_option/parts/demo_data.php:433
+#: framework/functions/theme_option/parts/demo_data.php:498
+#: framework/functions/theme_option/parts/demo_data.php:515
+msgid "Only color validation can be done on this field type"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:690
+msgid "Only Home"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:107
+msgid ""
+"Only logged in customers who have purchased this product may leave a review."
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:225
+msgid "Oops something went wrong updaing your account."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:15
+msgid ""
+"Options to change the link and content of the default pages such as login, "
+"register, forgot password... You can use the available WPDance shortcodes to "
+"create page content."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:46
+msgid "Order number:"
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:55
+msgid "Order Review"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"our default theme lets you create a strongest website with many features."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:173
+msgid "Out of Stock"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:729
+#: framework/functions/woocommerce/parts/functions.php:739
+#: framework/functions/woocommerce/parts/functions.php:743
+msgid "Out of stock"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:591
+#: framework/functions/theme_option/parts/demo_data.php:616
+msgid "Padding/Margin Option"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:168
+msgid "Page"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:20
+msgid "Page 404 Config"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:42
+msgid "Page Cart"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:12
+msgid "Page Default"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:27
+msgid "Page Search Config"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:3
+msgid "Page Settings"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1108
+msgid "Pages Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1099
+msgid "Pages Select Option"
+msgstr ""
+
+#: framework/functions/wd_blog.php:826
+msgid "Pages:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:432
+msgid "Palette Color Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:424
+msgid "Palette Colors"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_menu.php:22
+msgid "Panel Position"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:48
+#: woocommerce/myaccount/form-login.php:98
+#: framework/functions/theme_option/parts/demo_data.php:199
+msgid "Password"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:47
+msgid "Password change"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:259
+msgid "Password Confirmation:"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:147
+msgid "Password must be at least six characters"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:186
+#: framework/functions/woocommerce/parts/myaccount.php:257
+msgid "Password:"
+msgstr ""
+
+#: framework/functions/wd_blog.php:839
+msgid "Password: "
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:152
+msgid "Passwords do not match"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:293
+msgid "Paste your CSS code here."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:303
+#: framework/functions/theme_option/parts/options_custom.php:23
+msgid "Paste your JS code here."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:314
+msgid "Paste your PHP code here."
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:33
+msgid "Pay"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:585
+msgid "Payment Method"
+msgstr ""
+
+#: woocommerce/cart/cart.php:201 woocommerce/checkout/thankyou.php:63
+msgid "Payment method:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:481
+msgid "Payment Mothod"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:545
+msgid "Percent Sale"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:90
+msgid "Perfect"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1069
+#: framework/functions/woocommerce/parts/functions.php:1136
+msgid "Phone"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:313
+msgid "PHP Code"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:352
+msgid "Pick a background color for the footer (default: #dd9933)."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:345
+msgid "Pick a title color for the theme (default: #000)."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:809
+msgid "Placeholder"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:61
+#: framework/functions/theme_option/parts/options_blog.php:60
+msgid "Placeholder Image"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:62
+#: framework/functions/theme_option/parts/options_blog.php:61
+msgid "Placeholder image display when post no thumbnail"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:132
+msgid "Please enter a username"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:140
+msgid "Please enter a valid email"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:329
+msgid ""
+"Please enter your username or email address. You will receive a link to "
+"create a new password via email."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:289
+#, php-format
+msgid ""
+"Please go to <strong><a href=\"%s\">Install Plugins</a></strong> page to "
+"start install and activate the missing plugins."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:319
+#, php-format
+msgid ""
+"Please go to <strong><a href=\"%s\">Slider Revolution</a></strong>, choose "
+"<strong>Import Slider</strong> to start importing sample sliders come with "
+"the theme."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:338
+#, php-format
+msgid ""
+"Please go to <strong><a href=\"%s\">Smart Slider 3</a></strong>, choose "
+"<strong>Import Slider</strong> to start importing sample sliders come with "
+"the theme."
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:273
+msgid "Please note: comments may need to be approved before publishing!"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:176
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:265
+#: framework/functions/theme_option/parts/options_woocommerce.php:173
+msgid "Popup Add To Cart"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:182
+msgid "Popup Settings"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:169
+msgid "Portfolio"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:85
+#: framework/functions/theme_option/parts/options_woocommerce.php:43
+msgid "Position of the buttons: add to cart, compare, wishlist on shop loop"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:341
+msgid "Position Thumbnail"
+msgstr ""
+
+#: comments.php:29
+msgid "POST A COMMENT"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:272
+msgid "POST COMMENT"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:146
+msgid "Post SMTP Mailer/Email Log"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1159
+msgid "Post Type Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1169
+msgid "Post Type Multi Select Option + Sortable"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1150
+msgid "Post Type Select Option"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1066
+#: framework/functions/woocommerce/parts/functions.php:1099
+#: framework/functions/woocommerce/parts/functions.php:1133
+#: framework/functions/woocommerce/parts/functions.php:1168
+msgid "Postcode / ZIP"
+msgstr ""
+
+#: framework/functions/wd_blog.php:712
+msgid "Posted by"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1186
+msgid "Posts Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:275
+msgid "Posts Per Page"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1177
+msgid "Posts Select Option2"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:730
+msgid "Presentation Fields"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1297
+msgid "Preset"
+msgstr ""
+
+#: framework/functions/wd_slider.php:50
+msgid "Previous"
+msgstr ""
+
+#: framework/functions/wd_blog.php:572
+#: framework/functions/wd_pagination.php:143
+msgid "Previous Post"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:319
+#: framework/functions/theme_option/parts/options_blog.php:287
+msgid "Previous/Next Button"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:297 woocommerce/cart/cart.php:38
+#: woocommerce/cart/cart.php:90 woocommerce/cart/cart.php:128
+#: woocommerce/single-product/add-to-cart/variable.php:49
+#: framework/functions/woocommerce/parts/functions.php:217
+msgid "Price"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:227
+#: framework/functions/theme_option/parts/options_woocommerce.php:143
+msgid "Price Decimals"
+msgstr ""
+
+#: woocommerce/cart/cart.php:92
+msgid "Price: "
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_styling.php:11
+msgid "Primary Color All Theme"
+msgstr ""
+
+#: framework/abstract.php:191 framework/functions/wd_set_default.php:162
+#: framework/functions/theme_customize/parts/wd_customize_header.php:81
+msgid "Primary Menu"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:209
+msgid "Private"
+msgstr ""
+
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:70
+msgid "Product"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:209
+msgid "Product Archive"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:103
+msgid "Product Description"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:12
+msgid "Product Layout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:12
+msgid "Product layout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:154
+msgid "Product Meta"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:80
+msgid "Product Name"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:133
+msgid "Product Price"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:123
+msgid "Product Rating"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:370
+msgid "Product Summary Custom Content"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:361
+msgid "Product Summary Layout"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:637
+msgid "Product Tags"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:83
+msgid "Product Title"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:18
+#: framework/functions/theme_option/parts/options_woocommerce.php:164
+msgid "Product Visual"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:212
+msgid "Public"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_menu.php:12
+msgid "Pushmenu Mobile Settings"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:80
+msgid "Qty: "
+msgstr ""
+
+#: woocommerce/cart/cart.php:39 woocommerce/cart/cart.php:95
+#: woocommerce/cart/cart.php:134
+msgid "Quantity"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/simple.php:55
+msgid "QUANTITY: "
+msgstr ""
+
+#: woocommerce/cart/cart.php:109
+msgid "Quantity: "
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:73
+msgid "Radio"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:82
+msgid "Radio Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:96
+msgid "Radio Option w/ Menu Data"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:89
+msgid "Rate&hellip;"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:88
+msgid "Rating"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1585
+msgid "Raw"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1602
+msgid "Raw Field <code>full_width</code> False"
+msgstr ""
+
+#: framework/functions/wd_blog.php:812
+msgid "Read More"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:177
+msgid "Readmore Button"
+msgstr ""
+
+#: template-parts/content-none.php:7
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:336
+#: framework/functions/theme_option/parts/options_blog.php:297
+msgid "Recent Blog"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:307
+msgid "Recent Blog Settings"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:353
+#: framework/functions/theme_option/parts/options_blog.php:317
+msgid "Recent Blog Style"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:405
+msgid "Recent Product"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:86
+msgid "Redux Framework"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:649
+msgid "Refresh"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:126
+msgid "Regenerate Thumbnails"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:75
+#: woocommerce/myaccount/form-login.php:111
+msgid "Register"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:162
+msgid "Register account to success!"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:444
+msgid "Register all recommended widgets"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:30
+msgid "Register Page"
+msgstr ""
+
+#: woocommerce/single-product/related.php:45
+msgid "RELATED ITEMS"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:58
+msgid "Remember me"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:226 woocommerce/cart/cart.php:41
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:379
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:379
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:426
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:426
+msgid "Remove"
+msgstr ""
+
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:725
+msgid "Remove Image"
+msgstr ""
+
+#: woocommerce/cart/cart.php:119 woocommerce/cart/cart.php:164
+#: woocommerce/cart/mini-cart.php:54
+#: framework/functions/woocommerce/parts/minicart.php:181
+msgid "Remove this item"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:150 woocommerce/wishlist-view.php:226
+msgid "Remove this product"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:11
+msgid "Replace Page"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:3
+msgid "Replace URL"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:140
+msgid "REPLY"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:354
+msgid "Reset"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:102
+msgid "Reset your password"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:418
+msgid "Responsive"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:304
+msgid "Result Columns"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:606
+msgid "Return Theme installation page"
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:31
+msgid "Return to cart"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:175
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:260
+msgid "Retype your password..."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:98
+#: framework/functions/wd_set_default.php:298
+#: framework/functions/woocommerce/parts/functions.php:218
+msgid "Review"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:35
+msgid "Reviews"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:56
+msgid "Revolution Slider"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:189
+#: framework/functions/theme_customize/parts/wd_customize_header.php:101
+#: framework/functions/theme_option/parts/options_accessibility.php:624
+#: framework/functions/theme_option/parts/options_accessibility.php:875
+msgid "Right"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:85
+#: framework/functions/metabox/manager.php:278
+msgid "Right Sidebar"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:123
+msgid "Right Sidebar for shop page"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:105
+msgid "Right Sidebar for single product"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:103
+msgid "Right Sidebar Product"
+msgstr ""
+
+#: framework/functions/wd_sidebar.php:121
+msgid "Right Sidebar Shop"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:309
+msgid "Right Sidebar:"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:483
+msgid "Rounded"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:528
+msgid "Sale Flash"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:901
+msgid "Sale!"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:367
+#: framework/functions/theme_guide/manager.php:392
+msgid ""
+"Sample data are provided inside the directory <code>sample-data/</code> of "
+"the zip file \"All files and documentation\" which you should have "
+"downloaded when purchased the theme. Sample data include:"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:41
+msgid "Save"
+msgstr ""
+
+#: woocommerce/myaccount/form-edit-account.php:68
+msgid "Save changes"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:432
+msgid "Screen Width"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:130
+msgid "SEARCH"
+msgstr ""
+
+#: framework/functions/wd_search.php:101
+msgid "Search"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:460
+#: framework/functions/theme_customize/parts/wd_customize_page.php:293
+msgid "Search Blog"
+msgstr ""
+
+#: framework/functions/wd_search.php:80
+msgid "Search blog"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:5
+msgid ""
+"Search for and replace the path of all the photo options in the Theme Option "
+"panel and database.<br/> If you do not get the wrong path after the domain "
+"name conversion, do not worry about this part."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:137
+#: framework/functions/theme_option/parts/options_page.php:140
+msgid "Search Form"
+msgstr ""
+
+#: framework/functions/wd_search.php:97
+msgid "Search item here"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:410
+#: framework/functions/theme_option/parts/options_page.php:205
+msgid "Search Page"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:461
+#: framework/functions/theme_customize/parts/wd_customize_page.php:294
+msgid "Search Product"
+msgstr ""
+
+#: framework/functions/wd_search.php:80
+msgid "Search product"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:164
+msgid "Search results for "
+msgstr ""
+
+#: framework/abstract.php:192 framework/functions/wd_set_default.php:163
+#: framework/functions/theme_customize/parts/wd_customize_header.php:82
+msgid "Secondary Menu"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:961
+msgid "Secs"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:845
+msgid "Section"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:853
+msgid "Section Example"
+msgstr ""
+
+#: framework/functions/theme_option/manager.php:342
+msgid "Section via hook"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:993
+msgid "Select"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:60
+msgid ""
+"Select \"Multi Domain\" if you intend to change the domain and want to keep "
+"the old comments."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1272
+msgid "Select a background pattern."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:41
+msgid "Select a page to replace the default forgot password page."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:21
+msgid "Select a page to replace the default login page."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:31
+msgid "Select a page to replace the default register page."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:110
+#: framework/functions/theme_customize/parts/wd_customize_page.php:277
+msgid "Select Background Image"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:517
+msgid "Select Cart Icon"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:64
+#: framework/functions/theme_customize/parts/wd_customize_page.php:100
+#: framework/functions/theme_customize/parts/wd_customize_page.php:267
+msgid "Select Color Background"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:987
+msgid "Select Fields"
+msgstr ""
+
+#: framework/functions/wd_html_block.php:70
+msgid "Select Footer"
+msgstr ""
+
+#: framework/functions/wd_html_block.php:54
+msgid "Select Header"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:187
+#: framework/functions/theme_option/parts/options_accessibility.php:587
+msgid "Select Icon"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:349
+#: framework/functions/theme_option/parts/demo_data.php:1064
+#: framework/functions/theme_option/parts/demo_data.php:1321
+#: framework/functions/theme_option/parts/demo_data.php:1330
+msgid "Select Image"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:208
+#: framework/functions/theme_option/parts/options_blog.php:257
+#: framework/functions/theme_option/parts/options_blog.php:362
+#: framework/functions/theme_option/parts/options_page.php:70
+#: framework/functions/theme_option/parts/options_page.php:224
+#: framework/functions/theme_option/parts/options_woocommerce.php:255
+#: framework/functions/theme_option/parts/options_woocommerce.php:321
+#: framework/functions/theme_option/parts/options_woocommerce.php:444
+msgid "Select Left Sidebar"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_header.php:53
+msgid "Select Menu Locations"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1002
+msgid "Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1024
+msgid "Select Option with optgroup"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:218
+#: framework/functions/theme_option/parts/options_blog.php:267
+#: framework/functions/theme_option/parts/options_blog.php:372
+#: framework/functions/theme_option/parts/options_page.php:80
+#: framework/functions/theme_option/parts/options_page.php:234
+#: framework/functions/theme_option/parts/options_woocommerce.php:265
+#: framework/functions/theme_option/parts/options_woocommerce.php:331
+#: framework/functions/theme_option/parts/options_woocommerce.php:454
+msgid "Select Right Sidebar"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:170
+#: framework/functions/theme_option/parts/options_accessibility.php:528
+msgid "Select Style"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:301
+msgid "Select Style Hover Product"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:30
+#: framework/functions/theme_option/parts/options_accessibility.php:128
+#: framework/functions/theme_option/parts/options_accessibility.php:228
+#: framework/functions/theme_option/parts/options_accessibility.php:328
+#: framework/functions/theme_option/parts/options_accessibility.php:428
+#: framework/functions/theme_option/parts/options_blog.php:198
+#: framework/functions/theme_option/parts/options_blog.php:247
+#: framework/functions/theme_option/parts/options_blog.php:352
+#: framework/functions/theme_option/parts/options_page.php:60
+#: framework/functions/theme_option/parts/options_page.php:214
+#: framework/functions/theme_option/parts/options_woocommerce.php:245
+#: framework/functions/theme_option/parts/options_woocommerce.php:311
+#: framework/functions/theme_option/parts/options_woocommerce.php:434
+msgid "Select The Layout"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:261
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:384
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:442
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:23
+#: framework/functions/theme_customize/parts/wd_customize_header.php:19
+#: framework/functions/theme_customize/parts/wd_customize_page.php:42
+#: framework/functions/theme_customize/parts/wd_customize_page.php:212
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:317
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:446
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:530
+msgid "Select the layout"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:47
+msgid "Select the layout breadcrumb"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:357
+msgid "Select the position"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:12
+#: framework/functions/theme_option/parts/options_header.php:12
+msgid "Select The Template"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1017
+msgid "Select your themes alternative color scheme."
+msgstr ""
+
+#: framework/functions/wd_set_default.php:562
+msgid "Send a message to us..."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:720
+msgid "Session expire"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:185
+#: framework/functions/theme_option/parts/options_woocommerce.php:115
+msgid "Set -1 to display the full description."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:155
+#: framework/functions/theme_option/parts/options_woocommerce.php:95
+msgid "Set -1 to display the full title."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:491
+msgid "Set a static page as homepage"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:314
+#: framework/functions/theme_option/parts/options_page.php:286
+msgid "Set columns for blog search page."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:19
+msgid "Set properties for the default blog..."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:13
+msgid "Set properties for the default page template..."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:429
+msgid "Setting for pages use layout WooCommerce Template"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:19
+#: framework/functions/theme_option/parts/options_woocommerce.php:168
+msgid "Setting Product Visual Effect"
+msgstr ""
+
+#: framework/functions/wd_accessibility.php:205
+#: framework/functions/woocommerce/parts/functions.php:864
+msgid "Share "
+msgstr ""
+
+#: woocommerce/wishlist-view.php:206
+msgid "Shared"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:28
+msgid "Shipping address"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:134
+msgid "SHOP"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:218
+msgid "Shopping cart is empty."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:198
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:597
+msgid "Shortcode Cart"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:548
+#: framework/functions/theme_customize/parts/wd_customize_page.php:126
+msgid "Show"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:146
+msgid "Show Author Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:130
+#: framework/functions/theme_option/parts/options_blog.php:89
+msgid "show author, category or number facebook comment..."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:78
+#: framework/functions/theme_option/parts/options_blog.php:49
+msgid "Show By Post Format"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:163
+msgid "Show Category Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:112
+msgid "Show Date Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:164
+msgid "Show Description Product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:214
+msgid "Show Excerpt Blog"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_comments.php:43
+msgid "Show facebook comment form on product details page"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:158
+msgid "Show Logo"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:129
+msgid "Show Meta Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:245
+msgid "Show Meta Product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:180
+msgid "Show Number Comment"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:95
+msgid "Show placeholder_image Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:210
+msgid "Show Price Product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:194
+msgid "Show Rating Product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:230
+msgid "Show Read More Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:385
+msgid "Show Recent Product"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:159
+msgid "Show Site Title"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_page.php:296
+msgid "Show suggested results with keywords."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:197
+msgid "Show Tags"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:45
+msgid "Show Title Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:134
+msgid "Show Title Product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:68
+#: framework/functions/theme_option/parts/options_woocommerce.php:23
+msgid "Show/Hide Add To Cart, Compare, Wishlist button on your site"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:147
+msgid "Show/Hide author blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:303
+msgid "Show/Hide Author Information"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:156
+msgid "Show/Hide Back To Home Button"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:164
+msgid "Show/Hide category blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:113
+msgid "Show/Hide date blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:215
+msgid "Show/Hide excerpt blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:181
+msgid "Show/Hide Number Comment"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:96
+msgid "Show/Hide placeholder_image blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:320
+msgid "Show/Hide Previous/Next Button"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:228
+msgid "Show/Hide price decimal"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:211
+msgid "Show/Hide price product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:195
+msgid "Show/Hide rating product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:231
+msgid "Show/Hide read more blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:337
+msgid "Show/Hide Recent Blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:246
+#: framework/functions/theme_option/parts/options_woocommerce.php:155
+msgid "Show/Hide sale/featured product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:138
+msgid "Show/Hide Search Form"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:198
+msgid "Show/Hide Tags"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:46
+msgid "Show/Hide title blog"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:135
+msgid "Show/Hide title product"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:262
+#: framework/functions/theme_option/parts/options_accessibility.php:661
+msgid "Sidebar Fixed"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:189
+msgid "SIGN IN"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:31
+msgid "Single Blog"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:589
+msgid "Single Domain"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:30
+#: framework/functions/theme_option/parts/options_comments.php:42
+#: framework/functions/theme_option/parts/options_woocommerce.php:302
+msgid "Single Product"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:344
+msgid "Site Title Color"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:23
+#, php-format
+msgid "Site URL: <strong>%s</strong>"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:295
+#: framework/functions/theme_guide/manager.php:410
+#: framework/functions/theme_guide/manager.php:451
+#: framework/functions/theme_guide/manager.php:502
+msgid "Skip this step"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:299
+#: framework/functions/woocommerce/parts/functions.php:219
+msgid "Sku"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:762
+msgid "Sku:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1355
+msgid "Slider"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1348
+msgid "Slider / Spinner"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1405
+msgid "Slider description. Min: 0, max: 1, step: .1, default value: .5"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1377
+msgid "Slider description. Min: 0, max: 300, step: 5, default value: 75"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1389
+msgid ""
+"Slider description. Min: 0, max: 500, step: 5, slider 1 default value: 100, "
+"slider 2 default value: 300"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1365
+msgid "Slider description. Min: 1, max: 500, step: 1, default value: 250"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1363
+msgid "Slider Example 1"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1375
+msgid "Slider Example 2 with Steps (5)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1387
+msgid "Slider Example 3 with two sliders"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1403
+msgid "Slider Example 4 with float values"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:708
+msgid "Slides"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:716
+msgid "Slides Options"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:31
+#: framework/functions/theme_option/parts/options_accessibility.php:952
+msgid "Social Share"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:287
+#, php-format
+msgid "Some plugins are still not activated: <strong>%s</strong>"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:318
+#: framework/functions/theme_guide/manager.php:337
+#, php-format
+msgid "Some sample sliders are missing: <code>%s</code>."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:435
+#: framework/functions/theme_guide/manager.php:446
+#, php-format
+msgid "Some widgets are still not registered: <strong>%s</strong>"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:164
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: template-parts/content-none.php:9
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:170
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s plugin."
+" Contact the administrator of this site for help on getting the plugin "
+"activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/require_plugins/manager.php:167
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s plugins."
+" Contact the administrator of this site for help on getting the plugins "
+"installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/require_plugins/manager.php:172
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/wd_ajax_function.php:129
+msgid "Sorry, no spaces allowed in usernames"
+msgstr ""
+
+#: 404.php:38
+msgid "Sorry, Page Not Found!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:104
+msgid "Sortable"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:112
+#: framework/functions/theme_option/parts/demo_data.php:126
+msgid "Sortable Text Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1537
+msgid "Sorter"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:740
+msgid "Source"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:569
+msgid "Spacing"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1448
+msgid "Specify the body font properties."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1419
+msgid "Spinner"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:484
+msgid "Square"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1593
+msgid "Standard Raw Field"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:524
+msgid "Start guide again now"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1063
+#: framework/functions/woocommerce/parts/functions.php:1096
+#: framework/functions/woocommerce/parts/functions.php:1130
+#: framework/functions/woocommerce/parts/functions.php:1165
+msgid "State / County"
+msgstr ""
+
+#: framework/functions/wd_blog.php:699
+msgid "Sticky"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:100
+msgid "Stock Status"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:78
+msgid "Submit"
+msgstr ""
+
+#: framework/functions/wd_blog.php:840
+msgid "Submit "
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:155
+#: framework/functions/theme_option/parts/demo_data.php:163
+#: framework/functions/theme_option/parts/demo_data.php:175
+#: framework/functions/theme_option/parts/demo_data.php:227
+#: framework/functions/theme_option/parts/demo_data.php:1594
+#: framework/functions/theme_option/parts/demo_data.php:1603
+msgid "Subtitle"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:934
+msgid "Switch"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:888
+msgid "Switch & Button Set"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:958
+msgid "Switch - Nested Children, Enable to show"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:968
+msgid "Switch - This and the next switch required for patterns to show"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:950
+msgid "Switch Off"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:943
+msgid "Switch On"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:977
+msgid "Switch2 - Enable the above switch and this one for patterns to show"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:592
+msgid "Tab"
+msgstr ""
+
+#: framework/functions/wd_breadcrumbs.php:166
+msgid "Tagged "
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_blog.php:140
+msgid "Tags"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1125
+msgid "Tags Multi Select Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1116
+msgid "Tags Select Option"
+msgstr ""
+
+#: framework/functions/wd_blog.php:775
+msgid "Tags: "
+msgstr ""
+
+#: framework/functions/wd_html_block.php:100
+#, php-format
+msgid "Template file - Style %d"
+msgstr ""
+
+#: framework/functions/wd_html_block.php:87
+#, php-format
+msgid "Template file - style %d"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:145
+#: framework/functions/theme_option/parts/options_woocommerce.php:537
+msgid "Text"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:132
+#: framework/functions/theme_option/parts/options_accessibility.php:93
+#: framework/functions/theme_option/parts/options_accessibility.php:192
+#: framework/functions/theme_option/parts/options_accessibility.php:292
+#: framework/functions/theme_option/parts/options_accessibility.php:392
+#: framework/functions/theme_option/parts/options_accessibility.php:492
+msgid "Text Align"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:172
+#: framework/functions/theme_option/parts/options_page.php:169
+msgid "Text Button"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:211
+msgid "Text Center"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:925
+msgid "Text displays when the chatbox window is hidden"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:154
+#: framework/functions/theme_option/parts/demo_data.php:174
+msgid "Text Field"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:162
+msgid "Text Field w/ Hint"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:923
+msgid "Text Footer"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:214
+msgid "Text Justified"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:212
+msgid "Text Left"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1687
+msgid "Text Option - Comma Numeric Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1731
+msgid "Text Option - Custom Callback Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1643
+msgid "Text Option - Email Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1696
+msgid "Text Option - No Special Chars Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1678
+msgid "Text Option - Numeric Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1718
+msgid "Text Option - Preg Replace Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1705
+msgid "Text Option - Str Replace Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1669
+msgid "Text Option - URL Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1653
+msgid "Text Option with Data Attributes"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:213
+msgid "Text Right"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:218
+msgid "Textarea"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1764
+msgid "Textarea Option - HTML Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:226
+#: framework/functions/theme_option/parts/demo_data.php:1773
+msgid "Textarea Option - HTML Validated Custom"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1791
+msgid "Textarea Option - JS Validated"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1755
+msgid "Textarea Option - No HTML Validated"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:41 woocommerce/checkout/thankyou.php:78
+msgid "Thank you. Your order has been received."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_footer.php:21
+msgid "The custom sections below are only visible to the default footer."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_header.php:21
+msgid ""
+"The custom sections below are only visible to the default header, header "
+"mobile."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:97
+#: framework/functions/theme_option/parts/options_menu.php:13
+msgid "The custom sections below are only visible to the push menu mobile."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1944
+msgid "The field desc is NOT visible in customizer."
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:41
+msgid "The following addresses will be used on the checkout page by default."
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:171
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/require_plugins/manager.php:169
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/require_plugins/manager.php:168
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/theme_guide/manager.php:467
+msgid "The homepage is a static page already"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:376
+msgid ""
+"The maximum number of thumbnails appears on the slider thumbnail single "
+"product."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:352
+msgid "The maximum number of thumbnails on the slider."
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:374
+msgid "The number of columns displayed with the slider"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:342
+msgid "The position of the thumbnail slider compared to the large thumbnail."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:739
+msgid ""
+"The spacer to the section menu as seen to the left (after this section block)"
+" is the divide \"section\". Also the divider below is the divide \"field\"."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1943
+msgid "The subtitle is NOT visible in customizer"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:523
+msgid ""
+"The tutorial has been completed! If you want to learn again, please press "
+"the button below. Thank you for your trust and support WDTEAM. :)"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:604
+msgid "Theme installation is in progress..."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:29
+msgid "Theme Option Image"
+msgstr ""
+
+#: framework/functions/theme_option/manager.php:107
+#: framework/functions/theme_option/manager.php:108
+msgid "Theme Options"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:8
+msgid "Theme Sidebar Layout"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1016
+msgid "Theme Stylesheet"
+msgstr ""
+
+#: woocommerce/cart/mini-cart.php:93
+#, php-format
+msgid "There are <strong>%s</strong> item in your cart"
+msgid_plural "There are <strong>%s</strong> items in your cart"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product-reviews.php:56
+msgid "There are no reviews yet."
+msgstr ""
+
+#: woocommerce/checkout/cart-errors.php:27
+msgid ""
+"There are some issues with the items in your cart (shown above). Please go "
+"back to the cart page and resolve these issues before checking out."
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:191
+msgid "There is no user registered with that email address."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:5
+msgid "These are really basic fields!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1908
+msgid ""
+"These fields can be fully translated by WPML (WordPress Multi-Language). "
+"This serves as an example for you to implement. For extra details look at "
+"our <a href=\"//docs.reduxframework.com/core/advanced/wpml-integration/\" "
+"target=\"_blank\">WPML Implementation</a> documentation."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1298
+#: framework/functions/theme_option/parts/demo_data.php:1300
+msgid ""
+"This allows you to set a json string or array to override multiple "
+"preferences in your theme."
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:142
+msgid "This email address is already in use"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1404
+msgid "This example displays float values"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1376
+msgid "This example displays the value in a text box"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1388
+msgid "This example displays the values in select boxes"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:511
+msgid "This feature will not show on mobile devices!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1170
+msgid "This field also has sortable enabled!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:718
+msgid ""
+"This field will store all slides values into a multidimensional array to use "
+"into a foreach loop."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1707
+msgid "This field's default value was changed by a filter hook!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1626
+msgid "This is a completely unique field type"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1644
+msgid ""
+"This is a little space under the Field Title in the Options table, "
+"additional info is good in here."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:720
+msgid "This is a title"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:764
+#: framework/functions/theme_option/parts/demo_data.php:771
+#: framework/functions/theme_option/parts/demo_data.php:779
+#: framework/functions/theme_option/parts/demo_data.php:787
+#: framework/functions/theme_option/parts/demo_data.php:796
+#: framework/functions/theme_option/parts/demo_data.php:803
+#: framework/functions/theme_option/parts/demo_data.php:811
+#: framework/functions/theme_option/parts/demo_data.php:820
+#: framework/functions/theme_option/parts/demo_data.php:829
+#: framework/functions/theme_option/parts/demo_data.php:838
+msgid "This is a title."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:788
+msgid ""
+"This is an info field with the <strong>critical</strong> style applied and "
+"an icon."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:797
+msgid ""
+"This is an info field with the <strong>custom</strong> style applied, color "
+"arg passed, and an icon."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:765
+msgid ""
+"This is an info field with the <strong>info</strong> style applied. By "
+"default the <strong>normal</strong> style is applied."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:780
+msgid ""
+"This is an info field with the <strong>success</strong> style applied and an "
+"icon."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:772
+msgid "This is an info field with the <strong>warning</strong> style applied."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:812
+msgid ""
+"This is an info non-notice field with the <strong>info</strong> style "
+"applied."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:804
+msgid ""
+"This is an info non-notice field with the <strong>normal</strong> style "
+"applied."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:830
+msgid ""
+"This is an info non-notice field with the <strong>success</strong> style "
+"applied and an icon."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:821
+msgid ""
+"This is an info non-notice field with the <strong>warning</strong> style "
+"applied and an icon."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:839
+msgid ""
+"This is an non-notice field with the <strong>critical</strong> style applied "
+"and an icon."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1627
+msgid ""
+"This is created with a callback function, so anything goes in this field. "
+"Make sure to define the function though."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:14
+#: framework/functions/theme_option/parts/demo_data.php:32
+#: framework/functions/theme_option/parts/demo_data.php:40
+#: framework/functions/theme_option/parts/demo_data.php:59
+#: framework/functions/theme_option/parts/demo_data.php:67
+#: framework/functions/theme_option/parts/demo_data.php:84
+#: framework/functions/theme_option/parts/demo_data.php:98
+#: framework/functions/theme_option/parts/demo_data.php:114
+#: framework/functions/theme_option/parts/demo_data.php:128
+#: framework/functions/theme_option/parts/demo_data.php:228
+#: framework/functions/theme_option/parts/demo_data.php:369
+#: framework/functions/theme_option/parts/demo_data.php:409
+#: framework/functions/theme_option/parts/demo_data.php:434
+#: framework/functions/theme_option/parts/demo_data.php:501
+#: framework/functions/theme_option/parts/demo_data.php:519
+#: framework/functions/theme_option/parts/demo_data.php:649
+#: framework/functions/theme_option/parts/demo_data.php:905
+#: framework/functions/theme_option/parts/demo_data.php:919
+#: framework/functions/theme_option/parts/demo_data.php:1004
+#: framework/functions/theme_option/parts/demo_data.php:1026
+#: framework/functions/theme_option/parts/demo_data.php:1051
+#: framework/functions/theme_option/parts/demo_data.php:1084
+#: framework/functions/theme_option/parts/demo_data.php:1093
+#: framework/functions/theme_option/parts/demo_data.php:1101
+#: framework/functions/theme_option/parts/demo_data.php:1110
+#: framework/functions/theme_option/parts/demo_data.php:1118
+#: framework/functions/theme_option/parts/demo_data.php:1127
+#: framework/functions/theme_option/parts/demo_data.php:1135
+#: framework/functions/theme_option/parts/demo_data.php:1144
+#: framework/functions/theme_option/parts/demo_data.php:1152
+#: framework/functions/theme_option/parts/demo_data.php:1161
+#: framework/functions/theme_option/parts/demo_data.php:1171
+#: framework/functions/theme_option/parts/demo_data.php:1179
+#: framework/functions/theme_option/parts/demo_data.php:1188
+#: framework/functions/theme_option/parts/demo_data.php:1196
+#: framework/functions/theme_option/parts/demo_data.php:1205
+#: framework/functions/theme_option/parts/demo_data.php:1221
+#: framework/functions/theme_option/parts/demo_data.php:1282
+#: framework/functions/theme_option/parts/demo_data.php:1531
+#: framework/functions/theme_option/parts/demo_data.php:1645
+#: framework/functions/theme_option/parts/demo_data.php:1655
+#: framework/functions/theme_option/parts/demo_data.php:1664
+#: framework/functions/theme_option/parts/demo_data.php:1671
+#: framework/functions/theme_option/parts/demo_data.php:1680
+#: framework/functions/theme_option/parts/demo_data.php:1689
+#: framework/functions/theme_option/parts/demo_data.php:1698
+#: framework/functions/theme_option/parts/demo_data.php:1720
+#: framework/functions/theme_option/parts/demo_data.php:1757
+#: framework/functions/theme_option/parts/demo_data.php:1766
+#: framework/functions/theme_option/parts/demo_data.php:1775
+#: framework/functions/theme_option/parts/demo_data.php:1793
+msgid "This is the description field, again good for additional info."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:758
+msgid "This is the info field, if you want to break sections up."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1697
+msgid "This must be a alpha numeric only."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1688
+msgid "This must be a comma separated string of numerical values."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1670
+msgid "This must be a URL."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1679
+msgid "This must be numeric."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:30
+msgid "This option will replace all image URL set in the Theme Option"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_replace_url.php:38
+msgid "This option will replace site URL and something in the database"
+msgstr ""
+
+#: woocommerce/single-product/add-to-cart/variable.php:34
+msgid "This product is currently out of stock and unavailable."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:679
+#: framework/functions/theme_option/parts/demo_data.php:687
+msgid ""
+"This represents the minimalistic view. It does not have the preview box or "
+"the display URL in an input box. "
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:36
+#: framework/functions/theme_customize/parts/wd_customize_header.php:78
+msgid "This setting is only visible to the default header template."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:267
+msgid ""
+"This short guide will help you get started and quickly familiar with the "
+"theme. Teach you step by step how to build site like your demo site in few "
+"minutes without technical knowledge. Help you elimite too much time to read "
+"the complete user guide."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1364
+msgid "This slider displays the value as a label."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1916
+msgid "This string can be translated via WPML."
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:166
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/require_plugins/manager.php:165
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1237
+msgid ""
+"This uses some of the built in images, you can use them for layout options."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:226
+msgid "Thumbnail Hover Style"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:372
+#: framework/functions/theme_option/parts/options_woocommerce.php:351
+msgid "Thumbnail Number"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:713
+msgid "Time delay after page load to show popup."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:722
+msgid ""
+"Time does not allow popup display on page (for \"Dont show this again\" "
+"option). Set -1 to forever."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:791
+#: framework/functions/theme_option/parts/options_accessibility.php:971
+msgid "Title"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:103
+#: framework/functions/theme_option/parts/options_accessibility.php:74
+#: framework/functions/theme_option/parts/options_accessibility.php:173
+#: framework/functions/theme_option/parts/options_accessibility.php:273
+#: framework/functions/theme_option/parts/options_accessibility.php:373
+#: framework/functions/theme_option/parts/options_accessibility.php:473
+msgid "Title & Slug Color"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:115
+#: framework/functions/theme_option/parts/options_accessibility.php:82
+#: framework/functions/theme_option/parts/options_accessibility.php:181
+#: framework/functions/theme_option/parts/options_accessibility.php:281
+#: framework/functions/theme_option/parts/options_accessibility.php:381
+#: framework/functions/theme_option/parts/options_accessibility.php:481
+msgid "Title & Slug Style"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_header.php:30
+msgid "Title/Logo"
+msgstr ""
+
+#: framework/functions/wd_accessibility.php:232
+msgid "To Top"
+msgstr ""
+
+#: framework/functions/wd_blog.php:838
+msgid "To view this protected post, enter the password below: "
+msgstr ""
+
+#: woocommerce/cart/cart.php:40 woocommerce/cart/cart.php:152
+#: framework/functions/woocommerce/parts/minicart.php:206
+msgid "Total"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:56
+msgid "Total:"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:1060
+#: framework/functions/woocommerce/parts/functions.php:1093
+#: framework/functions/woocommerce/parts/functions.php:1127
+#: framework/functions/woocommerce/parts/functions.php:1162
+msgid "Town / City"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:396
+msgid "Turn on it if you want fullwidth detail"
+msgstr ""
+
+#. Author of the theme
+msgid "tvlgiao"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:288
+#: framework/functions/theme_option/parts/options_page.php:275
+msgid "Type"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1439
+msgid "Typography"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1460
+msgid "Typography h2.site-description"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1482
+msgid "Typography option with each property can be called individually."
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:76
+msgid "Uber Menu"
+msgstr ""
+
+#: woocommerce/checkout/thankyou.php:30
+msgid ""
+"Unfortunately your order cannot be processed as the originating "
+"bank/merchant has declined your transaction. Please attempt your purchase "
+"again."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:87
+msgid "Unit Price"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:721
+msgid "Unit: minutes (m)"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:773
+#: framework/functions/theme_option/parts/options_accessibility.php:782
+#: framework/functions/theme_option/parts/options_woocommerce.php:192
+#: framework/functions/theme_option/parts/options_woocommerce.php:201
+msgid "Unit: Pixel"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:92
+#: framework/functions/theme_option/parts/options_accessibility.php:66
+#: framework/functions/theme_option/parts/options_accessibility.php:165
+#: framework/functions/theme_option/parts/options_accessibility.php:265
+#: framework/functions/theme_option/parts/options_accessibility.php:365
+#: framework/functions/theme_option/parts/options_accessibility.php:465
+msgid "Unit: pixels"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:712
+msgid "Unit: seconds (s)"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:106
+msgid "Unknown error!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:717
+msgid "Unlimited slides with drag and drop sortings."
+msgstr ""
+
+#: woocommerce/cart/cart.php:184
+msgid "Update cart"
+msgstr ""
+
+#: woocommerce/loop/price.php:30
+msgid "Updating"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:668
+#: framework/functions/theme_option/parts/demo_data.php:680
+#: framework/functions/theme_option/parts/demo_data.php:688
+#: framework/functions/theme_option/parts/demo_data.php:702
+msgid "Upload any media using the WordPress native uploader"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:697
+msgid "Upload Anything - Disabled Mode"
+msgstr ""
+
+#: framework/functions/metabox/libs/Tax-meta-class/Tax-meta-class.php:727
+msgid "Upload Image"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:400
+#: framework/functions/theme_option/parts/options_woocommerce.php:415
+msgid "Upsell Product"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:253
+msgid "Use any of the features of WordPress editor inside your panel!"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:311
+msgid ""
+"Use for Cart/Checkout page. Disable this if you want to use the settings in "
+"the General section"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:210
+msgid ""
+"Use for Product Taxonomy Archive/Product Category. Disable this if you want "
+"to use the settings in the General section"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_general.php:95
+msgid "User ID"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1194
+msgid "User Role Select Option"
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:84
+msgid "Username"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:134
+msgid "Username already exists, please try another"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:328
+msgid "Username or E-mail..."
+msgstr ""
+
+#: woocommerce/myaccount/form-login.php:44
+msgid "Username or email address"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:184
+#: framework/functions/woocommerce/parts/myaccount.php:253
+#: framework/functions/woocommerce/parts/myaccount.php:327
+msgid "Username:"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1219
+msgid "Users Select Option"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:94
+msgid "Very Poor"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:85
+msgid "View Account Page"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:211
+msgid "View Cart"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:211
+msgid "View cart"
+msgstr ""
+
+#: framework/functions/wd_blog.php:544 framework/functions/wd_blog.php:685
+msgid "View detail (No title)"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:77
+msgid "View Login Page"
+msgstr ""
+
+#: framework/functions/metabox/manager.php:247
+#: framework/functions/metabox/manager.php:267
+msgid "View Template"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/minicart.php:92
+msgid "View your cart"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:563
+msgid "Visit us on facebook"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:25
+#: framework/functions/theme_option/parts/options_accessibility.php:643
+msgid "Visual Effects"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_accessibility.php:6
+msgid "WD - Accessibility"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_blog.php:6
+msgid "WD - Blog Setting"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_styling.php:6
+msgid "WD - Color Setting"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_font.php:6
+msgid "WD - Font Setting"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_footer.php:6
+msgid "WD - Footer"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_header.php:6
+msgid "WD - Header"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_page.php:6
+msgid "WD - Page Setting"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:7
+msgid "WD - Woocommerce Config"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:66
+msgid "WD Packages"
+msgstr ""
+
+#: woocommerce/cart/cart.php:202
+msgid "We continuously strives to give customers the best service."
+msgstr ""
+
+#: framework/functions/theme_customize/libs/wd-add-control-custom-font.php:48
+msgid "Web Fonts"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:234
+msgid "Website"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:106
+msgid "Widget Importer & Exporter"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:606
+#: framework/functions/theme_option/parts/options_accessibility.php:772
+#: framework/functions/theme_option/parts/options_accessibility.php:857
+#: framework/functions/theme_option/parts/options_woocommerce.php:191
+msgid "Width"
+msgstr ""
+
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:101
+#: framework/functions/theme_option/parts/options_woocommerce.php:53
+msgid "Wishlist Button Default"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:854
+msgid "With the \"section\" field you can create indented option sections."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:425
+msgid "Woo Page Template"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_woocommerce.php:4
+msgid "WooCommerce"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:91
+msgid "Woocommerce"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:414
+msgid "Woocommerce Plugin do not active"
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:310
+msgid "Woocommerce Special Page"
+msgstr ""
+
+#. Name of the template
+#: framework/functions/theme_customize/parts/wd_customize_woocommerce.php:36
+msgid "Woocommerce Template"
+msgstr ""
+
+#: framework/functions/wd_set_default.php:584
+msgid "Wordpress Comment"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:243
+msgid "WordPress Editor"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:46
+msgid "WPBakery Page Builder"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1907
+msgid "WPML Integration"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1921
+msgid "WPML Multi Checkbox"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1915
+msgid "WPML Text"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:112
+msgid "Wrong username or password!"
+msgstr ""
+
+#: framework/functions/wd_search.php:59
+msgid "X"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/functions.php:940
+msgid "Year"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:121
+msgid "YITH WooCommerce Compare"
+msgstr ""
+
+#: framework/functions/require_plugins/manager.php:116
+msgid "YITH WooCommerce Wishlist"
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1654
+msgid ""
+"You can also pass an options array if you want. Set the default to whatever "
+"you like."
+msgstr ""
+
+#: framework/functions/theme_option/parts/options_accessibility.php:754
+#: framework/functions/theme_option/parts/options_page.php:198
+#: framework/functions/theme_option/parts/options_woocommerce.php:295
+#: framework/functions/theme_option/parts/options_woocommerce.php:381
+#: framework/functions/theme_option/parts/options_woocommerce.php:465
+#: framework/functions/theme_option/parts/options_woocommerce.php:483
+#: framework/functions/theme_option/parts/options_woocommerce.php:491
+msgid "You can create a shortcode from the new page creation interface."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1076
+msgid "You can easily add a variety of data from WordPress."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:593
+#: framework/functions/theme_option/parts/demo_data.php:618
+msgid ""
+"You can enable or disable any piece of this field. Top, Right, Bottom, Left, "
+"or Units."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:545
+#: framework/functions/theme_option/parts/demo_data.php:558
+msgid ""
+"You can enable or disable any piece of this field. Width, Height, or Units."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1922
+msgid "You can literally translate the values via key."
+msgstr ""
+
+#: framework/functions/theme_option/parts/demo_data.php:1706
+#: framework/functions/theme_option/parts/demo_data.php:1719
+#: framework/functions/theme_option/parts/demo_data.php:1732
+msgid "You decide."
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:358
+msgid "You have completed learning about importing sample data"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:72
+msgid "You have not set up this type of address yet."
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:119
+#, php-format
+msgid ""
+"You have saved the Theme Options recently. If you have changed the color or "
+"font settings, please compile the CSS by clicking the following link: %1$s | "
+"%2$s"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:363
+msgid "You have skip learning about importing sample data"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:431
+msgid "You have skip learning about register any recommended widgets"
+msgstr ""
+
+#: framework/functions/theme_guide/manager.php:473
+msgid "You have skip learning about set a static page as homepage"
+msgstr ""
+
+#: woocommerce/single-product/up-sells.php:26
+msgid "YOU MAY ALSO LIKE..."
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:157
+msgid "You must agree to Terms of Service!"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:263
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:84
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a review."
+msgstr ""
+
+#: woocommerce/checkout/form-checkout.php:29
+msgid "You must be logged in to checkout."
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:241
+msgid "Your Comment"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:136
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:98
+msgid "Your comment..."
+msgstr ""
+
+#: woocommerce/wishlist-view.php:297
+#: framework/functions/wd_comment_form.php:239
+msgid "Your email"
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:76
+msgid "Your Email *"
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:256
+msgid "Your email..."
+msgstr ""
+
+#: woocommerce/single-product-reviews.php:74
+msgid "Your Name"
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:238
+msgid "Your name"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:206
+msgid "Your new password"
+msgstr ""
+
+#: framework/functions/wd_ajax_function.php:209
+msgid "Your new password is: "
+msgstr ""
+
+#: framework/functions/woocommerce/parts/myaccount.php:254
+msgid "Your username..."
+msgstr ""
+
+#: framework/functions/wd_comment_form.php:240
+msgid "Your website"
+msgstr ""
+
+#: framework/functions/style_manager/sass/manager.php:405
+msgid "Z-Index"
+msgstr ""

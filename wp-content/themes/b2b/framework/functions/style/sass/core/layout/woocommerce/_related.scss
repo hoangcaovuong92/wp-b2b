@@ -1,0 +1,37 @@
+.wd-related-product-wrap{
+    overflow:hidden;
+    .wd-shop-button--add-to-cart{
+        .button.loading{
+            &:before{
+                left:49%;
+            }
+        }
+    }
+}
+
+.wd-related-product-wrap{	
+    position:relative;
+    padding: 5px 0px;
+    font-weight: fontWeight("semibold");
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+    &:after,&:before {
+        border-top: dotted 1px $border-color-dark;
+        content: '';
+        display: table-cell;
+        position: relative;
+        top: 10px;
+        width: 45%;
+        clear: both;
+    }
+    &:before { right: 1.5%; }
+    &:after { left: 1.5%; }
+    .wd-related-product-wrap{
+        .owl-stage-outer{
+            @include breakpoint('max', 'tablet'){
+                overflow: inherit;
+            }
+        }
+    }
+}

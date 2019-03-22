@@ -1,0 +1,27 @@
+.woocommerce .wd-content-single-product .product, .wd-quickshop-detail-page{
+	.woocommerce-message {
+		border-top-color: $border-color-dark;
+		&:before {
+			content: '\e015';
+			color: #282828;
+		}
+		a.button.wc-forward{
+			padding:10px;
+			@include border-radius(0);
+		}
+	}
+
+	.wd-full-width-single-product{
+		float:left;
+		width:100%;
+		padding:0 50px;
+	}
+
+	.woocommerce-toggle { 
+		&:after,&:before {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	}
+}

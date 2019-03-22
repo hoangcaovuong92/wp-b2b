@@ -1,0 +1,298 @@
+.wd-megamenu-layout-menu-vertical{
+	&.wd-megamenu-hover-style-1{
+		ul{
+			li.wd-menu-item-depth-0{
+				&.wd-submenu-enable-megamenu{
+					ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+						visibility: hidden;
+						@include opacity(0);
+						@include transition;
+					}
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+							visibility: visible;
+							opacity: 1;
+						}
+					}
+				}
+				&.wd-submenu-disabled-megamenu{
+					perspective: 100px;
+					z-index: 10;
+					@include transition;
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+							@include transform(rotateX(0deg));
+							@include opacity(1);
+							visibility: visible;
+						}
+					}
+					ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+						@include transform(rotateX(-60deg));
+						@include transform-origin(0% 0%);
+						@include opacity(0);
+						visibility: hidden;
+						@include transition;
+						li.wd-menu-item-depth-1{
+							ul{
+								@include transform(rotateY(60deg));
+								@include transform-origin(0% 100%);
+								@include opacity(0);
+								visibility: hidden;
+								@include transition;
+							}
+						}
+						li{
+							@include transition;
+							perspective: 100px;
+							z-index: 10;
+							&:hover{
+								>ul{
+									@include transform(rotateY(0deg));
+									visibility: visible;
+									@include opacity(1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-2{
+		ul{
+			li.wd-menu-item-depth-0{
+				&.wd-submenu-enable-megamenu{
+					ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+						visibility: hidden;
+						@include transform(rotateX(-60deg));
+						@include transform-origin(0% 0%);
+						@include opacity(0);
+						@include transition;
+					}
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+							visibility: visible;
+							@include transform(rotateX(0deg));
+							@include opacity(1);
+						}
+					}
+				}
+				&.wd-submenu-disabled-megamenu{
+					z-index: 10;
+					@include transition;
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+							visibility: visible;
+							height: 100%;
+							@include transform(rotateX(0deg));
+							@include opacity(1);
+						}
+					}
+					ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+						height: 0;
+						visibility: hidden;
+						@include transform(rotateX(-60deg));
+						@include transform-origin(0% 0%);
+						@include opacity(0);
+						@include transition;
+						li.wd-menu-item-depth-1{
+							ul{
+								visibility: hidden;
+								@include transform(rotateY(60deg));
+								@include transform-origin(0% 100%);
+								@include opacity(0);
+								@include transition;
+							}
+						}
+						li{
+							position:relative;
+							z-index: 10;
+							@include transition;
+							&:hover{
+								>ul{
+									visibility: visible;
+									@include transform(rotateY(0deg));
+									@include opacity(1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-3{
+		ul{
+			li.wd-menu-item-depth-0{
+				&.wd-submenu-enable-megamenu{
+					ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+						visibility: hidden;
+						@include transform(translateY(30px));
+						@include opacity(0);
+						@include transition;
+					}
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+							visibility: visible;
+							@include transform(translateY(0px));
+							@include opacity(1);
+						}
+					}
+				}
+				&.wd-submenu-disabled-megamenu{
+					z-index: 10;
+					@include transition;
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+							visibility: visible;
+							@include transform(translateY(0px));
+							@include opacity(1);
+						}
+					}
+					ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+						visibility: hidden;
+						@include transform(translateY(30px));
+						@include opacity(0);
+						@include transition;
+						li.wd-menu-item-depth-1{
+							ul{
+								visibility: hidden;
+								width: 0;
+								@include transform(rotateY(60deg));
+								@include transform-origin(100% 0%);
+								@include opacity(0);
+								@include transition;
+							}
+						}
+						li{
+							position:relative;
+							z-index: 10;
+							@include transition;
+							&:hover{
+								>ul{
+									visibility: visible;
+									width: 100%;
+									@include transform(rotateY(0deg));
+									@include opacity(1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-4{
+		ul{
+			li.wd-menu-item-depth-0{
+				&.wd-submenu-enable-megamenu{
+					ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+						@include opacity(0);
+						visibility: hidden;
+						@include transition;
+					}
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+							@include opacity(1);
+							visibility: visible;
+						}
+					}
+				}
+				&.wd-submenu-disabled-megamenu{
+					z-index: 10;
+					@include transition;
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+							@include opacity(1);
+							visibility: visible;
+						}
+					}
+					ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+						@include opacity(0);
+						visibility: hidden;
+						@include transition;
+						li.wd-menu-item-depth-1{
+							ul{
+								@include opacity(0);
+								visibility: hidden;
+								@include transition;
+							}
+						}
+						li{
+							position:relative;
+							@include transition;
+							z-index: 10;
+							&:hover{
+								>ul{
+									visibility: visible;
+									@include opacity(1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-5{
+		ul{
+			li.wd-menu-item-depth-0{
+				&.wd-submenu-enable-megamenu{
+					ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+						@include transform(rotateX(-60deg) scale(0));
+						@include transform-origin(0% 0%);
+						@include opacity(0);
+						visibility: hidden;
+						@include transition;
+					}
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-enable-megamenu{
+							@include transform(rotateX(0deg) scale(1));
+							@include opacity(1);
+							visibility: visible;
+						}
+					}
+				}
+				&.wd-submenu-disabled-megamenu{
+					z-index: 10;
+					@include transition;
+					&:hover{
+						ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+							@include transform(rotateX(0deg) scale(1));
+							@include opacity(1);
+							visibility: visible;
+						}
+					}
+					ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+						@include transform(rotateX(-60deg) scale(0));
+						@include transform-origin(0% 0%);
+						@include opacity(0);
+						visibility: hidden;
+						@include transition;
+						li.wd-menu-item-depth-1{
+							ul{
+								@include transform(rotateY(60deg) scale(0));
+								@include transform-origin(0% 0%);
+								@include opacity(0);
+								visibility: hidden;
+								@include transition;
+							}
+						}
+						li{
+							position:relative;
+							@include transition;
+							z-index: 10;
+							&:hover{
+								>ul{
+									@include transform(rotateY(0deg) scale(1));
+									visibility: visible;
+									@include opacity(1);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

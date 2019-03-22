@@ -1,0 +1,60 @@
+//Screen Width
+//Function width($key)
+$widthMap: (
+    "12-12": 100%,
+    "11-12": 91.66667%,
+    "10-12": 83.33334%,
+    "9-12": 75%,
+    "8-12": 66.66667%,
+    "7-12": 58.33334%,
+    "6-12": 50%,
+    "5-12": 41.66667%,
+    "4-12": 33.33334%,
+    "3-12": 25%,
+    "2-12": 16.66667%,
+    "1-12": 8.33334%,
+);
+
+//Function zIndex($key)
+$zIndex: (
+    "lowest": 5,
+    "lower": 10,
+    "low": 20,
+    "high": 50,
+    "higher": 100,
+    "highest": 500,
+);
+
+//Function fontWeight($key)
+$fontWeight: (
+    "thin": 300,
+    "normal": 400,
+    "medium": 500,
+    "semibold": 600,
+    "bold": 700,
+    "black": 900,
+);
+
+//Function lineHeight($key)
+$lineHeight: (
+    "base": 1.6,
+    "hero": 50px,
+    "largest": 37px,
+    "larger": 32px,
+    "large": 29px,
+    "small": 24px,
+    "smaller": 19px,
+    "smallest": 15px,
+    "tiny": 18px,
+);
+
+//Function letterSpacing($key)
+$letterSpacing: (
+    "base": 0,
+    "largest": 0.25px,
+    "larger": 0.25px,
+    "large": 0.25px,
+    "small": 0.25px,
+    "smaller": 0.25px,
+    "smallest": 0.25px,
+);

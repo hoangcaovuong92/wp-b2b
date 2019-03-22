@@ -1,0 +1,39 @@
+header .wd-header-mobile{
+	background:#fff;
+	z-index: 999;
+	width: 100%;
+	border-bottom: solid 1px $border-color-light;
+	.wd-header-bottom{
+		position: relative;
+		@include flexbox;
+		@include align-items(center);
+		height: 50px;
+		.wd-header-mobile-content-left{
+			width: auto;
+		}
+		.wd-header-mobile-content-center{
+			height: 100%;
+			@include flex-grow(1);
+			.wd-logo{
+				z-index: 1;
+				text-align: center;
+				height: 100%;
+				@include flexbox; 
+				@include justify-content(center);
+				@include align-items(center);
+				img{
+					max-width: 50%;
+				}
+			}
+		}
+		.wd-header-mobile-content-right{
+			width: auto;
+			@include flexbox;
+			@include justify-content(flex-end);
+			@include align-items(center);
+			.wd-search{
+				width: 10%;
+			}
+		}
+	}
+}

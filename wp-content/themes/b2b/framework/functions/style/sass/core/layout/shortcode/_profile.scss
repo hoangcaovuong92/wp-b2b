@@ -1,0 +1,58 @@
+.wd-shortcode-profile {
+    text-align: center;
+    .wpb_content_element{
+        margin-bottom: 0;
+    }
+    .wd-banner-image{
+        margin-bottom: 0;
+        + .wd-profile-content{
+            margin-top: 40px;
+        }
+    }
+    .wd-profile-meta{
+        margin-top: 40px;
+        padding-bottom: 40px;
+        position: relative;
+        &:after{
+            content: '';
+            border-bottom: 1px solid $border-color-light;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            @include transform(translateX(-50%));
+            width: 100px;
+        }
+        .wd-profile-meta-item{
+            line-height: 1;
+            + .wd-profile-meta-item{
+                margin-top: 20px;
+            }
+        }
+        .wd-profile-meta--job{
+            font-size: fontSize("tiny");
+            color: $color-textLink--hover;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .wd-profile-meta--title{
+            font-size: fontSize("larger");
+            font-family: $blog-title-font;
+            font-style: italic;
+        }
+        .wd-profile-meta--desc{
+            font-size: fontSize("tiny");
+            color: $color-text-secondary;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        + .wd-profile-content{
+            margin-top: 40px;
+        }
+    }
+
+    .wd-profile-content-item{
+        + .wd-profile-content-item{
+            margin-top: 45px;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+#wd-comming-soon-page .wd-comming-soon-wrap{
+	position:fixed !important;
+	top:0;
+	left:0 !important;
+	width:100%;
+	height:100%;
+	min-height:100%;
+	.subscribe_widget {
+		position:fixed;
+		top:50%;
+		left: 50%;
+	    @include transform(translate(-50%, -50%));
+	    @include breakpoint('max', 'desktop'){
+			top:35%;
+		}
+		.wd-subscribe-header h2{
+			color: #fff;
+			text-align: center;
+			font-size: 30px;
+			font-style: italic;
+		}
+		.subscribe_intro_text{
+			color: #fff;
+			text-align: center;
+			font-size: 60px;
+			font-weight: fontWeight("semibold");
+		    margin-top: -15px;
+    		margin-bottom: 10px;
+    		@include breakpoint('max', 'desktop'){
+    			font-size: 30px;
+    		}
+		}
+		.subscribe_form{
+			position:relative;
+			button{
+				position:absolute;
+				top: 0;
+				right: 0;
+				border:solid 1px $border-color-light;
+				color: #fff;
+				background:none;
+			    height: 35px;
+    			line-height: 8px;
+				&:hover{
+					border:solid 1px $border-color-dark;
+					background: #212121;
+				}
+			}
+		}
+		.subscribe-email{
+			border-bottom:solid 1px $border-color-light;
+			padding-bottom:15px;
+			input{
+				border:none;
+				padding-left:0;
+				padding-right:0px;
+				color: #fff;
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: #fff;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+				  color: #fff;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+				  color: #fff;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+				  color: #fff;
+				}
+				@include breakpoint('min', 'tablet'){
+					padding-right:140px;
+				}
+			}
+		}
+	}
+	.header-main {
+		position: fixed;
+	    bottom:20px;
+	    left: 60px;
+	    @include breakpoint('max', 'desktop'){
+			bottom:10%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+	   		-moz-transform: translateX(-50%);
+	    	transform: translateX(-50%);
+		}
+		@include breakpoint('max', 'tablet'){
+			bottom:20%;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+	   		-moz-transform: translateX(-50%);
+	    	transform: translateX(-50%);
+		}
+	}
+}
+
+@include breakpoint('min', 'large') {
+    .coming-soon .content-coming > div > .wpb_wrapper {
+        width: 60%;
+    }
+}
+
+@include breakpoint('max', 'desktop') {
+    .commingsoon .subscribe_widget .subscribe_form button {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 50%;
+        margin-top: 10px;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+	}
+}
+
+@include breakpoint('max', 'tablet') {
+    .coming-soon {
+        .wpb_text_column p {
+            font-size: 250%;
+            line-height: 40px;
+            &:first-child {
+                font-size: 200%;
+            }
+        }
+        .ts-countdown-parent.style-1.ts-countdown {
+            .col {
+                margin: 0 5px;
+                .ce-days, .ce-hours, .ce-minutes, .ce-seconds {
+                    min-width: 60px;
+                    span {
+                        font-size: 200%;
+                    }
+                }
+                .ce-days-label, .ce-hours-label, .ce-minutes-label, .ce-seconds-label {
+                    font-size: 80%;
+                }
+            }
+        }
+        .content-coming > div {
+            > .wpb_wrapper {
+                &:before {
+                    top: 60px;
+                    bottom: 178px;
+                }
+            }
+        }
+	}
+}

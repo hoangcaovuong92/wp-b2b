@@ -1,0 +1,191 @@
+.wd-shortcode-feedburner-subscription{
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include align-items(center);
+	padding-bottom: 50px;
+    margin-bottom: 45px;
+	.wd-subscribe-header{
+		width: 15%;
+		padding-right: 30px;
+		h2{
+			color: #282828;
+			font-weight: fontWeight("semibold");
+			margin: 0;
+			text-transform: uppercase;
+		}
+	}
+	.subscribe_intro_text{
+		color:#282828;
+		width: 35%;
+	}
+	.subscribe_form{
+		position:relative;
+		width: 50%;
+    	text-align: right;
+		form {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			.subscribe-email{
+				margin:0;
+				width:100%;
+				border:none;
+				input[type='text']{
+					border: 1px solid $border-color-dark;
+					height: 40px;
+					padding: 0 15px;
+					padding-right: 160px;
+					background: transparent;
+					border: none;
+					outline: none;
+					color: $color-textBase;
+					@include box-shadow(none);
+				}
+				@include breakpoint('max', 'tablet') {
+					input[type='text']{
+						padding-left: 10px;
+					}
+				}
+				input::placeholder{
+					color: #8b8b8b;
+					text-transform: capitalize;}
+			}				
+		}		
+		.button{
+			background: #000;
+		    border: 0;
+		    height: auto;
+		    line-height: normal;
+		    width: 150px;
+		    position: absolute;
+		    right: 0;
+		    top: 0;
+		    bottom: 0;
+		    font-weight: fontWeight("semibold");
+		    padding: 0;
+		    text-transform: uppercase;
+		    @include transition(all .2s linear);
+		    @include text_color_hover(#fff, #fff);
+			@include background_color_hover(#000, #999);
+		}
+	}
+	@include breakpoint('max', 'tablet'){
+		.wd-subscribe-header{
+			width:100%;
+			margin:0 0 15px;
+			padding-right: 0px;
+		}
+		.subscribe_intro_text{
+			margin-bottom: 15px;
+			width: 100%;
+		}
+		.subscribe_form{
+			width: 100%;
+			form .subscribe-email input[type='text']{
+				border-color: $border-color-white;
+				margin-bottom: 15px;
+			}
+			.button{
+				position: static;
+			    width: 100%;
+			    padding: 1rem 1rem;
+			}
+		}
+	}
+	@include breakpoint_between('tablet', 'large'){
+		text-align: center;
+		.wd-subscribe-header{
+			width:100%;
+			margin:0 0 10px;
+		}
+		.subscribe_intro_text{
+			margin-bottom: 10px;
+			width: 100%;
+		}
+		.subscribe_form{
+			width: 100%;
+			form .subscribe-email{
+				input[type='text']{
+					border-color: $border-color-white;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+.wd-shortcode-pages-list{
+    padding-left: 0;
+	padding-right: 0;
+	ul{
+		list-style: none;
+	}
+	&.horizontal{
+		list-style-type: none;
+	    display: inline-block;
+	    margin-bottom: 0;
+		li{
+		    display: inline-block;
+		    padding: 0 15px;
+		    border-right: 1px solid rgba($border-color-dark, 0.6);
+			&:last-child{
+				border-right: none;
+			
+				a:after{
+					display: none;
+				}
+			}
+		}
+	}
+	&.vertical{
+		list-style-type: none;
+	    display: block;
+	    margin-bottom: 0;
+		li{
+		    display: block;
+		    padding: 0;
+		}
+		@include breakpoint('max', 'tablet'){
+			display: inline-block;
+		}
+	}
+}
+
+.wd-icon-widget-payment{
+	@include flexbox;
+	width: 100%;
+    margin-top: 20px;
+    filter: brightness(180%);
+   
+	li{
+
+		padding-right: 8px;
+		cursor: pointer;
+		i{
+			color: #505050;
+			@include banner_style(zoom);
+		}
+		&:hover{
+			i{
+				color: #000;
+			}
+		}
+	}
+	@include breakpoint_between('tablet', 'large'){
+		@include flex-wrap(wrap);
+		li{
+			width: 33%;
+		}
+	}
+	@include breakpoint('max', 'tablet'){
+		justify-content: center;
+	}
+}
+
+@include breakpoint('max', 'tablet'){
+	.vc_column_container .wpb_content_element{
+		margin-bottom: 0;
+	}
+}

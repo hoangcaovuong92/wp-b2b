@@ -1,0 +1,165 @@
+.wd-thumbnail-portfolio{
+    a.thumbnail{
+        padding:0;
+        border:none;
+		@include border-radius(0);
+        img{
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+.wd-content-portfolio{
+    .wd-share_list div{
+        margin-top: 10px;
+    }
+    .wd-blog-title{
+        .wd-title-blog{
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-top: 0;
+            font-weight: fontWeight("semibold");
+        }
+    }
+}
+.wd-content-portfolio .wd-info-portfolio > div + div {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid $border-color-light;
+}
+.wd-content-portfolio .wd-info-portfolio > div span:first-child {
+    color: #3f3f3f;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 30%;
+}
+.wd-content-portfolio .wd-info-portfolio > div.wd-project-portfolio {
+    padding: 0;
+    border: none;
+    margin-top: 50px;
+    a.wd-project-por{
+        @include button_style(1);
+        padding:10px;
+        border:solid 1px $border-color-dark !important;
+        font-weight: fontWeight("semibold");
+    }
+}
+
+.grid-item.wd-wrap-content-masonry{
+	.wd-wrap-content-inner{
+		position: relative;
+		overflow: hidden;
+		.wd-thumbnail-post{
+			position: relative;
+		    overflow: hidden;
+		    text-align: center;
+		    cursor: pointer;
+		    .thumbnail{
+		    	border:none;
+		    	@include border-radius(0px);
+		    	padding:0;
+		    	background: linear-gradient(-45deg, #000 0, #fff 100%);
+		    	>img {
+	    		    margin: -10px 0 0 -10px;
+				    max-width: none;
+				    width: calc(100% + 10px);
+				    opacity: 0.9;
+				    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				    transition: opacity 0.35s, -webkit-transform 0.35s;
+				    transition: opacity 0.35s, transform 0.35s;
+				    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+				    -webkit-transform: translate3d(10px, 0, 0);
+				    transform: translate3d(10px, 0, 0);
+				    -webkit-backface-visibility: hidden;
+				    backface-visibility: hidden;
+				}
+		    }
+		}
+		.wd-content-portfolio{ 
+		    position: absolute;
+		    bottom: 40px;
+		    right: 0;
+		    -webkit-backface-visibility: hidden;
+		    backface-visibility: hidden;
+		    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+		    transition: opacity 0.35s, -webkit-transform 0.35s;
+		    transition: opacity 0.35s, transform 0.35s;
+		    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+		    opacity: 0;
+		    -webkit-transform: translate3d(20px, 20px, 0);
+		    transform: translate3d(20px, 20px, 0);
+		     &:before{
+				content: '';
+			    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+			    transition: opacity 0.35s, -webkit-transform 0.35s;
+			    transition: opacity 0.35s, transform 0.35s;
+			    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+			    position: absolute;
+			    right: -100px;
+			    bottom: -100px;
+			    width: 250px;
+			    height: 250px;
+			    border: 2px solid $border-color-light;
+				@include box-shadow(0, 0, 900px, rgba($border-color-dark, 0.2));
+			    @include opacity(0);
+		    	@include border-radius(50%);
+			    @include transform(scale3d(0.5, 0.5, 1));
+				@include transform-origin(50% 50%);
+		    }
+		    .wd-title-portfolio{
+		    	position: relative;
+		    	text-align: center;
+		    	.wd-title-blog{
+					font-size: 14px;
+					margin-bottom: 0;
+					a{
+						color: #fff;
+					    font-size: 14px;
+					    text-transform: uppercase;
+					}
+				}
+		    }
+		    .wd-category-portfolio{
+		    	text-align: center;
+			    margin: 10px 0;
+			    position: relative;
+	    		z-index: 99;
+			    a{
+					color: #fff;
+				    font-size: 13px;
+				    
+				}
+	    	}
+		    .hover-default.thumb-image-hover{
+				position: relative;
+	    		z-index: 99;
+				.icons{
+					a{
+						margin-right: 10px;
+						background: none;
+						color: #fff;
+						&:hover{
+							background:none;
+						}
+					}
+				}
+			}
+		}
+		&:hover{
+			.wd-content-portfolio{
+			    @include opacity(1); 
+	   			@include transform(translate3d(0, 0, 0));
+			}
+	    	.wd-content-portfolio:before{
+	   			@include opacity(1); 
+	   			@include transform(scale3d(1, 1, 1));
+	    	}
+	    	.thumbnail{
+		    	>img {
+	   				@include opacity(0.6); 
+	    			@include transform(translate3d(0, 0, 0));
+				}
+		    }
+	    }
+	}
+}

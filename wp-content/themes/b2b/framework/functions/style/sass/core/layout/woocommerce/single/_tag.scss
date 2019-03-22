@@ -1,0 +1,22 @@
+.woocommerce .wd-content-single-product .product, .wd-quickshop-detail-page{
+	.tagcloud{
+		margin-bottom:10px;
+		span{
+			font-weight: fontWeight("semibold");
+			display: inline-block;
+			vertical-align:middle;
+			text-transform: uppercase;
+			&.tag_heading {
+				padding-right: 5px;
+			}
+		}
+		a{
+			font-size:13px !important; 
+			display: inline-block;
+			vertical-align:middle;
+			&:hover{
+				font-weight: fontWeight("semibold");
+			}
+		}
+	}
+}

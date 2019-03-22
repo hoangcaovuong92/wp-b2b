@@ -1,0 +1,5 @@
+@include breakpoint('min', 'desktop'){
+    .wd-sidebar .wd-panel-mobile-wrap{
+        display: block;
+    }
+}

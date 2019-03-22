@@ -1,0 +1,36 @@
+.wd-default-blog-page{
+	.wd-pagination {
+	    margin-bottom: 0px;
+	}
+	.wd-blog-wrapper.grid {
+		.wd-blog-content-wrap{
+			text-align: left;
+			padding: 0;
+			.wd-blog-meta-wrap .sticky-post {
+			    display: block;
+			    color: #40353d;
+			    font-weight: fontWeight("bold");
+			    margin-bottom: 5px;
+			    padding: 4px 0;
+			    text-transform: uppercase;
+			    font-size: 14px;
+			    position: absolute;
+			    top: 10px;
+			    left: 110px;
+			}
+			.wd-blog-meta-wrap{
+				@include justify-content(flex-start);
+			}
+			.wd-blog-desc{
+				&:before{
+					left: 0;
+					transform: none;
+				}
+			}
+		}
+		.wd-single-blog-without-thumbnail, .wd-post-without-thumbnail {
+		    margin-top: 10px;
+		    width: 100%;
+		}
+	}
+}

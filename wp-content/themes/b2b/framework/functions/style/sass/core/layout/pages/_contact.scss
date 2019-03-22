@@ -1,0 +1,75 @@
+/*================ CONTACT ================*/
+.contact-detail{
+    h5{margin-bottom:5px;}
+    p{margin-bottom:0;}
+}
+.wpcf7{
+    .wpcf7-form{
+        text-transform:uppercase;
+        color: $color-textBase;
+        .wpcf7-form-control{
+            width:100%;
+            margin-top: 3px;
+            margin-bottom: 13px;
+            @include border-radius(0);
+            &.wpcf7-submit{
+                font-size: 13px;
+                width:auto;
+                float: right;
+				border:solid 1px $border-color-dark;
+				@include text_color_hover(#fff, #282828);
+				@include background_color_hover(#282828, #fff);
+            }
+        }
+        p.col-sm-24{
+            .wpcf7-form-control.wpcf7-submit{width:100%;}
+        }
+    }
+}
+
+.contact-page{
+	span{
+		margin-bottom: 15px;
+		input{
+			width: 100%;
+		    height: 50px;
+		    margin-top: 15px;
+		    margin-bottom: 15px;
+			@include border-radius(0);
+		}
+	}
+	.wpcf7 .wpcf7-form .wpcf7-form-control.wpcf7-submit {
+	    font-size: 13px;
+	    width: auto;
+	    float: left;
+	    padding:10px 20px;
+	    @include button_style(1);
+	}
+	.wpb_wrapper .wd-title.wd-title-section-style-1 .wd-title-description.text-center {
+	    text-align: left;
+	    margin:25px 0;
+	}
+	.feature_information{
+		.feature_excerpt{
+			margin-top: 15px;
+		}
+	}
+	div.wpcf7-validation-errors {
+	    border: 1px solid $border-color-alert;
+	    margin: 30px 0;
+	}
+	div.wpcf7 .ajax-loader {
+	    margin-top: 10px;
+	}
+}
+
+@include breakpoint('max', 'desktop') {
+    .contact-page span {
+        padding: 0;
+	}
+	.page {
+        .contact-page {
+            margin: 0;
+        }
+	}
+}

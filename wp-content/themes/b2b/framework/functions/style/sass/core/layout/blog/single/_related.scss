@@ -1,0 +1,19 @@
+.wd-related-post-wrap{
+	position:relative;
+	overflow: hidden;
+	clear: both;
+	.wd-content-post-format--quote{
+		.wd-content-quote-info{
+			margin-top: 20px;
+			p{
+				&:before{
+					font-size: 48px;
+				}
+				font-size: 18px;
+			}
+		}
+	}
+	.wd-title{
+		text-align: center;
+	}
+}

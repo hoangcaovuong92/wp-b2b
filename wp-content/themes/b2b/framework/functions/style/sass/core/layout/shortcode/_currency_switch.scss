@@ -1,0 +1,36 @@
+.woocs_selector {
+    padding: 0;
+}
+
+.widget-woocommerce-currency-switcher {
+    position: relative;
+    overflow: hidden;
+    width: 110px;
+    padding-top: 10px;
+    h2:after {
+        display: inline-block;
+        content: "";
+        font-size: 14px;
+        line-height: inherit;
+        font-family: "FontAwesome";
+        padding-left: 10px;
+    }
+    > form {
+        position: absolute;
+        right: 0;
+        left: auto;
+        z-index: 10000;
+        @include opacity(0);
+        @include transition(all 2s ease-out);
+        @include transform(rotate(0deg) scale(1) skew(1deg) translate(0px));
+    }
+    &:hover {
+        overflow: visible;
+        >form {
+            z-index: 10000;
+            margin-top: 0;
+            @include opacity(1);
+            @include transform(rotate(0deg) scale(1) skew(1deg) translate(0px));
+        }
+    }
+}

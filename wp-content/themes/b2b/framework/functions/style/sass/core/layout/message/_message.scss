@@ -1,0 +1,32 @@
+.wd-message{
+	padding: 10px;
+	p{
+		color: #fff;
+		font-size: 15px;
+		display: inline-block;
+		margin: 0;
+		&:before{
+			content: "\f348";
+			display: inline-block;
+			font: 400 18px/1 dashicons;
+			speak: none;
+			margin: 3px 8px 0 -2px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			vertical-align: top;
+		}
+	}
+	.wd-message-closebtn{
+		float: right;
+		line-height: 25px;
+		color: #fff;
+		cursor: pointer;
+		transition: transform .25s ease-in-out;
+	}
+}
+.wd-message-warning{
+	background-color: #d54d21;
+}
+.wd-message-success{
+	background-color: #46b450;
+}

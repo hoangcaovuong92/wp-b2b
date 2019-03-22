@@ -1,0 +1,104 @@
+/* Variables setting */
+@import "settings/setting";
+@import "settings/fixed";
+
+/* Library */
+@import 'library/mixins'; 
+@import 'library/functions';
+@import 'library/flex'; 
+@import 'library/css3';
+@import 'library/placeholder';
+@import 'library/keyframes';
+
+/* Base */
+@import "layout/base/components";
+
+/* Classes */
+@import 'layout/classes/components';
+
+/* Container */
+@import 'layout/container/components';
+
+/* Screen */
+@import 'layout/screen/components';
+
+/* Banners */
+@import 'layout/banner/components';
+
+/* Title */
+@import 'layout/title/components';
+
+/* Comment */
+@import 'layout/comment/components';
+
+/* Nav User */
+@import 'layout/navUser/components';
+
+/* Popup */
+@import 'layout/popup/components';
+
+/* Panel */
+@import 'layout/panel/components';
+
+/* Dropdown */
+@import 'layout/dropdown/components';
+
+/* Scrollbar */
+@import 'layout/scrollbar/components';
+
+/* Toggle button */
+@import 'layout/toggle/components';
+
+/* Message */
+@import 'layout/message/components';
+
+/* Columns */
+@import 'layout/columns/components';
+
+/* Menu */
+@import 'layout/menu/components';
+
+/* Search */
+@import 'layout/search/components';
+
+/* Header */
+@import 'layout/header/components';
+
+/* Breadcrumb */
+@import 'layout/breadcrumbs/components';
+
+/* Footer */
+@import 'layout/footer/components';
+
+/* Homepage */
+@import 'layout/home/components';
+
+/* Slider */
+@import 'layout/slider/components';
+
+/* Woocommerce */
+@import "layout/woocommerce/components";
+
+/* Blog */
+@import "layout/blog/components";
+
+/* Shortcode */
+@import "layout/shortcode/components";
+
+/* Sidebar/Widget */
+@import "layout/sidebar/components";
+
+/* Pages */
+@import "layout/pages/components";
+
+/* Pagination */
+@import "layout/pagination/components";
+
+/* Accessibility */
+@import "layout/accessibility/components";
+
+/* RTL */
+@import "layout/rtl";
+
+/* WD Layout class */
+@import "layout/special_class";

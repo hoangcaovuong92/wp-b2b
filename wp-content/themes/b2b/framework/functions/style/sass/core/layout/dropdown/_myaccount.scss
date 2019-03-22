@@ -1,0 +1,73 @@
+.wd-dropdown--myaccount{
+    .wd-dropdown-body{
+        form.login{
+            border:none;
+            margin:0;
+            padding:0;
+        }
+    }
+    &.wd-user-logged{
+        min-width: 180px;
+    }
+    p.login-password, p.login-username{
+        input{
+            margin-bottom: 10px;
+        }
+    }
+    p.login-submit{
+        margin-top: 0;
+        input[type="submit"]{
+            border:solid 1px $border-color-dark;
+            width: 100%;
+            height: 35px;
+            line-height: 10px;
+            font-weight: fontWeight("semibold");
+            background:#212121;
+            @include border-radius(0);
+        }
+        input[type="submit"]:hover {
+            border:solid 1px $border-color-dark;
+            background:none;
+        }
+    }
+    p{
+        margin-top: 0px;
+    }
+    label{
+        min-width: 100px;
+    }
+    .wd-dropdown-footer{
+        text-align: center;
+        a{
+            text-decoration: underline !important;
+        }
+    }
+    .wd-my-account-list{
+        margin-bottom:0;
+        padding:0;
+        li{
+            list-style: none;
+            line-height: 25px;
+            a{
+                color: #282828;
+                &:hover{
+                    color: #a5a5a5;
+                }
+            }
+        }
+    }
+    .wd-login-alert{
+        label.error.wd-login-error{
+            font-weight: fontWeight("normal");
+            font-style: italic;
+            color: #FF0000;
+        }
+    }
+    .wd-login-form-image-loading{
+        width:50px;
+        margin: 0 auto;
+        img{
+            margin: 0 auto;
+        }
+    }
+}

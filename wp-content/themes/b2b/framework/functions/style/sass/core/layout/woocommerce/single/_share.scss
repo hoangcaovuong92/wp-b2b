@@ -1,0 +1,26 @@
+.woocommerce .wd-content-single-product .product, .wd-quickshop-detail-page{
+	.wd-product-share{
+		width:100%;
+		float:left;
+		.wd-social-share{
+			margin-bottom:10px;
+			clear:both;
+			float:right;
+			>span{
+				font-weight: fontWeight("semibold");
+			    display: inline-block;
+			    vertical-align: middle;
+			    text-transform: uppercase;
+			    margin-right: 20px;
+			}
+			>div{
+				float: right;
+			}
+			.at-share-tbx-element {
+				.at-icon-wrapper {
+					@include border-radius(0);
+				}
+			} 
+		}
+	}
+}

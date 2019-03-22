@@ -1,0 +1,219 @@
+.wd-blog-full-width {
+	.wd-content-single {
+		width: 100%;
+		float: none;
+		.wd-thumbnail-post {
+			img {
+				&.size-full {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.wd-single-post-wrap{
+	.wd-blog-left-sidebar{
+		margin-top: -10px;
+	}
+	.wd-content-single{	
+		width:100%;
+		.wd-single-blog-without-thumbnail{
+			width:100%;
+		}
+		.wd-thumbnail-post{
+			margin-bottom: 40px;
+			.thumbnail{
+				padding: 0;
+				border: none;
+				margin-bottom: 60px;
+				@include border-radius(0);
+				@include box-shadow(none);
+			}
+		}
+		.wd-infomation-author{
+			@include flexbox; 
+			@include breakpoint('max', 'tablet'){
+				width:100%;
+				margin:0 0 10px;
+			}	
+			.wd-author-avatar{
+				min-width: 120px;
+				margin-right: 20px;
+			}
+			.wd-author-info{
+				display:block;
+				a{
+					@include link_style(primary);
+					text-transform:uppercase;
+					font-weight: fontWeight("semibold");
+				}
+			}
+		}
+
+		.wd-blog-meta--category{
+			margin-bottom: 20px;
+		}
+	
+		.wd-title-blog-wrap {
+			margin-bottom: 20px;
+		}
+
+		// .wd-blog-meta-wrap{
+		// 	margin-bottom: 30px;
+		// }
+
+		.wd-social-share{
+			margin-bottom: 50px;
+		}
+		
+		.wd-blog-single-top{
+			border-bottom: 1px solid $border-color-light;
+			margin-bottom: 55px;
+		}
+
+		.entry-content{
+			margin-bottom: 60px;
+		}
+
+		.wd-blog-meta--tag{
+			margin-bottom: 60px;
+		}
+
+		.wd-infomation-author{
+			margin-bottom: 60px;
+		}
+
+		.wd-next-previous-post{
+			margin-bottom: 80px;
+		}
+
+		.wd-blog-content-wrap{
+			@include breakpoint('max', 'tablet'){
+				clear:both;
+			}
+			.wd-blog-title{
+				margin-bottom: 10px;
+				.wd-title-blog{
+					margin:0;
+					font-size: 20px;
+					margin: 25px 0 15px;
+					a{
+						text-transform:none;
+						text-transform: uppercase;
+						font-size: 20px;
+						font-weight: fontWeight("semibold");
+					}
+				}
+				@include breakpoint('max', 'tablet'){
+					font-size: 15px !important;
+					h2.wd-title-blog {
+						line-height: 1em;
+					}
+				}
+			}
+			.wd-blog-meta-wrap{
+				.sticky-post {
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+			.wd-blog-desc{
+				.entry-content{
+					blockquote{
+						margin-top: 20px;
+						p{
+							// &:before{
+							// 	@include font_awesome(\f10d, 65px);
+							//     font-weight: fontWeight("normal");
+							//     line-height: .8;
+							//     padding-right: 25px;
+							// }
+							cite{
+								a{
+									font-size: 18px;
+									text-align: center;
+									text-transform: uppercase;
+									font-style: italic;
+								}
+							}
+						}
+					}
+				}		
+				.wd-blog-meta--tag{
+					display: inline-block;
+					vertical-align: middle;
+					&:before{
+						@include font_awesome(\f02c, inherit);
+						text-rendering: auto;
+						margin-right: 10px;
+						font-size: fontSize("small") - 2px;
+				    }
+					span{
+						font-size: 0;
+					    text-transform: uppercase;
+	    				font-weight: fontWeight("bold");
+	    				margin-right: 10px;
+					}
+					a{
+						text-transform: uppercase;
+						background: #f7f5f3;
+						padding: 10px;
+						margin-right: 5px;
+					}
+				}
+				.wd-social-share {
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0;
+					text-align: left;
+					padding: 50px 0 0;
+					>span {
+						display: none;
+					}
+					.at-share-tbx-element .at-share-btn:last-child(){
+						margin-right: 0;
+					}
+				}
+				.wd-share_list{
+					margin-bottom:15px;
+					span{display:none;}
+				}			
+			}
+
+			.wd-next-previous-post{
+				@include flexbox;
+				@include align-items(center);
+				@include justify-content(space-between);
+			    position:relative;
+				&:before{
+					content: '';
+					border-top: 1px solid $border-color-light;
+					position: absolute;
+					top: 46%; 
+					left: 0;
+					right: 0;
+					z-index: zIndex("lowest");
+				}
+				.wd-navi-next, .wd-navi-prev{
+					z-index: zIndex("lower");
+					background-color: $background-color-light;
+					a{
+						text-transform: uppercase;
+						font-weight: fontWeight("bold");
+						font-size: fontSize("root");
+					}
+					i{
+						font-weight: fontWeight("bold");
+					}
+				}
+				.wd-navi-next{
+					padding-left: 10px;
+				}
+				.wd-navi-prev{
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}

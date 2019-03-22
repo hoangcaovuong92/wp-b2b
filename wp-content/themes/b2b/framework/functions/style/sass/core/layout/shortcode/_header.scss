@@ -1,0 +1,136 @@
+/* Currency switcher */
+.wd-shortcode-currency-switcher{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	.wd-currency-control{
+		cursor: pointer;
+		
+		a{text-decoration: none !important;}
+		>a{
+	    	&::after{
+				@include font_awesome(\f0d7, inherit);
+			    text-rendering: auto;
+			}
+	    }
+		.wd-dropdown-container{
+		    position: absolute;
+		    top: 100%;
+		    left: 0;
+		    z-index: 1000;
+		    float: left;
+		    text-align: left;
+		    list-style: none;
+		    background-color: #fff;
+		    -webkit-background-clip: padding-box;
+		    background-clip: padding-box;
+		    border: 1px solid rgba($border-color-dark, .15);
+		    right: 5px;
+		    left: auto;
+		    margin: 0;
+		    padding: 4px 0;
+		    width: 100px;
+			overflow: hidden;
+			visibility: hidden;
+			@include border-radius(0);
+			@include box-shadow(0, 2px, 4px, rgba($border-color-dark, 0.15));
+			@include transition(all 0.3s ease-out);
+			@include transform(scaleY(0));
+			@include transform-origin(left top);
+		    ul.currency_switcher{
+	    	    @include flexbox;
+				@include flex-wrap(wrap);
+				margin-bottom: 0;
+		    	li{
+		    		list-style: none;
+		    		width: 100%;
+	    			display: block;
+	    			margin: 0;
+		    		a{
+		    			color: #333 !important;
+					    text-decoration: none;
+					    line-height: 10px;
+					    border: none;
+					    padding: 7px 0 7px 20px;
+					    width: 100%;
+						@include border-radius(0);
+		    			&.active{
+			    			color: #fff !important;
+		    				background-color: #282828;
+					    }
+		    		}
+		    	}
+		    }
+		}
+		&:hover {
+			.wd-dropdown-container{
+				@include transform(scaleY(1));
+				visibility: visible;
+			}
+		}
+	}
+} 
+
+/* Gtranslate */
+.wd-shortcode-gtranslate{
+	.selected a{
+		color: #282828;
+		font-size: 13px;
+		&:hover{
+			color: #a5a5a5;
+		}
+	}
+	.switcher{
+		.option{
+			padding: 10px;
+			border: solid 1px $border-color-light;
+			background: #fff;
+			a {
+				padding: 5px;
+				border:none;
+				&.selected {
+					background: #fff;
+					border:none;
+				}
+				&:hover {
+				    background: #fff;
+				}
+			}
+		}
+		.selected{ 
+			a:hover {
+				background: none;
+			}
+			&.open{
+				background: none;
+				color: #282828;
+			}
+		}
+	}
+}
+
+.widget-woocommerce-currency-switcher,.wd-shortcode-gtranslate {
+	.woocommerce-currency-switcher-form,.switcher .option{
+		@include opacity(0);
+	    border: none;
+	    margin: 0;
+	    min-width: 190px;
+	    padding-top: 8px;
+	    text-align: initial;
+	    left: 0;
+	    top: 100%;
+	    position: absolute;
+		display: block!important;
+		@include opacity(0);
+		@include border-radius(0);
+		@include transform(scale(0, 0));
+		@include transform-origin(left top 0);
+		@include transition(all .5s ease 0s);
+	}
+	&:hover {
+		.woocommerce-currency-switcher-form,.switcher .option{
+			@include opacity(1);
+			@include transform(scale(1));
+		}
+	}
+}

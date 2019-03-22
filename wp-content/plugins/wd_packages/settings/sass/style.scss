@@ -1,0 +1,326 @@
+.wd-admin-page-wrap {
+	.card{
+		max-width: initial;
+		min-width: initial;
+	}
+	.submit-button, .social-button{
+		text-align: center;
+	}
+
+	.submit-button{
+		margin-top: 25px;
+	}
+
+	.wd-package-admin-page-form {
+		th{
+			//width: 20%; 
+			text-align: right;
+			white-space: nowrap;
+		}
+		td{
+			padding: 5px;
+		}
+	}
+	h3.wd-admin-page-heading{
+		font-size: 15px;
+		padding: 8px 12px;
+		margin: 10px 0 5px;
+		background: #3C82C7;
+		color: #ffffff;
+		text-transform: uppercase;
+		border-top-right-radius: 8px;
+		span{
+			font-size: 17px;
+		}
+	}
+}
+
+.wd-table-responsive{
+	overflow-x:auto;
+}
+table.wd-page-admin-page-form{
+	width: 100%; 
+	// table-layout: fixed;
+	border-spacing: 0;
+	border: 1px solid #dee2e6;
+	tr{
+		&:nth-child(odd){
+			//background-color: #f2f2f2;
+		}
+		&:hover{
+			background-color: #f2f2f2;
+		}
+	}
+	th{
+		color: #fff;
+		background-color: #3c3c3c;
+		padding: 5px;
+		text-transform: uppercase;
+		font-size: 14px;
+		white-space: nowrap;
+	}
+	td{
+		text-align: center;
+		padding: 5px;
+		vertical-align: middle;
+		border-bottom: 1px solid #dee2e6;
+		min-width: 150px;
+	}
+	img{
+		max-width: 100%;
+		max-height: 200px;
+		border: 1px solid #dee2e6
+	}
+	h3, p{
+		margin: 5px 0;
+		font-size: 12px;
+	}
+
+	h3{
+		margin-bottom: 10px;
+		font-size: 15px;
+	}
+
+	h3, .highlight-content{
+		font-weight: bold;
+		color: #dc3545;
+	}
+
+	.wd-version{
+		background: #e14d43;
+		border-radius: 2px;
+		padding: 2px 4px;
+		font-size: 8px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	.bold-content{
+		font-weight: bold;
+	}
+
+	.italic-content{
+		font-style: italic;
+		font-weight: 500;
+	}
+
+	.wd-button-with-loading{
+		position: relative;
+		.wd-image-loading{
+			display: none;
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			left: 100%;
+			top: -11px;
+			img{
+				border: none;
+			}
+		}
+	}
+}
+
+#wd-activation-reset{
+	color:#d44950;
+}
+
+.wd-activation-form-input{
+	color: red;
+	width: 100%;
+	max-width: 500px;
+	font-weight: 600;
+	height: 40px;
+}
+
+.wd-form-notice{
+	color:#d44950;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0;
+}
+
+.wd-form-desc{
+	font-weight: normal;
+	font-size: 12px;
+	margin: 0;
+}
+
+.wd-package-admin-page-label{
+	font-weight: bold;
+	margin-right: 10px;
+	width: 400px;
+	max-width: 50%;
+}
+
+.wd-table-fullwidth{
+	width: 100%;
+}
+
+.wd-table-packages-list{
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+	flex-wrap: wrap;
+	li{
+		width: 25%;
+		font-weight: bold;
+		margin-bottom: 15px;
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
+	}
+}
+
+//https://codepen.io/svsdesigns/pen/BMvmQK
+.wd-checkbox-style-1{
+	.row {
+		display: flex;
+		align-items: center;
+	}
+	  .column {
+		padding: 0 12px 0 0;
+	}
+	.toggle {
+		position: relative;
+		display:flex;
+		overflow:hidden;
+		border-radius: 4px;
+		
+		&__content {
+		  font-size: 14px;
+		  padding: 0.4rem 0.6rem;
+		  line-height: 1;
+		  font-weight: 500;
+		}
+		&__positive {
+		  background-color: #e0e0e0;
+		  color: #333;
+		  transition: all 0.25s ease;
+		}
+		&__negative {
+			background-color: MediumSeaGreen;
+			color: #fff;
+			transition: all 0.25s ease;
+		}
+		
+		input[type="checkbox"] {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			left: 0;
+			
+			&:checked ~ .toggle__negative {
+				background-color: #e0e0e0;
+				color: #333;
+			}
+			&:checked ~ .toggle__positive {
+				background-color: MediumSeaGreen;
+				color: #fff;
+			}
+		}
+	}
+}
+
+//https://codepen.io/zFunx/pen/dWbevd
+.wd-checkbox-style-2{
+	input[type=checkbox] {
+		display: none;
+		+ label {
+			display: block;
+			//margin: 0.2em;
+			cursor: pointer;
+			//padding: 0.2em;
+			&:before {
+				content: "\2714";
+				border: 0.1em solid #000;
+				border-radius: 0.2em;
+				display: inline-block;
+				width: 1em;
+				height: 1em;
+				padding-left: 0.2em;
+				padding-bottom: 0.3em;
+				margin-right: 0.2em;
+				vertical-align: bottom;
+				color: transparent;
+				transition: .2s;
+			}
+			&:active:before {
+				transform: scale(0);
+			}
+		}
+		&:checked + label:before {
+			background-color: MediumSeaGreen;
+			border-color: MediumSeaGreen;
+			color: #fff;
+		}
+		&:disabled + label:before {
+			transform: scale(1);
+			border-color: #aaa;
+		}
+		&:checked:disabled + label:before {
+			transform: scale(1);
+			background-color: #bfb;
+			border-color: #bfb;
+		}
+	}
+}
+
+//https://codepen.io/vkjgr/pen/VYMeXp
+select.wd-selectbox-style-1{
+	/* styling */
+	background-color: white;
+	border: thin solid MediumSeaGreen;
+	border-radius: 4px;
+	display: inline-block;
+	font: inherit;
+	height: auto;
+	line-height: 1.5em;
+	padding: 0.5em 3.5em 0.5em 1em;
+  
+	/* reset */
+	margin: 0;      
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  
+	/* select box custom */
+	background-image:
+		linear-gradient(45deg, transparent 50%, gray 50%),
+		linear-gradient(135deg, gray 50%, transparent 50%),
+		linear-gradient(to right, #ccc, #ccc);
+	background-position:
+		calc(100% - 20px) calc(1em + 2px),
+		calc(100% - 15px) calc(1em + 2px),
+		calc(100% - 2.5em) 0.5em;
+	background-size:
+		5px 5px,
+		5px 5px,
+		1px 1.5em;
+	background-repeat: no-repeat;
+	&:focus {
+		background-image:
+			linear-gradient(45deg, green 50%, transparent 50%),
+			linear-gradient(135deg, transparent 50%, green 50%),
+			linear-gradient(to right, #ccc, #ccc);
+		background-position:
+			calc(100% - 15px) 1em,
+			calc(100% - 20px) 1em,
+			calc(100% - 2.5em) 0.5em;
+		background-size:
+			5px 5px,
+			5px 5px,
+			1px 1.5em;
+		background-repeat: no-repeat;
+		border-color: green;
+		outline: 0;
+	}
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 #000;
+	}
+}

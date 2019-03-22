@@ -1,0 +1,103 @@
+#TB_window{
+    border: 0px solid $border-color-dark;
+    background-color: rgba( 255, 255, 255, 1 );
+    @include border-radius(0);
+    @include box-shadow(0, 3px, 2px, $border-color-dark);
+    @include breakpoint('max', 'tablet') {
+        top:0;
+    }
+    #TB_ajaxContent{
+    	background:#fff;
+        overflow: hidden;
+    	@include breakpoint('max', 'tablet') {
+			padding-bottom:100px;
+            overflow: auto;
+		}
+        .wd-subscribe-header{
+            text-align: center;
+            margin-top: 0;
+            h2{
+                color: #1a1a1a;
+                font-size: 20px;
+                margin-top: 0;
+            }
+        }
+        .subscribe_form{
+            display: initial;
+            form{
+                .subscribe-email{
+                    margin-top: 15px;
+                }
+                input.subscribe_email{
+                    width: 100%;
+                    margin-bottom: 15px;
+                    @include breakpoint('min', 'tablet') {
+                        width: 70%;
+                        float: left;
+                        margin-bottom: 0;
+                    }
+                }
+                button.button{
+                    width: 100%;
+                    @include button_style(1);
+                    height: 35px;
+                    padding: 0;
+                    margin-top: -15px;
+                    margin-bottom: 15px;
+                    @include breakpoint('min', 'tablet') {
+                        width: 30%;
+                        float: left;
+                    }
+                }
+            }
+        }
+        label{
+            margin-left: 15px;
+        }
+        &.TB_modal{
+            padding:0;
+            #wd-email-subscribe-content{
+                .wd-layout-half-width{
+                    width: 100%;
+                    float: left;
+                    img{
+                        width: 100%;
+                    }
+                    @include breakpoint('min', 'tablet') {
+                        width: 50%;
+                        float: left;
+                        margin-bottom: 0;
+                    }
+                }
+                .wd-email-subscribe-main-content{
+                    width: 100%;
+                    padding:15px;
+                }
+                .wd-tb-closeWindowButton{
+                    top:0;
+                    right:0;
+                    position:absolute;
+                    background:none;
+                    &:hover, &:focus{
+                        .tb-close-icon {
+                            color: #282828;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+    #TB_title{
+    	border-bottom: none;
+    	background:#fff;
+        #TB_ajaxWindowTitle {
+            text-align: center;
+            margin:20px;
+            padding: 0;
+            span{
+                color: #1a1a1a;
+                font-size: 20px;
+            }
+        }
+    }
+}

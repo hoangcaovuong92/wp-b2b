@@ -1,0 +1,94 @@
+.wd-slider-wrap{
+    position: relative;
+    .slick-arrow, .owl-prev, .owl-next{
+        font-size: 0;
+        position: absolute;
+        top: 50%;
+        bottom: auto;
+        z-index: zIndex("lowest");
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid $border-color-light;
+        padding: 15px 3px;
+        height: auto;
+        width: auto;
+        line-height: 1;
+        @include transform(translateY(-50%));
+        @include border-radius(2px);
+        &::before{
+            @include link_style(primary);
+            font-weight: fontWeight("semibold");
+        }
+    }
+    .slick-prev, .owl-prev{
+        left: 10px;
+        right: auto;
+        &::before {
+            @include font_linearicons(\e875, fontSize("large"));
+        }
+    }
+    .slick-next, .owl-next{
+        left: auto;
+        right: 10px;
+        &::before {
+            @include font_linearicons(\e876, fontSize("large"));
+        }
+    }
+
+    &.slick-slider{
+        //overflow: hidden;
+        ul.slick-dots{
+            bottom: 20px;
+            position: absolute;
+            z-index: 9;
+        }
+        .slick-up, .slick-down{
+            left: 50%;
+            padding: 3px 15px;
+            right: auto;
+            @include transform(translate(-50%, 0));
+        }
+        .slick-up{
+            top: -40px;
+            bottom: auto;
+            &::before {
+                @include font_linearicons(\e873, fontSize("large"));
+            }
+        }
+        .slick-down{
+            top: auto;
+            bottom: -40px;
+            &::before {
+                @include font_linearicons(\e874, fontSize("large"));
+            }
+        }
+        &.slick-vertical{
+            &.wd-product-thumbnails-enough{
+                margin-top: 40px;
+            }
+        }
+        &:not(.slick-vertical){
+            .slick-list{
+                margin: 0 -15px;
+                .slick-slide{
+                    >*{
+                        width: 100% !important;
+                        float: none !important;
+                        margin: 0 !important;
+                        padding: 0 15px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.owl-theme {
+        .owl-stage-outer{
+            .owl-item{
+                >*{
+                    width: 100%;
+                    padding: 0 !important;
+                }
+            }
+        }
+    }
+}

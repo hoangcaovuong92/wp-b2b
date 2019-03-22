@@ -1,0 +1,14 @@
+.wd-shortcode-special-blog{
+}
+
+.wd-shortcode-grid-list-blog{
+    .wd-blog-layout-inner{
+        @include flexbox;
+        @include flex-wrap(wrap);
+    }
+}
+.wd-shortcode-masonry-blog{
+    margin:0 -15px;
+}
+.wd-shortcode-recent-blog-slider{
+}

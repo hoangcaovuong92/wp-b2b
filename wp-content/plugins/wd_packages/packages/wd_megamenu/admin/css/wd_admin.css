@@ -1,0 +1,15 @@
+.menu-item-settings, .menu-item-bar .menu-item-handle{
+  width: auto;
+}
+
+.menu-item-depth-0 .menu-item-bar .menu-item-handle{
+  color: white;
+    background-color: #0073aa;
+}
+.menu-item-depth-0 .menu-item-bar .menu-item-handle .item-controls .item-type, .menu-item-depth-0 .menu-item-bar .menu-item-handle .item-controls a{
+  color: white;
+}
+
+.wd-menu-wrap-clearfix{
+  clear: both !important;
+}

@@ -1,0 +1,86 @@
+.woocommerce .wd-content-single-product .product, .wd-quickshop-detail-page{
+	.woocommerce-tabs{
+		.wd-single-product-tabs{ 
+			ul.tabs{
+				position: relative;
+		        overflow: visible;
+		        width: auto;
+		        z-index: 2;
+		        background-color: $background-color-light;
+				padding: 0;
+				margin: 0;
+				&:before{
+				    content: " ";
+				    border:none;
+				}
+				&:after{
+				    content: " ";
+				    border:none;
+				}
+				li{		    
+					border:none;
+					padding: 0;
+					background: none;
+					margin: 0;
+					@include border-radius(0);
+					&:after{
+						content:none!important;
+					}
+					&:before{
+						display: none;
+					}
+					a{
+						font-size: 13px;
+						background: none !important;
+					    border: 1px solid $border-color-light;
+						text-transform: uppercase;
+					    padding: 5px 25px;
+					    margin-right: 0;
+					    color: #282828;
+					    font-weight: fontWeight("medium");
+					    letter-spacing: 1.5px;
+					}
+					&:hover, &.active, &:active, &:focus {
+						a {
+		    				border: 1px solid $border-color-dark;				
+						}
+					}
+					@include breakpoint('max', 'tablet'){
+						width: 100%;
+						a {
+							width: 100%;
+							text-align: center;
+							padding:8px 15px;
+							margin-bottom: 10px;
+						}
+					}
+				}
+			}
+			@include breakpoint('min', 'tablet'){
+			    @include flexbox;
+				@include align-items(flex-end);
+				ul.tabs{
+					padding-left: 30px;
+					padding-right: 30px;
+					margin: 0 30px -15px;
+				}
+				li{
+					margin:0 5px;
+				}
+		    }
+		}
+		.panel{
+			border: 1px solid $border-color-light;
+			padding: 20px;
+			display:none;
+			@include border-radius(0);
+			@include box-shadow(none);
+			ul, ol{
+				margin-left: 20px;
+			}
+			@include breakpoint('min', 'tablet'){ 
+				padding: 50px 50px;
+			}
+		}
+	}
+}

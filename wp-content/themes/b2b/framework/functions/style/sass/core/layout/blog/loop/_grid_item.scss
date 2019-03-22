@@ -1,0 +1,36 @@
+.wd-blog-wrapper:not(.list){
+	.wd-blog-content-wrap{
+		text-align: center;
+		margin-bottom: 40px;
+		.wd-blog-meta-content{
+			display: none;
+		}
+		.wd-blog-meta-wrap{
+			@include justify-content(center);
+			.wd-blog-meta-item{
+				padding-right: 0;
+				margin-right: 0;
+				border: 0;
+				text-align: center;
+			}
+		}
+	}
+
+	.wd-blog-desc{
+		position: relative;
+		padding-top: 20px;
+		&:before{
+			position: absolute;
+			top: 0;
+			width: 100px;
+			left: 50%;
+			content: "";
+			border-top: 1px solid $border-color-light;
+			@include transform(translateX(-50%));
+		}
+	}
+
+	.wd-thumbnail-post, .wd-post-embed-audio {
+		margin-bottom: 35px;
+	}
+}

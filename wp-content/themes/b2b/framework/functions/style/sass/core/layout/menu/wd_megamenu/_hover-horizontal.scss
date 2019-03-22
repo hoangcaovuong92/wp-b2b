@@ -1,0 +1,234 @@
+.wd-megamenu-layout-menu-horizontal{
+	li.wd-menu-item-depth-0{
+		@include transition;
+		ul.wd-submenu-depth-0{
+			visibility: hidden;
+			@include opacity(0);
+			@include transition;
+			li.wd-menu-item-depth-1{
+				>ul{
+					visibility: hidden;
+					@include opacity(0);
+					@include transition;
+				}
+			}
+		}
+		&:hover{
+			ul.wd-submenu-depth-0{
+				visibility: visible;
+				@include opacity(1);
+			}
+		}
+		
+		ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+			li.wd-menu-item-depth-1{
+				>ul{
+					visibility: hidden;
+					@include opacity(0);
+					@include transition;
+				}
+			}
+			li{
+				z-index: 10;
+				&:hover{
+					>ul{
+						visibility: visible;
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	}
+	.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+		visibility: hidden;
+		@include opacity(0);
+	}
+	li.wd-submenu-custom-content-show-when-hover{
+		&:hover{
+			>.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+				visibility: visible;
+				@include opacity(1);
+			}
+		}
+	}
+
+	&.wd-megamenu-hover-style-1{
+		li.wd-menu-item-depth-0{
+			ul.wd-submenu-depth-0{
+				@include transform(rotateX(-60deg));
+				@include transform-origin(0% 0%);
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg));
+						@include transform-origin(0% 100%);
+					}
+				}
+			}
+			&:hover{
+				ul.wd-submenu-depth-0{
+					@include transform(rotateX(0deg));
+				}
+			}
+			ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg));
+						@include transform-origin(0% 100%);
+					}
+				}
+				li{
+					&:hover{
+						>ul{
+							@include transform(rotateY(0deg));
+						}
+					}
+				}
+			}
+		}
+		.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+			@include transform(rotateY(60deg));
+			@include transform-origin(0% 100%);
+		}
+		li.wd-submenu-custom-content-show-when-hover{
+			&:hover{
+				>.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+					@include transform(rotateY(0deg));
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-2{
+		li.wd-menu-item-depth-0{
+			ul.wd-submenu-depth-0{
+				@include transform(rotateX(-90deg));
+				@include transform-origin(0% 0%);
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg));
+						@include transform-origin(0% 100%);
+					}
+				}
+			}
+			&:hover{
+				ul.wd-submenu-depth-0{
+					@include transform(rotateX(0deg));
+				}
+			}
+			ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(90deg));
+						@include transform-origin(0% 100%);
+					}
+				}
+				li{
+					&:hover{
+						>ul{
+							@include transform(rotateY(0deg));
+						}
+					}
+				}
+			}
+		}
+		.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+			@include transform(rotateY(90deg));
+			@include transform-origin(0% 100%);
+		}
+		li.wd-submenu-custom-content-show-when-hover{
+			&:hover{
+				>.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+					@include transform(rotateY(0deg));
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-3{
+		li.wd-menu-item-depth-0{
+			ul.wd-submenu-depth-0{
+				@include transform(translateY(30px));
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg));
+						@include transform-origin(0% 100%);
+					}
+				}
+			}
+			&:hover{
+				ul.wd-submenu-depth-0{
+					@include transform(rotateX(0deg));
+				}
+			}
+			ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg));
+						@include transform-origin(100% 0%);
+					}
+				}
+				li{
+					&:hover{
+						>ul{
+							@include transform(rotateY(0deg));
+						}
+					}
+				}
+			}
+		}
+		.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+			@include transform(rotateY(60deg));
+			@include transform-origin(100% 0%);
+		}
+		li.wd-submenu-custom-content-show-when-hover{
+			&:hover{
+				>.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+					@include transform(rotateY(0deg));
+				}
+			}
+		}
+	}
+	&.wd-megamenu-hover-style-4{
+		li.wd-menu-item-depth-0{
+			ul.wd-submenu-depth-0{
+				@include transform(rotateX(-60deg) scale(0));
+				@include transform-origin(0% 0%);
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg));
+						@include transform-origin(0% 100%);
+					}
+				}
+			}
+			&:hover{
+				ul.wd-submenu-depth-0{
+					@include transform(rotateX(0deg) scale(1));
+				}
+			}
+			ul.wd-submenu-depth-0.wd-submenu-disabled-megamenu{
+				li.wd-menu-item-depth-1{
+					>ul{
+						@include transform(rotateY(60deg) scale(0));
+						@include transform-origin(0% 0%);
+					}
+				}
+				li{
+					&:hover{
+						>ul{
+							@include transform(rotateX(0deg) scale(1));
+						}
+					}
+				}
+			}
+		}
+		.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+			@include transform(rotateY(60deg) scale(0));
+			@include transform-origin(0% 0%);
+		}
+		li.wd-submenu-custom-content-show-when-hover{
+			&:hover{
+				>.wd-submenu-custom-content-wrap.wd-submenu-custom-content-show-when-hover{
+					@include transform(rotateX(0deg) scale(1));
+				}
+			}
+		}
+	}
+}

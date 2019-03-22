@@ -1,0 +1,21 @@
+
+/* icon config for metabox */
+#wp_cp_custom_post_layout h2.ui-sortable-handle span:before{
+    content: "\f111";
+    font: 400 20px/1 dashicons;
+    speak: none;
+    display: inline-block;
+    margin-left: -1px;
+    padding-right: 3px;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+}
+table.wd-custom-meta-box-width td input[type='text'], 
+table.wd-custom-meta-box-width td input[type='email']{
+	width: 25em;
+}
+
+.wd-layout-config-wrapper select, 
+.wd-layout-config-wrapper input[type="text"]{
+	width: 100%;
+}

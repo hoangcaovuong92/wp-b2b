@@ -1,0 +1,93 @@
+.wd-overflow{
+	overflow:visible !important;
+}
+
+.wd-text-left{
+	text-align: left;
+}
+
+.wd-text-right{
+	text-align: right;
+}
+
+.wd-text-center{
+	text-align: center;
+}
+
+.wd-text-justify{
+	text-align: justify;
+}
+
+header.menu-sticky{
+	.wd-hide-on-sticky-menu{
+		margin: 0;
+		padding: 0;
+		height: 0;
+		@include transition(all 100ms ease);
+		@include opacity(0);
+		.container{
+			display: none;
+		}
+	}
+}
+
+.wd-margin-left-0 {
+	margin-left: 0px !important
+
+}
+.wd-margin-right-0 {
+	margin-right: 0px !important
+
+}
+.wd-padding-left-0 {
+	padding-left: 0px !important
+
+}
+.wd-padding-right-0 {
+	padding-right: 0px !important
+
+}
+
+.wd-flex{
+	@include flexbox;
+}
+
+.wd-flex-wrap{
+	@include flex-wrap(wrap); 
+}
+
+.wd-flex-justify-left{
+	@include justify-content(flex-start);
+}
+
+.wd-flex-justify-center{
+	@include justify-content(center);
+}
+
+.wd-flex-justify-right{
+	@include justify-content(flex-end);
+}
+
+.wd-flex-align-center{
+	@include align-items(center);
+}
+
+.wd-flex-align-bottom{
+	@include align-items(flex-end);
+}
+
+.wd-flex-grow{
+	@include flex-grow(1);
+}
+
+.wd-flex-row-reverse{
+	@include flex-direction(row-reverse);
+}
+
+.wd-flex-column{
+	@include flex-direction(column);
+}
+
+.wd-flex-column-reverse{
+	@include flex-direction(column-reverse);
+}

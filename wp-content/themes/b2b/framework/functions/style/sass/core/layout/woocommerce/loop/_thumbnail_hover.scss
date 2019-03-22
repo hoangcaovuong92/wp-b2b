@@ -1,0 +1,39 @@
+//Hover change product image
+.wd-product-hover-thumbnail-effect{
+    position: relative;
+    .onsale {
+        z-index: 999999;
+    }
+    .wp-post-image {
+        @include transform(translateX(0));
+        @include transition(all .5s linear);
+    }
+    .wp-post-image--secondary{
+        display: none !important;
+    }
+    @include breakpoint('min', 'tablet') {
+        .wp-post-image--secondary {
+            visibility: hidden;
+            position: absolute;
+            display: block !important;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            @include opacity(0);
+            @include transition(all .5s linear);
+        }
+        .woocommerce-LoopProduct-link, .woocommerce-loop-product__link{
+            &:hover{
+                .wp-post-image {
+                    visibility: hidden;
+                    @include transform(translateX(-100%));
+                }
+                .wp-post-image--secondary {
+                    visibility: visible;
+                    @include opacity(1);
+                    @include transform(translateX(0));
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.wd-menu-mobile > div > ul, .wd-menu-mobile > ul{
+    margin:0;
+    list-style:none;
+    width: 100%;
+
+    > li.menu-item,
+    > li.page_item{
+        &:not(:last-child){
+            border-bottom: solid 1px $navPages-subMenu-border-Color;
+            >a{
+                text-transform: uppercase;
+            }
+        }
+    }
+    li.menu-item,
+    li.page_item{
+        position:relative;
+        display:block;
+        text-align:left;
+        font-size:14px;
+        padding:10px 0;
+        margin: 0;
+        width: 100%;
+        a{
+            display: block;
+            padding: 0;
+            @include link_style(navpage);
+            &:after{
+                content: none !important;
+            }
+            &:focus,&:hover {
+                font-weight: fontWeight("semibold");
+                background: transparent;
+            }
+        }
+        &.menu-item-has-children,
+        &.page_item_has_children{
+            &:before {
+                @include font_awesome(\f105);
+                position: absolute;
+                right: 0;
+                top: 10px;
+                z-index: zIndex('lowest');
+            }
+            &.wd-submenu-opened {
+                &:before {
+                    @include font_awesome(\f107);
+                }
+                + a + ul.children, 
+                + a + ul.sub-menu{
+                    display: block;
+                    @include animation(fadeInDown 0.4s ease-out 0s 1 normal);
+                }
+            }
+        }
+    }
+    .sub-menu, .children{
+        display:none;
+        padding:0;
+        padding-bottom:0;
+        background: none;
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        border: none;
+        max-width: none;
+        min-width: inherit;
+        margin-top: 5px;
+        @include box-shadow(none);
+        li{
+            padding:10px 0 10px 10px;
+            margin: 0;
+            border-bottom: solid 1px $navPages-subMenu-border-Color;
+            &:last-child{
+                border-bottom: none;
+            }
+            a{
+                display: block;
+            }
+        }
+        &:before{
+            content:none;
+        }
+    }
+}

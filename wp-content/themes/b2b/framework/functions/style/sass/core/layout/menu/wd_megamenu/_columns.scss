@@ -1,0 +1,51 @@
+/* Menu Columns */
+.wd-megamenu-wrap{
+	ul.wd-submenu-enable-megamenu{
+		width: width("12-12");
+		@include flexbox; 
+		@include flex-wrap(wrap); 
+		li{
+			width: width("12-12");
+		}
+	}
+	.wd-submenu-columns-1 {
+		li.wd-menu-item-depth-1{
+			width: width("12-12");
+		}
+	}
+	.wd-submenu-columns-2 {
+		li.wd-menu-item-depth-1{
+			width: width("6-12");
+		}
+	}
+	.wd-submenu-columns-3 {
+		li.wd-menu-item-depth-1{
+			width: width("4-12");
+		}
+	}
+	.wd-submenu-columns-4 {
+		li.wd-menu-item-depth-1{
+			width: width("3-12");
+		}
+	}
+	.wd-sub-menu{
+		li.wd-menu-item-submenu-width-full{
+			width: width("12-12");
+		}
+		li.wd-menu-item-submenu-width-1-3{
+			width: width("4-12");
+		}
+		li.wd-menu-item-submenu-width-2-3{
+			width: width("8-12");
+		}
+		li.wd-menu-item-submenu-width-1-4 {
+			width: width("3-12");
+		}
+		li.wd-menu-item-submenu-width-2-4 {
+			width: width("6-12");
+		}
+		li.wd-menu-item-submenu-width-3-4 {
+			width: width("9-12");
+		}
+	}
+}

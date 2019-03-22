@@ -1,0 +1,10 @@
+.wd-notice--fixed{
+    position: fixed !important;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    margin-bottom: 0 !important;
+    border: 3px dashed #ddd;
+    color: #ffffff;
+    background: #32373c !important;
+}

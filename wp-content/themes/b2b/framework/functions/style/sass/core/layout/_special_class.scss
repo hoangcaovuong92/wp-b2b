@@ -1,0 +1,113 @@
+/* Header: 
+ * - Add class wd-header-top to top row
+ * - Add class wd-header-main to main row
+ */
+
+/* Main menu/Menu sticky: 
+ * - Add class wd-main-menu to main menu row
+ * - Add class wd-sticky-menu to sticky menu row
+ * - Add the wd-special-sticky-menu class to sticky menu row if the sticky menu row is different from the main menu row.
+ */
+
+/* Hide element on device: 
+ * -- Visual Composer:
+ * - vc_hidden-lg	Large Screen
+ * - vc_hidden-md	Medium Screen
+ * - vc_hidden-sm	Small Screen
+ * - vc_hidden-xs	Extra Small Screen
+ * -- Bootstrap:
+ * - hidden-lg, visible-lg	Large Screen
+ * - hidden-md, visible-md	Medium Screen
+ * - hidden-sm, visible-sm	Small Screen
+ * - hidden-xs, visible-xs	Extra Small Screen
+ */
+ 
+
+/* wd-special-row-padding : Use for special fullwidth row with padding left - right (50px) on desktop */
+.wd-special-row-padding{ 
+	@include breakpoint('min', 'desktop') {
+		padding-left: 35px;
+		padding-right: 35px;
+		&.vc_row-no-padding{
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+	@include breakpoint('max', 'tablet') {
+		.wd-shortcode-banner{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/* wd-col-flex : Content of a col display flex - Insert class to col of row */
+.wd-col-flex .vc_column-inner{
+	>.wpb_wrapper{
+		width: 100%;
+		@include flexbox;
+		@include justify-content(flex-end);
+		@include align-items(center);
+		>div{
+			position: relative;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin-left: 26px;
+		}
+	}
+}
+
+/* wd-row-flex : Cols of a row display flex - Insert class to row */
+.wd-row-flex, .wd-row-flex >.vc_column_container >.vc_column-inner >.wpb_wrapper {
+	@include flexbox;
+	@include flex-wrap(wrap);
+}
+
+/* wd-row-flex-center : Cols of a row display flex - Insert class to row */
+.wd-row-flex-center, .wd-row-flex-center >.vc_column_container >.vc_column-inner >.wpb_wrapper {
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	@include align-items(center);
+}
+
+/* wd-row-flex-item-reverse : Cols of a row display flex, item reverse - Insert class to row */
+.wd-row-flex-item-reverse, .wd-row-flex-item-reverse >.vc_column_container >.vc_column-inner >.wpb_wrapper{
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include flex-direction(row-reverse);
+}
+
+/* wd-row-flex-item-reverse-center : Cols of a row display flex, item reverse - Insert class to row */
+.wd-row-flex-item-reverse-center, .wd-row-flex-item-reverse-center >.vc_column_container >.vc_column-inner >.wpb_wrapper{
+	@include flexbox;
+	@include flex-wrap(wrap);
+	@include justify-content(space-between);
+	@include align-items(center);
+	@include flex-direction(row-reverse);
+}
+
+/* wd-special-absolute-row-homepage : Insert class to row on homepage - the content will absolute to overlap the content section below. */
+.page-template-template-home{
+	.wd-special-absolute-row-homepage{
+		position: absolute !important;
+		top: auto !important;
+		left: 0 !important;
+		right: 0 !important;
+		width: 100vw !important;
+		margin: 0;
+		background: none !important;
+	}
+}
+/* wd-special-banner-padding-home-2 : Use on home 2 - custom padding between col for banner of row */
+.wd-special-banner-padding-home-2{
+	>.vc_column_container >.vc_column-inner{
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+		&:first-child(){
+			padding-left: 0;
+		}
+		&:last-child(){
+			padding-right: 0;
+		}
+	}	
+}

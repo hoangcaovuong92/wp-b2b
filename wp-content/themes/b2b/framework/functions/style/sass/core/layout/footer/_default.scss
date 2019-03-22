@@ -1,0 +1,61 @@
+.wd-footer-default{
+    font-size: fontSize("tiny");
+    @include breakpoint('max', 'tablet') {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .wd-instagram-wrapper, .wd-social-icons{
+        margin-bottom: 30px;
+        @include breakpoint('min', 'tablet') {
+            margin-bottom: 60px;
+        }
+        @include breakpoint('min', 'desktop') {
+            margin-bottom: 90px;
+        }
+    }
+    .wd-social-icons{
+        text-transform: uppercase;
+        font-weight: fontWeight("bold");
+        a{
+            @include flexbox;
+            @include flex-direction(column);
+            .wd-icon{
+                color: $color-textLink--hover;
+                font-size: fontSize("small");
+                margin-bottom: 0;
+                @include breakpoint('min', 'tablet') {
+                    margin-bottom: 20px;
+                }
+            }
+            span{
+                text-align: center;
+                letter-spacing: 0.1em;
+            }
+        }
+        &.wd-social-icons-horizontal{
+            .wd-flex-justify-center{
+                li{
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    @include breakpoint('min', 'tablet') {
+                        margin-left: 40px;
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .wd-footer-info{
+        color: $color-text-secondary;
+        text-transform: uppercase;
+        border-top: 1px solid $border-color-light;
+        height: 50px;
+        line-height: 50px;
+        letter-spacing: 0.1em;
+        @include breakpoint('min', 'tablet') {
+            height: 70px;
+            line-height: 70px;
+        }
+    }
+}

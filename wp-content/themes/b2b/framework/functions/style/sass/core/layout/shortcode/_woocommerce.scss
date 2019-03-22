@@ -1,0 +1,171 @@
+.wd-shortcode-product-slider-wrapper {
+}
+
+.wd-shortcode-bestselling-product{}
+
+.wd-shortcode-product-category{}
+
+.wd-shortcode-categories-group{}
+
+.wd-shortcode-product-categories-list{
+    .wd-products-categories-list-content{
+        padding-left: 0;
+        li{
+            margin-bottom: 12px;
+            padding:2px 0;
+            a{
+                font-size: 14px;
+                color: #282828 !important;
+                @include transition(all 0.3s linear);
+                &:hover{
+                    padding-left: 15px;
+                    color: #999999 !important;
+                    opacity: 1;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.wd-shortcode-products-by-category-tabs{
+    &.wd-tab-style-tab-on-top-content{
+        .tabs{
+            text-align: center;
+            margin: 0 0 40px;
+            li{
+                display: inline-block;
+                margin-right: 10px;
+                a{
+                    display: block;
+                    padding: 10px;
+                    border: 1px solid $border-color-light;
+                    min-width: 60px;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    color: #282828;
+                    font-weight: fontWeight("medium");
+                }
+                &.active a, &:hover a{
+                    border-color: $border-color-dark;
+                    color: #282828;
+                }
+            }
+        }
+    }
+    &.wd-tab-style-tab-on-left-content{
+        width:100%;
+        .tab-control{
+            width: 100%;
+            @include breakpoint('min', 'tablet'){
+                float: left;
+                width: 25%;
+                padding-right:25px;
+            }
+            ul.tabs{
+                li{
+                    margin-bottom: 8px;
+                    text-transform: uppercase;
+                    @include transition(all 0.5s ease);
+                    @include breakpoint('max', 'tablet'){
+                        text-align: center;
+                    }
+                    a{
+                        font-size: 14px;
+                        color: #282828;
+                    }
+                    &.active, &:hover{
+                        font-weight: fontWeight("semibold");
+                        text-decoration: none;
+                    }
+                    &:hover{
+                        padding-left: 15px;
+                    }
+                     &.heading{
+                        padding-bottom: 0px;
+                        margin-bottom: 25px;
+                        border-bottom: 1px dotted $border-color-dark;
+                        .wd-heading{
+                            font-size: 20px;
+                            font-weight: fontWeight("semibold");
+                            margin-top: 0;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content{
+            width: 100%;
+            position:relative;
+            margin: 0px;
+            @include breakpoint('min', 'tablet'){
+                float: left;
+                width: 75%;
+            }
+            
+            .slider_control{
+                a{
+                    position: absolute;
+                    top: 0;
+                    background: #fff;
+                    padding: 5 20px;
+                    width: 30px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    font-size: 20px;
+                    z-index: 99;
+                    &.next,&.prev{
+                        @include link_style(primary);
+                    }
+                    &.next{
+                        right: 15px;
+                        top: 31.5%;
+                        @include breakpoint('max', 'small'){
+                            top: 20%;
+                            right: 10px;
+                        }
+                        @include breakpoint_between('small', 'tablet'){
+                            top: 25%;
+                            right: 10px;
+                        }
+                        @include breakpoint_between('tablet', 'desktop'){
+                            top: 25%;
+                        }
+                    }
+                    &.prev{
+                        left: 15px;
+                        top: 31.5%;
+                        @include breakpoint('max', 'small'){
+                            top: 20%;
+                            left: 10px;
+                        }
+                        @include breakpoint_between('small', 'tablet'){
+                            top: 25%;
+                            left: 10px;
+                        }
+                        @include breakpoint_between('tablet', 'desktop'){
+                            top: 25%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+@include breakpoint('max', 'tablet') {
+    .wd-tab-style-tab-on-top-content .tabs li {
+        display: block;
+        margin: 10px 10px;
+    }
+}
+
+.wd-shortcode-category-single{}
+
+.wd-shortcode-product-grid-list{}
+
+.wd-shortcode-search-product{}
+
+.wd-shortcode-product-simple-slider{}

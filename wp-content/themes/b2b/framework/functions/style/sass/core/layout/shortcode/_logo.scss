@@ -1,0 +1,11 @@
+.wd-logo{
+    .wd-logo-text{
+        font-family: $logo-font;
+        color: $color-textHeading;
+        margin: 0;
+        font-size: fontSize("largest");
+        @include breakpoint('min', 'desktop') {
+            font-size: fontSize("hero");
+        }
+    }
+}

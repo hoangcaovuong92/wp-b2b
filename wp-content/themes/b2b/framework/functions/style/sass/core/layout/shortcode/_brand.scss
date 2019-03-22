@@ -1,0 +1,56 @@
+.wd-shortcode-brand{
+    position:relative;
+    .owl-item{
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        transition: all .5s ease;
+        img{
+            width:auto;
+            margin: auto;
+            cursor: pointer;
+            padding: 10px 0;
+        }
+        &:hover{
+            transform: scale(1.2);
+            -webkit-transition: all .5s ease;
+            transition: all .5s ease;
+        }
+    }
+    .owl-controls{
+        .owl-nav > div{
+            display:block;
+            position:absolute;
+            top: 50%;
+            width:22px;
+            text-align:center;
+            color:#989898 !important;
+            background: none !important;
+            @include border-radius(3px);
+            &:hover{
+                opacity: 0.8;
+            }
+            &.owl-prev{
+                left:-8px;
+                &:before{
+                    //@include font_awesome(\f104, 26px);
+                }
+                @include breakpoint('max', 'tablet') {
+                    left:0px;
+                }
+            }
+            &.owl-next{
+                right:-8px;
+                &:before{
+                    //@include font_awesome(\f105, 26px);
+                }
+                @include breakpoint('max', 'tablet') {
+                    right:0px;
+                }
+            }
+        }
+    }
+    &.img-logo{
+        border:none;
+        cursor:pointer;
+    }
+}

@@ -1,0 +1,62 @@
+/// Usage : width: width('1-12'); //1-12, 2-12, 3-12, 4-12, 5-12, 6-12, 7-12, 8-12, 9-12, 10-12, 11-12, 12-12
+@function width($key) {
+    @if map-has-key($widthMap, $key) {
+        @return map-get($widthMap, $key);
+    }
+    @warn "Unknown width `#{$key}` in width function.";
+    @return null;
+}
+
+/// Usage : font-family: fontFamily('body-font'); //body-font, headings-font , page-heading-font
+@function fontFamily($key) {
+    @if map-has-key($fontFamily, $key) {
+        @return map-get($fontFamily, $key);
+    }
+    @warn "Unknown font family `#{$key}` in fontFamily function.";
+    @return null;
+}
+
+/// Usage : font-size: fontSize('root'); //root, base, hero, largest, larger, large, small, smaller, smallest, tiny
+@function fontSize($key) {
+    @if map-has-key($fontSize, $key) {
+        @return map-get($fontSize, $key);
+    }
+    @warn "Unknown font size `#{$key}` in fontSize function.";
+    @return null;
+}
+
+/// Usage : line-height: lineHeight('base'); //base, hero, largest, larger, large, small, smaller, smallest, tiny
+@function lineHeight($key) {
+    @if map-has-key($lineHeight, $key) {
+        @return map-get($lineHeight, $key);
+    }
+    @warn "Unknown line height `#{$key}` in lineHeight function.";
+    @return null;
+}
+
+/// Usage : font-weight: fontWeight('thin'); //thin, normal, medium, semibold, bold, black
+@function fontWeight($key) {
+    @if map-has-key($fontWeight, $key) {
+        @return map-get($fontWeight, $key);
+    }
+    @warn "Unknown font weight `#{$key}` in fontWeight function.";
+    @return null;
+}
+
+/// Usage : letter-spacing: letterSpacing('base'); //base, largest, larger, large, small, smaller, smallest
+@function letterSpacing($key) {
+    @if map-has-key($letterSpacing, $key) {
+        @return map-get($letterSpacing, $key);
+    }
+    @warn "Unknown letter spacing `#{$key}` in letterSpacing function.";
+    @return null;
+}
+
+/// Usage : letter-spacing: zIndex('lowest'); //lowest, lower, low, high, higher, highest
+@function zIndex($key) {
+    @if map-has-key($zIndex, $key) {
+        @return map-get($zIndex, $key);
+    }
+    @warn "Unknown z-index `#{$key}` in zIndex function.";
+    @return null;
+}

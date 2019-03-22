@@ -1,0 +1,14 @@
+.wd-social-share{
+    width: 100%;
+    .addthis_inline_share_toolbox{
+        float: none !important;
+    }
+    .at-style-responsive{
+        .at-share-btn-elements{
+            @include flexbox;
+        }
+        .at-share-btn{
+            padding: 0 !important;
+        }
+    }
+}

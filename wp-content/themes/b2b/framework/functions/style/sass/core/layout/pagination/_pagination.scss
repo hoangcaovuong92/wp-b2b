@@ -1,0 +1,108 @@
+.wd-page-links{
+	padding:15px 0;
+	clear:both;
+	margin-top:10px;
+	span.wd-page-links-title{
+		border: none;
+		padding:0;
+		margin: 0 5px 0 0;
+	}
+	.post-page-numbers{
+		> span {
+			padding: 5px 10px;
+			margin: 0;
+			font-weight: fontWeight("bold");
+			color: $pagination-color;
+			background: $pagination-background-color;
+			&:hover, &:active{
+				color: $pagination-color-hover;
+				background-color: $pagination-background-color-hover;
+				cursor: pointer;
+			}
+		}
+		&.current > span {
+			color: $pagination-color-hover;
+			background-color: $pagination-background-color-hover;
+			cursor: pointer;
+		}
+	}
+}
+
+.wd-pagination, .paginate{
+	clear: both;
+	width:100%;
+	.sub-pagination {
+		list-style: none;
+		@include flexbox; 
+		@include justify-content(flex-start);
+	}
+	@include breakpoint('max', 'tablet') {
+		text-align: center;
+		.sub-pagination {
+			@include justify-content(center);
+		}
+	}
+	@include breakpoint('min', 'tablet') {
+		margin-left: -10px;
+	}
+	.wd-pagination-item{
+		display:inline-block;
+		width:30px;
+		height:30px;
+		text-align:center;
+		line-height:30px;
+		padding:0;
+		margin: 0;
+		font-weight: fontWeight("bold");
+		color: $pagination-color;
+		background: $pagination-background-color;
+		//border:solid 1px $border-color-dark;
+		@include border-radius(0);
+		&:before, &.after{
+			font-weight: fontWeight("bold");
+		}
+		&:hover, &:active, &.current{
+			color: $pagination-color-hover;
+			background-color: $pagination-background-color-hover;
+			cursor: pointer;
+		}
+		&.next{
+			font-size:0;
+			&:before{
+				@include font_awesome(\f105, 14px);
+				line-height: 28px;
+			}
+		}
+		&.last{
+			font-size:0;
+			&:before{
+				@include font_awesome(\f101, 14px);
+				line-height: 28px;				
+			}
+		}
+		&.previous, &.prev{
+			font-size:0;
+			&:before{
+				@include font_awesome(\f104, 14px);
+				line-height: 28px;
+			}
+		}
+		&.first{
+			font-size:0;
+			&:before{
+				@include font_awesome(\f100, 14px);
+				line-height: 28px;
+			}
+		}
+	}
+}
+nav.woocommerce-pagination ul{
+	padding-left: 0; 
+	float: left;
+	 li{ 
+		border:0 none;
+		a,span{
+			background: transparent!important;
+		}
+	}
+}

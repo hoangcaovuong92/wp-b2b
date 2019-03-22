@@ -1,0 +1,40 @@
+.wd-dropdown-wrap{
+	position: relative;
+	.wd-dropdown-container{
+		position: absolute;
+		top: 100%;
+		right: 0;
+        left: auto;
+		min-width: 300px;
+		margin-top: -1px;
+		z-index: 9999;
+	    height: auto;
+	    text-align: left;
+		overflow:hidden;
+	    padding: 20px;
+		color: $dropdown-textColor;
+		background: $dropdown-backgroundColor;
+	    border: 1px solid rgba($dropdown-borderColor, 1);
+		@include opacity(0);
+		@include border-radius(4px);		
+		@include box-shadow(0, 6px, 12px, rgba($border-color-dark, .175));
+		@include transition(all .3s ease);
+		@include transform(scale(1, 0));
+		@include transform-origin(0 0 0);
+		&.wd-dropdown-container--left{
+			right: 0;
+			left: auto;
+		}
+		&.wd-dropdown-container--right{
+			right: auto;
+			left: 0;
+		}
+	}
+    &:hover{
+    	.wd-dropdown-container{
+			height: auto;
+	    	@include opacity(1);
+		    @include transform(scale(1, 1));
+	    }
+    }
+}

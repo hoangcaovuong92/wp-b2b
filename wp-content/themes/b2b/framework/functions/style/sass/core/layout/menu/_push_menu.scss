@@ -1,0 +1,138 @@
+#wd-pushmenu-mobile{
+	@include breakpoint('max', 'tablet') {
+		&.wp-user-login-mobile{
+			top:46px;
+		}
+	} //Max tablet
+
+	@include breakpoint('max', 'desktop'){
+		&.wp-user-login-mobile{
+			top:32px;
+		}
+
+		.wd-navUser-action-wrap{
+			padding: 0;
+		}
+
+		.wd-navUser-list--pushmenu{
+			line-height: 1;
+			margin-right: 15px;
+		}
+
+		.wd-logo {
+			@include flex-grow(1);
+			.wd-logo-text{
+				max-width: 50%;
+				font-size: fontSize("large");
+			}
+			img{
+				max-height: 30px;
+			}
+			+ .wd-navUser-action-wrap{
+				margin: 0 10px;
+			}
+		}
+
+		.wd-search{
+			position: absolute;
+			top: 20px;
+			right: 75px;
+			z-index: 99;
+			a{
+				color: #000;
+				i{
+					color: #000;
+				}
+			}
+		}
+
+		.wd-login-user-action{
+			margin-top: 20px;
+			float: left;
+			width: 100%;
+			padding-bottom:50px;
+		}
+		.currency_gtranslate{
+			position: relative;
+			padding:0 15px;
+			height: 40px;
+			width: 100%;
+			background:#fff;
+			margin-top: 50px;
+			.wd-header-mobile-gtranslate{
+				position: absolute;
+				width: 100%;
+				height: 40px;
+				padding:0;
+				line-height: 1;
+				right: 0;
+				text-align: center;
+				.switcher {
+					width: 100%;
+					padding: 0 10px;
+					.selected{
+						position: relative;
+						background:none;
+						a{
+							padding:0;
+							line-height: 40px;
+							border: none;
+							background-image: none !important;
+							&:before{
+								@include font_awesome(\f107, 13px);
+								position: absolute;
+								right: 35px;
+								top: 2px;
+							}
+							.open{
+								background-image: none !important; 
+							}
+						}
+					}
+					.option{
+						min-width: 110px;
+						/* width: 110px; */
+					}
+				}
+			}
+			.wd-header-mobile-currency{
+				position: absolute;
+				width: 50%;
+				height: 40px;
+				padding:10px;
+				line-height: 20px;
+				left: 0;
+				.widget.widget-woocommerce-currency-switcher{
+					width: 100%;
+					padding:0;
+					border-right: solid 1px $border-color-dark;
+					position: relative;
+					>a>span{
+						&:before{
+							@include font_awesome(\f107, 13px);
+							position: absolute;
+							right: 10px;
+							top: 1px;
+						}
+					}
+				}
+				.woocommerce-currency-switcher-form .dd-selected {
+					color: #282828;
+					display: block;
+					font-weight: fontWeight("bold");
+					overflow: hidden;
+					padding: 10px;
+					font-size: 13px;
+					background:#fff;
+				}
+				.woocommerce-currency-switcher-form a.dd-option{
+					font-size: 13px;
+				}
+			}
+		}
+	} //Max desktop
+
+	@include breakpoint('min', 'desktop'){
+		display: none;
+	} //Min desktop
+}

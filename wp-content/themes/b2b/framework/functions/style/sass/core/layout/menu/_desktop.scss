@@ -1,0 +1,136 @@
+.wd-menu-desktop > div > ul, .wd-menu-desktop > ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	>li.page_item, 
+	>li.menu-item{
+		position: relative;
+		display:inline-block;
+		>a{
+			outline:none;
+			box-shadow:none; 
+			padding:5px 10px; 
+			display:inline-block;
+			letter-spacing: 0.1em;
+			@include link_style(navpage);
+			@include transition;
+		}
+		&.page_item_has_children,
+		&.menu-item-has-children{
+			>a{
+				&:after{
+					@include font_awesome(\f107, 14px);
+					margin-left: 10px;
+					vertical-align: 0px;
+				}
+			}
+		}
+		ul.children,
+		ul.sub-menu{
+			position:absolute;
+			text-align:left;	
+			z-index:200;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			top: 100%;
+			min-width: 290px;
+			background: #ffffff;
+			border:1px solid $navPages-subMenu-border-Color;
+			visibility: hidden;
+			@include opacity(0);
+			@include transition;
+			&:before{
+				content:'';
+				position:absolute;
+				left:0;
+				bottom:-1px;
+				background:#f3f3f3;
+				height:3px;
+				width:100%;
+				z-index:100;
+				display: none;
+			}
+			>li{
+				padding: 0 20px;
+				position:relative;
+				a{
+					padding: 10px 0;
+					display:block;
+				}
+				&+li{
+					border-top: 1px solid $navPages-subMenu-border-Color;
+				}
+				&:first-child{
+					>a{
+						border: none;
+					}
+				}
+				ul.children,
+				ul.sub-menu{
+					top: 0;
+					left: 100%;
+					li{
+						ul.children{
+							li{
+								ul.children{
+									left: 100%;
+								}
+							}
+						}	
+					}	
+				}
+				&:hover{
+					>ul.children,
+					>ul.sub-menu{
+						opacity:1;
+						visibility:visible;
+					}
+				}
+			}
+		}
+		&:hover{
+			>ul.children, 
+			>ul.sub-menu{
+				visibility: visible;
+				@include opacity(1);
+			}
+		}
+	}
+}
+
+.wd-navmenu{
+	.widget_nav_menu{
+		.menu{
+			> li{
+				&.menu-item-has-children{
+					.sub-menu{
+						display: none;
+						-webkit-transform: scale(1,0);
+					    -moz-transform: scale(1,0);
+					    transform:scale(1,0);
+						position: absolute;
+						left: 0;
+						width: 100%;
+						background-color: #f2f2f2;
+					    padding: 40px 70px;
+					    text-align: left;
+					    z-index: 100;
+					    li{
+							float: left;
+							padding: 15px;
+					    }
+					}
+					&:hover{
+						.sub-menu{
+							display: block;
+							-webkit-transform: scale(1,1);
+						    -moz-transform: scale(1,1);
+						    transform:scale(1,1);
+						}
+					}
+				}
+			}
+		}
+	}
+}

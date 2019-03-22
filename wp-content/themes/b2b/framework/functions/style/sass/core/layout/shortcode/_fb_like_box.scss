@@ -1,0 +1,25 @@
+/* Facebook likebox */
+.fb_iframe_widget {
+    display: block !important;
+    span {
+        position: static !important;
+    }
+}
+
+.fb_iframe_widget_fluid span {
+    width:100% !important;
+}
+
+.fb-like-box {
+    iframe {
+        width: 100% !important;
+        border: medium none;
+        overflow: hidden; 
+        height: 230px; 
+        background:#fff;
+    }
+    span {
+        width: auto !important;
+        position: initial !important;
+    }
+}

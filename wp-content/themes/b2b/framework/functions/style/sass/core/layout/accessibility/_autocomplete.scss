@@ -1,0 +1,45 @@
+/* Custom JQuery Autocomplete */
+.ui-autocomplete {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 101;
+	float: left;
+	display: none;
+	min-width: 160px;
+	_width: 160px;
+	padding: 20px 25px;
+	margin: 2px 0 0 0;
+	list-style: none;
+	background-color: #ffffff;
+	border-color: $border-color-dark;
+	border-style: solid;
+	border-width: 1px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	@include border-radius(0);
+	@include box-shadow(0, 5px, 10px, rgba($border-color-dark, 0.2));
+	@include breakpoint('max', 'tablet') {
+		max-height: 200px;
+		overflow: auto;
+	}
+}
+.ui-menu-item > a.ui-corner-all {
+	display: block;
+	padding: 3px 15px;
+	clear: both;
+	font-weight: fontWeight("normal");
+	line-height: 18px;
+	color: #fff;
+	white-space: nowrap;
+}
+.ui-autocomplete li{
+	cursor: pointer;
+	color:#282828;
+}
+.ui-autocomplete li:hover{
+	color:#a5a5a5;
+}

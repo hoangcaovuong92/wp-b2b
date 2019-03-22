@@ -1,0 +1,62 @@
+.wd-social-icons{
+    &.wd-social-icons-vertical, &.wd-social-icons-horizontal{
+        ul.wd-social-icons-list{
+            list-style: none;
+            margin: 0;
+        }
+        li{
+            a{
+                @include link_style(primary);
+            }
+            i{
+                min-width: 20px;
+            }
+            @include breakpoint('max', 'tablet'){
+                display: inline-block;
+                margin: 0 8px;
+                a{
+                    //border-bottom: 1px solid $border-color-light;
+                    //margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    &.wd-social-icons-vertical{
+        margin-top: 15px;
+        li{
+            display: block;
+            margin-bottom: 12px !important;
+            margin-left: 0px;
+        }
+    }
+    &.wd-social-icons-horizontal{
+        ul{
+            @include flexbox; 
+            @include flex-wrap(wrap); 
+        }
+        li:not(:last-child){
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        .wd-flex-justify-center{
+            li{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+        .wd-flex-justify-right{
+            li:not(:first-child){
+                margin-left: 20px;
+                margin-right: 0;
+            }
+        }
+    }
+    &.wd-social-icons-nav-user{
+
+    }
+    @include breakpoint('max', 'tablet') {
+       .wd-navUser-action-text{
+           display: none;
+        }
+    }
+}

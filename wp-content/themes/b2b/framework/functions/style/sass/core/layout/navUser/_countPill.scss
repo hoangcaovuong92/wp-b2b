@@ -1,0 +1,19 @@
+.wd-count-pill{
+    width: 17px;
+    height: 17px;
+    right: 20px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 24px;
+    background-color: $countPill-backgroundColor;
+    color: $countPill-color;
+    font-size: fontSize('tiny') - 2px;
+    @include flexbox; 
+    @include justify-content(center);
+    @include align-items(center);
+    @include breakpoint('min', 'tablet') {
+        position: absolute;
+        right: -15px;
+        bottom: -10px;
+    }
+}

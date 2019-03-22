@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Name: WP DANCE
+Slug: color_default
+Description: custom color for default.
+-->
+<items_setting>
+	<general>
+		<title>General</title>
+		<section>wd_color_general_section</section>
+		<description></description>
+		<items>
+			<item>
+				<name>Background Color</name>
+				<slug>wd_general_bg_color</slug>
+				<std>transparent</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector>body</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Title</name>
+				<slug>wd_general_title_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>
+							h1, h2, h3, h4, h5, h6, 
+							h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, 
+							h1 span, h2 span, h3 span, h4 span, h5 span, h6 span, 
+							.wd-title, .page-heading, .wd-title a, .wd-title .wd-title-heading, .page-heading a, .wd-title span, .page-heading span, 
+							.widget .wd-title-widget</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Link</name>
+				<slug>wd_general_link_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, a</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Link (hover)</name>
+				<slug>wd_general_link_hover_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>
+							h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, a:hover,
+							h1 a:active, h2 a:active, h3 a:active, h4 a:active, h5 a:active, h6 a:active, a:active,
+						</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Text</name>
+				<slug>wd_general_text_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>html, body ,a , a:hover, .wd-title .wd-title-description</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Input Text</name>
+				<slug>wd_general_input_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>textarea, input[type], ::-webkit-input-placeholder,:-moz-placeholder,::-moz-placeholder,:-ms-input-placeholder</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Border</name>
+				<slug>wd_general_border_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>border-color</attribute>
+						<selector></selector>
+					</f1>
+					<f2>
+						<attribute>background-color</attribute>
+						<selector></selector>
+					</f2>
+					<f3>
+						<attribute>boder-top-color</attribute>
+						<selector></selector>
+					</f3>
+					<f4>
+						<attribute>boder-bottom-color</attribute>
+						<selector></selector>
+					</f4>
+				</frontend>
+				<important>0</important>
+			</item>	
+		</items>
+	</general>
+	<product>
+		<title>Product</title>
+		<section>wd_color_product_section</section>
+		<description></description>
+		<items>
+			<item>
+				<name>Title</name>
+				<slug>wd_product_title_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Price</name>
+				<slug>wd_product_price_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Description</name>
+				<slug>wd_product_description_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+		</items>
+	</product>
+	<blog>
+		<title>Blog</title>
+		<section>wd_color_blog_section</section>
+		<description></description>
+		<items>
+			<item>
+				<name>Title</name>
+				<slug>wd_blog_title_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Meta</name>
+				<slug>wd_blog_meta_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Description</name>
+				<slug>wd_blog_description_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+		</items>
+	</blog>
+	<button>
+		<title>Button</title>
+		<section>wd_color_button_section</section>
+		<description></description>
+		<items>
+			<item>
+				<name>Text</name>
+				<slug>wd_button_text_color</slug>
+				<std>#fff</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>.button, a.button, .woocommerce a.button, wd-shortcode-buttons a</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Text (hover)</name>
+				<slug>wd_button_text_hover_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>.button:hover, .button:focus, .button:active,
+								a.button:hover, a.button:focus, a.button:active,
+								.woocommerce a.button:hover, .woocommerce a.button:focus, .woocommerce a.button:active,
+								wd-shortcode-buttons a:hover, wd-shortcode-buttons a:focus, wd-shortcode-buttons a:active
+						</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Background</name>
+				<slug>wd_button_background_color</slug>
+				<std>#000</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector>.button, wd-shortcode-buttons a</selector>
+					</f1>
+					<f2>
+						<attribute>border-color</attribute>
+						<selector>.button:hover, .button:focus, .button:active,
+								wd-shortcode-buttons a:hover, wd-shortcode-buttons a:focus, wd-shortcode-buttons a:active
+						</selector>
+					</f2>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Background (hover)</name>
+				<slug>wd_button_background_hover_color</slug>
+				<std>#fff</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector>.button:hover, .button:focus, .button:active,
+								wd-shortcode-buttons a:hover, wd-shortcode-buttons a:focus, wd-shortcode-buttons a:active
+						</selector>
+					</f1>
+					<f2>
+						<attribute>border-color</attribute>
+						<selector>.button, wd-shortcode-buttons a</selector>
+					</f2>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Border</name>
+				<slug>wd_button_border_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>border-color</attribute>
+						<selector></selector>
+					</f1>
+					<f2>
+						<attribute>background-color</attribute>
+						<selector></selector>
+					</f2>
+					<f3>
+						<attribute>boder-top-color</attribute>
+						<selector></selector>
+					</f3>
+					<f4>
+						<attribute>boder-bottom-color</attribute>
+						<selector></selector>
+					</f4>
+				</frontend>
+				<important>0</important>
+			</item>
+		</items>
+	</button>
+	<header>
+		<title>Header</title>
+		<section>wd_color_header_section</section>
+		<description></description>
+		<items>
+			<item>
+				<name>Background</name>
+				<slug>wd_header_bg_color</slug>
+				<std>transparent</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector>header</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Text</name>
+				<slug>wd_header_text</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+		</items>
+	</header>
+	<footer>
+		<title>Footer</title>
+		<section>wd_color_footer_section</section>
+		<description></description>
+		<items>
+			<background>
+				<name>Background</name>
+				<slug>wd_footer_bg_color</slug>
+				<std>transparent</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector>footer</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</background>	
+			
+			<item>
+				<name>Text</name>
+				<slug>wd_footer_text</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			
+		</items>
+	</footer>
+	<menu>
+		<title>Menu</title>
+		<section>wd_color_menu_section</section>
+		<description></description>
+		<items>
+			<item>
+				<name>Dropdown Background</name>
+				<slug>wd_menu_dropdown_bg_color</slug>
+				<std>transparent</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector></selector>
+					</f1>
+					<f2>
+						<attribute>border-color</attribute>
+						<selector></selector>
+					</f2>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Dropdown Text</name>
+				<slug>wd_menu_dropdown_text</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>.mobile-menu nav.ubermenu ul li.ubermenu-has-submenu-drop > .ubermenu-target:after, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 ul.ubermenu-submenu li a, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item ul.ubermenu-submenu li a, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 ul.ubermenu-submenu li a, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item ul.ubermenu-submenu li a, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:hover, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:focus, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:active, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:hover, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:focus, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:active, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:hover, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:focus, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:active, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:hover, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:focus, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a:active,.widget_nav_menu ul .sub-menu li a, .widget_nav_menu ul .children li a,.wd-header-menu-right ul .sub-menu li a,.wd-header-menu-right ul .children li a,.widget_nav_menu ul .sub-menu, .widget_nav_menu ul .children,.wd-header-menu-right ul .sub-menu,.wd-header-menu-right ul .children</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Dropdown Text (hover)</name>
+				<slug>wd_menu_dropdown_text</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector>body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 ul.ubermenu-submenu li a:hover, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 ul.ubermenu-submenu li a:focus, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 ul.ubermenu-submenu li a:active, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item ul.ubermenu-submenu li a:hover, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item ul.ubermenu-submenu li a:focus, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item ul.ubermenu-submenu li a:active, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 ul.ubermenu-submenu li a:hover, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 ul.ubermenu-submenu li a:focus, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 ul.ubermenu-submenu li a:active, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item ul.ubermenu-submenu li a:hover, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item ul.ubermenu-submenu li a:focus, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item ul.ubermenu-submenu li a:active ,body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 ul.ubermenu-submenu, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item ul.ubermenu-submenu, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 ul.ubermenu-submenu, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item ul.ubermenu-submenu ,body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item > ul.ubermenu-submenu.ubermenu-submenu-align-full_width > li .ubermenu-submenu li.ubermenu-item-has-children .ubermenu-submenu li a,widget_nav_menu ul .sub-menu li a:hover, .widget_nav_menu ul .sub-menu li a:focus, .widget_nav_menu ul .sub-menu li a:active, .widget_nav_menu ul .children li a:hover, .widget_nav_menu ul .children li a:focus, .widget_nav_menu ul .children li a:active,.wd-header-menu-right ul .sub-menu li a:hover,.wd-header-menu-right ul .sub-menu li a:focus, .wd-header-menu-right ul .sub-menu li a:active,.wd-header-menu-right ul .children li a:hover, .wd-header-menu-right ul .children li a:focus, .wd-header-menu-right ul .children li a:active,.widget_nav_menu ul .sub-menu, .widget_nav_menu ul .children, .wd-header-menu-right ul .sub-menu, .wd-header-menu-right ul .children</selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>
+			<item>
+				<name>Text</name>
+				<slug>wd_menu_text_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>color</attribute>
+						<selector></selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Menu Line</name>
+				<slug>wd_menu_line_color</slug>
+				<std>#282828</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector> body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 > a span:after, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item > a span:after, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 > a span:after, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item > a span:after </selector>
+					</f1>
+				</frontend>
+				<important>0</important>
+			</item>	
+			<item>
+				<name>Text (hover)</name>
+				<slug>wd_menu_text_hover</slug>
+				<std>#a5a5a5</std>
+				<frontend>
+					<f1>
+						<attribute>background-color</attribute>
+						<selector> body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0 ul.ubermenu-submenu li:hover > a:before, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item ul.ubermenu-submenu li:hover > a:before, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0 ul.ubermenu-submenu li:hover > a:before, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item ul.ubermenu-submenu li:hover > a:before,.widget_nav_menu ul .sub-menu li:hover > a:before, .widget_nav_menu ul .children li:hover > a:before,  .wd-header-menu-right ul .sub-menu li:hover > a:before,  .wd-header-menu-right ul .children li:hover > a:before</selector>
+					</f1>
+					<f2>
+						<attribute>color</attribute>
+						<selector>body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0:hover, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item:hover, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0:hover, body nav.ubermenu-horizontal .ubermenu-nav li.ubermenu-item-level-0:hover > a, body nav.ubermenu-horizontal .ubermenu-nav li.menu-item:hover > a, body nav.ubermenu-horizontal #menu-right-navigation li.ubermenu-item-level-0:hover > a, body nav.ubermenu-horizontal #menu-right-navigation li.menu-item:hover > a,.widget_nav_menu ul li.page_item_has_children:hover > a:after, .widget_nav_menu ul li.menu-item-has-children:hover > a:after, .wd-header-menu-right ul li.page_item_has_children:hover > a:after, .wd-header-menu-right ul li.menu-item-has-children:hover > a:after,.widget_nav_menu ul li:hover > a,        .wd-header-menu-right ul li:hover > a</selector>
+					</f2>
+				</frontend>
+				<important>0</important>
+			</item>		
+		</items>
+	</menu>
+</items_setting>

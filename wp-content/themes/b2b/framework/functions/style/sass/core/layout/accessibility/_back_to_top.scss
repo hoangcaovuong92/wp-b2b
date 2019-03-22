@@ -1,0 +1,16 @@
+/* back to top button */
+#wd-back-to-top{
+    position: fixed;
+    z-index: 9999;
+	a.scroll-button{
+	    text-align: center;
+	    font-weight: fontWeight("bold");
+	    text-decoration: none;
+	    font-size: 18px;
+	    display: block;
+		@include transition;
+	}
+	@include breakpoint('max', 'tablet') {
+		display: none;
+	}
+}

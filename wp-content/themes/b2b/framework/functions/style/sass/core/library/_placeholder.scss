@@ -1,0 +1,50 @@
+%hide_text{
+    font-size:0; 
+ 	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	text-align: left;
+}/* @extend %hide_text; */
+
+/* From keyframes */
+%effCircle{
+	position: relative;
+	overflow:hidden;
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		display: block;
+		content: '';
+		width: 0;
+		height: 0;
+		background: rgba(255,255,255,.2);
+		@include border-radius(100%);
+		@include transform(translate(-50%, -50%));
+		@include opacity(0);
+	}
+	&:hover:before {
+		@include animation(circle .75s);
+	}
+}/* @extend %effCircle; */
+
+%swing {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-transform-origin: top center;
+	-ms-transform-origin: top center;
+	transform-origin: top center;
+	-webkit-animation-name: swing;
+	animation-name: swing;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+	-webkit-animation-fill-mode: both;
+	&:hover{ 
+		-webkit-animation-play-state: paused;
+		animation-play-state: paused;
+	}
+}/* @extend %swing; */

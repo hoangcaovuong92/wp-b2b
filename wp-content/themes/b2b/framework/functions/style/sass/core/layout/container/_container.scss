@@ -1,0 +1,9 @@
+.wd-main-content{
+    //overflow: hidden;
+    &:after{
+        content: ".";
+        visibility: hidden;
+        display: block; 
+        clear: both;
+    }
+}

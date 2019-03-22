@@ -1,0 +1,4 @@
+.wd-megamenu-wrap, .wd-menu-desktop, .wd-menu-mobile{
+    font-family: $menu-font;
+    @include flex(1, 1, 0);
+}

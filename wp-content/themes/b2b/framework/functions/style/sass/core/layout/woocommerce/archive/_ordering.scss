@@ -1,0 +1,39 @@
+.woocommerce{
+	form.woocommerce-ordering{
+		float: right;
+		margin-bottom:40px;
+		position: relative;	
+		&:before {
+			content: "";
+			@include font_awesome(\f107, 14px);
+		    color: #282828;
+		    position: absolute;
+		    top: 50%;
+		    right: 5px;
+		    @include transform(translateY(-50%));
+		}
+		select{
+			height: 30px;
+			border:none;		
+			color:#7b7b7b;
+			padding:0 20px;
+			outline: none;
+			width:100%;
+			cursor: pointer;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			-prefix-appearance: none;
+			background: transparent;
+			position: relative;
+			z-index: 5;
+			@include box-sizing(border-box);
+			@include border-radius(0);
+		}
+		@include breakpoint('max', 'tablet') {
+			width: 100%;
+			border: solid 1px $border-color-dark;
+			margin-bottom: 20px;
+		}
+	}
+} 

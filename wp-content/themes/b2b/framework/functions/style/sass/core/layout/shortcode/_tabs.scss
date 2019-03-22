@@ -1,0 +1,70 @@
+.vc_tta-container{
+	.vc_general.vc_tta-tabs.vc_tta-style-classic{
+		/*==== TITLE TAB ====*/
+		.vc_tta-tabs-container{
+			margin:0;
+			ul.vc_tta-tabs-list{
+				text-align: center;
+				margin-bottom: 40px;
+				margin-top: 15px;
+				li.vc_tta-tab{
+					padding:0 0 0 20px;
+					>a{
+						display: inline-block;
+					    font-weight: fontWeight("medium");
+					    border: 1px solid $border-color-light;
+					    background: #fff;
+					    letter-spacing: .5px;
+					    text-transform: uppercase;
+					    font-size: 13px;
+					    color: #3f3f3f;
+					    min-width: 80px;
+					    padding: 5px 10px;
+						text-align: center;
+						@include border-radius(0);
+					    span{
+					    	vertical-align: -webkit-baseline-middle;
+					    }
+    					&:before,&:after{
+    						display: none;
+    					}
+					}
+					&.vc_active, &:hover,&:active,&:focus{						
+						>a{
+							color: #3f3f3f  !important;
+							border: 1px solid $border-color-dark;
+						}
+					}	
+				}
+			}
+		}
+		/*===== CONTENT =====*/
+		.vc_tta-panels-container{
+			.vc_tta-panels{
+				border:none;
+				background:none;
+				@include border-radius(0);
+				.vc_tta-panel{
+					margin:0;
+					.vc_tta-panel-heading{
+						@include breakpoint('max', 'tablet'){
+							margin-bottom:20px;
+							border-color:$border-color-light;
+						}
+						h4.vc_tta-panel-title{
+							a{	
+								@include link_style(primary);
+							}
+						}
+					}
+					.vc_tta-panel-body{
+						padding:0;
+						border:none;
+						overflow: visible;
+						@include border-radius(0);
+					}
+				}
+			}
+		}
+	}
+}	

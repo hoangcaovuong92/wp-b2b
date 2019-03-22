@@ -1,0 +1,15 @@
+.wd-desktop-screen{
+    display: none;
+}
+.wd-mobile-screen{
+    display: block;
+}
+
+@include breakpoint('min', 'desktop') {
+    .wd-desktop-screen{
+        display: block;
+    }
+    .wd-mobile-screen{
+        display: none;
+    }
+}
