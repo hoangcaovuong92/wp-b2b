@@ -1,17 +1,17 @@
 body .wd-main-content-wrap{
 	.wd-button-style-1{
-		@include button_style(1);
+		@include button_style(primary);
 	}
 
 	.wd-button-style-2{
-		@include button_style(2);
+		@include button_style(secondary);;
 	}
 
 	/* Loadmore button */
 	.wd-loadmore{
 		text-align:center;
 		a.button{
-			@include button_style(1);
+			@include button_style(primary);
 			&:after{
 				content: ">";
 	    		margin-left: 10px;
@@ -24,7 +24,7 @@ body .wd-main-content-wrap{
 			span{
 				padding:10px;
 				border:solid 1px $border-color-dark;
-				color:#282828;
+				color: $text-color-dark;
 			}
 		}
 	}
@@ -44,7 +44,7 @@ body .wd-main-content-wrap{
 			}
 			&:hover, &.active{
 				span{ 
-					background-color:#363636;
+					background-color: $text-color-dark;
 				}
 			}
 			&.active span{ 

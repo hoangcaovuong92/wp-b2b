@@ -7,6 +7,7 @@ if ( ! function_exists( 'wd_accordion_function' ) ) {
 			'icon_plus'				=> 'fa fa-plus',
 			'icon_minus'			=> 'fa fa-minus',
 			'style_class'      		=> 'style-1',
+			'fullwidth_mode'		=> false,
 			'class'      			=> '',
 		), $atts ));
 		if (!function_exists('vc_param_group_parse_atts')) return;
@@ -15,9 +16,12 @@ if ( ! function_exists( 'wd_accordion_function' ) ) {
 		$icon_minus = ($icon_minus) ? explode(' ', $icon_minus)[1] : '';
 		$style_class 	= 'wd-accordion-'.$style_class;
 		$random_id 	= 'wd-shortcode-accordion-'.mt_rand();
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 		ob_start(); ?>
 		<?php if (count($items)): ?>
-			<div id="<?php echo esc_attr($random_id); ?>"  class="wd-shortcode-accordion <?php echo esc_attr($style_class); ?> <?php echo esc_attr($class); ?>">
+			<div id="<?php echo esc_attr($random_id); ?>" class="wd-shortcode wd-shortcode-accordion <?php echo esc_attr($style_class); ?> <?php echo esc_attr($class); ?>">
 	        	<?php $random_num = mt_rand(); $i = 0; ?>
 	        	<div class="panel-group" id="accordion-<?php echo $random_num; ?>" role="tablist" aria-multiselectable="true" data-icon_plus="<?php echo esc_attr( $icon_plus ); ?>" data-icon_minus="<?php echo esc_attr( $icon_minus ); ?>">
 	        		<?php foreach ($items as $item): ?>
@@ -29,14 +33,14 @@ if ( ! function_exists( 'wd_accordion_function' ) ) {
 				                    	<?php if ($show_icon && $icon_plus != '' && $icon_minus != ''): ?>
 				                        	<i class="wd-accordion-icon fa <?php echo esc_attr( $icon_plus ); ?>"></i>
 				                    	<?php endif ?>
-										<span class="wd-shortcode-title">
+										<span class="wd-accordion-title">
 				                       	 <?php echo esc_html( $item['title'] ); ?>
 				                        </span>
 				                    </a>
 				                </h4>
 				            </div>
 				            <div id="collapse-<?php echo $random_num.$i; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $random_num.$i; ?>">
-				                <div class="panel-body wd-shortcode-content">
+				                <div class="panel-body wd-accordion-content">
 				                      <?php echo do_shortcode( $item['content'] ); ?>
 				                </div>
 				            </div>

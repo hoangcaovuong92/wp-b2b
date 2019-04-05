@@ -4,7 +4,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    .wd-instagram-wrapper, .wd-social-icons{
+    .wd-instagram-wrapper, .wd-shortcode-social-icons{
         margin-bottom: 30px;
         @include breakpoint('min', 'tablet') {
             margin-bottom: 60px;
@@ -13,7 +13,7 @@
             margin-bottom: 90px;
         }
     }
-    .wd-social-icons{
+    .wd-shortcode-social-icons{
         text-transform: uppercase;
         font-weight: fontWeight("bold");
         a{
@@ -30,6 +30,7 @@
             span{
                 text-align: center;
                 letter-spacing: 0.1em;
+                font-size: fontSize("tiny") + 1;
             }
         }
         &.wd-social-icons-horizontal{

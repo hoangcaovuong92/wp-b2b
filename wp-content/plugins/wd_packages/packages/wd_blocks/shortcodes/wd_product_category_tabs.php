@@ -23,6 +23,7 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 			'show_nav'				=> '1',
 			'auto_play'				=> '1',
 			'per_slide'				=> '1',
+			'fullwidth_mode' 		=> false,
 			'class'      			=> 'heading-1',
 		), $atts ));	
 		if (!wd_is_woocommerce()) return;
@@ -96,7 +97,7 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 						'name' => $item_name,
 						'id'   => $tab['id'],
 						'slug' => str_replace( '_', '-', $show ),
-						'link' => 'products-by-category-tabs-' . str_replace( '_', '-', $show ) . '-' . $tab['id'],
+						'link' => 'wd-products-by-category-tabs-' . str_replace( '_', '-', $show ) . '-' . $tab['id'],
 					);
 				}
 				break;
@@ -112,7 +113,7 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 						'name' => $category['name'],
 						'id'   => $category['id'],
 						'slug' => $category['slug'],
-						'link' => 'products-by-category-tabs-' . $category['slug'] . '-' . rand(),
+						'link' => 'wd-products-by-category-tabs-' . $category['slug'] . '-' . rand(),
 					);
 				}
 				break;
@@ -122,7 +123,7 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 						'name' => $category['name'],
 						'id'   => $category['id'],
 						'slug' => $category['slug'],
-						'link' => 'products-by-category-tabs-' . $category['slug'],
+						'link' => 'wd-products-by-category-tabs-' . $category['slug'],
 					);
 				}
 				$tab['id'] = $tab['items'][0]['id'];
@@ -156,9 +157,12 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 		}
 		$columns_product 	= ($is_slider == '0') ? 'wd-columns-'.$columns.' wd-tablet-columns-'.$columns_tablet.' wd-mobile-columns-'.$columns_mobile : '';
 
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
 		ob_start();
 		if ( $products->have_posts() ) : ?>
-			<div class="products-by-category-tabs woocommerce <?php echo esc_html($tab_style_class); ?> <?php echo esc_attr( $class ) ?>">
+			<div class="wd-shortcode wd-shortcode-products-by-category-tabs woocommerce <?php echo esc_html($tab_style_class); ?> <?php echo esc_attr( $class ) ?>">
 				<div class="tab-control">
 					<ul class="tabs" role="tablist">
 						<?php if ($title): ?>
@@ -216,7 +220,7 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 								
 								<?php $random_id 			= 'wd-product-by-category-tab-'.mt_rand(); ?>
 								<div id="<?php echo esc_attr( $random_id ); ?>" class="<?php echo esc_attr( $class_masonry_wrap ); ?>">
-									<div class="wd-products-wrapper <?php echo esc_html($columns_product); ?> <?php echo ( 0 == $key ) ? 'products-by-category-tabs-products' : 'products-by-category-tabs-loading' ?>">
+									<div class="wd-products-wrapper <?php echo esc_html($columns_product); ?> <?php echo ( 0 == $key ) ? 'wd-products-by-category-tabs-products' : 'wd-products-by-category-tabs-loading' ?>">
 										<?php if ( 0 == $key ): ?>
 											
 											<?php if ($is_slider == '1') : ?>
@@ -351,7 +355,7 @@ if ( ! function_exists( 'wd_product_category_tabs_function' ) ) {
 					<?php endif ?>
 
 				</div><!-- .tabs-contents -->
-			</div><!-- .products-by-category-tabs -->
+			</div><!-- .wd-shortcode-products-by-category-tabs -->
 			<?php
 
 			wp_reset_postdata();

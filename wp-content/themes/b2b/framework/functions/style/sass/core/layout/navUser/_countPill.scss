@@ -1,19 +1,21 @@
 .wd-count-pill{
     width: 17px;
     height: 17px;
-    right: 20px;
     text-align: center;
     border-radius: 50%;
     line-height: 24px;
-    background-color: $countPill-backgroundColor;
-    color: $countPill-color;
-    font-size: fontSize('tiny') - 2px;
+    font-size: fontSize('tiny');
+    font-weight: fontWeight('semibold');
+    position: absolute;
+    left: 50%;
+    top: -13px;
+    // background-color: $countPill-backgroundColor;
+    // color: $countPill-color;
     @include flexbox; 
     @include justify-content(center);
     @include align-items(center);
+    @include transform(translateX(-50%));
     @include breakpoint('min', 'tablet') {
-        position: absolute;
-        right: -15px;
-        bottom: -10px;
+        font-size: fontSize('root') - 1px;
     }
 }

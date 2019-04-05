@@ -318,14 +318,25 @@ if (typeof wd_menu_general_script != 'function') {
 				winTop = jQuery(window).scrollTop();
 				if (timer) clearTimeout(timer);
 				timer = setTimeout(function() {
-					if (winTop > top) {
+
+					if (winTop > top && !$header.hasClass('menu-sticky')) {
 						//add class sticky to header element after croll
 						$header.addClass('menu-sticky');
 						$stickymenu_placeholder.addClass('menu-sticky');
-					}else{
+
+						//Clear search ajax results
+						jQuery('body').trigger('clear_search_result');
+						//Close search ajax form
+						jQuery('.wd-popup-search-result').removeClass("wd-search-open");
+					}else if (winTop < top && $header.hasClass('menu-sticky')){
 						//add class sticky to header element after croll
 						$header.removeClass('menu-sticky');
 						$stickymenu_placeholder.removeClass('menu-sticky');
+
+						//Clear search ajax results
+						jQuery('body').trigger('clear_search_result');
+						//Close search ajax form
+						jQuery('.wd-popup-search-result').removeClass("wd-search-open");
 					}
 				}, 200);
 			});

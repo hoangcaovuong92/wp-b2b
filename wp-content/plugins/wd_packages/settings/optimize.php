@@ -42,6 +42,7 @@ if (!class_exists('WD_Optimize')) {
 			$options = get_option('wd_packages');
 			$auto_save_image = isset($options['wd_auto_save_image']) ? $options['wd_auto_save_image'] : false;
 			$auto_set_featured_image = isset($options['wd_auto_set_featured_image']) ? $options['wd_auto_set_featured_image'] : false;
+			$compress_html = isset($options['wd_compress_html']) ? $options['wd_compress_html'] : false;
 			$disable_compress_image = isset($options['wd_disable_compress_image']) ? $options['wd_disable_compress_image'] : false;
 			$disable_wpautop = isset($options['wd_disable_wpautop']) ? $options['wd_disable_wpautop'] : false;
 			$disable_remove_version = isset($options['wd_disable_remove_version']) ? $options['wd_disable_remove_version'] : false;
@@ -59,9 +60,15 @@ if (!class_exists('WD_Optimize')) {
 				add_action('save_post', array($this, 'auto_set_post_image'));
 			}
 
+			if ($compress_html) {
+				if(file_exists(WD_PACKAGE_INCLUDE."/compress_html.php")){
+					require_once WD_PACKAGE_INCLUDE."/compress_html.php";
+				}
+			}
+
 			if (!$disable_compress_image) {
-				if(file_exists(WD_PACKAGE_INCLUDE."/auto_compress_img.php")){
-					require_once WD_PACKAGE_INCLUDE."/auto_compress_img.php";
+				if(file_exists(WD_PACKAGE_INCLUDE."/compress_image.php")){
+					require_once WD_PACKAGE_INCLUDE."/compress_image.php";
 				}
 			}
 

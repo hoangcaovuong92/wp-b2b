@@ -10,6 +10,7 @@ if (!function_exists('wd_buttons_function')) {
 			'text_color'		=> '',
 			'button_text' 		=> 'View Category',
 			'button_class' 		=> '',
+			'fullwidth_mode'	=> false,
 			'class' 			=> ''
 		), $atts));
 		$color_style 	= ($bg_color != '' || $text_color != '') ? 'style="' : '';
@@ -28,8 +29,12 @@ if (!function_exists('wd_buttons_function')) {
 		}
 		$button_style_class 	= 'wd-banner-image-button-'.$button_style;
 		$title_image			= get_bloginfo('name');
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-		<div class="wd-shortcode-buttons <?php echo esc_attr($class); ?>">
+		<div class="wd-shortcode wd-shortcode-buttons <?php echo esc_attr($class); ?>">
 			<a class="<?php echo esc_attr($button_style_class); ?> <?php echo esc_attr($button_class); ?>" href="<?php echo esc_url($link_url); ?>" title="<?php echo esc_attr($title_image); ?>" <?php echo $color_style; ?>><?php echo esc_attr($button_text); ?></a>
 		</div>
 		<?php

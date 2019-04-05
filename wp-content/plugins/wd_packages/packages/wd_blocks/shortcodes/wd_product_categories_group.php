@@ -4,14 +4,17 @@ if ( ! function_exists( 'wd_product_categories_group_function' ) ) {
 		$attr = shortcode_atts( array(
 			'categories_group' => '',
 			'is_slider'        => '0',
+			'fullwidth_mode' 	=> false,
+			'class' 			=> '1',
 		), $atts );
 		if (!wd_is_woocommerce()) return;
 		$categories_group = json_decode( urldecode( $attr['categories_group'] ), true );
 
-		ob_start();
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 
-		?>
-		<div class="wd-categories-group-wrapper woocommerce">
+		ob_start();?>
+		<div class="wd-shortcode wd-shortcode-product-categories-group woocommerce <?php echo esc_attr($class); ?>">
 			<ul class="wd-categories-group list-inline" data-slider="<?php echo $attr['is_slider'] ?>">
 				<?php foreach ( $categories_group as $categories ):
 					// Get image for category
@@ -81,6 +84,15 @@ if (!function_exists('wd_product_categories_group_vc_map')) {
 					'value' 		=> wd_vc_get_list_tvgiao_boolean(),
 				),
 			),
+			array(
+				'type' 			=> 'textfield',
+				'class' 		=> '',
+				'heading' 		=> esc_html__("Extra class name", 'wd_package'),
+				'description'	=> esc_html__("Style particular content element differently - add a class name and refer to it in custom CSS.", 'wd_package'),
+				'admin_label' 	=> true,
+				'param_name' 	=> 'class',
+				'value' 		=> ''
+			)
 		);
 	}
 }

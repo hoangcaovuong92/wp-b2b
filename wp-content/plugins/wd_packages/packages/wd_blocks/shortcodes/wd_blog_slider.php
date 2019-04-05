@@ -14,10 +14,10 @@ if(!function_exists('wd_blog_slider_function')){
 			'grid_hover_style'		=> 'normal',
 			'show_nav'				=> '1',
 			'auto_play'				=> '1',
+			'fullwidth_mode'		=> false,
 			'class'					=> '',
 		),$atts));
-		wp_reset_query();
-		
+
 		$args = array(
 			'posts_per_page' 	=> (int)$number_blogs,
 			'order' 			=> $sort,
@@ -42,19 +42,25 @@ if(!function_exists('wd_blog_slider_function')){
 		));
 
 		$class	.= ($grid_hover_style === 'grid-inner') ? ' wd-masonry-blog-content-inner' : '';
+		$class	.= ($columns == '1') ? ' wd-masonry-blog-slider-single-column' : '';
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 		
+		wp_reset_query();
 		$recent_posts 		= new WP_Query( $args );
 		ob_start();
 		if ( $recent_posts->have_posts() ) { ?>
-			<div class="wd-blog-wrapper wd-shortcode-blog-slider wd-slider-wrap wd-slider-wrap--blog-slider <?php echo esc_attr( $class ); ?>"
-				data-slider-options='<?php echo esc_attr( $slider_options ); ?>'>
-				<?php while( $recent_posts->have_posts() ) { 
-					$recent_posts->the_post();	global $post; ?>
-					<?php echo apply_filters('wd_filter_blog_content', array('thumbnail_size' => $image_size)); ?>
-				<?php } // End While ?>
+			<div class="wd-shortcode wd-shortcode-blog-slider <?php echo esc_attr($class); ?>">
+				<div class="wd-blog-wrapper wd-slider-wrap wd-slider-wrap--blog-slider"
+					data-slider-options='<?php echo esc_attr( $slider_options ); ?>'>
+					<?php while( $recent_posts->have_posts() ) { 
+						$recent_posts->the_post();	global $post; ?>
+						<?php echo apply_filters('wd_filter_blog_content', array('thumbnail_size' => $image_size)); ?>
+					<?php } // End While ?>
+				</div>
 			</div>
-			<?php 	
-		}
+		<?php }
 		$output = ob_get_clean();
 		wp_reset_query();
 		return $output;

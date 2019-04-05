@@ -59,4 +59,12 @@ extract(apply_filters('wd_filter_get_data_package', 'header-default' )); ?>
 			</div>
 		<?php } ?>
 	</div>
+
+	<?php
+	/**
+	 * wd_hook_popup_search_form hook.
+	 *
+	 * @hooked popup_search_form - 5
+	 */ 
+	do_action('wd_hook_popup_search_form'); ?>
 </div>

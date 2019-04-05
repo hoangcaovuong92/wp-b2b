@@ -10,7 +10,7 @@ if (!function_exists('wd_banner_slider_function')) {
 			'show_nav'		=> '1',
 			'show_dot'		=> '1',
 			'auto_play'		=> '1',
-			'class'			=> '1',
+			'fullwidth_mode'=> false,
 			'class' 		=> ''
 		), $atts));
 
@@ -22,10 +22,14 @@ if (!function_exists('wd_banner_slider_function')) {
 		$auto_play 		= ($auto_play == '1') 	? 'true' : 'false';
 
 		$title_image	= get_bloginfo('name');
-	    $random_id 		= 'wd-banner-slider-'.mt_rand();
+		$random_id 		= 'wd-banner-slider-'.mt_rand();
+		
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
 		ob_start(); ?>
 			<?php if (count($slider)) { ?>
-				<div id="<?php echo esc_attr( $random_id ); ?>" class="wd-shortcode-banner-slider <?php echo esc_attr($class); ?>">
+				<div id="<?php echo esc_attr( $random_id ); ?>" class="wd-shortcode wd-shortcode-banner-slider <?php echo esc_attr($class); ?>">
 					<?php foreach($slider as $image){ ?>
 						<a href="<?php echo esc_url($image['link']); ?>"  target='<?php echo esc_attr($target); ?>' title="<?php echo esc_attr($title_image); ?>">
 							<?php echo apply_filters('wd_filter_image_html', array('attachment' => $image['image'], 'image_size' => $image_size)); ?>

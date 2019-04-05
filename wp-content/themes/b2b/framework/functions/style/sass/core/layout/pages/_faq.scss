@@ -13,9 +13,9 @@
 				margin-bottom: 10px;
 				&.active,&:hover,&:focus,&:active {
 					a {	
-						background-color: #fff;
+						background-color: $background-color-white;
 						border: none;
-						color: #ffffff;
+						color: $text-color-light;
 					}
 				}
 				a {
@@ -38,9 +38,9 @@
 						&.active,&:hover,&:focus {
 							border-top: 5px solid $border-color-white;									
 							background-color: transparent;
-							color: #fff;
+							color: $text-color-light;
 							a {
-								color: #fff;
+								color: $text-color-light;
 							}
 						}								
 					}	
@@ -68,7 +68,7 @@
 		@include border-radius(0);
 	}
 	.panel-default > .panel-heading {
-	    color: #282828;
+	    color: $text-color-dark;
 	    background-color: none;
 	    border: none;
 	    padding:10px 0;
@@ -76,7 +76,7 @@
 }
 .wd-faq-style-tab{
 	.panel-default > .panel-heading {
-	    color: #282828;
+	    color: $text-color-dark;
 	    background-color: none;
 	    border: none;
 	    padding:10px 15px;
@@ -88,7 +88,7 @@
 		margin-bottom: 50px;
 		.wd-faq-title{
 			text-transform: uppercase;
-			color: #282828;
+			color: $text-color-dark;
 			font-weight: fontWeight("semibold");
 			font-size: 13px;
 		}

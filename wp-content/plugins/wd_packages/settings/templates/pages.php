@@ -87,13 +87,16 @@ if (!class_exists('WD_Page_Template')) {
                                         $footer_template = !empty($data['meta_data']['_wd_custom_footer']) ? $data['meta_data']['_wd_custom_footer'] : esc_html__("Default Footer", 'wd_package');
 
                                         $editor_list = array(
-											'visual_composer' => esc_html__("Visual Composer Editor", 'wd_package'),
 											'gutenberg' => esc_html__("Gutenberg Editor", 'wd_package'),
                                         );
+
+                                        if (wd_is_visual_composer()) {
+                                            $editor_list['visual_composer'] = esc_html__("Visual Composer Editor", 'wd_package');
+                                        }
                                         
                                         $required_template = array(
                                             'sidebar' => array(),
-                                            'banner' => $data['banner'],
+                                            'required_template' => $data['required_template'],
                                         );
                                         if (!empty($data['meta_data']['_wd_custom_layout_config']['left_sidebar'])){
                                             $required_template['sidebar'][] = $data['meta_data']['_wd_custom_layout_config']['left_sidebar'];
@@ -104,7 +107,6 @@ if (!class_exists('WD_Page_Template')) {
 										<tr valign="top">
 											<td>
 												<h3><?php echo esc_html($name); ?></h3>
-												<p><?php printf(__('Description: <strong>%s</strong>', 'wd_package'), esc_html($data['desc'])) ?></p>
 												<p><?php printf(__('Header: <strong>%s</strong>', 'wd_package'), $header_template) ?></p>
                                                 <p><?php printf(__('Footer: <strong>%s</strong>', 'wd_package'), $footer_template) ?></p>
                                                 
@@ -112,9 +114,10 @@ if (!class_exists('WD_Page_Template')) {
                                                     <p><?php printf(__('Required Sidebar: <strong>%s</strong>', 'wd_package'), implode(', ', $required_template['sidebar'])); ?></p>
                                                 <?php } ?>
 
-                                                <?php if (!empty($required_template['banner'])) { ?>
-                                                    <p><?php printf(__('Required Banner: <strong>%s</strong>', 'wd_package'), implode(', ', $required_template['banner'])); ?></p>
+                                                <?php if (!empty($required_template['required_template'])) { ?>
+                                                    <p><?php printf(__('Required Templates: <strong>%s</strong>', 'wd_package'), implode(', ', $required_template['required_template'])); ?></p>
                                                 <?php } ?>
+												<p><?php printf(__('Description: <strong>%s</strong>', 'wd_package'), $data['desc']) ?></p>
 											</td>
 											<td>
 												<img src="<?php echo esc_url($data['thumbnail']); ?>" alt="<?php echo esc_html($data['desc']); ?>">
@@ -158,13 +161,13 @@ if (!class_exists('WD_Page_Template')) {
 													echo '<p><input type="checkbox" checked="checked" name="create_sidebar" value="1"> '.esc_html__("Create Sidebar Widget?", 'wd_package').'</p>';
                                                 } ?>
                                                 <?php 
-												if (!empty($required_template['banner'])) {
-													echo '<p><input type="checkbox" checked="checked" name="create_banner" value="1"> '.esc_html__("Create Banner Template?", 'wd_package').'</p>';
+												if (!empty($required_template['required_template'])) {
+													echo '<p><input type="checkbox" checked="checked" name="create_banner" value="1"> '.esc_html__("Create Template Parts?", 'wd_package').'</p>';
                                                 } ?>
 												<br/>
                                                 <p><a   data-template="<?php echo $name; ?>" 
                                                         data-sidebar-template="<?php echo implode(',', $required_template['sidebar']); ?>"
-                                                        data-banner-template="<?php echo implode(',', $required_template['banner']); ?>"
+                                                        data-banner-template="<?php echo implode(',', $required_template['required_template']); ?>"
                                                         data-template-exist="<?php echo $this->check_homepage_template_exit($name) ? 'true' : 'false'; ?>" 
                                                         href="" class="button button-primary wd-button-with-loading wd-create-page-template">
 														<?php echo $this->check_homepage_template_exit($name) 
@@ -199,7 +202,7 @@ if (!class_exists('WD_Page_Template')) {
                     'is_homepage'   => true,
                     'header'        => '', //empty or the filename of 1 file in framework\layout\headers\templates
                     'footer'        => '',
-                    'banner'        => array('homepage-1-before-front-page'),
+                    'required_template' => array('homepage-1-before-front-page'),
 					'meta_data'   	=> array(
                         '_wd_custom_header' => '',
                         '_wd_custom_footer' => '',
@@ -220,7 +223,7 @@ if (!class_exists('WD_Page_Template')) {
                     'content'       => 'aaa',
                     'content_gutenberg' => '',
                     'is_homepage'   => true,
-                    'banner'        => array(),
+                    'required_template' => array(),
 					'meta_data'   	=> array(
                         '_wd_custom_header' => '',
                         '_wd_custom_footer' => '',
@@ -238,10 +241,10 @@ if (!class_exists('WD_Page_Template')) {
                 'About Us' => array(
 					'desc'      	=> esc_html__( 'Content of about us page', 'wd_package' ),
 					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/pages/about.jpg',
-                    'content'       => '[vc_row][vc_column][wd_title text_align="text-center" display_button="0" title="ABOUT US"][wd_profile image="'.WDADMIN_TEMPLATE_URI.'/images/pages/about-big.jpg'.'" display_logo="0" display_sign="1" sign_image="'.WDADMIN_TEMPLATE_URI.'/images/pages/sign.png'.'"][/vc_column][/vc_row]',
-                    'content_gutenberg' => '<!-- wp:shortcode -->[vc_row][vc_column][wd_title text_align="text-center" display_button="0" title="ABOUT US"][wd_profile image="'.WDADMIN_TEMPLATE_URI.'/images/pages/about-big.jpg'.'" display_logo="0" display_sign="1" sign_image="'.WDADMIN_TEMPLATE_URI.'/images/pages/sign.png'.'"][/vc_column][/vc_row]<!-- /wp:shortcode -->',
+                    'content'       => '[vc_row][vc_column][wd_title text_align="text-center" display_button="0" title="ABOUT US"][wd_profile image="'.WDADMIN_TEMPLATE_URI.'/images/pages/about-banner.jpg'.'" display_logo="0" display_sign="1" sign_image="'.WDADMIN_TEMPLATE_URI.'/images/pages/sign.png'.'"][/vc_column][/vc_row]',
+                    'content_gutenberg' => '<!-- wp:shortcode -->[vc_row][vc_column][wd_title text_align="text-center" display_button="0" title="ABOUT US"][wd_profile image="'.WDADMIN_TEMPLATE_URI.'/images/pages/about-banner.jpg'.'" display_logo="0" display_sign="1" sign_image="'.WDADMIN_TEMPLATE_URI.'/images/pages/sign.png'.'"][/vc_column][/vc_row]<!-- /wp:shortcode -->',
                     'is_homepage'   => false,
-                    'banner'        => array(),
+                    'required_template' => array(),
 					'meta_data'   	=> array(
                         '_wd_custom_header' => '',
                         '_wd_custom_footer' => '',
@@ -259,10 +262,73 @@ if (!class_exists('WD_Page_Template')) {
                 'Contact' => array(
 					'desc'      	=> esc_html__( 'Content of contact page', 'wd_package' ),
 					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/pages/contact.jpg',
-                    'content'       => 'a',
+                    'content'       => '[vc_row][vc_column][wd_title display_button="0" title="Contact"][wd_profile image="'.WDADMIN_TEMPLATE_URI.'/images/pages/contact-banner.jpg'.'" job="When you want to get in touch with us?" title="Don\'t be shy - come and say hi!" desc="Fill out the contact form to shoot us an email!" display_logo="0" text_align="text-center" about="Alternatively, we will be available intermittently to answer your questions through our online chat feature - there\'s a little pop-up chat box in the bottom left-hand corner of the screen, send us a question and if an agent is available we will respond in real time!" display_sign="0"][wd_contact_form slug="main-contact-form"][/vc_column][/vc_row]',
                     'content_gutenberg' => '',
                     'is_homepage'   => false,
-                    'banner'        => array(),
+                    'required_template' => array('main-contact-form'),
+					'meta_data'   	=> array(
+                        '_wd_custom_header' => '',
+                        '_wd_custom_footer' => '',
+                        '_wd_custom_layout_config' => array(
+                            'layout' 				=> '',
+                            'left_sidebar' 			=> '',
+                            'right_sidebar' 		=> '',
+                            'style_breadcrumb'		=> '',
+                            'image_breadcrumb'		=> '',
+                            'custom_class'			=> '',
+                            'custom_id'				=> '',
+                        ),
+                    ),
+                ),
+                'Login' => array(
+					'desc'      	=> __( 'Content of login page. <br/>Go to Theme Options => Page => Account Page to use this page.', 'wd_package' ),
+					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/pages/default.jpg',
+                    'content'       => '[vc_row][vc_column][wd_myaccount_form][/vc_column][/vc_row]',
+                    'content_gutenberg' => '',
+                    'is_homepage'   => false,
+                    'required_template' => array(),
+					'meta_data'   	=> array(
+                        '_wd_custom_header' => '',
+                        '_wd_custom_footer' => '',
+                        '_wd_custom_layout_config' => array(
+                            'layout' 				=> '',
+                            'left_sidebar' 			=> '',
+                            'right_sidebar' 		=> '',
+                            'style_breadcrumb'		=> '',
+                            'image_breadcrumb'		=> '',
+                            'custom_class'			=> '',
+                            'custom_id'				=> '',
+                        ),
+                    ),
+                ),
+                'Register' => array(
+					'desc'      	=> __( 'Content of register page. <br/>Go to Theme Options => Page => Account Page to use this page.', 'wd_package' ),
+					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/pages/default.jpg',
+                    'content'       => '[vc_row][vc_column][wd_myaccount_form form="register"][/vc_column][/vc_row]',
+                    'content_gutenberg' => '',
+                    'is_homepage'   => false,
+                    'required_template' => array(),
+					'meta_data'   	=> array(
+                        '_wd_custom_header' => '',
+                        '_wd_custom_footer' => '',
+                        '_wd_custom_layout_config' => array(
+                            'layout' 				=> '',
+                            'left_sidebar' 			=> '',
+                            'right_sidebar' 		=> '',
+                            'style_breadcrumb'		=> '',
+                            'image_breadcrumb'		=> '',
+                            'custom_class'			=> '',
+                            'custom_id'				=> '',
+                        ),
+                    ),
+                ),
+                'Forgot Password' => array(
+					'desc'      	=> __( 'Content of forgot password page. <br/>Go to Theme Options => Page => Account Page to use this page.', 'wd_package' ),
+					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/pages/default.jpg',
+                    'content'       => '[vc_row][vc_column][wd_myaccount_form form="forgot-password"][/vc_column][/vc_row]',
+                    'content_gutenberg' => '',
+                    'is_homepage'   => false,
+                    'required_template' => array(),
 					'meta_data'   	=> array(
                         '_wd_custom_header' => '',
                         '_wd_custom_footer' => '',
@@ -348,7 +414,7 @@ if (!class_exists('WD_Page_Template')) {
                     }
                 }
                
-                if ($template_data['is_homepage'] && $set_homepage === 'true') {
+                if ($template_data['is_homepage'] && $set_homepage) {
                     update_option('page_on_front', $post_id);
                     update_option( 'show_on_front', 'page' );
                 }
@@ -362,12 +428,10 @@ if (!class_exists('WD_Page_Template')) {
         public function create_page_template_ajax(){
             $template = $_REQUEST['template'];
             $editor = $_REQUEST['editor'];
-            $set_homepage = $_REQUEST['set_homepage'];
-            $create_sidebar = $_REQUEST['create_sidebar'];
-            $create_banner = $_REQUEST['create_banner'];
-            $result['template'] = $template;
-            $result['editor'] = $editor;
-            $result['set_homepage'] = $set_homepage;
+            $set_homepage = !empty($_REQUEST['set_homepage']) ? $_REQUEST['set_homepage'] : false;
+            $create_sidebar = !empty($_REQUEST['create_sidebar']) ? $_REQUEST['create_sidebar'] : false;
+            $create_banner = !empty($_REQUEST['create_banner']) ? $_REQUEST['create_banner'] : false;
+            
             if (!empty($create_sidebar)) {
                 $sidebar = WD_Sidebar_Installation::get_instance();
                 $create_sidebar = explode(',', $create_sidebar);
@@ -376,10 +440,10 @@ if (!class_exists('WD_Page_Template')) {
                 }
             }
             if (!empty($create_banner)) {
-                $banner = WD_Template_Parts::get_instance();
+                $template_parts = WD_Template_Parts::get_instance();
                 $create_banner = explode(',', $create_banner);
-                foreach ($create_banner as $template) {
-                    $banner->create_template_part($template, 'wd_banner');
+                foreach ($create_banner as $banner) {
+                    $template_parts->create_template_part($banner);
                 }
             }
 			if ($template) {

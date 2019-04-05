@@ -57,9 +57,8 @@ if (!class_exists('WD_Nav_User')) {
 				foreach ($layout_desktop as $key => $value) {
 					if ($key === 'mini_cart' && $value) {
 						if (!wd_is_woocommerce()) continue;
-						echo '<li>'.apply_filters('wd_filter_minicart', array('show_icon' => $show_icon, 'show_text' => $show_text, 'dropdown_position' => $dropdown_position, 'class' => '' )).'</li>';
+						echo '<li>'.apply_filters('wd_filter_minicart', array('show_icon' => $show_icon, 'show_text' => $show_text, 'dropdown_position' => $dropdown_position, 'screen' => 'desktop', 'class' => '' )).'</li>';
 					}elseif ($key === 'mini_account' && $value) {
-						if (!wd_is_woocommerce()) continue;
 						echo '<li>'.apply_filters('wd_filter_tiny_myaccount', array('show_icon' => $show_icon, 'show_text' => $show_text, 'dropdown_position' => $dropdown_position, 'class' => '' )).'</li>';
 					}if ($key === 'wishlist' && $value) {
 						if (!wd_is_woocommerce() || !defined( 'YITH_WCWL')) continue;
@@ -90,9 +89,8 @@ if (!class_exists('WD_Nav_User')) {
 				foreach ($layout_mobile as $key => $value) {
 					if ($key === 'mini_cart' && $value) {
 						if (!wd_is_woocommerce()) continue;
-						echo '<li>'.apply_filters('wd_filter_minicart', array('show_icon' => $show_icon, 'show_text' => $show_text, 'class' => '' )).'</li>';
+						echo '<li>'.apply_filters('wd_filter_minicart', array('show_icon' => $show_icon, 'show_text' => $show_text, 'screen' => 'mobile', 'class' => '' )).'</li>';
 					}elseif ($key === 'mini_account' && $value) {
-						if (!wd_is_woocommerce()) continue;
 						echo '<li>'.apply_filters('wd_filter_tiny_myaccount', array('show_icon' => $show_icon, 'show_text' => $show_text, 'class' => '' )).'</li>';
 					}if ($key === 'wishlist' && $value) {
 						if (!wd_is_woocommerce() || !defined( 'YITH_WCWL')) continue;
@@ -122,9 +120,8 @@ if (!class_exists('WD_Nav_User')) {
 				foreach ($layout_pushmenu as $key => $value) {
 					if ($key === 'mini_cart' && $value) {
 						if (!wd_is_woocommerce()) continue;
-						echo '<li>'.apply_filters('wd_filter_minicart', array('show_icon' => $show_icon, 'show_text' => $show_text, 'class' => '' )).'</li>';
+						echo '<li>'.apply_filters('wd_filter_minicart', array('show_icon' => $show_icon, 'show_text' => $show_text, 'screen' => 'mobile', 'class' => '' )).'</li>';
 					}elseif ($key === 'mini_account' && $value) {
-						if (!wd_is_woocommerce()) continue;
 						echo '<li>'.apply_filters('wd_filter_tiny_myaccount', array('show_icon' => $show_icon, 'show_text' => $show_text, 'class' => '' )).'</li>';
 					}if ($key === 'wishlist' && $value) {
 						if (!wd_is_woocommerce() || !defined( 'YITH_WCWL')) continue;

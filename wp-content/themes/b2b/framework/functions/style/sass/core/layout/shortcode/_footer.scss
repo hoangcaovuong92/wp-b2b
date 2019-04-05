@@ -8,14 +8,14 @@
 		width: 15%;
 		padding-right: 30px;
 		h2{
-			color: #282828;
+			color: $text-color-dark;
 			font-weight: fontWeight("semibold");
 			margin: 0;
 			text-transform: uppercase;
 		}
 	}
 	.subscribe_intro_text{
-		color:#282828;
+		color: $text-color-dark;
 		width: 35%;
 	}
 	.subscribe_form{
@@ -54,7 +54,7 @@
 			}				
 		}		
 		.button{
-			background: #000;
+			background: $background-color-dark;
 		    border: 0;
 		    height: auto;
 		    line-height: normal;
@@ -153,7 +153,7 @@
 	}
 }
 
-.wd-icon-widget-payment{
+.wd-shortcode-payment-icon{
 	@include flexbox;
 	width: 100%;
     margin-top: 20px;

@@ -58,15 +58,17 @@ do_action('wd_hook_before_main_content'); ?>
 		<!-- Content Index -->
 		<div class="wd-default-blog-archive <?php echo esc_attr($content_class); ?>">
 			<?php if ( have_posts() ) : ?>
-				<?php 
-				if ($toggle_layout) {
-					/**
-					 * wd_hook_blog_archive_toggle_button hook.
-					 *
-					 * @hooked before_main_content_wrapper
-					 */
-					do_action('wd_hook_blog_archive_toggle_button');
-				} ?>
+				<?php if ($toggle_layout) { ?>
+					<div class="wd-blog-toggle-layout-wrapper">
+						<?php
+						/**
+						 * wd_hook_blog_archive_toggle_button hook.
+						 *
+						 * @hooked blog_archive_toggle_button - 5
+						 */
+						do_action('wd_hook_blog_archive_toggle_button'); ?>
+					</div>
+				<?php } ?>
 				<div class="wd-blog-wrapper wd-blog-switchable-layout <?php echo esc_attr($layout_class); ?>">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php echo apply_filters('wd_filter_blog_content', array('thumbnail_size' => $image_size, 'custom_class' => $class_masonry_item )); ?>

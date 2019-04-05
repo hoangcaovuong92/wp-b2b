@@ -4,13 +4,18 @@ if ( ! function_exists( 'wd_myaccount_form_function' ) ) {
 		extract(shortcode_atts( array(
 			'form'			=> 'login',
 			'style_class'   => 'style-1',
+			'fullwidth_mode' => false,
 			'class'      	=> '',
 		), $atts ));
 
 		$style 		= 'wd-my-account-form-'.$style_class;
 		$random_id 	= 'wd-my-account-form-'.mt_rand();
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
 		ob_start(); ?>
-		<div id="<?php echo esc_attr($random_id); ?>" class="wd-shortcode-my-account-form-wrapper <?php echo esc_attr($style); ?> <?php echo esc_attr($class); ?>">
+		<div id="<?php echo esc_attr($random_id); ?>" class="wd-shortcode wd-shortcode-my-account-form-wrapper <?php echo esc_attr($style); ?> <?php echo esc_attr($class); ?>">
 			<?php echo apply_filters('wd_filter_myaccount_form', $form); ?>
 		</div>
 		<?php
@@ -45,7 +50,7 @@ if (!function_exists('wd_myaccount_form_vc_map')) {
 					'heading' 			=> esc_html__( 'Style', 'wd_package' ),
 					'param_name' 		=> 'style_class',
 					'admin_label' 		=> true,
-					'value' 			=> wd_vc_get_list_style_class(4),
+					'value' 			=> wd_vc_get_list_style_class(1),
 					'description' 		=> '',
 				),
 				array(

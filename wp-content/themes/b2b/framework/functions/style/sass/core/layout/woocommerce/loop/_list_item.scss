@@ -48,7 +48,7 @@
 					@include border-radius(0);
 					&:hover{
 						background:#282828 !important ;
-						color: #fff;
+						color: $text-color-light;
 						border: solid 1px $border-color-dark;
 					}
 					&.wd-shop-button--add-to-cart{
@@ -99,7 +99,7 @@
 									text-align: center;
 									font-weight: fontWeight("semibold");
 									background: none !important;
-									color: #282828;
+									color: $text-color-dark;
 									padding: 0 5px;
 								}
 								&:after{
@@ -114,7 +114,7 @@
 							}
 							&.button.loading{
 								position:relative;
-								background:#fff;
+								background: $background-color-white;
 								&:before{
 									width: 12px;
 									height: 12px;
@@ -142,7 +142,7 @@
 
 				.wd_quickshop_handler, .compare.button, .yith-wcwl-add-to-wishlist a.add_to_wishlist{
 					&:before{
-						color: #282828;
+						color: $text-color-dark;
 						text-align: center;
 						width:100%;
 						font-weight: fontWeight("semibold");
@@ -150,7 +150,7 @@
 					}
 					&:hover{
 						&:before{
-							color: #fff;
+							color: $text-color-light;
 						}
 						background:#282828 !important;
 						border: solid 1px $border-color-dark;

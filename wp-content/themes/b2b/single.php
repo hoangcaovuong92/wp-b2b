@@ -62,13 +62,17 @@ do_action('wd_hook_before_main_content'); ?>
 		
 		<?php while ( have_posts() ) : the_post();  ?>
 			<!-- Content Single Post -->
-			<div itemscope itemtype="http://schema.org/Article" class="wd-single-post-content <?php echo esc_attr($content_col_class); ?>">
-				<div class="<?php echo esc_attr($wrap_content_class); ?>">
-					<div class="wd-content-single">
-						<?php echo apply_filters('wd_filter_blog_single', true); ?>
-					</div>
-					<?php do_action('wd_hook_display_comment_form'); ?>
+			<div class="wd-single-post-content <?php echo esc_attr($content_col_class); ?> <?php echo esc_attr($wrap_content_class); ?>">
+				<div class="wd-content-single">
+					<?php echo apply_filters('wd_filter_blog_single', true); ?>
 				</div>
+				<?php 
+				/**
+				 * wd_hook_display_comment_form hook.
+				 * 
+				 * @hooked display_comment_form - 5
+				 */
+				do_action('wd_hook_display_comment_form'); ?>
 			</div>
 		<?php endwhile; // End of the loop. ?>
 		

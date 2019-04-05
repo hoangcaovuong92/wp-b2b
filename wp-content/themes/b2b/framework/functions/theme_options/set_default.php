@@ -31,12 +31,29 @@ if (!class_exists('WD_Default_Data')) {
 			if ( static::$called ) return;
 			static::$called = true;
 
-			// $wd_default_data = apply_filters('wd_filter_defaut_data', true); //return array default data
+			// $wd_default_data = apply_filters('wd_filter_get_icon', 'all'); //return class of icon
+			add_filter( 'wd_filter_get_icon', array($this, 'set_icons' ), 10, 2);
+
+			// $wd_default_data = apply_filters('wd_filter_defaut_data', 'all'); //return array default data
 			add_filter( 'wd_filter_defaut_data', array($this, 'set_default_data' ), 10, 2);
 		}
 
-		public function set_default_data(){
-			return array(
+		//****************************************************************//
+		/*								ICONS							  */
+		//****************************************************************//
+		public function set_icons($icon_name = 'all'){
+			$all_parts = array(
+				'cart' => 'fa fa-cart-arrow-down'
+			);
+			
+			return ($icon_name !== 'all' && !empty($all_parts[$icon_name])) ? $all_parts[$icon_name] : $all_parts;
+		}
+
+		//****************************************************************//
+		/*							THEME OPTIONS						  */
+		//****************************************************************//
+		public function set_default_data($part = 'all'){
+			$all_parts = array(
 				'general'       	=> $this->default_general(),
 				'sidebar'       	=> $this->default_sidebar(),
 				'layout'       		=> $this->default_layout(),
@@ -60,6 +77,7 @@ if (!class_exists('WD_Default_Data')) {
 				'social_instagram'	=> $this->default_social_instagram(),
 				'comment'       	=> $this->default_comment(),
 			);
+			return ($part !== 'all' && !empty($all_parts[$part])) ? $all_parts[$part] : $all_parts;
 		}
 
 		public function default_general(){
@@ -517,14 +535,15 @@ if (!class_exists('WD_Default_Data')) {
 	                'type'         		=> array(
 	                    'post'          	=> esc_html__( 'Blog', 'feellio' ),
 	                    'product'          	=> esc_html__( 'Product', 'feellio' ),
-	                    'post,product'      => esc_html__( 'Product & Blog', 'feellio' ),
+	                    'page'      		=> esc_html__( 'Page', 'feellio' ),
+	                    'wd_business'      	=> esc_html__( 'Business', 'feellio' ),
 	                ),
 		        ),
 		        'default'       => array(
 		            'bg_style'     		=> 'bg_color',
 		            'bg_color'      	=> '#fff',
 		            'bg_image'      	=> WD_THEME_IMAGES.'/bg_404.jpg',
-		            'type'      		=> 'post',
+		            'type'      		=> 'business',
 		            'search_only_title' => false,
 		            'ajax'     			=> false,
 		            'show_thumbnail'    => true,

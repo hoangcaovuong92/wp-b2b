@@ -35,6 +35,7 @@ if (!class_exists('WD_Package_Metabox')) {
         
         public function load_template(){
             $template_file = array(
+                'business', 
                 'header', 
                 'footer', 
                 'banner', 
@@ -49,13 +50,32 @@ if (!class_exists('WD_Package_Metabox')) {
 
         
         public function frontend_libs(){
-			wp_register_style('wd-advance-post-type-inline-css', 	WD_PACKAGE_METABOX_URI.'/css/inline.css');
+            wp_register_style('wd-advance-post-type-inline-css', 	WD_PACKAGE_METABOX_URI.'/css/inline.css');
+            wp_enqueue_style('wd-advance-post-type-css', 	WD_PACKAGE_METABOX_URI.'/css/style.css');
+            wp_enqueue_script( 'jquery-ui-datepicker');
 		}
 
         public function backend_libs(){
 			wp_enqueue_script( 'clipboard-polyfill.promise-js', WD_PACKAGE_METABOX_URI.'/js/clipboard-polyfill.promise.js', array('jquery'), false, true);
-			wp_enqueue_script( 'wd-metabox-script-js', WD_PACKAGE_METABOX_URI.'/js/wd_script.js', array('jquery'), false, true);
-		}
+            wp_enqueue_script( 'wd-metabox-script-js', WD_PACKAGE_METABOX_URI.'/js/wd_script.js', array('jquery'), false, true);
+            wp_enqueue_script( 'jquery-ui-datepicker');
+            wp_enqueue_style('wd-advance-post-type-css', 	WD_PACKAGE_METABOX_URI.'/css/style.css');
+        }
+        
+        public function get_heading_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+            );
+            $data = wp_parse_args($data, $default); ?>
+            <tr>
+                <th scope="row" colspan="2">
+                    <h2 class="wd-metabox-heading"><?php echo $data['title']; ?></h2>
+                    <p><?php echo $data['desc']; ?></p>
+                </th>
+            </tr>
+            <?php
+        }
         
         public function get_text_field($data = array()){
             $default = array(
@@ -63,9 +83,12 @@ if (!class_exists('WD_Package_Metabox')) {
                 "desc" => "",
                 "placeholder" => "",
                 "field_name" => "no_name_available",
+                "required" => false,
                 "value" => "",
             );
-            $data = wp_parse_args($data, $default); ?>
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
             <tr>
                 <th scope="row">
                     <label><?php echo $data['title']; ?>:</label>
@@ -74,7 +97,197 @@ if (!class_exists('WD_Package_Metabox')) {
                 <td><input type="text" class="wd-full-width" 
                     name="<?php echo $data['field_name']; ?>" 
                     value="<?php echo htmlspecialchars($data['value']); ?>" 
-                    placeholder="<?php echo $data['placeholder']; ?>"/>
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_email_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="email" class="wd-full-width" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_number_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="number" class="wd-full-width" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_url_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="url" class="wd-full-width" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_password_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="password" class="wd-full-width" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_tel_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="tel" class="wd-full-width" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_datepicker_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="text" class="wd-full-width wd-datepicker" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
+                </td>
+            </tr>
+            <?php
+        }
+
+        public function get_timepicker_field($data = array()){
+            $default = array(
+                "title" => "",
+                "desc" => "",
+                "placeholder" => "",
+                "field_name" => "no_name_available",
+                "required" => false,
+                "value" => "",
+            );
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
+            <tr>
+                <th scope="row">
+                    <label><?php echo $data['title']; ?>:</label>
+                    <p class="description"><?php echo $data['desc']; ?></p>
+                </th>
+                <td><input type="text" class="wd-full-width wd-timepicker" 
+                    name="<?php echo $data['field_name']; ?>" 
+                    value="<?php echo htmlspecialchars($data['value']); ?>" 
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>/>
                 </td>
             </tr>
             <?php
@@ -123,9 +336,12 @@ if (!class_exists('WD_Package_Metabox')) {
                 "desc" => "",
                 "placeholder" => "",
                 "field_name" => "no_name_available",
+                "required" => false,
                 "value" => "",
             );
-            $data = wp_parse_args($data, $default); ?>
+            $data = wp_parse_args($data, $default);
+            $placeholder = ($data['placeholder']) ? 'placeholder="'.$data['placeholder'].'"' : '' ;
+            $required = ($data['required']) ? 'required="required"' : '' ; ?>
             <tr>
                 <th scope="row">
                     <label><?php echo $data['title']; ?>:</label>
@@ -134,7 +350,8 @@ if (!class_exists('WD_Package_Metabox')) {
                 <td><textarea class="wd-full-width" 
                     name="<?php echo $data['field_name']; ?>" 
                     rows="10"
-                    placeholder="<?php echo $data['placeholder']; ?>"><?php echo $data['value']; ?></textarea>
+                    <?php echo $placeholder; ?>
+                    <?php echo $required; ?>><?php echo $data['value']; ?></textarea>
                 </td>
             </tr>
             <?php
@@ -478,7 +695,6 @@ if (!class_exists('WD_Package_Metabox')) {
                     'libraries' => 'places',
                     'callback' => 'google_map_admin_script'
                 ), $google_map_url );
-
             ?>
             
             <script>
@@ -606,7 +822,7 @@ if (!class_exists('WD_Package_Metabox')) {
                             });
                     }
                 }
-                </script>
+            </script>
             <script src="<?php echo $google_map_url; ?>"></script>
         <?php 
         }

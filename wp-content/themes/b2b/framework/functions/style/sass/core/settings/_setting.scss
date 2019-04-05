@@ -2,14 +2,28 @@ $color-textBase: #282828;
 $color-textLink: #282828;
 $color-textLink--hover: #b47828;
 $color-text-secondary: #969696;
-$color-textLink-secondary: #FF2D55;
-$color-textLink-secondary--hover: #333333;
-$color-textHeading: #000000;
-$color-textHeading--desc: #000000;
+$color-textLink-secondary: #969696;
+$color-textLink-secondary--hover: #282828;
+$color-textHeading: #282828;
+$color-textHeading--desc: #282828;
+$text-color-light: #ffffff;
+$text-color-dark: #282828;
+$text-color-alert: #f00f00;
+$text-color-success: #46b450;
+$text-color-highlight: #0066c0;
 
 $background-body-color: #ffffff;
-$background-color-light: #ffffff;
+$background-color-white: #ffffff;
+$background-color-light: #e7e7e7;
 $background-color-dark: #282828;
+$background-color-alert: #f00f00;
+$background-color-success: #46b450;
+
+$border-color-white: #ffffff;
+$border-color-light: #dbdbdb;
+$border-color-dark: #282828;
+$border-color-alert: #f00f00;
+$border-color-success: #46b450;
 
 $table-heading-color: #ffffff;
 $table-heading-background-color: #282828;
@@ -18,32 +32,34 @@ $table-row-odd-background-color: #ffffff;
 $table-row-even-color: #282828;
 $table-row-even-background-color: #f9f9f9;
 
+$tab-nav-color: #898989;
+$tab-nav-colorHover: #ffffff;
+$tab-nav-backgroundColor: #ffffff;
+$tab-nav-backgroundColorHover: #898989;
+$tab-nav-borderColor: #898989;
+$tab-nav-borderColorHover: #898989;
+
 $button--default-color: #ffffff;
 $button--default-colorHover: #282828;
 $button--default-backgroundColor: #282828;
-$button--default-backgroundColorHover: #ffffff;
-$button--default-borderColor: #ffffff;
-$button--default-borderColorHover: #FF2D55;
-$button--primary-color: #ffffff;
-$button--primary-colorHover: #FF2D55;
-$button--primary-backgroundColor: #FF2D55;
-$button--primary-backgroundColorHover: #ffffff;
-$button--primary-borderColor: #ffffff;
-$button--primary-borderColorHover: #FF2D55;
+$button--default-backgroundColorHover: #dddddd;
+$button--default-borderColor: #dddddd;
+$button--default-borderColorHover: #282828;
+$button--secondary-color: #ffffff;
+$button--secondary-colorHover: #282828;
+$button--secondary-backgroundColor: #F9B143;
+$button--secondary-backgroundColorHover: #dddddd;
+$button--secondary-borderColor: #dddddd;
+$button--secondary-borderColorHover: #F9B143;
 $button--disabled-color: #ffffff;
 $button--disabled-backgroundColor: #cccccc;
 $button--disabled-borderColor: #cccccc;
 
-$border-color-light: #dbdbdb;
-$border-color-dark: #282828;
-$border-color-white: #ffffff;
-$border-color-alert: #f00f00;
+$navUser-color: #282828;
+$navUser-color-hover: #F9B143;
 
-$navUser-color: #000000;
-$navUser-color-hover: #FF2D55;
-
-$navPages-color: #000000;
-$navPages-color-hover: #FF2D55;
+$navPages-color: #282828;
+$navPages-color-hover: #F9B143;
 $navPages-subMenu-background-Color: #ffffff;
 $navPages-subMenu-background-Color-hover: #dddddd;
 $navPages-subMenu-border-Color: #dbe2e5;
@@ -63,11 +79,8 @@ $product-title-color-hover: #282828;
 $product-price-color: #282828;
 $product-price-sale-color: #999999;
 
-$icon-color: #757575;
-$icon-color-hover: #999999;
-$button--icon-svg-color: #757575;
 $countPill-color: #ffffff;
-$countPill-backgroundColor: #000000;
+$countPill-backgroundColor: #282828;
 
 $footer-backgroundColor: #ffffff;
 $footer-color: #282828;
@@ -82,6 +95,9 @@ $copyright-linkColor-hover: #b47828;
 $dropdown-backgroundColor: #ffffff;
 $dropdown-textColor: #282828;
 $dropdown-borderColor: #dbdbdb;
+
+$scrollbar-backgroundColor: #ffffff;
+$scrollbar-buttonColor: #888888;
 
 $body-font: "Arimo","Helvetica Neue", Helvetica, sans-serif;
 $headings-font: "Arimo","Helvetica Neue", Helvetica, sans-serif;

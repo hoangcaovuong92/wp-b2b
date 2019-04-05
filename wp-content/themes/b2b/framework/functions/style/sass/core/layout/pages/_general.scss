@@ -1,28 +1,3 @@
 // #page, .wd-main-content-wrap{
 // 	overflow:hidden;
 // }
-
-@-ms-viewport {
-    width: device-width;
-}
-@viewport {
-    width: device-width;
-}
-
-@include breakpoint('min', 'large') {
-    ::-webkit-scrollbar {
-        background: #fff;
-        width: 11px;
-        height: 11px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        @include border-radius(10px);
-    }
-}
-
-@include breakpoint('max', 'desktop') {
-    html {
-        overflow: initial !important;
-    }
-}

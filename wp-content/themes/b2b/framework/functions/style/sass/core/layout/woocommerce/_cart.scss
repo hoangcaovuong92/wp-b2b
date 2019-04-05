@@ -80,13 +80,13 @@
 				font-weight: fontWeight("normal");
 			    text-transform: uppercase;
 				&.wd-update-cart-button{
-					@include button_style(1);
+					@include button_style(primary);
 					margin-left: auto;
 					margin-right: 10px;
 					font-size: 13px;
 				}
 				&.wd-clear-cart-item, &.wd-continue-shopping-button{
-					@include button_style(2);
+					@include button_style(secondary);;
 					font-size: 13px;
 				}
 			}
@@ -113,7 +113,7 @@
 				margin-right: 10px;
 			}
 			.button{
-				@include button_style(1);
+				@include button_style(primary);
 				float: left;
 			    font-weight: fontWeight("normal");
 			    text-transform: uppercase;
@@ -123,7 +123,7 @@
 		}
 		.wd-cart-collaterals-left-block{
 			width: 100%;
-			.payment.wd-icon-widget-payment{
+			.wd-shortcode-payment-icon{
 				height: 40px;
 				li{
 					list-style: none;
@@ -173,7 +173,7 @@
 					padding-bottom: 5px;
 					margin-bottom: 0;
 					@include border-radius(0);
-					@include button_style(1);
+					@include button_style(primary);
 				}
 			}
 		}
@@ -186,7 +186,7 @@
 			padding-bottom: 5px;
 			margin-bottom: 0;
 			@include border-radius(0);
-			@include button_style(1);	
+			@include button_style(primary);	
 		}
 	}
 	.wd-cart-interested{

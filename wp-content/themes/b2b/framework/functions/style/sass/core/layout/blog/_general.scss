@@ -30,8 +30,7 @@
 	position: relative;
 	.readmore {
 		position: relative;
-		padding-top: 20px;
-		margin-top: 20px;
+		margin-top: 15px;
 		a.readmore_link {	
 			font-size:14px;
 			font-style:normal;
@@ -43,43 +42,16 @@
 			font-size: 13px;
 			text-transform: uppercase;
 			@include transition(all .3s linear);
-			@include link_style(primary);
-			&:after{
-				@include font_awesome(\f105, 14px);
-				margin-left: 10px;
-			}
+			@include link_style(primary-reverse);
 		}  
-		&:after{
-			content: '';
-			border-top: 1px solid $border-color-light;
-			width: 70px;
-			display: block;
-			position: absolute;
-			top: 0;
-		}
 	}
 
 	.wd-blog-meta--category{
-		letter-spacing: 0.1em;
-		font-size: fontSize("tiny");
-		@include link_style(primary-reverse);
-		a{
-			text-transform: uppercase;
-			@include link_style(primary-reverse);
-		}
+		@extend %blog_category;
 	}
 
 	.wd-blog-meta-wrap{
-		font-size: fontSize("tiny");
-		text-transform: uppercase;
-		color: $color-text-secondary;
-		letter-spacing: 0.1em;
-		@include flexbox; 
-		@include align-items(center);
-		a{
-			color: $color-text-secondary;
-		}
-
+		@extend %blog_meta_wrap;
 		.wd-blog-meta-content{
 		    display: block;
 			@include flexbox;
@@ -179,17 +151,14 @@
 	input[type="password"]{
 		margin-bottom: 15px;
 		@include breakpoint('min', 'tablet'){
-		    width: 85%;
+		    width: auto;
 			margin-right: 10px;
 	    }
 	}
 	input[type="submit"]{
 		height: 35px;
-	    padding: 0 25px;
-	    &:hover{
-	    	border:solid 1px $border-color-dark;
-	    	background:#fff;
-	    }
+		padding: 0 25px;
+		border: 0;
 	    @include breakpoint('max', 'tablet'){
 	    	width: 100%;
 	    }

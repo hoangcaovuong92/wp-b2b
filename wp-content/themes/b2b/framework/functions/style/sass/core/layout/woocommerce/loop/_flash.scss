@@ -3,10 +3,10 @@
 		position: absolute;
 	    top: 10px;
 	    left: 10px;
-	    color: #fff;
+	    color: $text-color-light;
 	    z-index: 1;
 	    span.onsale, span.featured{
-    	    color: #fff;
+    	    color: $text-color-light;
 			font-size: 10px;
 		    font-weight: fontWeight("normal");
 		    text-transform: uppercase;

@@ -14,21 +14,21 @@ if (!function_exists('wd_product_layout_function')) {
 			'grid_list_button'		=> '1',
 			'grid_list_layout'		=> 'grid',
 			'pagination_loadmore'	=> 'pagination',
+			'fullwidth_mode' 		=> false,
 			'class'					=> ''
 		), $atts));
 		if (!wd_is_woocommerce()) return;
-		wp_reset_query();	
 
 		$args = array(
 			'posts_per_page' 	=> (int)$number_products,
 			'order' 			=> $sort,
 		);
 		$settings = array(
-				'category' 	=> array(
-					'product_cat'	=> (int)$id_category
-				),
-				'order_by' 	=> $order_by,
-				'data_show' => $data_show
+			'category' 	=> array(
+				'product_cat'	=> (int)$id_category
+			),
+			'order_by' 	=> $order_by,
+			'data_show' => $data_show
 		);
 		$args = apply_filters('wd_filter_get_product_query', $args, $settings);
 
@@ -40,10 +40,14 @@ if (!function_exists('wd_product_layout_function')) {
 		$columns_product 	= 'wd-columns-'.$columns.' wd-tablet-columns-'.$columns_tablet.' wd-mobile-columns-'.$columns_mobile;
 		$random_id 			= 'wd-product-grid-list-'.rand(0,1000).time();
 		
-		$class 				.= ($pagination_loadmore === "loadmore") ? ' wd-infinite-scroll-wrap' : '';
+		$class .= ($pagination_loadmore === "loadmore") ? ' wd-infinite-scroll-wrap' : '';
 
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
+		wp_reset_query();
 		ob_start(); ?>
-		<div id="<?php echo esc_html($random_id); ?>" class='wd-shortcode-product-grid-list woocommerce <?php echo esc_html($class); ?>'>
+		<div id="<?php echo esc_attr($random_id); ?>" class="wd-shortcode wd-shortcode-product-grid-list woocommerce <?php echo esc_attr($class); ?>">
 			<?php if ( $products->have_posts() ) : ?>
 				<?php if ($grid_list_button == 1) { ?>
 					<div class="wd-product-toggle-layout-wrapper">

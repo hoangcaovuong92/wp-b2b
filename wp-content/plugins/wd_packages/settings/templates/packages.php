@@ -81,11 +81,15 @@ if (!class_exists('WD_Package_Settings')) {
 							$optimize_list = array(
 								'wd_auto_save_image' => array(
 									'label' => esc_html__("Enable Auto Save Image (Classic Editor): ", 'wd_package'),
-									'desc' => esc_html__("Downloading automatically image from a post to gallery", 'wd_package'),
+									'desc' => esc_html__("Downloading automatically image from a post to gallery.", 'wd_package'),
 								),
 								'wd_auto_set_featured_image' => array(
 									'label' => esc_html__("Enable Auto Set Featured Image: ", 'wd_package'),
-									'desc' => esc_html__("Set featured images automatically when saving posts (if not any)", 'wd_package'),
+									'desc' => esc_html__("Set featured images automatically when saving posts (if not any).", 'wd_package'),
+								),
+								'wd_compress_html' => array(
+									'label' => esc_html__("Enable Compress HTML: ", 'wd_package'),
+									'desc' => esc_html__("Automatically compress HTML/CSS/JS to improve page speed.", 'wd_package'),
 								),
 								'wd_disable_compress_image' => array(
 									'label' => esc_html__("Disable Auto Compress Image: ", 'wd_package'),

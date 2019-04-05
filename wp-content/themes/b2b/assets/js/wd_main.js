@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 	var window_width 	= jQuery(window).width();
 	wd_blog_grid_list_toggle(); //PRODUCT GRID/LIST TOGGLE
 	wd_sidebar(); //Sidebar
+	wd_comment_form(); //Custom comment form
 	wd_search_form(); //Search Form
 	wd_back_to_top_button(); //Scroll Button
 	wd_messenger_notice(); //WD Messager notice
@@ -33,7 +34,6 @@ if (typeof wd_main_window_resize != 'function') {
 	}
 }
 
-
 //Highlight keyword from text
 if (typeof wd_highlight_string != 'function') { 
 	function wd_highlight_string(string, key){
@@ -58,12 +58,25 @@ if (typeof wd_sidebar != 'function') {
 	}
 }
 
+//Custom comment form
+if (typeof wd_comment_form != 'function') { 
+	function wd_comment_form(){
+		if(jQuery('.wd-blog-comment-tab').length > 0 ){
+			jQuery('body').on('click', '.wd-blog-comment-tab .nav-tabs > li', function(){
+				jQuery('#cancel-comment-reply-link').click();
+			});
+		}
+	}
+}
+
 //Search form
 if (typeof wd_search_form != 'function') { 
 	function wd_search_form(){
 		//Search Hover
 		var _form_text = jQuery( ".wd-search-form-default .wd-search-form-text" );
 		var _form_wrap = _form_text.parents(".wd-search-form-wrapper");
+
+		//On focus input field
 		_form_text.focus(function() {
 			if (!_form_wrap.hasClass("wd-search-typing")) {
 				_form_wrap.addClass('wd-search-typing');
@@ -74,10 +87,34 @@ if (typeof wd_search_form != 'function') {
 				  	_form_wrap.removeClass('wd-search-typing');
 				}, 500);
 			}
-	    });
+		});
+		
+		//Trigger clear search result
+		jQuery('body').on('clear_search_result', function(){
+			jQuery('.wd-search-form-ajax-result').html('');
+		});
 
 		//Search Popup
-		jQuery(".popup").hide();
+		//jQuery(".popup").hide();
+
+		jQuery(".wd-click-popup-search").click(function (e) {
+			e.preventDefault();
+			jQuery('body').trigger('clear_search_result');
+			jQuery(this).parents('.wd-header-content-wrap').find('.wd-popup-search-result').toggleClass("wd-search-open");
+
+			var $input_field = jQuery(this).parents('.wd-header-content-wrap').find('.wd-search-form-text');
+			var tmp = $input_field.val(); 
+			$input_field.focus().val("").blur().focus().val(tmp);
+			$input_field.focus();
+		});
+
+		jQuery('.wd-popup-search-close').on('click', function(e){
+			e.preventDefault();
+			//Clear search ajax results
+			jQuery('body').trigger('clear_search_result');
+			//Close search ajax form
+			jQuery('.wd-popup-search-result').removeClass("wd-search-open");
+		})
 	}
 }
 
@@ -184,37 +221,37 @@ if (typeof wd_mansory_layout != 'function') {
 //Fancybox
 if (typeof wd_fancybox_script != 'function') {
 	function wd_fancybox_script() {
-		jQuery(".wd-click-popup-search").click(function () {
-			var target = jQuery(this).data('target');
-			var ajax_search = jQuery(this).data('ajax');
-			if (target) {
-				jQuery.fancybox('#'+target, {
-					openEffect: 'fade',
-					closeEffect: 'fade',
-					padding: ajax_search == 1 ? [15, 15, 15, 15] : [75, 15, 15, 15],
-					margin: [0, 0, 0, 0],
-					fitToView: false,
-					autoSize: false,
-					width: '85%',
-					height: ajax_search == 1 ? '85%' : 'auto',
-					closeBtn: true,
-					arrows: true,
-					helpers: {
-						overlay: {
-							css: {
-								'background': 'rgba(58, 42, 45, 0.5)'
-							},
-						}
-					},
-					onComplete: function () {},
-					beforeShow: function () {
-						jQuery('.wd-search-form-text').focus();
-					},
-					afterClose: function () {},
-					afterLoad: function () {}
-				});
-			}
-		});
+		// jQuery(".wd-click-popup-search").click(function () {
+		// 	var target = jQuery(this).data('target');
+		// 	var ajax_search = jQuery(this).data('ajax');
+		// 	if (target) {
+		// 		jQuery.fancybox('#'+target, {
+		// 			openEffect: 'fade',
+		// 			closeEffect: 'fade',
+		// 			padding: ajax_search == 1 ? [15, 15, 15, 15] : [75, 15, 15, 15],
+		// 			margin: [0, 0, 0, 0],
+		// 			fitToView: false,
+		// 			autoSize: false,
+		// 			width: '85%',
+		// 			height: ajax_search == 1 ? '85%' : 'auto',
+		// 			closeBtn: true,
+		// 			arrows: true,
+		// 			helpers: {
+		// 				overlay: {
+		// 					css: {
+		// 						'background': 'rgba(58, 42, 45, 0.5)'
+		// 					},
+		// 				}
+		// 			},
+		// 			onComplete: function () {},
+		// 			beforeShow: function () {
+		// 				jQuery('.wd-search-form-text').focus();
+		// 			},
+		// 			afterClose: function () {},
+		// 			afterLoad: function () {}
+		// 		});
+		// 	}
+		// });
 
 		jQuery(".wd-fancybox-image, .wd-fancybox-image-gallery").fancybox({
 			openEffect: 'fade',

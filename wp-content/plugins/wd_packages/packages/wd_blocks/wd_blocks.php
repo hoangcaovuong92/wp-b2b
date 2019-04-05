@@ -58,9 +58,11 @@ if (!class_exists('WD_Blocks')) {
 
 		protected function initArrShortcodes(){
 			return array(
+				'wd_business',
 				'wd_title',
 				'wd_logo',
 				'wd_profile',
+				'wd_contact_form',
 				'wd_copyright',
 				'wd_do_shortcode',
 				'wd_myaccount_form',
@@ -91,7 +93,7 @@ if (!class_exists('WD_Blocks')) {
 				'wd_product_slider',
 				'wd_product_single_category',
 				'wd_product_categories',
-				'wd_product_category_tabs',
+				// 'wd_product_category_tabs',
 				'wd_product_categories_group',
 				'wd_product_categories_accordion',
 				'wd_product_categories_list',

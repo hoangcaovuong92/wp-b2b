@@ -6,13 +6,6 @@
  * -Email  : hoangcaovuong92@gmail.com.
  */
 
-/**
- * Usage : 
- * echo apply_filters('wd_filter_excerpt_limit_character_length', array('charlength' => $charlength, 'post_obj' => $post_obj));
- * echo apply_filters('wd_filter_excerpt_limit_word_length', array('word_limit' => $word_limit, 'post_obj' => $post_obj, 'strip_tags' => $strip_tags));
- * echo apply_filters('wd_filter_number_fix_length', array('number' => '0', 'length' => '2', 'character' => '0'));
- */
-
 if (!class_exists('WD_Excerpt')) {
 	class WD_Excerpt {
 		/**
@@ -37,8 +30,13 @@ if (!class_exists('WD_Excerpt')) {
 			if ( static::$called ) return;
 			static::$called = true;
 			
+			// echo apply_filters('wd_filter_excerpt_limit_character_length', array('charlength' => $charlength, 'post_obj' => $post_obj));
 			add_filter( 'wd_filter_excerpt_limit_character_length', array($this, 'limit_character_length' ), 10, 2);
+
+			// echo apply_filters('wd_filter_excerpt_limit_word_length', array('word_limit' => $word_limit, 'post_obj' => $post_obj, 'strip_tags' => $strip_tags));
 			add_filter( 'wd_filter_excerpt_limit_word_length', array($this, 'limit_words_length' ), 10, 2);
+
+			// echo apply_filters('wd_filter_number_fix_length', array('number' => '0', 'length' => '2', 'character' => '0'));
 			add_filter( 'wd_filter_number_fix_length', array($this, 'number_fix_length' ), 10, 2);
 		}
 
@@ -81,17 +79,23 @@ if (!class_exists('WD_Excerpt')) {
 					$excerpt = strip_shortcodes($excerpt);
 				}
 			}
-			if(is_home()){
-				echo do_shortcode($excerpt);
-				/**
-				 * wd_hook_page_link hook.
-				 *
-				 * @hooked display_blog_page_link - 5
-				 */
-				do_action('wd_hook_page_link');
+			ob_start();
+			if (!post_password_required()){
+				if(is_home()){
+					echo do_shortcode($excerpt);
+					/**
+					 * wd_hook_page_link hook.
+					 *
+					 * @hooked display_blog_page_link - 5
+					 */
+					do_action('wd_hook_page_link');
+				}else{
+					echo $excerpt;
+				}
 			}else{
-				echo $excerpt;
+				echo get_the_password_form();
 			}
+			return ob_get_clean();
 		}
 		
 		//Pad a string to a certain length with another string

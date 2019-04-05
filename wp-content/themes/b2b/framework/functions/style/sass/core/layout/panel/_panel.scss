@@ -38,7 +38,7 @@
 			left: 0;
 			right: 0;
 			z-index: zIndex("lower");
-			background-color: $background-color-light;
+			background-color: $background-color-white;
 			margin: 0 -15px;
 			padding: 10px 15px;
 			margin-bottom: 10px;
@@ -54,9 +54,9 @@
 				font-size: fontSize("smaller");
 				width: auto;
 			}
-			.wd-icon{
-				font-size: fontSize("small");
-			}
+			// .wd-icon{
+			// 	font-size: fontSize("small");
+			// }
 		}
 		&.wd-panel--right{
 			.wd-panel-title{
@@ -106,7 +106,7 @@
 			position: fixed;
 			bottom: 70px;
 			z-index: zIndex("lowest");
-			background-color: $background-color-light;
+			background-color: $background-color-white;
 			@include border-radius(50%);
 			.wd-icon{
 				font-size: fontSize("larger");

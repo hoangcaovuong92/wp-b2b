@@ -45,7 +45,7 @@ if (!class_exists('WD_Get_Theme_Options')) {
 
 		public function get_data_package( $template = 'all' ) {
 			/* DATA SETTING */ 
-			$wd_default_data = apply_filters('wd_filter_defaut_data', true);
+			$wd_default_data = apply_filters('wd_filter_defaut_data', 'all');
 			$data = array(
 				'background' => array(
 					'bg_display'	  		=> $this->get_option_value('bg_body_display', $wd_default_data['general']['default']['bg_display']),  
@@ -519,10 +519,10 @@ if (!class_exists('WD_Get_Theme_Options')) {
 		}
 		
 		public function theme_option_after_save() {
-			$url_old 			= Redux::getOption( $this->theme_option_obj_name, $this->pre.'replace_url_old');
-			$url_new 			= Redux::getOption( $this->theme_option_obj_name, $this->pre.'replace_url_new');
-			$image_theme_option = Redux::getOption( $this->theme_option_obj_name, $this->pre.'replace_url_image_theme_option');
-			$site_database 		= Redux::getOption( $this->theme_option_obj_name, $this->pre.'replace_url_site_database');
+			$url_old 			= Redux::getOption($this->theme_option_obj_name, $this->pre.'replace_url_old');
+			$url_new 			= Redux::getOption($this->theme_option_obj_name, $this->pre.'replace_url_new');
+			$image_theme_option = Redux::getOption($this->theme_option_obj_name, $this->pre.'replace_url_image_theme_option');
+			$site_database 		= Redux::getOption($this->theme_option_obj_name, $this->pre.'replace_url_site_database');
 		
 			if ($url_old && $url_old !== $url_new) {
 				$url_old_array = array($url_old);
@@ -548,10 +548,10 @@ if (!class_exists('WD_Get_Theme_Options')) {
 			
 					foreach ($list_key_need_replace as $key) {
 						$key = $this->pre.$key;
-						$data = Redux::getOption( $this->theme_option_obj_name, $key );
+						$data = Redux::getOption($this->theme_option_obj_name, $key );
 						if (isset($data) && $data['url'] != '') {
 							$data['url'] = str_replace($url_old_array, $url_new, $data['url']);
-							Redux::setOption( $this->theme_option_obj_name, $key, $data );
+							Redux::setOption($this->theme_option_obj_name, $key, $data );
 						}
 					}
 				}
@@ -568,8 +568,8 @@ if (!class_exists('WD_Get_Theme_Options')) {
 				}
 			
 				//reset form
-				Redux::setOption( $this->theme_option_obj_name, $this->pre.'replace_url_old', '');
-				Redux::setOption( $this->theme_option_obj_name, $this->pre.'replace_url_new', '');
+				Redux::setOption($this->theme_option_obj_name, $this->pre.'replace_url_old', '');
+				Redux::setOption($this->theme_option_obj_name, $this->pre.'replace_url_new', '');
 			} //End update url
 
 			//Update theme options to database

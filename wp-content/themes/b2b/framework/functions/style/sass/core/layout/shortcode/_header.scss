@@ -21,7 +21,7 @@
 		    float: left;
 		    text-align: left;
 		    list-style: none;
-		    background-color: #fff;
+		    background-color: $background-color-white;
 		    -webkit-background-clip: padding-box;
 		    background-clip: padding-box;
 		    border: 1px solid rgba($border-color-dark, .15);
@@ -47,7 +47,7 @@
 	    			display: block;
 	    			margin: 0;
 		    		a{
-		    			color: #333 !important;
+		    			color: $text-color-dark !important;
 					    text-decoration: none;
 					    line-height: 10px;
 					    border: none;
@@ -55,8 +55,8 @@
 					    width: 100%;
 						@include border-radius(0);
 		    			&.active{
-			    			color: #fff !important;
-		    				background-color: #282828;
+			    			color: $text-color-light !important;
+		    				background-color: $text-color-dark;
 					    }
 		    		}
 		    	}
@@ -74,7 +74,7 @@
 /* Gtranslate */
 .wd-shortcode-gtranslate{
 	.selected a{
-		color: #282828;
+		color: $text-color-dark;
 		font-size: 13px;
 		&:hover{
 			color: #a5a5a5;
@@ -84,16 +84,16 @@
 		.option{
 			padding: 10px;
 			border: solid 1px $border-color-light;
-			background: #fff;
+			background: $background-color-white;
 			a {
 				padding: 5px;
 				border:none;
 				&.selected {
-					background: #fff;
+					background: $background-color-white;
 					border:none;
 				}
 				&:hover {
-				    background: #fff;
+				    background: $background-color-white;
 				}
 			}
 		}
@@ -103,7 +103,7 @@
 			}
 			&.open{
 				background: none;
-				color: #282828;
+				color: $text-color-dark;
 			}
 		}
 	}

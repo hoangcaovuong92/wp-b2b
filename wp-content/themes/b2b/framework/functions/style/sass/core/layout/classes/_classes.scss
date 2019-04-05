@@ -2,6 +2,7 @@
 	overflow:visible !important;
 }
 
+//Text alignment
 .wd-text-left{
 	text-align: left;
 }
@@ -18,19 +19,44 @@
 	text-align: justify;
 }
 
-header.menu-sticky{
-	.wd-hide-on-sticky-menu{
-		margin: 0;
-		padding: 0;
-		height: 0;
-		@include transition(all 100ms ease);
-		@include opacity(0);
-		.container{
-			display: none;
-		}
-	}
+//Button style
+.wd-button-primary{
+	@include button_style(primary);
 }
 
+.wd-button-primary-border{
+	@include button_style(primary-border);
+}
+
+.wd-button-primary-reverse{
+	@include button_style(primary-reverse);
+}
+
+.wd-button-primary-reverse-border{
+	@include button_style(primary-reverse-border);
+}
+
+.wd-button-secondary{
+	@include button_style(secondary);
+}
+
+.wd-button-secondary-border{
+	@include button_style(secondary-border);
+}
+
+.wd-button-secondary-reverse{
+	@include button_style(secondary-reverse);
+}
+
+.wd-button-secondary-reverse-border{
+	@include button_style(secondary-reverse-border);
+}
+
+.wd-button-disabled{
+	@include button_style(disabled);
+}
+
+//Spacing
 .wd-margin-left-0 {
 	margin-left: 0px !important
 
@@ -48,6 +74,7 @@ header.menu-sticky{
 
 }
 
+//Flexbox
 .wd-flex{
 	@include flexbox;
 }

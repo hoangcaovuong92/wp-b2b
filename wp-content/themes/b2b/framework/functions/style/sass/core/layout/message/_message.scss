@@ -1,32 +1,33 @@
 .wd-message{
 	padding: 10px;
 	p{
-		color: #fff;
-		font-size: 15px;
+		color: $text-color-light;
 		display: inline-block;
 		margin: 0;
 		&:before{
-			content: "\f348";
-			display: inline-block;
-			font: 400 18px/1 dashicons;
-			speak: none;
-			margin: 3px 8px 0 -2px;
+			@include font_awesome(\f071, fontSize("smaller"));
+			margin: 0 10px 0 0;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			vertical-align: top;
 		}
 	}
 	.wd-message-closebtn{
 		float: right;
 		line-height: 25px;
-		color: #fff;
+		color: $text-color-light;
 		cursor: pointer;
 		transition: transform .25s ease-in-out;
 	}
 }
 .wd-message-warning{
-	background-color: #d54d21;
+	background-color: $background-color-alert;
 }
 .wd-message-success{
-	background-color: #46b450;
+	background-color: $background-color-success;
+}
+
+.wd-alert{
+	display: block;
+	color: $text-color-alert;
+	font-size: fontSize("tiny");
 }

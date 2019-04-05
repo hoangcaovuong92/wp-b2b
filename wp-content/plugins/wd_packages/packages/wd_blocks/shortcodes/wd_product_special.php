@@ -16,6 +16,7 @@ if (!function_exists('wd_product_special_function')) {
 			'center_mode'			=> '0',
 			'show_nav'				=> '1',
 			'auto_play'				=> '1',
+			'fullwidth_mode' 		=> false,
 			'class'					=> ''
 		), $atts));
 		if (!wd_is_woocommerce()) return;
@@ -26,11 +27,11 @@ if (!function_exists('wd_product_special_function')) {
 			'order' 			=> $sort,
 		);
 		$settings = array(
-				'category' 	=> array(
-					'product_cat'	=> (int)$id_category
-				),
-				'order_by' 	=> $order_by,
-				'data_show' => $data_show
+			'category' 	=> array(
+				'product_cat'	=> (int)$id_category
+			),
+			'order_by' 	=> $order_by,
+			'data_show' => $data_show
 		);
 		$args = apply_filters('wd_filter_get_product_query', $args, $settings);
 
@@ -53,9 +54,13 @@ if (!function_exists('wd_product_special_function')) {
 		}
 
 		$products 			= new WP_Query( $args );
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
 		ob_start(); ?>
 		<?php if ( $products->have_posts() ) : ?>
-			<div class="wd-products-wrapper wd-shortcode-product-slider-wrapper woocommerce <?php echo esc_attr( $wrap_class ); ?> <?php echo esc_attr($class); ?>">
+			<div class="wd-products-wrapper wd-shortcode-product-special woocommerce <?php echo esc_attr( $wrap_class ); ?> <?php echo esc_attr($class); ?>">
 				<ul class="products <?php echo esc_attr( $product_style ); ?> <?php echo esc_attr( $list_class ); ?>" 
 					data-slider-options='<?php echo esc_attr( $slider_options ); ?>'>
 					<!-- Begin while -->

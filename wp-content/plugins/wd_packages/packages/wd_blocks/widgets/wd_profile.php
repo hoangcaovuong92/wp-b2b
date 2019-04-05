@@ -119,7 +119,7 @@ if( !class_exists( 'wd_widget_profile' ) ) {
             ); 
             
             $this->textarea_field(
-                esc_html__( 'About:', 'wd_package' ), 
+                esc_html__( 'About Text:', 'wd_package' ), 
                 $this->get_field_name( 'about' ),
                 $this->get_field_id( 'about' ),
                 $about, 

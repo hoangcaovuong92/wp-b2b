@@ -6,7 +6,7 @@
 		&:before {
 			content: "";
 			@include font_awesome(\f107, 14px);
-		    color: #282828;
+		    color: $text-color-dark;
 		    position: absolute;
 		    top: 50%;
 		    right: 5px;

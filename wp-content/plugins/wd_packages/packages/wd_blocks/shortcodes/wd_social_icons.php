@@ -79,7 +79,7 @@ if(!function_exists('wd_social_icons_function')){
 		$list_class .= ' '.$item_align;
 		ob_start();
 		?>
-		<div class="wd-social-icons <?php echo esc_attr( $style_class ); ?> <?php echo esc_attr( $class ); ?>">
+		<div class="wd-shortcode wd-shortcode-social-icons <?php echo esc_attr( $style_class ); ?> <?php echo esc_attr( $class ); ?>">
 			<ul class="wd-social-icons-list<?php echo esc_attr( $list_class ); ?>">
 				<?php foreach ($data_settings as $key => $value): ?>
 					<?php if ($value['status']): ?>

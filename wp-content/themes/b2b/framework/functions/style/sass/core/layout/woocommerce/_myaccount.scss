@@ -3,7 +3,7 @@
 		input.button{
 			padding:10px 20px;
 			@include border-radius(0);
-			@include button_style(1);
+			@include button_style(primary);
 		}
 	}
 	.woocommerce-MyAccount-navigation{
@@ -42,7 +42,7 @@
 	   		}
 	   }
 	   .button{
-   			@include button_style(1);
+   			@include button_style(primary);
    		}
    		.woocommerce-Address{
    			header{
@@ -64,7 +64,7 @@
 		p input.button{
 			padding:10px;
 			margin:20px 0 50px 0;
-			@include button_style(1);
+			@include button_style(primary);
 		}
 	}
 	.woocommerce-MyAccount-content{
@@ -126,7 +126,7 @@
 		p input.woocommerce-Button.button{
 			padding:10px;
 			margin:20px 0 50px 0;
-			@include button_style(1);
+			@include button_style(primary);
 		}
 	}
 }

@@ -255,7 +255,7 @@ if (typeof wd_ajax_create_page_template != 'function') {
             var create_sidebar = _this.parents('td').find('input[name="create_sidebar"]').prop('checked') ? _this.data('sidebar-template') : '';
             var create_banner = _this.parents('td').find('input[name="create_banner"]').prop('checked') ? _this.data('banner-template') : '';
             var confirm = (!template_exist) ? true : window.confirm("The content of the page will be restored to the default. Are you sure?");
-            
+
             if (template && confirm) {
                 jQuery.ajax({
                     type: 'POST',
@@ -293,7 +293,6 @@ if (typeof wd_ajax_create_other_template != 'function') {
 			e.preventDefault();
 			var _this = jQuery(this);
             var template = _this.data('template');
-            var post_type = _this.data('post_type');
             var template_exist = _this.data('template-exist');
             var editor = _this.parents('td').find('input[name="set_editor_action_'+template.replace(/ /g, '-')+'"]:checked').val();
             var confirm = (!template_exist) ? true : window.confirm("The content of the page will be restored to the default. Are you sure?");
@@ -304,7 +303,6 @@ if (typeof wd_ajax_create_other_template != 'function') {
                     data: { 
                         action: "create_template_part",
                         template: template,
-                        post_type: post_type,
                         editor: editor,
                     },
                     beforeSend: function(){

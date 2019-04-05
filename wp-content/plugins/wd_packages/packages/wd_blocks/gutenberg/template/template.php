@@ -100,6 +100,7 @@ if (!class_exists('WD_Gutenberg_Template')) {
             /* AVAILABLE FIELDS:
              * $this->get_image_block($id, $title = 'Image', $default = '', $required = array());
              * $this->get_text_block($id, $title = 'Text', $default = '', $required = array());
+             * $this->get_textarea_block($id, $title = 'Textarea', $default = '', $required = array());
              * $this->get_range_block($id, $title = 'Range', $min = 1, $max = 100, $default = 1, $required = array())
              * $this->get_number_block($id, $title = 'Number', $default = '', $required = array());
              * $this->get_url_block($id, $title = 'Url', $default = '', $required = array());
@@ -187,6 +188,21 @@ if (!class_exists('WD_Gutenberg_Template')) {
                 'title' => $title,
                 'desc'  => '',
                 'control' => 'TextControl',
+                'type' => 'text',
+                'default' => $default,
+                'group' => $this->group_name,
+            );
+            if (!empty($required)) {
+                $this->block_attributes[$id]['required'] = $required;
+            }
+        }
+
+        public function get_textarea_block($id, $title = 'Textarea', $default = '', $required = array()){
+            if (!isset($id)) return;
+            $this->block_attributes[$id] = array(
+                'title' => $title,
+                'desc'  => '',
+                'control' => 'TextareaControl',
                 'type' => 'text',
                 'default' => $default,
                 'group' => $this->group_name,
@@ -397,7 +413,7 @@ if (!class_exists('WD_Gutenberg_Template')) {
             //Scripts
             wp_register_script(
                 'wd-'.$this->block_name.'-block-script', // Handle.
-                WD_BLOCKS_BASE_URI.'/gutenberg/template/block.min.js', // Block.js: We register the block here.
+                WD_BLOCKS_BASE_URI.'/gutenberg/template/block.js', // Block.js: We register the block here.
                 array( 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-editor', 'wp-date', 'wp-api-fetch' ), // Dependencies, defined above.
                 filemtime( WD_BLOCKS_BASE.'/gutenberg/template/block.js' ),
                 true

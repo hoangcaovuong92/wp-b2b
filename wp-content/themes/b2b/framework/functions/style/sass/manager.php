@@ -55,6 +55,10 @@ if (!class_exists('WD_SASS')) {
 			if ( static::$called ) return;
             static::$called = true;
 
+            $this->do_action();
+        }
+       
+        public function do_action(){
             if (WD_THEME_STYLE_MODE !== 'sass') return;
             
             $this->init_setting();
@@ -88,7 +92,6 @@ if (!class_exists('WD_SASS')) {
             //Action after save Theme Option
 			add_action('redux/options/'.$this->theme_option_obj_name.'/saved', array($this, 'theme_option_after_save'));
         }
-       
 
         public function init_setting(){
             $this->dev_mode = ($_SERVER['HTTP_HOST'] === $this->dev_domain) ? true : $this->dev_mode;
@@ -307,11 +310,17 @@ if (!class_exists('WD_SASS')) {
                         'color-textLink--hover' => '#b47828',
 
                         'color-text-secondary' => '#969696',
-                        'color-textLink-secondary' => '#FF2D55',
-                        'color-textLink-secondary--hover' => '#333333',
+                        'color-textLink-secondary' => '#969696',
+                        'color-textLink-secondary--hover' => '#282828',
 
-                        'color-textHeading' => '#000000',
-                        'color-textHeading--desc' => '#000000',
+                        'color-textHeading' => '#282828',
+                        'color-textHeading--desc' => '#282828',
+
+                        'text-color-light' => '#ffffff',
+                        'text-color-dark' => '#282828',
+                        'text-color-alert' => '#f00f00',
+                        'text-color-success' => '#46b450',
+                        'text-color-highlight' => '#0066c0',
                     )
                 ),
                 'color-background' => array(
@@ -321,8 +330,24 @@ if (!class_exists('WD_SASS')) {
                     'output' => 'single',
                     'data'  => array(
                         'background-body-color' => '#ffffff',
-                        'background-color-light' => '#ffffff',
+                        'background-color-white' => '#ffffff',
+                        'background-color-light' => '#e7e7e7',
                         'background-color-dark' => '#282828',
+                        'background-color-alert' => '#f00f00',
+                        'background-color-success' => '#46b450',
+                    )
+                ),
+                'color-border' => array(
+                    'title' => esc_html__( 'Border', 'feellio' ),
+                    'desc'  => esc_html__( 'Customize border color.', 'feellio' ),
+                    'type'  => 'color', //color, typography, text
+                    'output' => 'single',
+                    'data'  => array(
+                        'border-color-white' => '#ffffff',
+                        'border-color-light' => '#dbdbdb',
+                        'border-color-dark' => '#282828',
+                        'border-color-alert' => '#f00f00',
+                        'border-color-success' => '#46b450',
                     )
                 ),
                 'color-table' => array(
@@ -339,6 +364,20 @@ if (!class_exists('WD_SASS')) {
                         'table-row-even-background-color' => '#f9f9f9',
                     )
                 ),
+                'color-tab' => array(
+                    'title' => esc_html__( 'Tabs', 'feellio' ),
+                    'desc'  => esc_html__( 'Customize tabs color.', 'feellio' ),
+                    'type'  => 'color', //color, typography, text
+                    'output' => 'single',
+                    'data'  => array(
+                        'tab-nav-color' => '#898989',
+                        'tab-nav-colorHover' => '#ffffff',
+                        'tab-nav-backgroundColor' => '#ffffff',
+                        'tab-nav-backgroundColorHover' => '#898989',
+                        'tab-nav-borderColor' => '#898989',
+                        'tab-nav-borderColorHover' => '#898989',
+                    )
+                ),
                 'color-button' => array(
                     'title' => esc_html__( 'Button', 'feellio' ),
                     'desc'  => esc_html__( 'Customize button color.', 'feellio' ),
@@ -348,32 +387,20 @@ if (!class_exists('WD_SASS')) {
                         'button--default-color' => '#ffffff',
                         'button--default-colorHover' => '#282828',
                         'button--default-backgroundColor' => '#282828',
-                        'button--default-backgroundColorHover' => '#ffffff',
-                        'button--default-borderColor' => '#ffffff',
-                        'button--default-borderColorHover' => '#FF2D55',
+                        'button--default-backgroundColorHover' => '#dddddd',
+                        'button--default-borderColor' => '#dddddd',
+                        'button--default-borderColorHover' => '#282828',
 
-                        'button--primary-color' => '#ffffff',
-                        'button--primary-colorHover' => '#FF2D55',
-                        'button--primary-backgroundColor' => '#FF2D55',
-                        'button--primary-backgroundColorHover' => '#ffffff',
-                        'button--primary-borderColor' => '#ffffff',
-                        'button--primary-borderColorHover' => '#FF2D55',
+                        'button--secondary-color' => '#ffffff',
+                        'button--secondary-colorHover' => '#282828',
+                        'button--secondary-backgroundColor' => '#F9B143',
+                        'button--secondary-backgroundColorHover' => '#dddddd',
+                        'button--secondary-borderColor' => '#dddddd',
+                        'button--secondary-borderColorHover' => '#F9B143',
 
                         'button--disabled-color' => '#ffffff',
                         'button--disabled-backgroundColor' => '#cccccc',
                         'button--disabled-borderColor' => '#cccccc',
-                    )
-                ),
-                'color-border' => array(
-                    'title' => esc_html__( 'Border', 'feellio' ),
-                    'desc'  => esc_html__( 'Customize border color.', 'feellio' ),
-                    'type'  => 'color', //color, typography, text
-                    'output' => 'single',
-                    'data'  => array(
-                        'border-color-light' => '#dbdbdb',
-                        'border-color-dark' => '#282828',
-                        'border-color-white' => '#ffffff',
-                        'border-color-alert' => '#f00',
                     )
                 ),
                 'color-nav-user' => array(
@@ -382,8 +409,8 @@ if (!class_exists('WD_SASS')) {
                     'type'  => 'color', //color, typography, text
                     'output' => 'single',
                     'data'  => array(
-                        'navUser-color' => '#000000',
-                        'navUser-color-hover' => '#FF2D55',
+                        'navUser-color' => '#282828',
+                        'navUser-color-hover' => '#b47828',
                     )
                 ),
                 'color-nav-pages' => array(
@@ -392,16 +419,11 @@ if (!class_exists('WD_SASS')) {
                     'type'  => 'color', //color, typography, text
                     'output' => 'single',
                     'data'  => array(
-                        'navPages-color' => '#000000',
-                        'navPages-color-hover' => '#FF2D55',
+                        'navPages-color' => '#282828',
+                        'navPages-color-hover' => '#b47828',
                         'navPages-subMenu-background-Color' => '#ffffff',
-                        'navPages-color' => '#000000',
-                        'navPages-color-hover' => '#FF2D55',
-                        'navPages-subMenu-background-Color' => '#ffffff',
-                        'navPages-subMenu-background-Color-hover' => '#ddd',
+                        'navPages-subMenu-background-Color-hover' => '#dddddd',
                         'navPages-subMenu-border-Color' => '#dbe2e5',
-                        // 'navPages-subMenu-border-Color-hover' => '#dbe2e5',
-                        // 'navPages-subMenu-boxshadow-Color' => '#282828',
                         'navPages-flag-new-Color' => '#33a561',
                         'navPages-flag-sale-Color' => '#8224e3',
                         'navPages-flag-hot-Color' => '#ff3366',
@@ -447,16 +469,13 @@ if (!class_exists('WD_SASS')) {
                     'type'  => 'color', //color, typography, text
                     'output' => 'single',
                     'data'  => array(
-                        'icon-color' => '#757575',
-                        'icon-color-hover' => '#999999',
-                        'button--icon-svg-color' => '#757575',
                         'countPill-color' => '#ffffff',
-                        'countPill-backgroundColor' => '#000000',
+                        'countPill-backgroundColor' => '#282828',
                     )
                 ),
                 'color-footer' => array(
                     'title' => esc_html__( 'Footer', 'feellio' ),
-                    'desc'  => esc_html__( 'Customize footer color.', 'feellio' ),
+                    'desc'  => esc_html__( 'Customize default footer color.', 'feellio' ),
                     'type'  => 'color', //color, typography, text
                     'output' => 'single',
                     'data'  => array(
@@ -480,6 +499,16 @@ if (!class_exists('WD_SASS')) {
                         'dropdown-backgroundColor' => '#ffffff',
                         'dropdown-textColor' => '#282828',
                         'dropdown-borderColor' => '#dbdbdb',
+                    )
+                ),
+                'color-scrollbar' => array(
+                    'title' => esc_html__( 'Scrollbar', 'feellio' ),
+                    'desc'  => esc_html__( 'Customize scrollbar color (large screen only).', 'feellio' ),
+                    'type'  => 'color', //color, typography, text
+                    'output' => 'single',
+                    'data'  => array(
+                        'scrollbar-backgroundColor' => '#ffffff',
+                        'scrollbar-buttonColor' => '#888888'
                     )
                 ),
 			);

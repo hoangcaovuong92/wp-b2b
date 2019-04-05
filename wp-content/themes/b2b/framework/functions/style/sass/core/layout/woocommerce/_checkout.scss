@@ -3,7 +3,7 @@
 		.woocommerce-info{
 		    border-top-color: $border-color-dark;
 		    &:before {
-			    color: #282828;
+			    color: $text-color-dark;
 			}
 		}
 	}
@@ -36,7 +36,7 @@
 			padding:0;
 			&.place-order{
 				input.button{
-					@include button_style(1);
+					@include button_style(primary);
 				}
 			}
 		}
@@ -102,7 +102,7 @@
 						th{
 							background: #282828;
 							text-transform:uppercase;
-							color:#fff;
+							color: $text-color-light;
 							text-align:center;
 							padding:12px;
 							border:1px solid $border-color-light;
@@ -136,16 +136,16 @@
 					}
 				}
 				#payment.woocommerce-checkout-payment{
-					background:#fff;
+					background: $background-color-white;
 					margin-bottom:30px;			
 					input.button.alt{								
-						color:#fff;
-						background: #000;
+						color: $text-color-light;
+						background: $background-color-dark;
 						padding:11px 18px;
 						font-size: 14px;
 						margin-bottom:0;
 						&:hover{
-							background: #fff;
+							background: $background-color-white;
 						}
 					}
 				}
@@ -164,7 +164,7 @@
 					}
 				}
 				#place_order{
-				    @include button_style(1);
+				    @include button_style(primary);
 				    font-size: 13px;
 				    font-weight: fontWeight("normal");
 				    text-transform: uppercase;

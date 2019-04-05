@@ -3,7 +3,7 @@
 		border-top-color: $border-color-dark;
 		&:before {
 			content: '\e015';
-			color: #282828;
+			color: $text-color-dark;
 		}
 		a.button.wc-forward{
 			padding:10px;

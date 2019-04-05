@@ -16,7 +16,7 @@
                         font-size: 13px;
                         font-weight: fontWeight("medium");
                         text-transform: uppercase;
-                        color: #282828;
+                        color: $text-color-dark;
                         p{
                             margin:0;
                         }
@@ -90,7 +90,7 @@
                     .feature_title  {
                         font-size: 17px;
                         font-weight: fontWeight("medium");
-                        color: #fff;
+                        color: $text-color-light;
                         text-transform: uppercase;
                     }
                     .feature_excerpt {
@@ -99,11 +99,11 @@
                     .wd-feature-readmore {
                         font-size: 15px;
                         background-color: #111;
-                        color: #fff;
+                        color: $text-color-light;
                         padding: 10px 20px;                                             
                         @include transition;
                         &:hover {
-                            background-color: #fff;
+                            background-color: $background-color-white;
                         }
                     }
                 }               
@@ -112,8 +112,8 @@
                 .feature_thumbnail_image {
                     .feature_icon {
                         &:before {
-                            color: #fff;
-                            background-color: #fff;
+                            color: $text-color-light;
+                            background-color: $background-color-white;
                             padding: 20px;
                             @include border-radius(50%);
                         }
@@ -146,7 +146,7 @@
                 .feature_thumbnail_image {
                     .feature_icon {
                         &:before {
-                            color: #fff;
+                            color: $text-color-light;
                         }
                         &:after {
                             transform: translate(-50%,-50%) scale(1);

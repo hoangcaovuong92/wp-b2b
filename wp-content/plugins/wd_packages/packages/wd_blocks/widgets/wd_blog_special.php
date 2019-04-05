@@ -8,7 +8,7 @@ if( !class_exists( 'wd_widget_blog_special' ) ) {
         public function init_settings(){
 			$this->list_widget_field_default = array(
                 'widget_title'			=> 'Popular Posts',
-                'layout'				=> 'title',
+                'layout'				=> 'category, title',
                 'style'					=> 'grid',
                 'id_category'			=> '-1',
                 'data_show'				=> 'recent-post',

@@ -1,6 +1,18 @@
-html{
-    overflow-x: hidden;
+@-ms-viewport {
+    width: device-width;
 }
+@viewport {
+    width: device-width;
+}
+
+
+html{
+	overflow-x: hidden;
+	@include breakpoint('max', 'desktop') {
+		overflow: initial !important;
+	}
+}
+
 body {
 	position: relative;
 	font-family: fontFamily('body-font');
@@ -34,10 +46,6 @@ body {
 		vertical-align:top;
 		@include transition;
 		@include link_style(primary);
-		&:hover,&:active,&:focus{
-			text-decoration: none;
-			outline: none;
-		}
 	}
 	select::-ms-expand {
 		display: none;
@@ -53,6 +61,7 @@ body {
 
 	ul, ol{
 		padding:0;
+		list-style-position: inside;
 		ul, ol{
 			padding-left: 20px;
 		}
@@ -73,20 +82,7 @@ body {
 			padding:0;
 		}
 		&.wd-table{
-			th{
-				color: $table-heading-color;
-				background-color: $table-heading-background-color;
-			}
-			tr{
-				&:nth-of-type(odd){
-					color: $table-row-odd-color;
-					background-color: $table-row-odd-background-color;
-				}
-				&:nth-of-type(even){
-					color: $table-row-even-color;
-					background-color: $table-row-even-background-color;
-				}
-			}
+			@extend %table_color;
 		}
 	}
 
@@ -101,7 +97,7 @@ body {
 	input[type="submit"],
 	input[type="button"],
 	input[type="reset"]{
-		@include button_style('default');
+		@include button_style(primary);
 	}
 
 	input[type='text'],
@@ -137,4 +133,34 @@ body {
 	input.input-text{
 		min-height: 28px;
 	}
+}
+
+/* Placeholder text color -- selectors need to be separate to work. */
+::-webkit-input-placeholder {
+	color: $color-textBase;
+}
+
+:-moz-placeholder {
+	color: $color-textBase;
+}
+
+::-moz-placeholder {
+	color: $color-textBase;
+}
+
+:-ms-input-placeholder {
+	color: $color-textBase;
+}
+
+//Scroll bar
+@include breakpoint('min', 'large') {
+    ::-webkit-scrollbar {
+        background: $scrollbar-backgroundColor;
+        width: 11px;
+        height: 11px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $scrollbar-buttonColor;
+        @include border-radius(10px);
+    }
 }

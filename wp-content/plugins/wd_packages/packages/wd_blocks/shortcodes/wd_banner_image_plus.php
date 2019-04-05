@@ -28,6 +28,7 @@ if (!function_exists('wd_banner_image_plus_function')) {
 			'id_category' 		=> '',
 			'button_text' 		=> 'View Category',
 			'button_class' 		=> '',
+			'fullwidth_mode'	=> false,
 			'class' 			=> ''
 		), $atts));
 		
@@ -50,6 +51,9 @@ if (!function_exists('wd_banner_image_plus_function')) {
 			'alt' 		=> get_bloginfo('name').' - Banner Image Plus',
 			'title' 	=> get_bloginfo('name').' - Banner Image Plus',
 		);
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 
 		ob_start(); ?>
 			<?php if ($type == 'image'): ?>
@@ -96,7 +100,7 @@ if (!function_exists('wd_banner_image_plus_function')) {
 		<?php
 		$main_content = ob_get_clean();
 		ob_start(); ?>
-			<div class="wd-shortcode-banner-plus <?php echo esc_attr($class); ?> <?php echo esc_attr($position_content_class); ?>">
+			<div class="wd-shortcode wd-shortcode-banner-plus <?php echo esc_attr($position_content_class); ?> <?php echo esc_attr($class); ?>">
 				<?php if ($position_content == 'outside-right' || $position_content == 'inside-right'): ?>
 					<div class="<?php echo esc_attr($type_class); ?>">
 						<?php echo $main_content; ?>

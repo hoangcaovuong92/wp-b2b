@@ -9,6 +9,7 @@ if (!function_exists('wd_text_slider_function')) {
 			'show_nav'		=> '1',
 			'show_dot'		=> '1',
 			'auto_play'		=> '1',
+			'fullwidth_mode' => false,
 			'class' 		=> ''
 		), $atts));
 		if (!function_exists('vc_param_group_parse_atts')) return;
@@ -18,61 +19,65 @@ if (!function_exists('wd_text_slider_function')) {
 		$center_mode 	= ($center_mode == '1') ? 'true' : 'false';
 		$auto_play 		= ($auto_play == '1') 	? 'true' : 'false';
 
-	    $random_id 		= 'wd-banner-slider-'.mt_rand();
+		$random_id 		= 'wd-banner-slider-'.mt_rand();
+		
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-			<?php if (count($slider)) { ?>
-				<div id="<?php echo esc_attr( $random_id ); ?>" class="wd-shortcode-text-slider <?php echo esc_attr($text_align); ?> <?php echo esc_attr($class); ?>">
-					<?php foreach($slider as $content){ ?>
-						<?php if (!empty($content['content'])): ?>
-							<div class="wd-shortcode-text-slider-content <?php echo esc_attr($text_align); ?>">
-								<?php echo $content['content']; ?>
-							</div>
-						<?php endif ?>
-					<?php } ?>
-				</div>
-				<script type="text/javascript">
-					jQuery(document).ready(function() {
-						"use strict";	
-						var $_this = jQuery('#<?php echo esc_attr( $random_id ); ?>');
-						$_this.slick({
-						  	arrows			: <?php echo esc_html($show_nav); ?>,
-						  	dots 			: <?php echo esc_html($show_dot); ?>,
-						  	centerMode 		: <?php echo esc_html($center_mode); ?>,
-						  	infinite 		: true,
-						  	autoplay 		: <?php echo esc_html($auto_play); ?>,
-						  	autoplaySpeed	: 2000,
-						  	speed			: 300,
-						  	slidesToShow	: <?php echo esc_attr($columns); ?>,
-						  	slidesToScroll	: <?php echo esc_attr($columns); ?>,
-						  	responsive		: [
-							    {
-							      	breakpoint			: 1024,
-							      	settings 			: {
-								        slidesToShow	: <?php echo esc_attr($columns); ?>,
-								        slidesToScroll	: <?php echo esc_attr($columns); ?>,
-								        infinite		: true,
-								        dots 			: <?php echo esc_attr($show_dot); ?>,
-							      	}
-							    },
-							    {
-							      	breakpoint			: 600,
-							      	settings 			: {
-								        slidesToShow	: (<?php echo esc_attr($columns); ?> > 1) ? <?php echo esc_attr($columns); ?> - 1 : 1,
-								        slidesToScroll	: (<?php echo esc_attr($columns); ?> > 1) ? <?php echo esc_attr($columns); ?> - 1 : 1
-							      	}
-							    },
-							    {
-								    breakpoint			: 480,
-								    settings 			: {
-								        slidesToShow	: 1,
-								        slidesToScroll	: 1
-								    }
-							    }
-						  	]
-						});
-					});	
-				</script>
-			<?php } ?>
+		<?php if (count($slider)) { ?>
+			<div id="<?php echo esc_attr( $random_id ); ?>" class="wd-shortcode wd-shortcode-text-slider <?php echo esc_attr($text_align); ?> <?php echo esc_attr($class); ?>">
+				<?php foreach($slider as $content){ ?>
+					<?php if (!empty($content['content'])): ?>
+						<div class="wd-shortcode-text-slider-content <?php echo esc_attr($text_align); ?>">
+							<?php echo $content['content']; ?>
+						</div>
+					<?php endif ?>
+				<?php } ?>
+			</div>
+			<script type="text/javascript">
+				jQuery(document).ready(function() {
+					"use strict";	
+					var $_this = jQuery('#<?php echo esc_attr( $random_id ); ?>');
+					$_this.slick({
+						arrows			: <?php echo esc_html($show_nav); ?>,
+						dots 			: <?php echo esc_html($show_dot); ?>,
+						centerMode 		: <?php echo esc_html($center_mode); ?>,
+						infinite 		: true,
+						autoplay 		: <?php echo esc_html($auto_play); ?>,
+						autoplaySpeed	: 2000,
+						speed			: 300,
+						slidesToShow	: <?php echo esc_attr($columns); ?>,
+						slidesToScroll	: <?php echo esc_attr($columns); ?>,
+						responsive		: [
+							{
+								breakpoint			: 1024,
+								settings 			: {
+									slidesToShow	: <?php echo esc_attr($columns); ?>,
+									slidesToScroll	: <?php echo esc_attr($columns); ?>,
+									infinite		: true,
+									dots 			: <?php echo esc_attr($show_dot); ?>,
+								}
+							},
+							{
+								breakpoint			: 600,
+								settings 			: {
+									slidesToShow	: (<?php echo esc_attr($columns); ?> > 1) ? <?php echo esc_attr($columns); ?> - 1 : 1,
+									slidesToScroll	: (<?php echo esc_attr($columns); ?> > 1) ? <?php echo esc_attr($columns); ?> - 1 : 1
+								}
+							},
+							{
+								breakpoint			: 480,
+								settings 			: {
+									slidesToShow	: 1,
+									slidesToScroll	: 1
+								}
+							}
+						]
+					});
+				});	
+			</script>
+		<?php } ?>
 		<?php
 		$output = ob_get_clean();
 		wp_reset_postdata();

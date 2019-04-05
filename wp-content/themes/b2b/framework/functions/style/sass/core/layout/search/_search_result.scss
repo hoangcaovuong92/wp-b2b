@@ -14,8 +14,8 @@
             }
             &:hover{
                 border:solid 1px $border-color-dark;
-                background:#fff;
-                color: #282828;
+                background:$background-color-white;
+                color: $text-color-dark;
             }
         }
         input[type="text"]{
@@ -39,7 +39,7 @@ section.no-results.not-found{
         h2.page-title{
             margin: 0 0 26px;
             font: 400 14px/1.75 "HelvetiCaneue", Helvetica, Arial, sans-serif;
-            font-size: 80px;
+            font-size: fontSize("small") * 4;
             text-transform: uppercase;
             line-height: 80px;
             text-align: center;
@@ -49,9 +49,9 @@ section.no-results.not-found{
         text-align:center;
         >p{
             display: block;
-            font-size: 20px;
+            font-size: fontSize("small");
             text-transform: uppercase;
-            color: #3f3f3f;
+            color: $text-color-dark;
             position: relative;
             padding-bottom: 15px;
             margin-bottom: 50px;
@@ -60,11 +60,10 @@ section.no-results.not-found{
                 position: absolute;
                 width: 107px;
                 height: 1px;
-                background: #000;
+                background: $background-color-dark;
                 bottom: 0;
                 left: 50%;
-                transform: translateX(-50%);
-                -webkit-transform: translateX(-50%);
+                @include transform(translateX(-50%));
             }
         }
         form.searchform{
@@ -84,11 +83,11 @@ section.no-results.not-found{
                 top: 20px;
                 right: 20px;
                 padding: 12px 30px;
-                background: #000;
-                color: #fff;
+                background: $background-color-dark;
+                color: $text-color-light;
                 @include transition;
                 &:hover {
-                    background-color: #282828;                  
+                    background-color: $background-color-dark;
                 }
             }
         }

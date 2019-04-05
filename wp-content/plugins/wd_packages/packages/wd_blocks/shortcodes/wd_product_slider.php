@@ -13,6 +13,7 @@ if (!function_exists('wd_product_slider_function')) {
 			'columns_mobile'		=> 1,
 			'show_nav'				=> '1',
 			'auto_play'				=> '1',
+			'fullwidth_mode' 		=> false,
 			'class'					=> ''
 		), $atts));
 		if (!wd_is_woocommerce()) return;
@@ -23,11 +24,11 @@ if (!function_exists('wd_product_slider_function')) {
 			'order' 			=> $sort,
 		);
 		$settings = array(
-				'category' 	=> array(
-					'product_cat'	=> (int)$id_category
-				),
-				'order_by' 	=> $order_by,
-				'data_show' => $data_show
+			'category' 	=> array(
+				'product_cat'	=> (int)$id_category
+			),
+			'order_by' 	=> $order_by,
+			'data_show' => $data_show
 		);
 		$args = apply_filters('wd_filter_get_product_query', $args, $settings);
 
@@ -35,21 +36,23 @@ if (!function_exists('wd_product_slider_function')) {
 		$products 		= new WP_Query( $args );
 		$count 			= 0;
 		$random_id 		= 'wd-simple-product-slider-'.mt_rand();	
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
 		<?php if ( $products->have_posts() ) : ?>
-			<div class="wd-shortcode-product-simple-slider woocommerce <?php echo esc_html($class); ?>">
-				<div id="<?php echo esc_attr( $random_id ); ?>" class='wd-shortcode-product-slider'>
-					<ul class="products grid">
-						<div class="wd-products-wrapper">				
-							<?php while ( $products->have_posts() ) : $products->the_post(); global $post; ?>
-								<?php wc_get_template( 'content-product.php', array(
-									'image_size'    => $image_size,
-								) ); ?>
-								<?php //include( locate_template( 'woocommerce/content-product.php' ) ); ?>
-							<?php endwhile; //End While ?>
-						</div>
-					</ul>
-				</div>
+			<div id="<?php echo esc_attr( $random_id ); ?>" class="wd-shortcode wd-shortcode-product-slider woocommerce <?php echo esc_attr($class); ?>">
+				<ul class="products grid">
+					<div class="wd-products-wrapper">				
+						<?php while ( $products->have_posts() ) : $products->the_post(); global $post; ?>
+							<?php wc_get_template( 'content-product.php', array(
+								'image_size'    => $image_size,
+							) ); ?>
+							<?php //include( locate_template( 'woocommerce/content-product.php' ) ); ?>
+						<?php endwhile; //End While ?>
+					</div>
+				</ul>
 			</div>
 		<?php endif; // Have Product ?>	
 		<?php

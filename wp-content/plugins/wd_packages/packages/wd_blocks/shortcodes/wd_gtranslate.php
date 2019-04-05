@@ -2,12 +2,15 @@
 if (!function_exists('wd_gtranslate_function')) {
 	function wd_gtranslate_function($atts) {
 		extract(shortcode_atts(array(
-			'class' => '',
+			'fullwidth_mode' 	=> false,
+			'class' 			=> '',
 		), $atts));
 		
-		ob_start();
-		?>
-		<div class="wd-shortcode-gtranslate <?php echo esc_attr($class) ?>">
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
+		ob_start(); ?>
+		<div class="wd-shortcode wd-shortcode-gtranslate <?php echo esc_attr($class) ?>">
 			<?php echo do_shortcode( '[GTranslate]' ); ?>
 		</div>
 		<?php

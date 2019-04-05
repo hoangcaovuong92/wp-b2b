@@ -181,39 +181,39 @@ if (!class_exists('WD_Ajax')) {
 					} else if( ! email_exists( $email ) ) {
 						$mess['error'] 		= esc_html__( 'There is no user registered with that email address.', 'feellio' );
 					} else {
-
-						$random_password 	= wp_generate_password( 12, false );
 						$user 				= get_user_by( 'email', $email );
+						$current_password	= $user->data->user_pass;
+						$random_password 	= wp_generate_password( 12, false );
 
-						$update_user = wp_update_user( array (
-								'ID' => $user->ID,
-								'user_pass' => $random_password
-							)
-						);
+						//Send email
+						$to 		= $email;
+						$subject 	= esc_html__( 'Your new password', 'feellio' );
+						$sender 	= get_option('name');
 
-						// if  update user return true then lets send user an email containing the new password
-						if( $update_user ) {
-							$to 		= $email;
-							$subject 	= esc_html__( 'Your new password', 'feellio' );
-							$sender 	= get_option('name');
+						$message 	= esc_html__( 'Your new password is: ', 'feellio' ).$random_password;
 
-							$message 	= esc_html__( 'Your new password is: ', 'feellio' ).$random_password;
+						$headers[] 	= 'MIME-Version: 1.0' . "\r\n";
+						$headers[] 	= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+						$headers[] 	= "X-Mailer: PHP \r\n";
+						$headers[] 	= 'From: '.$sender.' < '.$email.'>' . "\r\n";
 
-							$headers[] 	= 'MIME-Version: 1.0' . "\r\n";
-							$headers[] 	= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-							$headers[] 	= "X-Mailer: PHP \r\n";
-							$headers[] 	= 'From: '.$sender.' < '.$email.'>' . "\r\n";
-
-							$mail 		= wp_mail( $to, $subject, $message, $headers );
-							if( !$mail ) {
-								$mess['error'] 		= esc_html__( 'Error when sending email...', 'feellio' );
-							}else{
+						$mail 		= wp_mail( $to, $subject, $message, $headers );
+						if( !$mail ) {
+							$mess['error'] = esc_html__( 'Error when sending email, Password reset failed!', 'feellio' );
+						}else{
+							$update_user = wp_update_user( 
+								array (
+									'ID' => $user->ID,
+									'user_pass' => $random_password
+								)
+							);
+							// if  update user return true then lets send user an email containing the new password
+							if( $update_user ) {
 								$success 			= true;
 								$mess['successs'] 	= esc_html__( 'Check your email address for you new password.', 'feellio' );
+							} else {
+								$mess['error'] 	= esc_html__( 'Oops something went wrong updaing your account.', 'feellio' );
 							}
-
-						} else {
-							$mess['error'] 	= esc_html__( 'Oops something went wrong updaing your account.', 'feellio' );
 						}
 					}
 

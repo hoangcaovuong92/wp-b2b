@@ -13,6 +13,7 @@ if (!function_exists('wd_banner_image_function')) {
 			'right'			=> '',
 			'bottom'		=> '',
 			'left'			=> '',
+			'fullwidth_mode'=> false,
 			'class' 		=> ''
 		), $atts));
 
@@ -23,8 +24,12 @@ if (!function_exists('wd_banner_image_function')) {
 			$button_style 	.= ($left != '') ? 'left:'. esc_attr($left) . ';' : '';
 			$button_style 	.= ($right != '') ? 'right:'. esc_attr($top) . ';' : '';
 		}
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
 		ob_start(); ?>
-			<div class="wd-shortcode-banner <?php echo esc_attr($class); ?>">	
+			<div class="wd-shortcode wd-shortcode-banner <?php echo esc_attr($class); ?>">	
 				<div class="wd-banner-image wd-banner-hover--<?php echo esc_attr($hover_style); ?>">
 					<a target="<?php echo esc_attr($target);?>" href="<?php echo esc_url($link_url)?>">
 						<?php echo apply_filters('wd_filter_image_html', array('attachment' => $image, 'image_size' => $image_size)); ?>

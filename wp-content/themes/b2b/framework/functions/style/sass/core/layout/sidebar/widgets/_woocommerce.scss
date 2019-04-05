@@ -8,21 +8,13 @@ aside{
 				a {
 					@include border-radius(0);
 					&.wc-forward {
-						background-color: #212121;
 						border:solid 1px $border-color-dark;
 						padding: 10px;
 						font-weight: fontWeight("medium");
-						&:hover{
-							background:#fff;
-							color: #212121;
-						}
 					}
 				}
 			}
 			.cart_list {
-				a:hover{
-					color: #fff;
-				}
 			}
 		}
 		ul.cart_list li img, .woocommerce ul.product_list_widget li img {
@@ -33,12 +25,7 @@ aside{
 			@include box-shadow(none);
 		}
 		.cart_list li a.remove, &.widget_shopping_cart .cart_list li a.remove {
-		    color: #282828 !important;
 		    padding-top:2px;
-		    &:hover{
-		    	background:#282828;
-		    	color: #fff !important;
-		    }
 		}
 		ul.cart_list li, ul.product_list_widget li {
 		    margin-bottom: 25px;
@@ -50,23 +37,18 @@ aside{
 	&.widget_price_filter {
 		.price_slider_amount{
 			.button{
-				background-color: #212121;
 				border:solid 1px $border-color-dark;
 				outline: none;
 				padding:10px;
 				font-weight: fontWeight("medium");
 				@include border-radius(0);
-				&:hover {
-					background:#fff;
-					color: #212121;
-				}
+				@include button_style(primary);
 			}
 		}
 	}
 	&.wd_widget_product_categories{
 		ul.dropdown_mode.is_dropdown > li > a{
 			font-weight: fontWeight("normal");
-			color: #282828 !important;
 			margin-left: 0;
 			&:hover{
 			    font-weight: fontWeight("semibold");
@@ -79,7 +61,6 @@ aside{
 				padding:3px 0;
 				a{
 					text-transform:uppercase;
-					font-size: 13px;				
 				}
 				a.current{
 					font-weight: fontWeight("semibold");
@@ -103,7 +84,6 @@ aside{
 						    color: inherit;
 						    -webkit-font-smoothing: antialiased;
 							-moz-osx-font-smoothing: grayscale;
-						    color: #282828;
 						}
 					}
 					&.active{
@@ -122,7 +102,6 @@ aside{
 							    color: inherit;
 							    -webkit-font-smoothing: antialiased;
 							    -moz-osx-font-smoothing: grayscale;
-							    color: #282828;
 							}
 						}
 					}
@@ -154,55 +133,46 @@ aside{
 		}
 	}
 	
-	&.wd_widget_recent_onsaleproduct_wrapper.style_02 .product_detail_wd .product_info_wd a h3:hover {
-		color: #fff;
-	}
 	&.widget_layered_nav{
 		ul.wd-product-filter-by-attr{
 			li{
-				width: 45%;
 			}
 		}
 		ul{
 			width: 100%;
-			float: left;
 			margin-bottom: 30px;
 			li{
 				padding:0;
 				width: 100%;
-				float: left;
 				height: 30px;
 				margin:0 10px 10px 0;
-				span.count {display:none;}
+				span.count {
+					display:none;
+				}
 				a{			
-					background:none;
-					color:#282828;
-					text-transform:uppercase;
+					background: none;
+					text-transform: uppercase;
 					display: block;
 					text-align: left;				
 					line-height: 30px;
 					padding: 0 10px;
 					position: relative;
-					padding-left:35px;
+					padding-left: 35px !important;
 					&:before{
 					    font: normal normal normal 14px/1 FontAwesome;
 						content: "";
-						color: #282828;
-					    width: 20px;
 					    position: absolute;
+					    width: 20px;
 					    height: 20px;
 					    border: solid 1px $border-color-dark;
 					    left: 0;
 					    top: 5px;
 					}
-					&:hover{
-						color:#fff;
-					}
 				}
 				&.chosen{
 					a:before{
 						content: "\f00c"; 
-						font-size: 11px;
+						font-size: fontSize("tiny");
 						padding-top:4px;
 						padding-left:3px;
 					}
@@ -215,8 +185,10 @@ aside{
 			overflow:hidden;
 			li{
 				float:left;
-				margin:0 20px 8px 0;
-				span, small{display:none;}
+				margin: 0 20px 8px 0;
+				span, small{
+					display:none;
+				}
 				a{
 					>div{
 						width:20px!important;
@@ -240,7 +212,6 @@ aside{
 		.price_slider_wrapper{
 			.price_slider{
 				height:4px;
-				background: #ffffff;
 				margin-bottom:20px;
 				margin-top: 25px;
 				@include border-radius(0);
@@ -250,14 +221,13 @@ aside{
 				.ui-slider-handle{
 					width:15px;
 					height:15px;
-					background:#fff;
 					border:1px solid $border-color-dark;
 					top:-6px;
 				}
 			}
 			.price_slider_amount{
 				.price_label{					
-					font-size: 14px;
+					font-size: fontSize("root");
 				}
 			}
 		}
@@ -303,7 +273,6 @@ aside{
 					.price {
 						.woocommerce-Price-amount, .woocommerce-Price-currencySymbol {
 							font-weight: fontWeight("bold");
-							font-size: 16px;
 						}
 
 					}
@@ -320,12 +289,7 @@ aside{
 					text-align:center;
 					line-height: 22px;
 					font-size:0;
-					background: #dee2e5 !important; 
-					color: #fff !important;
 					@include border-radius(3px);
-					&:hover{						
-						background: #fff !important;
-					}
 					&.next{
 						right:0;
 						&:before{

@@ -93,8 +93,10 @@
 			var InterfaceElements = []; //Add HTML to interface
 			var BlockGroup = {}; //List of block group
 
+			//Display preview icon (boolean)
 			var preview = (typeof(attributes.preview) != undefined && attributes.preview) ? attributes.preview : false;
 			
+			//Select image button on block setting panel
 			var onImageRender = function (obj) {
 				return el(Button, {
 						className : 'editor-post-featured-image__toggle',
@@ -115,6 +117,7 @@
 					))
 			}
 
+			//Select image button on toolbar
 			var onImageRenderToolbar = function (obj) {
 				return el(Button, {
 						className : 'components-icon-button components-toolbar__control',
@@ -132,6 +135,7 @@
 					))
 			}
 
+			//Display title on Interface
 			var displayTitle = function (title, content) {
 				return WDBlock.show_current_value && content ? el('p', {
 						style: {
@@ -155,10 +159,12 @@
 				) : '';
 			}
 
+			//Convert text to variable name
 			var converterString = function (string) {
 				return string.replace(" ", "").toLowerCase();
 			}
 
+			//Parameter analysis from php
 			if (typeof WDBlock.attributes !== 'undefined'){
 				for (let fieldName in WDBlock.attributes) {
 					if (!fieldName || fieldName === 'className') continue;
@@ -169,7 +175,7 @@
 					
 					//If display field, register attribute field otherwise unset
 					if (display) {
-						attributes[fieldName] = attributes[fieldName] ? attributes[fieldName] : fieldData.default;
+						attributes[fieldName] = attributes[fieldName] || attributes[fieldName] == '' || attributes[fieldName] == 0 ? attributes[fieldName] : fieldData.default;
 					}else{
 						attributes[fieldName] = null;
 					}

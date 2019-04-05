@@ -29,7 +29,7 @@ if( !class_exists( 'wd_widget_my_account_form' ) ) {
 					'forgot-password' 	=> esc_html__( 'Forgot Password', 'wd_package' ),
 				);
 
-			$style_arr 		= wd_get_list_style_class(4);
+			$style_arr 		= wd_get_list_style_class(1);
 			
 			$this->text_field(
     			esc_html__( 'Widget title:', 'wd_package' ), 

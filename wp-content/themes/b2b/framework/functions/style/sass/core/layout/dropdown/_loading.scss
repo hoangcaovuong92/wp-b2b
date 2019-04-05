@@ -1,0 +1,23 @@
+.wd-empty-cart-btn, .login-submit, .register-submit, .forgot-password-submit{
+    position: relative;
+    .wd-loading{
+        max-width: 50px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        img{
+            height: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.login-submit, .register-submit, .forgot-password-submit{
+    margin-top: 0;
+    .wd-my-account-btn{
+        display: block;
+        width: 100%;
+    }
+}

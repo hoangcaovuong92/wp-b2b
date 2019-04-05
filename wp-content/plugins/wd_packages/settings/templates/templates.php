@@ -109,7 +109,7 @@ if (!class_exists('WD_Template_Parts')) {
 													} ?>
 												</p>
 												
-												<p><a data-template="<?php echo esc_html($template); ?>" data-post_type="<?php echo esc_html($data['post_type']); ?>" data-template-exist="<?php echo $this->check_template_part_exit($template) ? 'true' : 'false'; ?>" href="" class="button button-primary wd-button-with-loading wd-template-parts-template">
+												<p><a data-template="<?php echo esc_html($template); ?>" data-template-exist="<?php echo $this->check_template_part_exit($template) ? 'true' : 'false'; ?>" href="" class="button button-primary wd-button-with-loading wd-template-parts-template">
 														<?php echo $this->check_template_part_exit($template) 
 																? esc_html__("Restore Template", 'wd_package') 
 																: esc_html__("Create Template", 'wd_package'); ?>
@@ -131,14 +131,17 @@ if (!class_exists('WD_Template_Parts')) {
 		} //end content admin page
 
 		public function template_part($template = 'all'){
-            $demo_image_id = apply_filters('wd_filter_demo_image', true);
+			$demo_image_id = apply_filters('wd_filter_demo_image', true);
+			$admin_email = get_option('admin_email', 'vuong.hoang@codespot.vn');
+			$blog_name = get_option('blogname', 'Wordpress Site');
+			$home_url = get_option('siteurl', '');
 			$data = array(
                 'homepage-1-before-front-page' => array(
 					'title'      	=> esc_html__( 'Homepage 1 - Before front page', 'wd_package' ),
-					'desc'      	=> esc_html__( '', 'wd_package' ),
+					'desc'      	=> esc_html__( 'Content before home1 main content.', 'wd_package' ),
 					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/others/before_home1.jpg',
-                    'content'       => '[vc_row full_width="stretch_row_content_no_spaces"][vc_column][wd_blog_slider id_category="-1" columns="1" columns_tablet="2" columns_mobile="1" image_size="wd_image_size_large" grid_hover_style="grid-inner"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column][wd_title heading_element="h2" display_button="0" title="POPULAR POSTS"][wd_blog_special layout="title,meta" id_category="-1" number_blogs="5" columns="5" columns_tablet="2" columns_mobile="1" padding="small" show_placeholder_image="1" grid_hover_style="grid-inner" is_slider="0"][/vc_column][/vc_row]',
-                    'content_gutenberg' => '<!-- wp:shortcode -->[vc_row full_width="stretch_row_content_no_spaces"][vc_column][wd_blog_slider id_category="-1" columns="1" columns_tablet="2" columns_mobile="1" image_size="wd_image_size_large" grid_hover_style="grid-inner"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column][wd_title heading_element="h2" display_button="0" title="POPULAR POSTS"][wd_blog_special layout="title,meta" id_category="-1" number_blogs="5" columns="5" columns_tablet="2" columns_mobile="1" padding="small" show_placeholder_image="1" grid_hover_style="grid-inner" is_slider="0"][/vc_column][/vc_row]<!-- /wp:shortcode -->',
+                    'content'       => '[vc_row full_width="stretch_row_content_no_spaces"][vc_column][wd_blog_slider id_category="-1" columns="1" columns_tablet="2" columns_mobile="1" image_size="wd_image_size_large" grid_hover_style="grid-inner"][vc_empty_space height="50px"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column][wd_title heading_element="h2" display_button="0" title="POPULAR POSTS"][wd_blog_special layout="category, title" id_category="-1" number_blogs="5" columns="5" columns_tablet="2" columns_mobile="1" padding="small" show_placeholder_image="1" is_slider="0"][/vc_column][/vc_row]',
+                    'content_gutenberg' => '<!-- wp:shortcode -->[vc_row full_width="stretch_row_content_no_spaces"][vc_column][wd_blog_slider id_category="-1" columns="1" columns_tablet="2" columns_mobile="1" image_size="wd_image_size_large" grid_hover_style="grid-inner"][vc_empty_space height="50px"][/vc_column][/vc_row][vc_row full_width="stretch_row_content"][vc_column][wd_title heading_element="h2" display_button="0" title="POPULAR POSTS"][wd_blog_special layout="category, title" id_category="-1" number_blogs="5" columns="5" columns_tablet="2" columns_mobile="1" padding="small" show_placeholder_image="1" is_slider="0"][/vc_column][/vc_row]<!-- /wp:shortcode -->',
                     'post_type'     => 'wd_banner',
 					'meta_data'   	=> array(
 						'_wd_custom_layout_config' => array(
@@ -157,9 +160,77 @@ if (!class_exists('WD_Template_Parts')) {
 						),
                     ),
 				),
+				'main-contact-form' => array(
+					'title'      	=> esc_html__( 'Main Contact Form', 'wd_package' ),
+					'desc'      	=> esc_html__( 'The contact form display on contact page (Contact Form 7).', 'wd_package' ),
+					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/others/contact_form.jpg',
+                    'content'       => '',
+					'content_gutenberg' => '',
+                    'post_type'     => 'wpcf7_contact_form',
+					'meta_data'   	=> array(
+						'_form' => '<div class="wd-contact-form"><div class="wd-contact-form-message">[textarea your-message placeholder "Your Message *"]</div><div class="wd-contact-form-info">[text* your-name placeholder "Your Name *"][email* your-email placeholder "Your Email *"][tel* your-phone placeholder "Phone Number *"]</div><div class="wd-contact-form-alert"><span class="lnr lnr-checkmark-circle wd-icon"></span>I agree, by using this form you agree with the storage and handling of your data by this website.</div><div class="wd-contact-form-submit">[submit "Send Message"]</div></div>',
+						'_mail'	=> array ( 
+							'active' => true, 
+							'subject' => $blog_name.' "[your-name] - [your-email]"', 
+							'sender' => '[your-name] <'.$admin_email.'>', 
+							'recipient' => $admin_email, 
+							'body' => 'From: [your-name] <[your-email]>
+Phone: [your-phone]
+
+Message Body:
+[your-message]
+
+-- 
+This e-mail was sent from a contact form on '.$blog_name.' ('.$home_url.')', 
+							'additional_headers' => 'Reply-To: [your-email]', 
+							'attachments' => '', 
+							'use_html' => false, 'exclude_blank' => false,
+						),
+						'_mail_2'	=> array ( 
+							'active' => false, 
+							'subject' => $blog_name.' "[your-name] - [your-email]"', 
+							'sender' => '[your-name] <'.$admin_email.'>', 
+							'recipient' => '[your-email]', 
+							'body' => 'Message Body
+:[your-message]
+
+-- 
+This e-mail was sent from a contact form on '.$blog_name.' ('.$home_url.')', 
+							'additional_headers' => 'Reply-To: '.$admin_email, 
+							'attachments' => '', 
+							'use_html' => false, 
+							'exclude_blank' => false,
+						),
+						'_messages' => array ( 
+							'mail_sent_ok' => 'Thank you for your message. It has been sent.', 'mail_sent_ng' => 'There was an error trying to send your message. Please try again later.', 
+							'validation_error' => 'One or more fields have an error. Please check and try again.', 
+							'spam' => 'There was an error trying to send your message. Please try again later.', 
+							'accept_terms' => 'You must accept the terms and conditions before sending your message.', 
+							'invalid_required' => 'The field is required.', 
+							'invalid_too_long' => 'The field is too long.', 
+							'invalid_too_short' => 'The field is too short.', 
+							'invalid_date' => 'The date format is incorrect.', 
+							'date_too_early' => 'The date is before the earliest one allowed.', 
+							'date_too_late' => 'The date is after the latest one allowed.', 
+							'upload_failed' => 'There was an unknown error uploading the file.', 
+							'upload_file_type_invalid' => 'You are not allowed to upload files of this type.', 
+							'upload_file_too_large' => 'The file is too big.', 
+							'upload_failed_php_error' => 'There was an error uploading the file.', 
+							'invalid_number' => 'The number format is invalid.', 
+							'number_too_small' => 'The number is smaller than the minimum allowed.', 
+							'number_too_large' => 'The number is larger than the maximum allowed.', 
+							'quiz_answer_not_correct' => 'The answer to the quiz is incorrect.', 
+							'captcha_not_match' => 'Your entered code is incorrect.', 
+							'invalid_email' => 'The e-mail address entered is invalid.', 
+							'invalid_url' => 'The URL is invalid.', 
+							'invalid_tel' => 'The telephone number is invalid.',),
+						'_additional_settings' => '',
+						'_locale' 	=> 'en_US',
+					),
+                ),
 				'megamenu-1' => array(
 					'title'      	=> esc_html__( 'Megamenu 1', 'wd_package' ),
-					'desc'      	=> esc_html__( '', 'wd_package' ),
+					'desc'      	=> esc_html__( 'Megamenu layout demo.', 'wd_package' ),
 					'thumbnail'     => WDADMIN_TEMPLATE_URI.'/images/others/megamenu.jpg',
                     'content'       => '[vc_row][vc_column][vc_column_text]I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.[/vc_column_text][wd_pages_list ids="701,748,202,201" copyright="0"][/vc_column][/vc_row]',
                     'content_gutenberg' => '<!-- wp:shortcode -->[vc_row][vc_column][vc_column_text]I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.[/vc_column_text][wd_pages_list ids="701,748,202,201" copyright="0"][/vc_column][/vc_row]<!-- /wp:shortcode -->',
@@ -203,11 +274,12 @@ if (!class_exists('WD_Template_Parts')) {
 
         //Renew content of template part or create new
         //$template : name of template (a part of $this->template_part())
-        public function create_template_part($template = '', $post_type = '', $editor = 'visual_composer'){
+        public function create_template_part($template = '', $editor = 'visual_composer'){
             $post_id = $this->check_template_part_exit($template);
             $template_data = $this->template_part($template);
-            if (empty($template_data)) return;
+			if (empty($template_data)) return;
 
+			$post_type = $template_data['post_type'];
             $content = $template_data['content'];
             $content = ($editor === 'gutenberg' && !empty($template_data['content_gutenberg'])) ? $template_data['content_gutenberg'] : $content;
 
@@ -240,13 +312,9 @@ if (!class_exists('WD_Template_Parts')) {
 		//**************************************************************//
         public function create_template_part_ajax(){
             $template	= $_REQUEST['template'];
-            $post_type = $_REQUEST['post_type'];
             $editor = $_REQUEST['editor'];
-            $result['template'] = $template;
-            $result['post_type'] = $post_type;
-            $result['editor'] = $editor;
 			if ($template) {
-                $result['html'] = $this->create_template_part($template, $post_type, $editor);
+                $result['html'] = $this->create_template_part($template, $editor);
             }
 			wp_send_json_success($result);
 			die(); //stop "0" from being output

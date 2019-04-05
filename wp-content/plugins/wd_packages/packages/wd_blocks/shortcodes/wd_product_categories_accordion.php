@@ -8,15 +8,21 @@ if ( ! function_exists( 'wd_product_categories_accordion_function' ) ) {
 			'sort'				=> 'DESC',
 			'order_by'			=> 'date',
 			'number' 			=> '-1',
+			'fullwidth_mode' 	=> false,
 			'class' 			=> '1',
 		), $atts );
-		if (!wd_is_woocommerce()) return;
 		extract($attr);
-		ob_start();
-		$random_id 		= 'wd_product_categories_'.rand(0,1000);
+
+		if (!wd_is_woocommerce()) return;
+
+		$random_id 		= 'wd-product-categories-'.rand(0,1000);
 		$current_cat 	= (isset($_GET['product_cat']) && $_GET['product_cat']!='')?$_GET['product_cat']:get_query_var('product_cat');
-		?>
-		<div class="wd-shortcode-product-categories-accordion woocommerce" id="<?php echo $random_id; ?>">
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
+		ob_start(); ?>
+		<div id="<?php echo $random_id; ?>" class="wd-shortcode wd-shortcode-product-categories-accordion woocommerce <?php echo esc_attr($class); ?>">
 			<?php 
 				$args = array(
 					'taxonomy'     => 'product_cat',

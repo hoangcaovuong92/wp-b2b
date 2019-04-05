@@ -3,11 +3,15 @@ if (!function_exists('wd_do_shortcode_function')) {
 	function wd_do_shortcode_function($atts) {
 		extract(shortcode_atts(array(
 			'shortcode'		=> '',
+			'fullwidth_mode'		=> false,
 			'class' 		=> '',
 		), $atts));
-		ob_start();
-		?>
-		<div class="wd-shortcode-do-shortcode <?php echo esc_attr($class) ?>">
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
+		ob_start(); ?>
+		<div class="wd-shortcode wd-shortcode-do-shortcode <?php echo esc_attr($class) ?>">
 			<?php if ($shortcode): ?>
 				<?php 
 				$shortcode = str_replace('`{`', '[', $shortcode);

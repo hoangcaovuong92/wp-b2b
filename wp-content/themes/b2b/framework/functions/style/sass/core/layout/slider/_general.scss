@@ -6,34 +6,62 @@
         top: 50%;
         bottom: auto;
         z-index: zIndex("lowest");
-        background: rgba(255, 255, 255, 0.5);
-        border: 1px solid $border-color-light;
-        padding: 15px 3px;
-        height: auto;
-        width: auto;
         line-height: 1;
         @include transform(translateY(-50%));
         @include border-radius(2px);
+        @include button_style(primary);
+        @include opacity(0.7);
+        height: 50px;
+        width: 50px;
+        padding: 0;
         &::before{
-            @include link_style(primary);
             font-weight: fontWeight("semibold");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
         }
     }
     .slick-prev, .owl-prev{
-        left: 10px;
+        left: 20px;
         right: auto;
         &::before {
-            @include font_linearicons(\e875, fontSize("large"));
+            //@include font_linearicons(\e875, fontSize("large"));
+            @include font_awesome(\f053, fontSize("large"));
         }
     }
     .slick-next, .owl-next{
         left: auto;
-        right: 10px;
+        right: 20px;
         &::before {
-            @include font_linearicons(\e876, fontSize("large"));
+            //@include font_linearicons(\e876, fontSize("large"));
+            @include font_awesome(\f054, fontSize("large"));
         }
     }
-
+    
+    &.wd-slider-control-top{
+        .slick-arrow, .owl-prev, .owl-next{
+			height: auto;
+			width: auto;
+			padding: 0;
+			top: -60px;
+			@include transform(none);
+			@include link_style(primary);
+			@include background_color_hover(transparent, transparent);
+			@include opacity(1);
+			&:before, &:after{
+				font-size: fontSize("small");
+			}
+		}
+		.slick-prev, .owl-prev{
+			left: auto;
+    		right: 40px;
+		}
+		.slick-next, .owl-next{
+			right: 5px;
+		}
+    }
+   
     &.slick-slider{
         //overflow: hidden;
         ul.slick-dots{
@@ -43,15 +71,20 @@
         }
         .slick-up, .slick-down{
             left: 50%;
-            padding: 3px 15px;
             right: auto;
+            display: block;
+            background: transparent;
+            padding: 0;
+            height: auto;
             @include transform(translate(-50%, 0));
+            @include link_style(primary);
         }
         .slick-up{
             top: -40px;
             bottom: auto;
             &::before {
                 @include font_linearicons(\e873, fontSize("large"));
+                font-weight: fontWeight("bold");
             }
         }
         .slick-down{
@@ -59,6 +92,7 @@
             bottom: -40px;
             &::before {
                 @include font_linearicons(\e874, fontSize("large"));
+                font-weight: fontWeight("bold");
             }
         }
         &.slick-vertical{

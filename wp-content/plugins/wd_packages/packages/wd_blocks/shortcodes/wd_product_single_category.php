@@ -8,18 +8,22 @@ if (!function_exists('wd_product_single_category_function')) {
 			'title'				=> '1',
 			'readmore'			=> '1',
 			'meta'				=> '1',
+			'fullwidth_mode' 	=> false,
 			'class'				=> ''
 
 		), $atts));
 		if (!wd_is_woocommerce()) return;
-		wp_reset_query();	
-
+		wp_reset_query();
 		$product_categorie = get_term( $id_category, 'product_cat' );	
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-			<?php if($id_category == '-1') : ?>
-				<?php esc_html_e('Please select category.','wd_package'); ?>
-			<?php else: ?>
-				<div class="wd-cate-pro-by-name woocommerce">
+			<div class="wd-shortcode wd-shortcode-product-single-category woocommerce <?php echo esc_attr($class); ?>">
+				<?php if($id_category == '-1') : ?>
+					<?php esc_html_e('Please select category.','wd_package'); ?>
+				<?php else: ?>
 					<a href="<?php echo get_category_link($id_category); ?>">
 						<div class="wd-image-cate">
 							<?php echo apply_filters('wd_filter_image_html', array('attachment' => $image_url, 'image_size' => $image_size)); ?>
@@ -38,8 +42,8 @@ if (!function_exists('wd_product_single_category_function')) {
 							<a class='wd-cate-readmore' href="<?php echo get_category_link($id_category); ?>"><?php esc_html_e('Read more','wd_package'); ?></a>
 						<?php endif; ?>
 					</div>
-				</div>
-			<?php endif; ?>
+				<?php endif; ?>
+			</div>
 		<?php
 		$content = ob_get_clean();
 		wp_reset_postdata();

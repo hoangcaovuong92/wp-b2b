@@ -83,15 +83,16 @@ if (!class_exists('WD_Theme_Abstract')) {
 		//Include Function
 		protected function init_arr_functions(){
 			$this->arr_functions = array(
+				'theme_options/set_default',
 				'global_functions',
 				'style/manager',
 				'required/plugins',
 				'required/version',
 				'set_demo',
+				'timezone',
 				'query',
 				'main',
 				'html_block',
-				'theme_options/set_default',
 				'set_font_list',
 				'theme_options/get_data',
 				'accessibility',
@@ -101,6 +102,7 @@ if (!class_exists('WD_Theme_Abstract')) {
 				'counter_views',
 				'excerpt',
 				'navuser',
+				'myaccount',
 				'menu',
 				'pushmenu',
 				'pagination',
@@ -110,7 +112,6 @@ if (!class_exists('WD_Theme_Abstract')) {
 				'blog/manager',
 				'slider',
 				'metabox/manager',
-				'myaccount',
 			);
 		}
 		
@@ -212,6 +213,7 @@ if (!class_exists('WD_Theme_Abstract')) {
 			wp_enqueue_style('slick-theme-css', 		WD_THEME_EXTEND_LIBS.'/slick/slick-theme.css');
 			wp_enqueue_style('fancybox-css', 			WD_THEME_EXTEND_LIBS.'/fancybox/jquery.fancybox.css');
 			wp_enqueue_style('select2-core',			WD_THEME_EXTEND_LIBS.'/select2/css/select2.min.css'); 
+			wp_enqueue_style('jquery-timepicker', 		WD_THEME_EXTEND_LIBS.'/jquery-timepicker/jquery.timepicker.min.css');
 
 			// CSS OF THEME
 			wp_enqueue_style('wd-theme-main-css', 		WD_THEME_URI.'/style.css');
@@ -241,18 +243,8 @@ if (!class_exists('WD_Theme_Abstract')) {
 
 			wp_enqueue_script('cloud-zoom-core', 		WD_THEME_EXTEND_LIBS.'/cloud-zoom/js/cloud-zoom.1.0.2.js', array('jquery'), false, true);
 			wp_enqueue_script('jquery-validate-core', 	WD_THEME_EXTEND_LIBS.'/jquery-validate/js/jquery.validate.min.js', array('jquery'), false, true);
-			wp_enqueue_script('jquery-cookie', 			WD_THEME_EXTEND_LIBS.'/jquery-cookie/js.cookie.min.js', array('jquery'), false,true);
-			wp_enqueue_script('jquery-hoverIntent-core', 	WD_THEME_EXTEND_LIBS.'/dcjqaccordion/js/jquery.hoverIntent.minified.js', array('jquery'), false, true);
-
-			if (is_page_template( 'page-templates/template-fullpage.php' )) {
-				wp_enqueue_script('scrolloverflow-js', 	WD_THEME_EXTEND_LIBS.'/fullpage-js/js/scrolloverflow.min.js', array('jquery'), false, true);
-				wp_enqueue_script('fullpage-js-core', 	WD_THEME_EXTEND_LIBS.'/fullpage-js/js/jquery.fullpage.min.js', array('jquery'), false, true);
-				wp_enqueue_script('fullpage-js-run', 	WD_THEME_JS.'/wd_fullpage.js', array('jquery'), false, true);
-			}
-			if (class_exists('WooCommerce')){
-				wp_enqueue_script('jquery-countdown-core', 	WD_THEME_EXTEND_LIBS.'/jquery-countdown/jquery.countdown.min.js', array('jquery'), false, true);
-			}
-
+			wp_enqueue_script('jquery-timepicker', 		WD_THEME_EXTEND_LIBS.'/jquery-timepicker/jquery.timepicker.min.js', array('jquery'), false, true);
+		
 			// JS OF THEME
 		    wp_enqueue_script('wd-validate-form-js'	, 	WD_THEME_JS.'/wd_validate_form.js', array('jquery', 'jquery-validate-core'), false, true);
 			wp_enqueue_script('wd-menu-js', 			WD_THEME_JS.'/wd_menu.js', array('jquery'), false, true);
@@ -270,11 +262,6 @@ if (!class_exists('WD_Theme_Abstract')) {
 			wp_enqueue_script('wd-custom-script-inline-js', WD_THEME_JS.'/wd_print_inline_script.js', array('jquery'), false, true);
 			wp_enqueue_script('wd-update-js', 			WD_THEME_JS.'/wd_update.js', array('jquery'), false, true);
 			
-
-			if (class_exists('WooCommerce')){
-				wp_enqueue_script('wd-woo-product-js', 	WD_THEME_JS.'/wd_woo.js', array('jquery'), false, true);
-			}
-
 		    if (is_singular() && comments_open()) { 
 		    	wp_enqueue_script('comment-reply'); 
 		    }
@@ -284,6 +271,9 @@ if (!class_exists('WD_Theme_Abstract')) {
 			wp_enqueue_media();
 			wp_enqueue_style('wp-color-picker');
 			wp_enqueue_style('wd-main-admin-css', 		WD_THEME_CSS.'/wd_admin.css');
+			wp_enqueue_style('jquery-timepicker', 		WD_THEME_EXTEND_LIBS.'/jquery-timepicker/jquery.timepicker.min.css');
+
+			wp_enqueue_script('jquery-timepicker', 		WD_THEME_EXTEND_LIBS.'/jquery-timepicker/jquery.timepicker.min.js', array('jquery'), false, true);
 		}
 	}
 	WD_Theme_Abstract::get_instance();

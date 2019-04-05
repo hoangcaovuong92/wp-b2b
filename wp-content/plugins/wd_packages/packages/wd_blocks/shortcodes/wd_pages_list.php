@@ -2,18 +2,22 @@
 if ( ! function_exists( 'wd_pages_list_function' ) ) {
 	function wd_pages_list_function( $atts ) {
 		extract(shortcode_atts( array(
-			'ids'					=> '-1',
-			'style'					=> 'vertical',
-			'copyright'				=> '0',
-			'copyright_text'		=> sprintf(__( '© 2019 by %s. All rights reserved.', 'wd_package' ), esc_html( get_bloginfo('name'))),
-			'class'      			=> '',
+			'ids'				=> '-1',
+			'style'				=> 'vertical',
+			'copyright'			=> '0',
+			'copyright_text'	=> sprintf(__( '© 2019 by %s. All rights reserved.', 'wd_package' ), esc_html( get_bloginfo('name'))),
+			'fullwidth_mode' 	=> false,
+			'class'      		=> '',
 		), $atts ));
 
 		if ($ids == '-1' || $ids == '') return;
 		$list_pages_id 	= array_filter(explode(',', $ids));
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 		
-		ob_start();?>
-        <div class="wd-shortcode-pages-list <?php echo esc_attr($style); ?> <?php echo esc_attr($class); ?>">
+		ob_start(); ?>
+        <div class="wd-shortcode wd-shortcode-pages-list <?php echo esc_attr($style); ?> <?php echo esc_attr($class); ?>">
         	<ul>
 				<?php foreach ( $list_pages_id as $page_id ) { ?>
 					<?php if ($page_id && !is_wp_error(get_post($page_id)) && get_post_field( 'post_name', $page_id )): ?>
@@ -21,7 +25,7 @@ if ( ! function_exists( 'wd_pages_list_function' ) ) {
 			       	<?php endif ?>
 			    <?php } ?>
 			    <?php if ($copyright){
-					print_r(apply_filters('wd_filter_copyright', array('copyright' => $copyright_text, 'list_item' => true))); 
+					echo apply_filters('wd_filter_copyright', array('copyright' => $copyright_text, 'list_item' => true)); 
 				} ?>
 			</ul>
         </div>

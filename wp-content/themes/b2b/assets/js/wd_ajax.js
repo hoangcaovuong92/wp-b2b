@@ -22,7 +22,7 @@ if (typeof wd_ajax_empty_cart != 'function') {
 			var _this = jQuery(this);
 			var _mess = _this.data('mess');
 			if (confirm(_mess)) {
-				var image_loading =	_this.next('.wd-feature-loading-img');
+				var image_loading =	_this.next('.wd-loading--empty-minicart');
 				_this.parents('.wd-cart-flagments').find('.wd-dropdown-container').addClass('wd-showing-cart');
 			   	jQuery.ajax({
 					type: 'POST',
@@ -46,14 +46,19 @@ if (typeof wd_ajax_empty_cart != 'function') {
 if (typeof wd_ajax_search != 'function') { 
 	function wd_ajax_search() {
 		var timer;
-		jQuery('body').on('clear_search_result', function(){
-			jQuery('.wd-search-form-ajax-result').html('');
-		});
 		jQuery( '.wd-search-with-ajax' ).on('click', function(){
 			jQuery('body').trigger('clear_search_result');
 		});
 
-		jQuery( '.wd-search-with-ajax' ).on('keydown', function(){
+		jQuery( '.wd-search-with-ajax' ).on('keydown', function(e){
+			//if press ctrl, alt, shift or enter key
+			if(e.ctrlKey || e.altKey || e.shiftKey || e.which == 13) return;
+			//if press escape key
+			if (e.key === "Escape") {
+				jQuery('body').trigger('clear_search_result');
+				return;
+			}
+
 			var $this = jQuery(this);
 			jQuery('body').trigger('clear_search_result');
 
@@ -71,10 +76,10 @@ if (typeof wd_ajax_search != 'function') {
 							s: s, 
 						},
 						beforeSend: function(){
-							$this.parents('.wd-search-form-default').find(".wd-search-form-image-loading").removeClass('hidden');
+							$this.parents('.wd-search-form-default').find(".wd-loading--search-form").removeClass('hidden');
 						},
 						success: function(response) {
-							$this.parents('.wd-search-form-default').find(".wd-search-form-image-loading").addClass('hidden');
+							$this.parents('.wd-search-form-default').find(".wd-loading--search-form").addClass('hidden');
 							if (response.success) {
 								$this.parents('.wd-search-form-default').find('.wd-search-form-ajax-result').html(response.data.html);
 							}
@@ -111,11 +116,11 @@ if (typeof wd_ajax_login_validate != 'function') {
 					 	rememberme: rememberme, 
 				 	},
 					beforeSend: function(){
-		               jQuery('#'+form_id+' .wd-login-form-image-loading').removeClass('hidden');
+		               jQuery('#'+form_id+' .wd-loading--login-form').removeClass('hidden');
 		               jQuery('#'+form_id+' .wd-login-form-field').attr('disabled', 'disabled');
 		           	},
 					success: function(data) {
-						jQuery('#'+form_id+" .wd-login-form-image-loading").addClass('hidden');
+						jQuery('#'+form_id+" .wd-loading--login-form").addClass('hidden');
 						var data_obj = jQuery.parseJSON(data);
 
 						var class_message = (data_obj.success) ? 'wd-notice wd-success-message' : 'wd-notice wd-error-message' ;
@@ -173,11 +178,11 @@ if (typeof wd_ajax_register_validate != 'function') {
 					 	terms: terms, 
 				 	},
 					beforeSend: function(){
-		               jQuery('#'+form_id+' .wd-register-form-image-loading').removeClass('hidden');
+		               jQuery('#'+form_id+' .wd-loading--register-form').removeClass('hidden');
 		               jQuery('#'+form_id+' .wd-register-form-field').attr('disabled', 'disabled');
 		           	},
 					success: function(data) {
-						jQuery('#'+form_id+" .wd-register-form-image-loading").addClass('hidden');
+						jQuery('#'+form_id+" .wd-loading--register-form").addClass('hidden');
 
 						var data_obj = jQuery.parseJSON(data);
 						var class_message = (data_obj.success) ? 'wd-notice wd-success-message' : 'wd-notice wd-error-message' ;
@@ -226,11 +231,11 @@ if (typeof wd_ajax_forgot_password != 'function') {
 					 	action_form: action, 
 				 	},
 					beforeSend: function(){
-		               jQuery('#'+form_id+' .wd-forgot-password-form-image-loading').removeClass('hidden');
+		               jQuery('#'+form_id+' .wd-loading--forgot-password-form').removeClass('hidden');
 		               jQuery('#'+form_id+' .wd-forgot-password-form-field').attr('disabled', 'disabled');
 		           	},
 					success: function(data) {
-						jQuery('#'+form_id+" .wd-forgot-password-form-image-loading").addClass('hidden');
+						jQuery('#'+form_id+" .wd-loading--forgot-password-form").addClass('hidden');
 
 						var data_obj = jQuery.parseJSON(data);
 						var class_message = (data_obj.success) ? 'wd-notice wd-success-message' : 'wd-notice wd-error-message' ;

@@ -10,11 +10,15 @@ if (!function_exists('wd_count_icon_function')) {
 			'color_number'		=> '#cccccc',
 			'text_infomation'	=> '',
 			'color_text'		=> '#cccccc',
+			'fullwidth_mode'	=> false,
 			'class' 			=> ''
 		), $atts));
 
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-			<div class="wd-count_icon <?php echo esc_attr($class); ?>">				
+			<div class="wd-shortcode wd-shortcode-count-icon <?php echo esc_attr($class); ?>">				
 				<?php if($show_icon): ?>
 					<div class="feature_icon fa fa-3x <?php echo esc_attr($icon_fontawesome); ?>" style="color: <?php echo esc_attr($color_icon); ?>"></div>
 				<?php endif; ?>
@@ -24,7 +28,7 @@ if (!function_exists('wd_count_icon_function')) {
 			<script type="text/javascript">
 				jQuery(document).ready(function($) {
 					"use strict";
-					$('.wd-count_icon .counter').each(function() {
+					$('.wd-shortcode-count-icon .counter').each(function() {
 		 				var $this = $(this),
 			  			countTo = $this.attr('data-count');
 						$({ countNum: $this.text()}).animate({

@@ -7,13 +7,18 @@ if (!function_exists('wd_process_bar_function')) {
     function wd_process_bar_function($atts) {
         extract(shortcode_atts(array(
             'process'     	=> '',
+			'fullwidth_mode' => false,
             'class'     	=> ''
         ),$atts));
         if (!function_exists('vc_param_group_parse_atts')) return;
 		$process = vc_param_group_parse_atts( $process );
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
         ob_start(); ?>
         	<?php if ($process): ?>
-        		<div class="wd-process-bar <?php echo esc_attr($class); ?>">
+        		<div class="wd-shortcode wd-shortcode-process-bar <?php echo esc_attr($class); ?>">
 					<?php foreach($process as $item){ ?>
 						<div class="wd-single-bar">
 							<p class="wd-label-bar"><?php echo $item['label']; ?> <span><?php echo $item['value']; ?>%</span></p>

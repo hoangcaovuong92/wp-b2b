@@ -43,9 +43,6 @@
 /* Dropdown */
 @import 'layout/dropdown/components';
 
-/* Scrollbar */
-@import 'layout/scrollbar/components';
-
 /* Toggle button */
 @import 'layout/toggle/components';
 
@@ -81,6 +78,9 @@
 
 /* Blog */
 @import "layout/blog/components";
+
+/* Blocks */
+@import "layout/blocks/components";
 
 /* Shortcode */
 @import "layout/shortcode/components";

@@ -2,7 +2,7 @@
 if(!function_exists('wd_blog_special_function')){
 	function wd_blog_special_function($atts){
 		extract(shortcode_atts(array(
-			'layout'				=> 'title, meta, excerpt, readmore',
+			'layout'				=> 'category, title, meta, excerpt, readmore',
 			'style'					=> 'grid',
 			'id_category'			=> '-1',
 			'data_show'				=> 'recent-post',
@@ -21,6 +21,7 @@ if(!function_exists('wd_blog_special_function')){
 			'is_slider'				=> '1',
 			'show_nav'				=> '1',	
 			'auto_play'				=> '1',
+			'fullwidth_mode'		=> false,
 			'class'					=> ''
 		),$atts));
 		
@@ -59,50 +60,56 @@ if(!function_exists('wd_blog_special_function')){
 
 		$layout = ($layout) ? explode(',', $layout) : array();
 
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		wp_reset_query();
 		$recent_posts = new WP_Query($args);
 		ob_start();
 
 		if ( $recent_posts->have_posts() ) { ?>
-			<div class="wd-blog-wrapper wd-shortcode-blog-special <?php echo esc_attr( $style ); ?> <?php echo esc_attr( $wrap_class ); ?> <?php echo esc_attr( $class ); ?>">
-				<div class="wd-blog-special-list <?php echo esc_attr( $list_class ); ?>" 
-					data-slider-options='<?php echo esc_attr( $slider_options ); ?>'>
-					<?php
-					$count = 0;	
-					while( $recent_posts->have_posts() ) {
-						$recent_posts->the_post();
-						global $post; ?>
-						<article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" <?php post_class( 'wd-blog-item' ); ?>>
-							<div class="wd-content-post-format wd-content-post-format--none wd-post-has-thumbnail">
-								<?php 
-								echo apply_filters('wd_filter_blog_thumbnail_html', array(
-										'thumbnail_size' => $image_size, 
-										'show_thumbnail' => $show_thumbnail, 
-										'num' => 1, 
-										'placeholder' => $show_placeholder_image, 
-										'custom_class' => ''
-									)); ?>
-								<div class="wd-blog-content-wrap">
-									<?php foreach ($layout as $layout_part){
-										$layout_part = trim($layout_part);
-										if ($layout_part == 'title') {
-											echo apply_filters('wd_filter_blog_title', true);
-										}elseif ($layout_part == 'meta') {
-											echo apply_filters('wd_filter_blog_meta', 'loop');
-										}elseif ($layout_part == 'excerpt') {
-											echo apply_filters('wd_filter_blog_excerpt', true, $number_excerpt);
-										}elseif ($layout_part == 'readmore') {
-											echo apply_filters('wd_filter_blog_readmore', true);
-										}
-									} ?>
+			<div class="wd-shortcode wd-shortcode-blog-special <?php echo esc_attr($class); ?>">
+				<div class="wd-blog-wrapper <?php echo esc_attr( $style ); ?> <?php echo esc_attr( $wrap_class ); ?>">
+					<div class="wd-blog-special-list <?php echo esc_attr( $list_class ); ?>" 
+						data-slider-options='<?php echo esc_attr( $slider_options ); ?>'>
+						<?php
+						$count = 0;	
+						while( $recent_posts->have_posts() ) {
+							$recent_posts->the_post();
+							global $post; ?>
+							<article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" <?php post_class( 'wd-blog-item' ); ?>>
+								<div class="wd-content-post-format wd-content-post-format--none wd-post-has-thumbnail">
+									<?php 
+									echo apply_filters('wd_filter_blog_thumbnail_html', array(
+											'thumbnail_size' => $image_size, 
+											'show_thumbnail' => $show_thumbnail, 
+											'num' => 1, 
+											'placeholder' => $show_placeholder_image, 
+											'custom_class' => ''
+										)); ?>
+									<div class="wd-blog-content-wrap">
+										<?php foreach ($layout as $layout_part){
+											$layout_part = trim($layout_part);
+											if ($layout_part == 'category') {
+												echo apply_filters('wd_filter_blog_category', true);
+											}elseif ($layout_part == 'title') {
+												echo apply_filters('wd_filter_blog_title', true);
+											}elseif ($layout_part == 'meta') {
+												echo apply_filters('wd_filter_blog_meta', 'loop');
+											}elseif ($layout_part == 'excerpt') {
+												echo apply_filters('wd_filter_blog_excerpt', true, $number_excerpt);
+											}elseif ($layout_part == 'readmore') {
+												echo apply_filters('wd_filter_blog_readmore', true);
+											}
+										} ?>
+									</div>
 								</div>
-							</div>
-						</article>
-					<?php } ?>
+							</article>
+						<?php } ?>
+					</div>
 				</div>
 			</div>
-			<?php
-		}
+		<?php }
 		$output = ob_get_clean();
 		wp_reset_query();
 		return $output;
@@ -124,7 +131,7 @@ if (!function_exists('wd_blog_special_vc_map')) {
 					'heading' 		=> __( 'Layout', 'wd_package' ),
 					'param_name' 	=> 'layout',
 					'description' 	=> __( 'Select and sort blog layout. Leave blank if you want to display all properties blog', 'wd_package' ),
-					'value' 		=> 'title, meta, excerpt, readmore',
+					'value' 		=> 'category, title, meta, excerpt, readmore',
 					'options' 		=> wd_vc_get_list_blog_special_layout(),
 				),
 				array(

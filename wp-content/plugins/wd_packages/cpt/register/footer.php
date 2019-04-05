@@ -181,9 +181,9 @@ if (!class_exists('WD_Footers_Post_Type')) {
 			// verify this came from the our screen and with proper authorization,
 			// because save_post can be triggered at other times
 			if (!wp_verify_nonce($_POST[$this->post_type.'_box_nonce'],$this->post_type.'_box'))
-				return $post->ID;
-			if (!current_user_can('edit_post', $post->ID))
-				return $post->ID;
+				return $post_id;
+			if (!current_user_can('edit_post', $post_id))
+				return $post_id;
 
 			$data = array();
 			if (isset($_POST[$this->post_type])) {

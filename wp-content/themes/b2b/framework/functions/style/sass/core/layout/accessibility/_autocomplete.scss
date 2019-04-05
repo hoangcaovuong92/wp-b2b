@@ -7,11 +7,11 @@
 	float: left;
 	display: none;
 	min-width: 160px;
-	_width: 160px;
+	width: 160px;
 	padding: 20px 25px;
 	margin: 2px 0 0 0;
 	list-style: none;
-	background-color: #ffffff;
+	background-color: $background-color-white;
 	border-color: $border-color-dark;
 	border-style: solid;
 	border-width: 1px;
@@ -33,12 +33,12 @@
 	clear: both;
 	font-weight: fontWeight("normal");
 	line-height: 18px;
-	color: #fff;
+	color: $text-color-light;
 	white-space: nowrap;
 }
 .ui-autocomplete li{
 	cursor: pointer;
-	color:#282828;
+	color: $text-color-dark;
 }
 .ui-autocomplete li:hover{
 	color:#a5a5a5;

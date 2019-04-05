@@ -5,21 +5,24 @@ if (!function_exists('wd_payment_icon_function')) {
 			'list_icon_payment'	=> 'fa-cc-amex, fa-cc-discover, fa-cc-mastercard, fa-cc-paypal, fa-cc-visa',
 			'size'				=> 'fa-2x',
 			'text_align'		=> 'text-left',
+			'fullwidth_mode' 	=> false,
 			'class' 			=> ''
 		), $atts));
+		$icons_class = explode(',', $list_icon_payment);
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-			<?php if ($list_icon_payment): ?>
-	    		<?php $icons_class = explode(',', $list_icon_payment); ?>
-	    		<?php if (count($icons_class) > 0): ?>
-	    			<ul class="payment wd-icon-widget-payment <?php echo esc_attr($text_align) ?> <?php echo esc_attr($class); ?>">
-	        			<?php foreach ($icons_class as $icon): ?>
-	        				<?php if ($icon != ''): ?>
-	        					<li><i class="fa <?php echo esc_html($size); ?> <?php echo esc_html(trim($icon)); ?>" aria-hidden="true"></i></li>
-	        				<?php endif ?>
-	        			<?php endforeach ?>
-	    			</ul>
-	    		<?php endif ?>
-	    	<?php endif ?>
+		<?php if ($list_icon_payment && count($icons_class) > 0): ?>
+			<ul class="wd-shortcode wd-shortcode-payment-icon <?php echo esc_attr($text_align) ?> <?php echo esc_attr($class); ?>">
+				<?php foreach ($icons_class as $icon): ?>
+					<?php if ($icon != ''): ?>
+						<li><i class="fa <?php echo esc_html($size); ?> <?php echo esc_html(trim($icon)); ?>" aria-hidden="true"></i></li>
+					<?php endif ?>
+				<?php endforeach ?>
+			</ul>
+		<?php endif ?>
 		<?php
 		$output = ob_get_clean();
 		wp_reset_postdata();

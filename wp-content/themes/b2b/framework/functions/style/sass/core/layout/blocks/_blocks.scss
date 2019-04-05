@@ -1,117 +1,113 @@
 /* !Block styles */
-
-.wd-blog-item-wrap .entry-content > *,
-.wd-blog-item-wrap .entry-summary > * {
-	margin: 32px 0;
-	max-width: 100%;
-	@include breakpoint('min', 'tablet') {
-		margin: 32px 0;
-	}
-
-	> *:first-child {
-		margin-top: 0;
-	}
-
-	> *:last-child {
-		margin-bottom: 0;
-	}
-
-	&.alignwide {
-		margin-left: auto;
-		margin-right: auto;
-		clear: both;
-
-		@include breakpoint('min', 'tablet') {
-			width: 100%;
-			max-width: 100%;
+.wd-layout-fullwidth{
+	.wd-blog-desc > .entry-content,
+	.wd-page-content-entry > .entry-content,
+	.product > .entry-summary{
+		> * {
+			&.alignfull {
+				width: 100vw;
+				max-width: 100vw !important;
+				margin-left: calc(-50vw + 50%);
+				&.wd-shortcode{
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
 		}
 	}
+}
 
-	&.alignfull {
-		position: relative;
-		left: -#{$size__spacing-unit };
-		width: calc( 100% + (2 * #{$size__spacing-unit}));
-		max-width: calc( 100% + (2 * #{$size__spacing-unit}));
-		clear: both;
+.wd-blog-desc > .entry-content, //blog
+.wd-page-content-entry > .entry-content, //blog
+.product > .entry-summary //single product
+{
+	> *{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		//@include postContentMaxWidth();
 
-		@include breakpoint('min', 'tablet') {
-			margin-top: calc(2 * #{$size__spacing-unit});
-			margin-bottom: calc(2 * #{$size__spacing-unit});
-			left: calc( -12.5% - 75px );
-			width: calc( 125% + 150px );
-			max-width: calc( 125% + 150px );
+		&:first-child {
+			margin-top: 0;
 		}
-	}
+	
+		&:last-child {
+			margin-bottom: 0;
+		}
 
-	&.alignleft {
-		/*rtl:ignore*/
-		float: left;
-		max-width: calc(5 * (100vw / 12));
-		margin-top: 0;
-		margin-left: 0;
-		/*rtl:ignore*/
-		margin-right: $size__spacing-unit;
-
-		@include breakpoint('min', 'tablet') {
-			max-width: calc(4 * (100vw / 12));
+		select{
+			height: 40px;
+			padding-left: 10px;
+			padding-right: 10px;
+			width: auto;
+			border: solid 1px $border-color-light;
+		}
+	
+		&.alignwide {
+			margin-left: auto;
+			margin-right: auto;
+			clear: both;
+	
+			@include breakpoint('min', 'tablet') {
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	
+		&.alignfull {
+			position: relative;
+			clear: both;
+			@include breakpoint('min', 'tablet') {
+				margin-top: 30px;
+				margin-bottom: 30px;
+				width: 100%;
+				max-width: 100%;
+			}
+		}
+	
+		&.alignleft {
 			/*rtl:ignore*/
-			margin-right: calc(2 * #{$size__spacing-unit});
-		}
-	}
-
-	&.alignright {
-		/*rtl:ignore*/
-		float: right;
-		max-width: calc(5 * (100vw / 12));
-		margin-top: 0;
-		margin-right: 0;
-		/*rtl:ignore*/
-		margin-left: $size__spacing-unit;
-
-		@include breakpoint('min', 'tablet') {
-			max-width: calc(4 * (100vw / 12));
-			margin-right: 0;
-			/*rtl:ignore*/
-			margin-left: calc(2 * #{$size__spacing-unit});
-		}
-	}
-	&.aligncenter {
-		margin-left: auto;
-		margin-right: auto;
-
-		@include postContentMaxWidth();
-
-		@include breakpoint('min', 'tablet') {
+			float: left;
+			max-width: calc(5 * (100vw / 12));
+			margin-top: 0;
 			margin-left: 0;
+			/*rtl:ignore*/
+			margin-right: 1rem;
+	
+			@include breakpoint('min', 'tablet') {
+				max-width: calc(4 * (100vw / 12));
+				/*rtl:ignore*/
+				margin-right: 30px;
+			}
+		}
+	
+		&.alignright {
+			/*rtl:ignore*/
+			float: right;
+			max-width: calc(5 * (100vw / 12));
+			margin-top: 0;
 			margin-right: 0;
+			/*rtl:ignore*/
+			margin-left: 1rem;
+	
+			@include breakpoint('min', 'tablet') {
+				max-width: calc(4 * (100vw / 12));
+				margin-right: 0;
+				/*rtl:ignore*/
+				margin-left: 30px;
+			}
+		}
+		&.aligncenter {
+			margin-left: auto;
+			margin-right: auto;
+
+			//@include postContentMaxWidth();
+	
+			@include breakpoint('min', 'tablet') {
+				margin-left: 0;
+				margin-right: 0;
+			}
 		}
 	}
-}
-
-/*
- * Unset nested content selector styles
- * - Prevents layout styles from cascading too deeply
- * - helps with plugin compatibility
- */
-.entry .entry-content,
-.entry .entry-summary {
-
-	.entry-content,
-	.entry-summary,
-	.entry {
-		margin: inherit;
-		max-width: inherit;
-		padding: inherit;
-
-		@include breakpoint('min', 'tablet') {
-			margin: inherit;
-			max-width: inherit;
-			padding: inherit;
-		}
-	}
-}
-
-.entry .entry-content {
 
 	//! Paragraphs
 	p.has-background {
@@ -152,29 +148,31 @@
 
 	//! Button
 	.wp-block-button {
-
 		.wp-block-button__link {
 			border: none;
 			box-sizing: border-box;
 			font-weight: fontWeight("bold");
 			text-decoration: none;
 			outline: none;
+			color: $button--default-color;
+			font-size: fontSize("root");
+			padding: 10px 20px;
 			&:not(.has-background) {
 				background-color: $button--default-backgroundColor;
 			}
 
 			&:not(.has-text-color) {
-				color: #ffffff;
+				color: $button--default-color;
 			}
 
 			&:hover {
-				color: #ffffff;
+				color: $button--default-colorHover;
 				background: $button--default-backgroundColorHover;
 				cursor: pointer;
 			}
 
 			&:focus {
-				color: #ffffff;
+				color: $button--default-colorHover;
 				background: $button--default-backgroundColorHover;
 				outline: thin dotted;
 				outline-offset: -4px;
@@ -188,10 +186,6 @@
 		&.is-style-outline .wp-block-button__link,
 		&.is-style-outline .wp-block-button__link:focus,
 		&.is-style-outline .wp-block-button__link:active {
-			@include button-all-transition;
-			border-width: 2px;
-			border-style: solid;
-
 			&:not(.has-background) {
 				background: transparent;
 			}
@@ -201,12 +195,16 @@
 				border-color: $button--default-borderColor;
 			}
 		}
-
-		&.is-style-outline .wp-block-button__link:hover {
-			color: $button--default-colorHover;
-			border-color: $button--default-borderColorHover;
-			&:not(.has-background) {
+		&.is-style-outline .wp-block-button__link{
+			border-color: $button--default-borderColor;
+			border-width: 2px;
+			border-style: solid;
+			&:hover {
 				color: $button--default-colorHover;
+				border-color: $button--default-borderColorHover;
+				&:not(.has-background) {
+					color: $button--default-colorHover;
+				}
 			}
 		}
 	}
@@ -217,24 +215,6 @@
 	.wp-block-latest-posts {
 		padding: 0;
 		list-style: none;
-
-		li {
-			color: $color__text-light;
-			@include font-family( $font__heading );
-			font-size: calc(#{$font__size_base} * #{$font__size-ratio});
-			font-weight: fontWeight("bold");
-			line-height: $font__line-height-heading;
-			padding-bottom: ( .75 * $size__spacing-unit );
-
-			&.menu-item-has-children,
-			&:last-child {
-				padding-bottom: 0;
-			}
-
-			a {
-				text-decoration: none;
-			}
-		}
 	}
 
 	.wp-block-archives,
@@ -242,63 +222,62 @@
 
 		&.aligncenter {
 			text-align: center;
-		}
-	}
+		} 
 
-	//! Latest categories
-	.wp-block-categories {
-
-		ul {
-			padding-top: ( .75 * $size__spacing-unit );
-		}
-
-		li ul {
-			list-style: none;
-			padding-left: 0;
-		}
-
-		@include nestedSubMenuPadding();
+		@extend %sidebar_category_list_style_1;
 	}
 
 	//! Latest posts grid view
-	.wp-block-latest-posts.is-grid {
-		li {
-			border-top: 2px solid $color__border;
-			padding-top: (1 * $size__spacing-unit);
-			margin-bottom: (2 * $size__spacing-unit);
-			a {
-				&:after {
-					content: '';
+	.wp-block-latest-posts{
+		li{
+			@extend %comment_author_name;
+		}
+		&.is-grid {
+			li {
+				border-top: 2px solid $border-color-light;
+				padding-top: (1 * 1rem);
+				margin-bottom: (2 * 1rem);
+				@include breakpoint('max', 'mobile') {
+					margin-right: 0;
+				}
+				a {
+					&:after {
+						content: '';
+					}
+				}
+				&:last-child {
+					margin-bottom: auto;
+					a:after {
+						content: '';
+					}
 				}
 			}
-			&:last-child {
-				margin-bottom: auto;
-				a:after {
-					content: '';
-				}
+		}
+		&.has-dates{
+			.wp-block-latest-posts__post-date{
+				@extend %comment_meta_item;
 			}
 		}
 	}
 
 	//! Latest preformatted text
 	.wp-block-preformatted {
-		font-size: $font__size-xs;
+		font-size: fontSize("smaller");
 		line-height: 1.8;
-		padding: $size__spacing-unit;
+		padding: 1rem;
 	}
 
 	//! Verse
 	.wp-block-verse {
-		@include font-family( $font__body );
-		font-size: $font__size_base;
+		font-size: 22px;
 		line-height: 1.8;
 	}
 
 	//! Paragraphs
 	.has-drop-cap {
 		&:not(:focus):first-letter {
-			@include font-family( $font__heading );
-			font-size: $font__size-xxxl;
+			font-family: $headings-font;
+			font-size: fontSize("hero");
 			line-height: 1;
 			font-weight: fontWeight("bold");
 			margin: 0 0.25em 0 0;
@@ -309,19 +288,19 @@
 	.wp-block-pullquote {
 		border-color: transparent;
 		border-width: 2px;
-		padding: $size__spacing-unit;
+		padding: 1rem;
 
 		blockquote {
 			color: $color-textBase;
 			border: none;
-			margin-top: calc(4 * #{ $size__spacing-unit});
-			margin-bottom: calc(4.33 * #{ $size__spacing-unit});
+			margin-top: calc(4 * 1rem);
+			margin-bottom: calc(4.33 * 1rem);
 			margin-right: 0;
 			padding-left: 0;
 		}
 
 		p {
-			font-size: $font__size-lg;
+			font-size: fontSize("large");
 			font-style: italic;
 			line-height: 1.3;
 			margin-bottom: 0.5em;
@@ -332,22 +311,22 @@
 			}
 
 			@include breakpoint('min', 'tablet') {
-				font-size: $font__size-xl;
+				font-size: fontSize("larger");
 			}
 		}
 
 		cite {
 			display: inline-block;
-			@include font-family( $font__heading );
+			font-family: $headings-font;
 			line-height: 1.6;
 			text-transform: none;
-			color: $color__text-light;
+			color: $color-text-secondary;
 
 			/*
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 			 */
-			font-size: calc(1rem / (1.25 * #{$font__size-ratio}));
+			font-size: fontSize("tiny");
 		}
 
 		&.alignleft,
@@ -356,7 +335,7 @@
 			padding: 0;
 
 			blockquote {
-				margin: $size__spacing-unit 0;
+				margin: 1rem 0;
 				padding: 0;
 				text-align: left;
 				max-width: 100%;
@@ -368,7 +347,7 @@
 		}
 
 		&.is-style-solid-color {
-			background-color: $color__link;
+			background-color: $color-textLink--hover;
 			padding-left: 0;
 			padding-right: 0;
 
@@ -378,18 +357,18 @@
 			}
 
 			p {
-				font-size: $font__size-lg;
+				font-size: fontSize("large");
 				line-height: 1.3;
 				margin-bottom: 0.5em;
 				margin-top: 0.5em;
 
 				@include breakpoint('min', 'tablet') {
-					font-size: $font__size-xl;
+					font-size: fontSize("larger");
 				}
 			}
 
 			a {
-				color: $color__background-body;
+				color: $background-body-color;
 			}
 
 			cite {
@@ -398,10 +377,10 @@
 
 			blockquote {
 				max-width: 100%;
-				color: $color__background-body;
+				color: $background-body-color;
 				padding-left: 0;
-				margin-left: $size__spacing-unit;
-				margin-right: $size__spacing-unit;
+				margin-left: 1rem;
+				margin-right: 1rem;
 
 				&.has-text-color p,
 				&.has-text-color a,
@@ -423,15 +402,15 @@
 			&.alignleft {
 
 				@include breakpoint('min', 'tablet') {
-					padding: $size__spacing-unit calc(2 * #{$size__spacing-unit});
+					padding: 1rem 30px;
 				}
 			}
 
 			&.alignfull {
 
 				@include breakpoint('min', 'tablet') {
-					padding-left: calc(10% + 58px + (2 * #{$size__spacing-unit}));
-					padding-right: calc(10% + 58px + (2 * #{$size__spacing-unit}));
+					padding-left: calc(10% + 58px + (2 * 1rem));
+					padding-right: calc(10% + 58px + (2 * 1rem));
 				}
 			}
 		}
@@ -442,7 +421,7 @@
 
 		&:not(.is-large),
 		&:not(.is-style-large) {
-			border-left: 2px solid $color__link;
+			border-left: 2px solid $color-textLink;
 			padding-top: 0;
 			padding-bottom: 0;
 		}
@@ -458,17 +437,17 @@
 			 * This requires a rem-based font size calculation instead of our normal em-based one,
 			 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 			 */
-			font-size: calc(1rem / (1.25 * #{$font__size-ratio}));
+			font-size: fontSize("tiny");
 		}
 
 		&.is-large,
 		&.is-style-large {
-			margin: $size__spacing-unit 0;
+			margin: 1rem 0;
 			padding: 0;
 			border-left: none;
 
 			p {
-				font-size: $font__size-lg;
+				font-size: fontSize("large");
 				line-height: 1.4;
 				font-style: italic;
 			}
@@ -479,15 +458,15 @@
 				 * This requires a rem-based font size calculation instead of our normal em-based one,
 				 * because the cite tag sometimes gets wrapped in a p tag. This is equivalent to $font-size_xs.
 				 */
-				font-size: calc(1rem / (1.25 * #{$font__size-ratio}));
+				font-size: fontSize("tiny");
 			}
 
 			@include breakpoint('min', 'tablet') {
-				margin: $size__spacing-unit 0;
-				padding: $size__spacing-unit 0;
+				margin: 1rem 0;
+				padding: 1rem 0;
 
 				p {
-					font-size: $font__size-lg;
+					font-size: fontSize("large");
 				}
 			}
 		}
@@ -502,20 +481,19 @@
 		}
 
 		.aligncenter {
-			
-			@include postContentMaxWidth();
+			//@include postContentMaxWidth();
 
 			@include breakpoint('min', 'tablet') {
 				margin: 0;
-				width: $size__site-tablet-content;
+				width: calc(8 * (100vw / 12) - 28px);
 
 				img {
 					margin: 0 auto;
 				}
 			}
 
-			@include media(desktop) {
-				width: $size__site-desktop-content;
+			@include breakpoint('min', 'desktop') {
+				width: calc(6 * (100vw / 12) - 28px);
 
 				img {
 					margin: 0 auto;
@@ -525,7 +503,7 @@
 
 		&.alignfull img {
 			width: 100vw;
-			max-width: calc( 100% + (2 * #{$size__spacing-unit}));
+			max-width: calc( 100% + (2 * 1rem));
 
 			@include breakpoint('min', 'tablet') {
 				max-width: calc( 125% + 150px );
@@ -540,24 +518,24 @@
 	.wp-block-cover {
 		position: relative;
 		min-height: 430px;
-		padding: $size__spacing-unit;
+		padding: 1rem;
 
 		@include breakpoint('min', 'tablet') {
-			padding: $size__spacing-unit 10%;
+			padding: 1rem 10%;
 		}
 
 		.wp-block-cover-image-text,
 		.wp-block-cover-text,
 		h2 {
-			@include font-family( $font__heading );
-			font-size: $font__size-lg;
+			font-family: $headings-font;
+			font-size: fontSize("large");
 			font-weight: fontWeight("bold");
 			line-height: 1.25;
 			padding: 0;
-			color: #fff;
+			color: $text-color-light;
 
 			@include breakpoint('min', 'tablet') {
-				font-size: $font__size-xl;
+				font-size: fontSize("larger");
 				max-width: 100%;
 			}
 		}
@@ -567,7 +545,7 @@
 			width: 100%;
 
 			@include breakpoint('min', 'tablet') {
-				padding: $size__spacing-unit calc(2 * #{$size__spacing-unit});
+				padding: 1rem 30px;
 			}
 		}
 
@@ -576,12 +554,12 @@
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
-				@include postContentMaxWidth();
+				//@include postContentMaxWidth();
 			}
 
 			@include breakpoint('min', 'tablet') {
-				padding-left: calc(10% + 58px + (2 * #{$size__spacing-unit}));
-				padding-right: calc(10% + 58px + (2 * #{$size__spacing-unit}));
+				padding-left: calc(10% + 58px + (2 * 1rem));
+				padding-right: calc(10% + 58px + (2 * 1rem));
 
 				.wp-block-cover-image-text,
 				.wp-block-cover-text,
@@ -603,7 +581,7 @@
 		}
 
 		figcaption a {
-			color: #fff;
+			color: $text-color-light;
 		}
 	}
 
@@ -613,43 +591,42 @@
 	.wp-block-image figcaption,
 	.wp-block-gallery .blocks-gallery-image figcaption,
 	.wp-block-gallery .blocks-gallery-item figcaption {
-		font-size: $font__size-xs;
-		@include font-family( $font__heading );
-		line-height: $font__line-height-pre;
+		font-family: $headings-font;
+		line-height: 1.6;
 		margin: 0;
-		padding: ( $size__spacing-unit * .5 );
+		padding: ( 1rem * .5 );
 		text-align: center;
 	}
 
 	//! Separator
 	.wp-block-separator,
 	hr {
-		background-color: $background-color-light;
+		background-color: $background-color-white;
 		border: 0;
 		height: 2px;
-		margin-bottom: (2 * $size__spacing-unit);
-		margin-top: (2 * $size__spacing-unit);
+		margin-bottom: (2 * 1rem);
+		margin-top: (2 * 1rem);
 		max-width: 2.25em;
 		text-align: left;
 
 		&.is-style-wide {
 			max-width: 100%;
-			@include postContentMaxWidth();
+			//@include postContentMaxWidth();
 		}
 
 		&.is-style-dots {
 			max-width: 100%;
-			@include postContentMaxWidth();
+			//@include postContentMaxWidth();
 			background-color: inherit;
 			border: inherit;
 			height: inherit;
 			text-align: center;
 
 			&:before {
-				color: $color__text-light;
-				font-size: $font__size-lg;
-				letter-spacing: $font__size-sm;
-				padding-left: $font__size-sm;
+				color: $color-text-secondary;
+				font-size: fontSize("large");
+				letter-spacing: 0.1em;
+				padding-left: 1em / (1 * 1.125);
 			}
 		}
 
@@ -671,48 +648,30 @@
 
 	//! Table
 	.wp-block-table {
-
 		th,
 		td {
-			border-color: $color__text-light;
+			border-color: $border-color-light;
+			&:not(:last-child){
+				border-right: 0;
+			}
 		}
+		tr{
+			&:not(:last-child){
+				th,
+				td {
+					border-bottom: 0;
+				}
+			}
+		}
+		@extend %table_color;
 	}
 
 	//! File
 	.wp-block-file {
-		@include font-family( $font__heading );
+		font-family: $headings-font;
 
 		.wp-block-file__button {
-			display: table;
-			@include button-transition;
-			border: none;
-			border-radius: 5px;
-			background: $color__background-button;
-			font-size: $font__size-base;
-			@include font-family( $font__heading );
-			line-height: $font__line-height-heading;
-			text-decoration: none;
-			font-weight: fontWeight("bold");
-			padding: ($size__spacing-unit * .75) $size__spacing-unit;
-			color: #fff;
-			margin-left: 0;
-			margin-top: calc(0.75 * #{$size__spacing-unit});
-
-			@include media(desktop) {
-				font-size: $font__size-base;
-				padding: ($size__spacing-unit * .875) ($size__spacing-unit * 1.5);
-			}
-
-			&:hover {
-				background: $color__background-button-hover;
-				cursor: pointer;
-			}
-
-			&:focus {
-				background: $color__background-button-hover;
-				outline: thin dotted;
-				outline-offset: -4px;
-			}
+			@include button_style(default);
 		}
 	}
 
@@ -721,21 +680,20 @@
 		border-radius: 0;
 
 		code {
-			font-size: $font__size-md;
+			font-size: fontsize("smaller");
 			white-space: pre-wrap;
-    	                word-break: break-word;
+    	    word-break: break-word;
 		}
 	}
 
 	//! Columns
 	.wp-block-columns {
-
 		&.alignfull {
-			padding-left: $size__spacing-unit;
-			padding-right: $size__spacing-unit;
+			padding-left: 1rem;
+			padding-right: 1rem;
 		}
 
-		@include media(mobile) {
+		@include breakpoint('min', 'mobile') {
 			flex-wrap: nowrap;
 		}
 
@@ -752,7 +710,7 @@
 			}
 
 			&[class*='has-'] > * {
-				margin-right: $size__spacing-unit;
+				margin-right: 1rem;
 
 				&:last-child {
 					margin-right: 0;
@@ -761,21 +719,22 @@
 
 			&.alignfull,
 			&.alignfull .wp-block-column {
-				padding-left: calc(2 * #{$size__spacing-unit});
-				padding-right: calc(2 * #{$size__spacing-unit});
+				padding-left: 30px;
+				padding-right: 30px;
 			}
 		}
 	}
 
 	//! Latest Comments
 	.wp-block-latest-comments {
+		.wp-block-latest-comments__comment-author{
+			@extend %comment_author_name;
+		}
 
 		.wp-block-latest-comments__comment-meta {
-			@include font-family( $font__heading );
-			font-weight: fontWeight("bold");
-
+			@extend %comment_author_name;
 			.wp-block-latest-comments__comment-date {
-				font-weight: normal;
+				@extend %comment_meta_item;
 			}
 		}
 
@@ -791,9 +750,6 @@
 
 		&.has-dates {
 
-			.wp-block-latest-comments__comment-date {
-				font-size: $font__size-xs;
-			}
 		}
 
 		&.has-excerpts {
@@ -852,14 +808,25 @@
 		}
 	}
 
+	.wp-block-embed-wordpress-tv{
+		&.alignfull{
+			.wp-block-embed__wrapper{
+				text-align: center;
+				iframe{
+					width: 100% !important;
+				}
+			}
+		}
+	}
+
 	.has-primary-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-primary-background-color {
-		background-color: $color__link;
+		background-color: $color-textLink;
 	}
 
 	.has-secondary-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-secondary-background-color {
-		//background-color: $color__border-link-hover;
+		//background-color: $border-color-light-link-hover;
 	}
 
 	.has-dark-gray-background-color,
@@ -869,12 +836,12 @@
 
 	.has-light-gray-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-light-gray-background-color {
-		background-color: $background-color-light;
+		background-color: $background-color-white;
 	}
 
 	.has-white-background-color,
 	.wp-block-pullquote.is-style-solid-color.has-white-background-color {
-		background-color: $background-color-light;
+		background-color: $background-color-white;
 	}
 
 	//! Custom foreground colors
@@ -904,6 +871,6 @@
 
 	.has-white-color,
 	.wp-block-pullquote.is-style-solid-color blockquote.has-white-color {
-		color: #ffffff;
+		color: $text-color-light;
 	}
 }

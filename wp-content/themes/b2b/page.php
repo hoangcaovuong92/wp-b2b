@@ -62,7 +62,13 @@ do_action('wd_hook_before_main_content'); ?>
 				<!-- Start the Loop --> 
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'template-parts/content', 'page' ); ?>
-					<?php do_action('wd_hook_display_comment_form'); ?>
+					<?php 
+					/**
+					 * wd_hook_display_comment_form hook.
+					 * 
+					 * @hooked display_comment_form - 5
+					 */
+					do_action('wd_hook_display_comment_form'); ?>
 				<?php endwhile; ?>
 				<!-- End the Loop -->
 			<?php else: ?>

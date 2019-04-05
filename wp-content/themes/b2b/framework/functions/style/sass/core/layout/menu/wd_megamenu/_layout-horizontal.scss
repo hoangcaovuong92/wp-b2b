@@ -6,7 +6,9 @@
         margin:0;
         .menu-item > a{
             @include link_style(navpage);
-            letter-spacing: 0.1em;
+            //letter-spacing: 0.1em;
+            position: relative;
+            display: block;
         }
         &.wd-sub-menu{
             background: $navPages-subMenu-background-Color;
@@ -92,19 +94,26 @@
             text-align: left;
             padding: 0px 7px;
             @include transition;
-            &.menu-item-has-children > a{
-                @include flexbox; 
-                @include align-items(center);
-                &:after{
-                    @include font_awesome(\f107, 14px);
+            &.menu-item-has-children{
+                &:not(:last-child){
+                    padding-right: 20px;
                 }
-            }                
+                > a{
+                    &:after{
+                        @include font_awesome(\f107, 14px);
+                        position: absolute;
+                        right: -9px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                    }
+                } 
+            }               
             span.wd-menu-item-flag{
                 position: static;
                 margin-left: 10px;
                 line-height: 25px;
                 padding: 5px;
-                color:#fff;
+                color:$text-color-light;
                 font-size: 12px;
                 @include transform(translateY(-50%));
                 &.wd-menu-item-flag-style-new{
@@ -252,7 +261,7 @@
                         &:after{
                             border-left: 7px solid transparent;
                             border-right: 7px solid transparent;
-                            border-bottom: 10px solid #fff;
+                            border-bottom: 10px solid $border-color-white;
                             left: 50%;
                             bottom: 0;
                             margin-left: -5px;
@@ -315,7 +324,7 @@
             position: absolute;
             z-index:9999;
             &.wd-submenu-enable-megamenu{
-                border-top:2px solid #fff;
+                border-top: 2px solid $border-color-white;
                 left: 0;
             }
             &.wd-submenu-disabled-megamenu{

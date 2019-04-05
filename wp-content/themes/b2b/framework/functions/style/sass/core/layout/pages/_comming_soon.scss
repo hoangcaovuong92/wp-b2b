@@ -5,7 +5,7 @@
 	width:100%;
 	height:100%;
 	min-height:100%;
-	.subscribe_widget {
+	.wd-shortcode-feedburner-subscription {
 		position:fixed;
 		top:50%;
 		left: 50%;
@@ -14,13 +14,13 @@
 			top:35%;
 		}
 		.wd-subscribe-header h2{
-			color: #fff;
+			color: $text-color-light;
 			text-align: center;
 			font-size: 30px;
 			font-style: italic;
 		}
 		.subscribe_intro_text{
-			color: #fff;
+			color: $text-color-light;
 			text-align: center;
 			font-size: 60px;
 			font-weight: fontWeight("semibold");
@@ -37,7 +37,7 @@
 				top: 0;
 				right: 0;
 				border:solid 1px $border-color-light;
-				color: #fff;
+				color: $text-color-light;
 				background:none;
 			    height: 35px;
     			line-height: 8px;
@@ -54,18 +54,18 @@
 				border:none;
 				padding-left:0;
 				padding-right:0px;
-				color: #fff;
+				color: $text-color-light;
 				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				  color: #fff;
+				  color: $text-color-light;
 				}
 				&::-moz-placeholder { /* Firefox 19+ */
-				  color: #fff;
+				  color: $text-color-light;
 				}
 				&:-ms-input-placeholder { /* IE 10+ */
-				  color: #fff;
+				  color: $text-color-light;
 				}
 				&:-moz-placeholder { /* Firefox 18- */
-				  color: #fff;
+				  color: $text-color-light;
 				}
 				@include breakpoint('min', 'tablet'){
 					padding-right:140px;
@@ -101,7 +101,7 @@
 }
 
 @include breakpoint('max', 'desktop') {
-    .commingsoon .subscribe_widget .subscribe_form button {
+    .commingsoon .wd-shortcode-feedburner-subscription .subscribe_form button {
         position: absolute;
         top: 100%;
         width: 100%;

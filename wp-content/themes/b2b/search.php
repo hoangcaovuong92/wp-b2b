@@ -22,13 +22,12 @@ $content_class = apply_filters('wd_filter_content_class_by_layout', $layout);
 
 $layout_class 	= 'wd-columns-'.$columns.' wd-tablet-columns-2 wd-mobile-columns-1';
 
-$class_masonry_wrap = (isset($_GET['post_type']) && $_GET['post_type'] == 'post' && have_posts() ) ? 'wd-masonry-wrap' : '';
-$class_masonry_item = (isset($_GET['post_type']) && $_GET['post_type'] == 'post' && have_posts() ) ? 'wd-masonry-item' : '';
+$class_masonry_wrap = (((isset($_GET['post_type']) && $_GET['post_type'] == 'post') || !isset($_GET['post_type'])) && have_posts() ) ? 'wd-masonry-wrap' : '';
+$class_masonry_item = (((isset($_GET['post_type']) && $_GET['post_type'] == 'post') || !isset($_GET['post_type'])) && have_posts() ) ? 'wd-masonry-item' : '';
 ?>
 <div id="wd-main-content-wrap" class="wd-main-content-wrap wd-search-result-page">
 	<div class="container">
 		<div class="row">
-
 			<?php 
 			/**
 			 * wd_hook_banner_search_result_before hook.

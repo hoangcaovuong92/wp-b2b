@@ -16,7 +16,7 @@
 		background: $dropdown-backgroundColor;
 	    border: 1px solid rgba($dropdown-borderColor, 1);
 		@include opacity(0);
-		@include border-radius(4px);		
+		@include border-radius(0);		
 		@include box-shadow(0, 6px, 12px, rgba($border-color-dark, .175));
 		@include transition(all .3s ease);
 		@include transform(scale(1, 0));

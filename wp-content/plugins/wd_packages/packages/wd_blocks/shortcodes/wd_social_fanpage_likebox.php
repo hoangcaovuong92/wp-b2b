@@ -10,7 +10,7 @@ if(!function_exists('wd_social_fanpage_likebox_function')){
 		ob_start();
 		?>
 		<?php if ($fanpage_url): ?>
-			<div class="fb-like-box <?php echo esc_attr($class) ?>">
+			<div class="wd-shortcode wd-shortcode-fanpage-likebox fb-like-box <?php echo esc_attr($class) ?>">
 				<iframe src="http://www.facebook.com/plugins/likebox.php?href=<?php echo esc_url($fanpage_url); ?>&amp;width=<?php echo esc_html($width); ?>&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=<?php echo esc_html($height); ?>" scrolling="no" frameborder="0" scrolling="no"></iframe>
 			</div>
     	<?php endif ?>

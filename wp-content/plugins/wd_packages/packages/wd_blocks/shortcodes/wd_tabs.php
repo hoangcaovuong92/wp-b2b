@@ -2,21 +2,25 @@
 if ( ! function_exists( 'wd_tabs_function' ) ) {
 	function wd_tabs_function( $atts ) {
 		extract(shortcode_atts( array(
-			'items'					=> '',
-			'style_class'			=> 'style-1',
-			'class'      			=> '',
+			'items'			=> '',
+			'style_class'	=> 'style-1',
+			'fullwidth_mode' => false,
+			'class'      	=> '',
 		), $atts ));
 		if (!function_exists('vc_param_group_parse_atts')) return;
 		$items 		= vc_param_group_parse_atts( $items );
-		$style_class 	= 'wd-tabs-'.$style_class;
+		$style_class = 'wd-tabs-'.$style_class;
 		$random_id 	= 'wd-shortcode-tabs-'.mt_rand();
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
 		<?php if (count($items)): ?>
-			<div id="<?php echo esc_attr($random_id); ?>"  class="wd-shortcode-tabs <?php echo esc_attr($style_class); ?> <?php echo esc_attr($class); ?>">
+			<div id="<?php echo esc_attr($random_id); ?>" class="wd-shortcode wd-shortcode-tabs <?php echo esc_attr($style_class); ?> <?php echo esc_attr($class); ?>">
 	        	<?php echo wd_tab_bootstrap($items); ?>
 	        </div>
 		<?php endif ?>
-        
 		<?php
 		wp_reset_postdata();
 		return ob_get_clean();

@@ -55,6 +55,8 @@ if (!class_exists('WD_Block_Product_Grid_List')) {
                 '0'         => __('No Show', 'wd_package'),
             );
 
+            $fullwidth_mode = wd_get_list_tvgiao_boolean();
+
             $this->get_api_block('id_category', 'product_categories', __('Select Category', 'wd_package'));
             //$this->get_select_block('id_category', wd_get_list_category(), __('Select Category', 'wd_package'));
             $this->get_select_block('data_show', $data_show, __('Data Show', 'wd_package'), 'recent_product');
@@ -67,6 +69,7 @@ if (!class_exists('WD_Block_Product_Grid_List')) {
             $this->get_select_block('grid_list_button', $grid_list_button, __('Show Layout Switch Button', 'wd_package'), 1);
             $this->get_select_block('grid_list_layout', $grid_list_layout, __('Default Layout', 'wd_package'), 'grid', array('grid_list_button', '==', '0'));
             $this->get_select_block('pagination_loadmore', $pagination_loadmore, __('Show Pagination/Load More', 'wd_package'), 'pagination');
+            $this->get_select_block('fullwidth_mode', $fullwidth_mode, __('Fullwidth Mode', 'wd_package'), 0);
             $this->get_text_block('class', __('Extra class name', 'wd_package'), '');
         }
 	}

@@ -41,7 +41,9 @@ if (!class_exists('WD_Gutenberg')) {
 				'blog_layout',
 				'product_layout',
 				'social_icons',
-				'banner_image'
+				'banner_image',
+				'profile',
+				'title'
 			);
 			if (class_exists('WD_Instagram')) {
 				$blocks[] = 'instagram';

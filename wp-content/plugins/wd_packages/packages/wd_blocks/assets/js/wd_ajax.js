@@ -164,7 +164,7 @@ if (typeof wd_ajax_load_more_product_basic != 'function') {
 //Ajax load product tab. Template: wd_product_by_category_tabs.php
 if (typeof wd_ajax_load_more_product_tabs != 'function') { 
 	function wd_ajax_load_more_product_tabs(){
-		jQuery( '.products-by-category-tabs a[data-toggle="tab"]' ).on( 'show.bs.tab', function ( e ) {
+		jQuery( '.wd-shortcode-products-by-category-tabs a[data-toggle="tab"]' ).on( 'show.bs.tab', function ( e ) {
 			const type    				= jQuery( this ).data( 'type' );
 			const slug    				= jQuery( this ).data( 'slug' );
 			const id      				= jQuery( this ).data( 'id' );

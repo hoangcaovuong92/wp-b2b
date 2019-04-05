@@ -62,6 +62,8 @@ if (!class_exists('WD_Block_Instagram')) {
             $show_nav = wd_get_list_tvgiao_boolean();
             $auto_play = wd_get_list_tvgiao_boolean();
 
+            $fullwidth_mode = wd_get_list_tvgiao_boolean();
+
             $this->set_group_name(esc_html__("General Settings", 'wd_package'));
 
             $this->get_text_block('insta_title', esc_html__("Title Instagram", 'wd_package'), '');
@@ -96,6 +98,7 @@ if (!class_exists('WD_Block_Instagram')) {
             //Advance Setting
             $this->set_group_name(esc_html__("General Settings", 'wd_package'));
 
+            $this->get_select_block('fullwidth_mode', $fullwidth_mode, __('Fullwidth Mode', 'wd_package'), 0);
             $this->get_text_block('class', __('Extra class name', 'wd_package'), '');
         }
 	}

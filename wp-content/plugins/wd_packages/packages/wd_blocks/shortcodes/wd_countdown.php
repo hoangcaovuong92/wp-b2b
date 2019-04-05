@@ -5,6 +5,7 @@ if (!function_exists('wd_countdown_function')) {
 			'title'					=> '',
 			'icon_image'			=> '',
 			'date_count_down'		=> '',
+			'fullwidth_mode'		=> false,
 			'class' 				=> ''
 		), $atts));
 		$image_url 	= wp_get_attachment_image_src($icon_image, "full");
@@ -12,8 +13,12 @@ if (!function_exists('wd_countdown_function')) {
 		$title_img	= get_bloginfo('name');
 		
 		$random_id = 'wd_count_down'.mt_rand();
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-			<div id="<?php echo esc_attr($random_id); ?>" class="wd-count-down <?php echo esc_attr($class); ?>">
+			<div id="<?php echo esc_attr($random_id); ?>" class="wd-shortcode wd-shortcode-countdown <?php echo esc_attr($class); ?>">
 				<?php if($imgSrc != "") : ?>
 					<div class="wd-image-banner">
 						<img alt="<?php echo esc_attr($title_img);?>" title="<?php echo esc_attr($title_img);?>" class="img" src="<?php echo esc_url($imgSrc)?>" />

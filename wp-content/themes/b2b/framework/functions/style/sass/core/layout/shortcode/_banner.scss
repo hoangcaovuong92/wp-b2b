@@ -41,7 +41,7 @@
 .wd-shortcode-banner-plus{
     .wd-banner-plus-heading-1, .wd-banner-plus-heading-2 {
         margin: 0;
-        color: #282828;
+        color: $text-color-dark;
         margin-bottom: 25px;
         @include breakpoint('max', 'tablet'){
             margin-bottom: 15px;
@@ -100,7 +100,7 @@
                     padding: 20px;
                     border: 2px solid $border-color-light;
                     border-right: 0;
-                    background: #fff;
+                    background: $background-color-white;
                     @include breakpoint('min', 'largest'){
                         margin-top: 60px;
                         padding: 70px 100px 70px;
@@ -243,7 +243,7 @@
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
             margin: 0;
-            background-color: #fff;
+            background-color: $background-color-white;
             z-index: 4;
             @include breakpoint('max', 'desktop') {
                 position: initial;
@@ -319,7 +319,7 @@
                 .owl-prev, .owl-next{
                     position: absolute;
                     display: block;
-                    background: #fff;
+                    background: $background-color-white;
                     color: #989898;
                     font-size: 35px;
                     margin: 0;
@@ -355,7 +355,7 @@
             text-transform: uppercase;
             display: inline-block;
             border-color: $border-color-dark;
-            color: #282828;
+            color: $text-color-dark;
             padding: 8px 35px;
             outline: 0;
             vertical-align: middle;
@@ -371,14 +371,14 @@
             &.wd-banner-image-button-style-1 {
                 letter-spacing: 1.3px;
                 padding: 5px 25px;
-                @include button_style(1);
+                @include button_style(primary);
             }
             &.wd-banner-image-button-style-2{
                 background-color: transparent;
                 border-width: 2px;
                 letter-spacing: 1.3px;
                 padding: 5px 25px;
-                @include button_style(2);
+                @include button_style(secondary);;
             }
             &.wd-banner-image-button-style-3{
                 border-color: transparent;

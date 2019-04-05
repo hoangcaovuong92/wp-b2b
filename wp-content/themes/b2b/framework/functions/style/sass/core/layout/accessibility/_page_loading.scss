@@ -3,7 +3,7 @@
 .chromeframe{
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: $text-color-dark;
     padding: 0.2em 0;
 }
   
@@ -26,7 +26,7 @@
         @include align-items(center);
     }
     .wd-loader--style-1{
-        background:#fff;
+        background: $background-color-white;
         .wd-loader-content{
             position:relative;
             width:58px;
@@ -35,7 +35,7 @@
         }
         .circularG{
             position:absolute;
-            background-color:rgb(0,0,0);
+            background-color:$background-color-dark;
             width:14px;
             height:14px;
             @include border-radius(9px);
@@ -90,10 +90,10 @@
         }
     }
     .wd-loader--style-2{
-        background:#000;
+        background: $background-color-dark;
         .wd-loader-content{
             margin: 120px auto 0;
-            color: #fff;
+            color: $text-color-light;
             margin: 5px 0;
             text-transform: uppercase;
             text-align: center;
@@ -104,7 +104,7 @@
         .line {
             width: 1px;
             height: 12px;
-            background: #fff;
+            background: $background-color-white;
             margin: 0 1px;
             display: inline-block;
             @include animation(loading_2 1000ms infinite ease-in-out);
@@ -185,6 +185,6 @@
         display: none;
     }
     h1{
-        color: #222222;
+        color: $text-color-dark;
     }
 }

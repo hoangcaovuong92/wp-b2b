@@ -31,10 +31,32 @@
 @mixin vertical_align {
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+	@include transform(translateY(-50%));
 } /* @include vertical_align(); */
+
+/* Nested sub-menu padding: 10 levels deep */
+@mixin nestedSubMenuPadding() {
+	ul {
+		counter-reset: submenu;
+	}
+
+	ul > li > a::before {
+		font-weight: normal;
+		content: "\2013\00a0" counters(submenu, "\2013\00a0", none);
+		counter-increment: submenu
+	}
+}/* @include nestedSubMenuPadding(); */
+
+/* Calculates maximum width for post content */
+@mixin postContentMaxWidth() {
+	@include breakpoint('min', 'tablet') {
+		max-width: calc(8 * (100vw / 12) - 28px);
+	}
+
+	@include breakpoint('min', 'desktop') {
+		max-width: calc(6 * (100vw / 12) - 28px);
+	}
+}/* @include postContentMaxWidth(); */
 
 /* Font size */
 @mixin font_size_icon($size){
@@ -57,33 +79,61 @@
     }
 } /* @include font_size_button($size); */
 
-//Style : 1 / 2 / default
-@mixin button_style($style: 'default'){
+//Style : primary / primary-border / primary-reverse / primary-reverse-border / secondary / secondary-border / secondary-reverse / secondary-reverse-border / disabled
+@mixin button_style($style: primary){
 	display: inline-block;
 	cursor: pointer;
-	background:#282828;
-	border: solid 1px $border-color-dark;
-	letter-spacing: 1.3px;
+	letter-spacing: 0.1em;
 	padding: 5px 30px;
 	font-weight: 600;
 	line-height: 1.8;
-	font-size: 16px;
 	white-space: nowrap;
 	min-height: 35px;
-	@include transition;
+	@include transition(all .15s ease);
 	@include border-radius(0);
-	@if $style == 1{
-		@include text_color_hover(#fff, #282828);
-		@include background_color_hover(#282828, #fff);
-	}@else if $style == 2{
-		@include text_color_hover(#282828, #fff);
-		@include background_color_hover(#fff, #282828);
+	@if $style == secondary{
+		@include text_color_hover($button--secondary-color, $button--secondary-colorHover);
+		@include background_color_hover($button--secondary-backgroundColor, $button--secondary-backgroundColorHover);
+		border: 0;
+	}@else if $style == secondary-border{
+		@include text_color_hover($button--secondary-color, $button--secondary-colorHover);
+		@include background_color_hover($button--secondary-backgroundColor, $button--secondary-backgroundColorHover);
+		@include border_color_hover($button--secondary-borderColor, $button--secondary-borderColorHover);
+	}@else if $style == secondary-reverse{
+		@include text_color_hover($button--secondary-colorHover, $button--secondary-color);
+		@include background_color_hover($button--secondary-backgroundColorHover, $button--secondary-backgroundColor);
+		border: 0;
+	}@else if $style == secondary-reverse-border{
+		@include text_color_hover($button--secondary-colorHover, $button--secondary-color);
+		@include background_color_hover($button--secondary-backgroundColorHover, $button--secondary-backgroundColor);
+		@include border_color_hover($button--secondary-borderColorHover, $button--secondary-borderColor);
+	}@else if $style == disabled{
+		@include text_color_hover($button--disabled-color, $button--disabled-color);
+		@include background_color_hover($button--disabled-backgroundColor, $button--disabled-backgroundColor);
+		@include border_color_hover($button--disabled-borderColor, $button--disabled-borderColor);
+	}@else if $style == transparent{
+		@include text_color_hover($button--default-colorHover, $button--default-color);
+		@include background_color_hover(transparent, transparent);
+		@include border_color_hover(transparent, transparent);
+	}@else if $style == primary-border{
+		@include text_color_hover($button--default-color, $button--default-colorHover);
+		@include background_color_hover($button--default-backgroundColor, $button--default-backgroundColorHover);
+		@include border_color_hover($button--default-borderColor, $button--default-borderColorHover);
+	}@else if $style == primary-reverse{
+		@include text_color_hover($button--default-colorHover, $button--default-color);
+		@include background_color_hover($button--default-backgroundColorHover, $button--default-backgroundColor);
+		border: 0;
+	}@else if $style == primary-reverse-border{
+		@include text_color_hover($button--default-colorHover, $button--default-color);
+		@include background_color_hover($button--default-backgroundColorHover, $button--default-backgroundColor);
+		@include border_color_hover($button--default-borderColorHover, $button--default-borderColor);
 	}@else{
-		@include text_color_hover(#fff, #282828);
-		@include background_color_hover(#282828, #fff);
-		&:hover,&:focus,&:active{
-			outline: none;  
-		}
+		@include text_color_hover($button--default-color, $button--default-colorHover);
+		@include background_color_hover($button--default-backgroundColor, $button--default-backgroundColorHover);
+		border: 0;
+	}
+	&:hover, &:focus, &:active{
+		outline: none;  
 	}
 } /* @include button_style($style); */
 
@@ -120,8 +170,8 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			border-top: 1px solid #fff;
-			border-bottom: 1px solid #fff;
+			border-top: 1px solid $border-color-white;
+			border-bottom: 1px solid $border-color-white;
 			content: '';
 			@include opacity(0);
 			@include transform(rotate3d(0, 0, 1, 45deg) scale3d(1, 0, 1));
@@ -157,8 +207,8 @@
 			display: block;
 			width: 30%;
 			height: 100%;
-			background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
-			background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 100%);
+			background: -webkit-linear-gradient(left, rgba($background-color-dark, 0) 0%, rgba($background-color-dark, 0.3) 100%);
+			background: linear-gradient(to right, rgba($background-color-dark, 0) 0%, rgba($background-color-dark, 0.3) 100%);
 			@include transition(all .4s linear);
 			@include transform(skewX(-25deg));
 		}
@@ -176,7 +226,7 @@
 			width: 100%;
 			height: 100%;
 			z-index: 1;
-			background: rgba(0, 0, 0, 0.1);
+			background: rgba($background-color-dark, 0.1);
 			@include transition(all 500ms ease-in);
 		}
 		img{
@@ -189,7 +239,7 @@
 				@include transform(scale(2, 2) translateX(-20%));
 			}
 			&:before{
-				background: rgba(0, 0, 0, 0.3);
+				background: rgba($background-color-dark, 0.3);
 			}
 		}
 	}@else if $style == gray{
@@ -245,13 +295,13 @@
                 z-index: 7;
             }
             &:before{
-                border-top: 1px solid #fff;
-                border-bottom: 1px solid #fff;
+                border-top: 1px solid $border-color-white;
+                border-bottom: 1px solid $border-color-white;
 				@include transform(scale(0, 1));
             }
             &:after{
-                border-right: 1px solid #fff;
-                border-left: 1px solid #fff;
+                border-right: 1px solid $border-color-white;
+                border-left: 1px solid $border-color-white;
 				@include transform(scale(1, 0));
             }
         }
@@ -283,6 +333,7 @@
 			color: $color_hover;
 		}
 		text-decoration:none;
+		outline: none;
 	}
 } /* @include text_color_hover($color, $color_hover); */
 
@@ -302,6 +353,23 @@
 		}
 	}
 } /* @include background_color_hover($color, $color_hover); */
+
+@mixin border_color_hover($color, $color_hover, $important: 0){
+	@if $important == 1{
+		border: 1px solid $color !important;
+	}@else{
+		border: 1px solid $color;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		@if $important == 1{
+			border: 1px solid $color_hover !important;
+		}@else{
+			border: 1px solid $color_hover;
+		}
+	}
+} /* @include border_color_hover($color, $color_hover); */
 
 @mixin font_weight_hover($font_weight, $font_weight_hover, $important: 0){
 	@if $important == 1{

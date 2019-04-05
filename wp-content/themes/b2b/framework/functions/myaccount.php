@@ -213,16 +213,15 @@ if (!class_exists('WD_My_Account')) {
 						<label><input name="rememberme" class="wd-login-form-field wd-login-rememberme" type="checkbox" value="forever"> <?php echo $args['remember_text']; ?></label> 
 					</p>
 		
-					<p class="wd-login-form-image-loading hidden">
-						<img src="<?php echo WD_THEME_IMAGES.'/loading.gif'; ?>" alt="<?php echo esc_html__( 'Loading Icon' , 'feellio'); ?>">
-					</p>
-		
 					<p class="wd-alert wd-login-success-alert hidden"></p>
 					<p class="wd-alert wd-login-error-alert hidden"></p>
 		
 					<div class="clear"></div>
 					
 					<p class="login-submit">
+						<span class="wd-loading wd-loading--login-form hidden">
+							<img src="<?php echo WD_THEME_IMAGES.'/loading.gif'; ?>" alt="<?php echo esc_html__( 'Loading Icon' , 'feellio'); ?>">
+						</span>
 						<input type="submit" class="wd-my-account-btn wd-login-form-field wd-login-btn" name="login" data-form_id="<?php echo esc_attr($random_id); ?>"  value="<?php echo $args['btn_text']; ?>" />
 					</p>
 				</form>	
@@ -283,14 +282,13 @@ if (!class_exists('WD_My_Account')) {
 							<span class="wd-alert wd-register-terms-alert hidden"></span>
 						</p>
 		
-						<p class="wd-register-form-image-loading hidden">
-							<img src="<?php echo WD_THEME_IMAGES.'/loading.gif'; ?>" alt="<?php echo esc_html__( 'Loading Icon' , 'feellio'); ?>">
-						</p>
-		
 						<p class="wd-alert wd-register-success-alert hidden"></p>
 						<p class="wd-alert wd-register-error-alert hidden"></p>
 		
 						<p class="register-submit">
+							<span class="wd-loading wd-loading--register-form hidden">
+								<img src="<?php echo WD_THEME_IMAGES.'/loading.gif'; ?>" alt="<?php echo esc_html__( 'Loading Icon' , 'feellio'); ?>">
+							</span>
 							<input type="submit" class="wd-my-account-btn wd-register-form-field wd-register-btn" name="submit" data-form_id="<?php echo esc_attr($random_id); ?>"  value="<?php echo $args['btn_text']; ?>" />
 						</p>
 					</form>
@@ -333,15 +331,16 @@ if (!class_exists('WD_My_Account')) {
 					</p>
 					<p><?php echo $args['desc']; ?></p>
 					<input type="hidden" class="wd-forgot-password-input wd-forgot-password-action" name="action" value="reset" />
-					<p class="wd-forgot-password-form-image-loading hidden">
-						<img src="<?php echo WD_THEME_IMAGES.'/loading.gif'; ?>" alt="<?php echo esc_html__( 'Loading Icon' , 'feellio'); ?>">
-					</p>
-					<p class="wd-forgot-password-success-alert hidden"></p>
-					<p class="wd-forgot-password-error-alert hidden"></p>
+					
+					<p class="wd-alert wd-forgot-password-success-alert hidden"></p>
+					<p class="wd-alert wd-forgot-password-error-alert hidden"></p>
 		
 					<div class="clear"></div>
 					
 					<p class="forgot-password-submit">
+						<span class="wd-loading wd-loading--forgot-password-form hidden">
+							<img src="<?php echo WD_THEME_IMAGES.'/loading.gif'; ?>" alt="<?php echo esc_html__( 'Loading Icon' , 'feellio'); ?>">
+						</span>
 						<input type="submit" class="wd-my-account-btn wd-forgot-password-form-field wd-forgot-password-btn" name="submit" data-form_id="<?php echo esc_attr($random_id); ?>"  value="<?php echo $args['btn_text']; ?>" />
 					</p>
 				</form>

@@ -183,7 +183,7 @@ if (!class_exists('WD_Theme_Options_Settings')) {
 
         public function include_option_parts(){
             $opt_name = $this->opt_name;
-            $wd_default_data = apply_filters('wd_filter_defaut_data', true);
+            $wd_default_data = apply_filters('wd_filter_defaut_data', 'all');
 
             //Xml template file name
             $xml_color_file     = 'color_default';

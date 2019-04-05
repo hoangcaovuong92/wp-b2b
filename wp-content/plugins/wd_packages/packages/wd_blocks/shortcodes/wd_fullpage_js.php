@@ -9,7 +9,7 @@ if (!function_exists('wd_fullpage_js_function')) {
 		$content_group 		= vc_param_group_parse_atts( $content_group );
 		ob_start(); ?>
 			<?php if (count($content_group)) { ?>
-				<div class="wd-shortcode-fullpage-wrap <?php echo esc_attr($class); ?>">
+				<div class="wd-shortcode wd-shortcode-fullpage-wrap <?php echo esc_attr($class); ?>">
 					<?php foreach($content_group as $content){ ?>
 						<?php if (!empty($content['content']) || !empty($content['background'])): ?>
 							<?php 

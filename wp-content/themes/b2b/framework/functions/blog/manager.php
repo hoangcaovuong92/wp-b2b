@@ -170,14 +170,14 @@ if (!class_exists('WD_Blog')) {
 							if(!is_home()){
 								echo $this->get_embedded_media( array('audio','iframe'), '50%' );
 							} ?>
-							<div class="wd-blog-content-wrap">
+							<figcaption class="wd-blog-content-wrap">
 								<?php
 								$this->display_blog_category($show_category);
 								$this->display_blog_title($show_title);
 								$this->display_post_meta('loop');
 								$this->display_blog_excerpt($show_excerpt, $number_excerpt);
 								$this->display_blog_readmore($show_readmore); ?>
-							</div>
+							</figcaption>
 						</div>
 					<?php
 					} elseif ($post_format == 'gallery') { ?>
@@ -185,14 +185,14 @@ if (!class_exists('WD_Blog')) {
 							<?php if (!is_home()): ?>
 								<?php echo $this->display_blog_thumbnail_gallery($thumbnail_size, $show_thumbnail, $placeholder_image); ?>
 							<?php endif ?>
-							<div class="wd-blog-content-wrap">
+							<figcaption class="wd-blog-content-wrap">
 								<?php
 								$this->display_blog_category($show_category);
 								$this->display_blog_title($show_title);
 								$this->display_post_meta('loop');
 								$this->display_blog_excerpt($show_excerpt, $number_excerpt);
 								$this->display_blog_readmore($show_readmore); ?>
-							</div>
+							</figcaption>
 						</div>
 					<?php
 					} elseif ($post_format == 'link') { ?>
@@ -204,7 +204,7 @@ if (!class_exists('WD_Blog')) {
 					<?php
 					} elseif ($post_format == 'quote') { ?>
 						<div class="wd-content-post-format wd-content-post-format--quote <?php echo esc_attr($class_content); ?>">
-							<div class="wd-blog-content-wrap">	
+							<figcaption class="wd-blog-content-wrap">	
 								<?php if (is_home()): ?>
 									<?php
 									$this->display_blog_category($show_category);
@@ -219,20 +219,20 @@ if (!class_exists('WD_Blog')) {
 									<?php the_author_posts_link(); ?>
 								</div>
 								<?php $this->display_blog_readmore($show_readmore); ?>
-							</div>
+							</figcaption>
 						</div>
 					<?php
 					} elseif ($post_format == 'video') { ?>
 						<div class="wd-content-post-format wd-content-post-format--video <?php echo esc_attr($class_content); ?>">
 							<?php echo $this->get_embedded_media( array('video','iframe') ); ?>
-							<div class="wd-blog-content-wrap">
+							<figcaption class="wd-blog-content-wrap">
 								<?php
 								$this->display_blog_category($show_category);
 								$this->display_blog_title($show_title);
 								$this->display_post_meta('loop');
 								$this->display_blog_excerpt($show_excerpt, $number_excerpt);
 								$this->display_blog_readmore($show_readmore); ?>
-							</div>
+							</figcaption>
 						</div>
 					<?php
 					} else { ?>
@@ -244,14 +244,14 @@ if (!class_exists('WD_Blog')) {
 									'placeholder' => $placeholder_image,
 									'custom_class' => ''
 								)); ?>
-							<div class="wd-blog-content-wrap">
+							<figcaption class="wd-blog-content-wrap">
 								<?php
 								$this->display_blog_category($show_category);
 								$this->display_blog_title($show_title);
 								$this->display_post_meta('loop');
 								$this->display_blog_excerpt($show_excerpt, $number_excerpt);
 								$this->display_blog_readmore($show_readmore); ?>
-							</div>
+							</figcaption>
 						</div>
 					<?php } ?>
 				</article>
@@ -280,21 +280,19 @@ if (!class_exists('WD_Blog')) {
 			global $post;
 			$thumbnail_class = (has_post_thumbnail()) ? 'wd-single-blog-has-thumbnail' : 'wd-single-blog-without-thumbnail';
 			ob_start(); ?>
-				<div class="wd-blog-content-wrap <?php echo esc_attr($thumbnail_class); ?>">
-					<div class="wd-blog-single-top">
-						<?php 
-						$this->display_blog_category($show_category);
-						$this->display_blog_single_title($show_title);
-						$this->display_post_meta('single'); 
-						$this->display_post_share($show_share); ?>
-					</div>
-					<?php
-					$this->display_blog_thumbnail('full', $show_thumbnail); ?>
-
-					<div class="wd-blog-desc">
-						<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="wd-blog-content-wrap <?php echo esc_attr($thumbnail_class); ?>">
+						<div class="wd-blog-single-top">
+							<?php 
+							$this->display_blog_category($show_category);
+							$this->display_blog_single_title($show_title);
+							$this->display_post_meta('single'); 
+							$this->display_post_share($show_share); ?>
+						</div>
+						<?php
+						$this->display_blog_thumbnail('full', $show_thumbnail); ?>
+						<div class="wd-blog-desc">
 							<div class="entry-content">
-
 								<?php if ( !post_password_required() /* || current_user_can('editor') || current_user_can('administrator') */) { 
 									the_content( sprintf(__( 'Continue reading<span class="wd-screen-reader-text"> "%s"</span>', 'feellio' ),
 										get_the_title()
@@ -311,15 +309,14 @@ if (!class_exists('WD_Blog')) {
 								} ?>
 
 							</div><!-- .entry-content -->
-
 							<?php 
 							$this->display_blog_tag($show_tag);
 							$this->display_author_information($show_author_information); ?>
-							
-						</article><!-- End Article -->
+								
+						</div>
+						<?php $this->display_blog_previous_next_btn($show_previous_next_btn); ?>
 					</div>
-					<?php $this->display_blog_previous_next_btn($show_previous_next_btn); ?>
-				</div>
+				</article><!-- End Article -->
 			<?php
 			return ob_get_clean();
 		}
@@ -439,33 +436,33 @@ if (!class_exists('WD_Blog')) {
 			if ( $show_thumbnail ) {
 				if ( has_post_thumbnail() && get_the_post_thumbnail() && 1 == $num ) {
 					ob_start(); ?>
-					<div class="wd-thumbnail-post <?php echo $slider; ?> <?php echo esc_attr($custom_class); ?>">
+					<figure class="wd-thumbnail-post <?php echo $slider; ?> <?php echo esc_attr($custom_class); ?>">
 						<a class="wd-thumbnail" href="<?php echo get_permalink(); ?>">
 							<?php echo get_the_post_thumbnail( null, $thumbnail_size ); ?>
 						</a>
-					</div><!-- .wd-thumbnail-post -->
+					</figure><!-- .wd-thumbnail-post -->
 					<?php
 					$output = ob_get_clean();
 				} else {
 					$attachments = $this->get_post_attachment($num);
 					if ( $attachments && 1 == $num ) {
 						ob_start(); ?>
-						<div class="wd-thumbnail-post <?php echo $slider; ?> <?php echo esc_attr($custom_class); ?>">
+						<figure class="wd-thumbnail-post <?php echo $slider; ?> <?php echo esc_attr($custom_class); ?>">
 							<a class="wd-thumbnail" href="<?php echo get_permalink(); ?>">
 								<?php echo wp_get_attachment_image( $attachments[0], $thumbnail_size ); ?>
 							</a>
-						</div><!-- .wd-thumbnail-post -->
+						</figure><!-- .wd-thumbnail-post -->
 						<?php
 						$output = ob_get_clean();
 					} elseif ( $attachments && 1 < $num ) {
 						ob_start(); ?>
-						<div class="wd-thumbnail-post <?php echo $slider; ?> <?php echo esc_attr($custom_class); ?>">
+						<figure class="wd-thumbnail-post <?php echo $slider; ?> <?php echo esc_attr($custom_class); ?>">
 							<?php foreach ( $attachments as $attachment ) { ?>
 								<div class="wd-thumbnail">
 									<?php echo wp_get_attachment_image( $attachment, $thumbnail_size ); ?>
 								</div>
 							<?php } ?>
-						</div><!-- .wd-thumbnail-post -->
+						</figure><!-- .wd-thumbnail-post -->
 						<?php
 						$output = ob_get_clean();
 					} else {
@@ -538,12 +535,12 @@ if (!class_exists('WD_Blog')) {
 
 			if ($type == 'html') {
 				ob_start(); ?>
-				<div class="wd-thumbnail-post <?php echo esc_attr($custom_class); ?>">
+				<figure class="wd-thumbnail-post <?php echo esc_attr($custom_class); ?>">
 					<a class="wd-thumbnail <?php echo esc_attr($wrap_class); ?>" href="<?php echo get_permalink(); ?>">
 						<img class="<?php echo esc_attr($image_class); ?>" src="<?php echo esc_url($image_placeholder); ?>" alt="<?php echo get_the_title(); ?>" title="<?php echo get_the_title(); ?>" />
 						<span class="lnr lnr-picture wd-icon"></span>
 					</a>
-				</div><!-- .wd-thumbnail-post -->
+				</figure><!-- .wd-thumbnail-post -->
 				<?php
 				$output = ob_get_clean();
 			} elseif ($type == 'url') {
@@ -631,23 +628,22 @@ if (!class_exists('WD_Blog')) {
 				$previous  = get_previous_post(); ?>
 				<?php if ($next_post || $previous): ?>
 					<div class="wd-next-previous-post <?php echo esc_attr($custom_class); ?>">
-						
-						<?php if($previous){
-							$title = esc_html__('Previous Post', 'feellio'); ?>
-							<div class="wd-navi-prev">
+						<div class="wd-navi-prev">
+							<?php if($previous){
+								$title = esc_html__('Previous Post', 'feellio'); ?>
 								<a class="wd-navi-title" data-toggle="tooltip" title="<?php echo $title; ?>" href="<?php echo get_permalink( $previous->ID ); ?>">
 									<span><i class="lnr lnr-chevron-left wd-icon"></i> <?php echo $title; ?></span>
 								</a>
-							</div>
-						<?php } ?>
-						<?php if($next_post){ 
-							$title = esc_html__('Next Post', 'feellio'); ?>
-							<div class="wd-navi-next">
+							<?php } ?>
+						</div>
+						<div class="wd-navi-next">
+							<?php if($next_post){ 
+								$title = esc_html__('Next Post', 'feellio'); ?>
 								<a class="wd-navi-title" data-toggle="tooltip" title="<?php echo $title; ?>" href="<?php echo get_permalink( $next_post->ID ); ?>">
 									<span><?php echo $title; ?> <i class="lnr lnr-chevron-right wd-icon"></i></span>
 								</a>
-							</div>
-						<?php } ?>
+							<?php } ?>
+						</div>
 					</div>
 				<?php endif ?>
 			<?php endif ?>
@@ -726,13 +722,13 @@ if (!class_exists('WD_Blog')) {
 			global $post;
 			?>
 			<?php if( $display == '1' && has_post_thumbnail() && get_the_post_thumbnail()): ?>
-				<div class="wd-thumbnail-post <?php echo esc_attr($custom_class); ?>">
+				<figure class="wd-thumbnail-post <?php echo esc_attr($custom_class); ?>">
 					<a class="wd-thumbnail" href="<?php the_permalink(); ?>">
 						<?php
 							the_post_thumbnail($image_size);
 						?>
 					</a>
-				</div>
+				</figure>
 			<?php endif; // End If ?>
 			<?php 
 			echo ob_get_clean();
@@ -754,7 +750,7 @@ if (!class_exists('WD_Blog')) {
 						'column_tablet' => 1,
 						'column_mobile' => 1,
 					)); ?>
-					<div class="wd-thumbnail-post wd-thumbnail-post--gallery <?php echo esc_attr($custom_class); ?>">
+					<figure class="wd-thumbnail-post wd-thumbnail-post--gallery <?php echo esc_attr($custom_class); ?>">
 						<div id="<?php echo esc_attr($slider_id); ?>">
 							<!-- Wrapper for slides -->
 							<ul class="wd-blog-gallery-list wd-slider-wrap wd-slider-wrap--post-gallery" 
@@ -771,7 +767,7 @@ if (!class_exists('WD_Blog')) {
 								<?php endforeach; ?>
 							</ul>
 						</div>
-					</div>
+					</figure>
 				<?php elseif($placeholder && !is_home()): ?>
 					<?php echo $this->get_placeholder_image('html'); ?>
 				<?php endif; ?>
@@ -908,18 +904,15 @@ if (!class_exists('WD_Blog')) {
 			global $post;
 			$class = ($display == '0' && !is_home()) ? 'wd-blog-desc--hidden' : 'wd-blog-desc--show';
 			$class .= (!$number_excerpt || $number_excerpt == '-1') ? ' wd-blog-desc--full' : ' wd-blog-desc--limit-word';
-			$class .= ' '.esc_attr($custom_class); ?>
-			<div itemprop="description" class="wd-blog-desc <?php echo esc_attr($class); ?>">
-				<div class="entry-content">
-					<?php if (get_the_content() || get_the_excerpt()): ?>
-						<?php if (!post_password_required()): ?>
-								<?php echo apply_filters('wd_filter_excerpt_limit_word_length', array('word_limit' => $number_excerpt)); ?>
-						<?php else: ?>
-							<?php echo get_the_password_form(); ?>
-						<?php endif ?>
-					<?php endif ?>
+			$class .= ' '.esc_attr($custom_class);
+			$excerpt = apply_filters('wd_filter_excerpt_limit_word_length', array('word_limit' => $number_excerpt)); ?>
+			<?php if ((get_the_content() || get_the_excerpt()) && $excerpt): ?>
+				<div itemprop="description" class="wd-blog-desc <?php echo esc_attr($class); ?>">
+					<div class="entry-content">
+						<?php echo $excerpt; ?>
+					</div>
 				</div>
-			</div>
+			<?php endif ?>
 			<?php 
 			echo ob_get_clean();
 		}

@@ -16,7 +16,7 @@
     text-align: center;
     margin: 15px 0;
     .wd-related-title{
-        background-color: $background-color-light;
+        background-color: $background-color-white;
         text-transform: uppercase;
         padding: 0px 30px;
         font-size: 20px;
@@ -71,7 +71,8 @@
     }
 }
 
-.wd-columns-1{
+//Blog 1 columns
+.wd-columns-1, .wd-masonry-blog-slider-single-column{
     .wd-blog-item{
         .wd-title-blog-wrap{
             .wd-title-blog{
@@ -92,37 +93,22 @@
 }
 
 //Widget title
-aside {
-    .wd-title-widget-wrap{
-        position: relative;
-        text-align: center;
-        margin: 0 0 15px;
-        color: $color-textHeading;
-        &:after{
-            content: '';
-            width: 100%;
-            height: 1px;
-            border-top: 1px solid $border-color-light;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            z-index: 1;
-        }
+.wd-title-widget-wrap{
+    position: relative;
+    text-align: center;
+    margin: 0 0 15px;
+    color: $color-textHeading;
+    &:after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid $border-color-light;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        z-index: 1;
     }
-
-    .wd-blog-item{
-        .wd-title-blog-wrap{
-            .wd-title-blog{
-                text-align: left;
-                font-size: fontSize("small") - 2px !important;
-                a{
-                    white-space: normal;
-                }
-            }
-        }
-    }
-
     .wd-title-widget,
     .wd-title.wd-title-widget h1,
     .wd-title.wd-title-widget h2,
@@ -132,7 +118,7 @@ aside {
     .wd-title.wd-title-widget h6{
         font-size: fontSize("root");
         //border-bottom: 1px dotted $border-color-dark;
-        background-color: $background-color-light;
+        background-color: $background-color-white;
         color: $color-textHeading;
         text-transform: uppercase;
         padding: 0px 10px;
@@ -143,6 +129,19 @@ aside {
         z-index: 2;
         position: relative;
         width: auto !important;
+    }
+}
+aside {
+    .wd-blog-item{
+        .wd-title-blog-wrap{
+            .wd-title-blog{
+                text-align: left;
+                font-size: fontSize("small") - 2px !important;
+                a{
+                    white-space: normal;
+                }
+            }
+        }
     }
 }
 
@@ -167,6 +166,7 @@ aside {
         }
     }
     .wd-title-highlight{
+        color: $text-color-highlight;
     }
     @include breakpoint('max', 'desktop') {
         .wd-title-heading, .wd-title-description{
@@ -194,7 +194,7 @@ aside {
 #TB_ajaxWindowTitle {
     position: relative;
     .popup-cart-title{
-        background-color: $background-color-light;
+        background-color: $background-color-white;
         text-transform: uppercase;
         padding: 0px 30px;
         font-size: 20px;

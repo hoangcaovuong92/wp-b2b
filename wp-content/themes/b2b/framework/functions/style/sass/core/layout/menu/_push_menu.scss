@@ -17,6 +17,9 @@
 		.wd-navUser-list--pushmenu{
 			line-height: 1;
 			margin-right: 15px;
+			> li:not(:first-child){
+				margin-left: 10px;
+			}
 		}
 
 		.wd-logo {
@@ -57,7 +60,7 @@
 			padding:0 15px;
 			height: 40px;
 			width: 100%;
-			background:#fff;
+			background: $background-color-white;
 			margin-top: 50px;
 			.wd-header-mobile-gtranslate{
 				position: absolute;
@@ -117,13 +120,13 @@
 					}
 				}
 				.woocommerce-currency-switcher-form .dd-selected {
-					color: #282828;
+					color: $text-color-dark;
 					display: block;
 					font-weight: fontWeight("bold");
 					overflow: hidden;
 					padding: 10px;
 					font-size: 13px;
-					background:#fff;
+					background: $background-color-white;
 				}
 				.woocommerce-currency-switcher-form a.dd-option{
 					font-size: 13px;

@@ -6,11 +6,6 @@
     padding-top: 10px;
     padding-bottom: 10px;
     display: inline-block;
-    @include breakpoint('min', 'tablet') {
-        &.wd-cart-flagments, &.wd-wishlist-icon{
-            margin-right: 10px;
-        }
-    }
 }
 
 .wd-navUser-list{
@@ -23,7 +18,7 @@
         &:not(:first-child){
             margin-left: 5px;
             @include breakpoint('min', 'tablet') {
-                margin-left: 10px;
+                margin-left: 12px;
             }
         }
     }

@@ -59,7 +59,7 @@
         h3.comment-reply-title{
             font-size:14px;
             text-transform:uppercase;
-            color: #fff;
+            color: $text-color-light;
             float:left;
             position: relative;
             &:before{
@@ -93,13 +93,13 @@
             .submit{
                 background: #282828;
                 padding: 10px;
-                color: #fff;
+                color: $text-color-light;
                 border: solid 1px $border-color-light;
                 @include border-radius(0);
                 &:hover,&:active,&:focus,&:visited{
-                    color:#282828;
+                    color: $text-color-dark;
                     border: solid 1px $border-color-light;
-                    background:#fff;
+                    background: $background-color-white;
                 }
             }
         }

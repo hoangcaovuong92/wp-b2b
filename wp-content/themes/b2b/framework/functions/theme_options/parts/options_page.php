@@ -8,8 +8,8 @@ Redux::setSection( $opt_name, array(
 ) );
 
 Redux::setSection( $opt_name, array(
-    'title'            => __( 'Replace Page', 'feellio' ),
-    'id'               => 'wd_replace_page',
+    'title'            => __( 'Account Page', 'feellio' ),
+    'id'               => 'wd_account_page',
     'subsection'       => true,
     'customizer_width' => '450px',
     'desc'             => __( 'Options to change the link and content of the default pages such as login, register, forgot password... You can use the available WPDance shortcodes to create page content.', 'feellio' ),

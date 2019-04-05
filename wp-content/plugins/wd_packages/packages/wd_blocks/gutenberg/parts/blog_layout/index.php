@@ -59,6 +59,8 @@ if (!class_exists('WD_Block_Blog_Grid_List')) {
                 'loadmore'  => __('Infinite Scroll', 'wd_package'),
                 '0'         => __('No Show', 'wd_package'),
             );
+            
+            $fullwidth_mode = wd_get_list_tvgiao_boolean();
 
             //$this->get_toggle_block('test', 'Toggle', true);
             $this->get_api_block('id_category', 'post_categories', __('Select Category', 'wd_package'));
@@ -74,6 +76,7 @@ if (!class_exists('WD_Block_Blog_Grid_List')) {
             $this->get_select_block('grid_hover_style', $grid_hover_style, __('Grid Hover Style', 'wd_package'), 'normal');
             $this->get_text_block('excerpt_words', __('Number of excerpt words', 'wd_package'), 20);
             $this->get_select_block('pagination_loadmore', $pagination_loadmore, __('Show Pagination/Load More', 'wd_package'), 'pagination');
+            $this->get_select_block('fullwidth_mode', $fullwidth_mode, __('Fullwidth Mode', 'wd_package'), 0);
             $this->get_text_block('class', __('Extra class name', 'wd_package'), '');
         }
 	}

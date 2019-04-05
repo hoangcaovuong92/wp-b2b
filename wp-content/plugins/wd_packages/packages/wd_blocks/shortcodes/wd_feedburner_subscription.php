@@ -7,10 +7,15 @@ if(!function_exists('wd_feedburner_subscription_function')){
 			'placeholder_text'		=> "Enter your email address",
 			'button_text'			=> "Subscribe",
 			'feedburner_id'			=> "WpComic-Manga",
+			'fullwidth_mode'		=> false,
 			'class'					=> ''
 		),$atts));
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+		
 		ob_start(); ?>
-		<div class="subscribe_widget <?php echo esc_attr( $class ); ?>">
+		<div class="wd-shortcode wd-shortcode-feedburner-subscription <?php echo esc_attr( $class ); ?>">
 			<?php if($title != "") : ?>
 				<div class="wd-subscribe-header">
 					<h2><?php echo esc_attr( $title ); ?></h2>
@@ -31,7 +36,7 @@ if(!function_exists('wd_feedburner_subscription_function')){
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
 				"use strict";
-				var subscribe_input = jQuery(".subscribe_widget input.subscribe_email");
+				var subscribe_input = jQuery(".wd-shortcode-feedburner-subscription input.subscribe_email");
 				var value_default = subscribe_input.attr('data-default');
 				subscribe_input.val(value_default);
 				if( jQuery(this).val() === "" ) jQuery(this).val(value_default);

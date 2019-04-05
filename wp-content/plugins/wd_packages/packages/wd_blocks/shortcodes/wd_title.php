@@ -14,33 +14,38 @@ if (!function_exists('wd_title_function')) {
 			'display_button'	=> '0',
 			'button_text'		=> 'View All',
 			'button_url'		=> '#',
+			'fullwidth_mode' 	=> false,
 			'class' 			=> ''
 		), $atts));
 		$title_color 	= $title_color != '' ? 'style="color: '.$title_color.';"' : '';
 		$highlight_color 	= $highlight_color != '' ? 'style="color: '.$highlight_color.';"' : '';
 		$desc_color 	= $desc_color != '' ? 'style="color: '.$desc_color.';"' : '';
+
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
 		ob_start(); ?>
-			<?php if($title != "" || $description != "" || $display_button) : ?>
-				<div class="wd-title <?php echo esc_attr($heading_type); ?> <?php echo esc_attr($class); ?>">
-					<?php if ($title != ''): ?>
-						<?php $title = ($title_highlight != '') ? str_replace($title_highlight, '<span class="wd-title-highlight" '.$highlight_color.'>'.$title_highlight.'</span>', $title) : esc_html($title); ?>
-						<<?php echo esc_html($heading_element); ?> class="wd-title-heading <?php echo esc_html($text_align); ?>" <?php echo $title_color; ?>><?php echo $title; ?></<?php echo esc_html($heading_element); ?>>		
-					<?php endif ?>		
-					<?php if($description != "" || $display_button) : ?>
-						<div class="wd-title-description <?php echo esc_attr($text_align); ?>" <?php echo $desc_color; ?>>
-							<?php if ($description != ''): ?>
-								<?php echo $description; ?>
-							<?php endif ?>
-							<?php if($description != "" && $display_button) : ?>
-								<?php _e(' | ','wd_package') ?>
-							<?php endif; ?>
-							<?php if($display_button) : ?>
-								<a target="_blank" href="<?php echo esc_url($button_url);?>"><?php echo esc_html($button_text); ?></a>
-							<?php endif; ?>
-						</div>	
-					<?php endif ?>	
-				</div> 
-			<?php endif ?>	
+		<?php if($title != "" || $description != "" || $display_button) : ?>
+			<div class="wd-shortcode wd-shortcode-title wd-title <?php echo esc_attr($heading_type); ?> <?php echo esc_attr($class); ?>">
+				<?php if ($title != ''): ?>
+					<?php $title = ($title_highlight != '') ? str_replace($title_highlight, '<span class="wd-title-highlight" '.$highlight_color.'>'.$title_highlight.'</span>', $title) : esc_html($title); ?>
+					<<?php echo esc_html($heading_element); ?> class="wd-title-heading <?php echo esc_html($text_align); ?>" <?php echo $title_color; ?>><?php echo $title; ?></<?php echo esc_html($heading_element); ?>>		
+				<?php endif ?>		
+				<?php if($description != "" || $display_button) : ?>
+					<div class="wd-title-description <?php echo esc_attr($text_align); ?>" <?php echo $desc_color; ?>>
+						<?php if ($description != ''): ?>
+							<?php echo $description; ?>
+						<?php endif ?>
+						<?php if($description != "" && $display_button) : ?>
+							<?php _e(' | ','wd_package') ?>
+						<?php endif; ?>
+						<?php if($display_button) : ?>
+							<a target="_blank" href="<?php echo esc_url($button_url);?>"><?php echo esc_html($button_text); ?></a>
+						<?php endif; ?>
+					</div>	
+				<?php endif ?>	
+			</div> 
+		<?php endif ?>	
 		<?php
 		$output = ob_get_clean();
 		wp_reset_postdata();
@@ -94,13 +99,14 @@ if (!function_exists('wd_title_vc_map')) {
 					'description' 		=> '',
 				),
 				array(
-					  "type" 			=> "colorpicker",
-					  "class" 			=> "",
-					  "heading" 		=> __( "Title Color", 'wd_package' ),
-					  "param_name"		=> "title_color",
-					  "value" 			=> '', 
-					  "description" 	=> __( "Choose text color...", 'wd_package' ),
-					  'edit_field_class' => 'vc_col-sm-6',
+					"type" 			=> "colorpicker",
+					"class" 			=> "",
+					"heading" 		=> __( "Title Color", 'wd_package' ),
+					"param_name"		=> "title_color",
+					"value" 			=> '', 
+					"description" 	=> __( "Choose text color...", 'wd_package' ),
+					'edit_field_class' => 'vc_col-sm-6',
+					'dependency'  	=> array('element' => "title", 'not_empty' => true),
 				),
 				array(
 					"type" 			=> "colorpicker",
@@ -113,13 +119,14 @@ if (!function_exists('wd_title_vc_map')) {
 					'dependency'  	=> array('element' => "title_highlight", 'not_empty' => true),
 			  ),
 				array(
-					  "type" 			=> "colorpicker",
-					  "class" 			=> "",
-					  "heading" 		=> __( "Description Color", 'wd_package' ),
-					  "param_name"		=> "desc_color",
-					  "value" 			=> '', 
-					  "description" 	=> __( "Choose text color...", 'wd_package' ),
-					  'edit_field_class' => 'vc_col-sm-6',
+					"type" 			=> "colorpicker",
+					"class" 			=> "",
+					"heading" 		=> __( "Description Color", 'wd_package' ),
+					"param_name"		=> "desc_color",
+					"value" 			=> '', 
+					"description" 	=> __( "Choose text color...", 'wd_package' ),
+					'edit_field_class' => 'vc_col-sm-6',
+					'dependency'  	=> array('element' => "description", 'not_empty' => true),
 				),
 				array(
 					'type' 			=> 'dropdown',

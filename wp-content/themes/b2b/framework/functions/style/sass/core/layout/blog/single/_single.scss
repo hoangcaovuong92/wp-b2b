@@ -84,8 +84,8 @@
 			margin-bottom: 60px;
 		}
 
-		.wd-next-previous-post{
-			margin-bottom: 80px;
+		+ .wd-comment-form-wrap{
+			margin-top: 80px;
 		}
 
 		.wd-blog-content-wrap{
@@ -197,7 +197,7 @@
 				}
 				.wd-navi-next, .wd-navi-prev{
 					z-index: zIndex("lower");
-					background-color: $background-color-light;
+					background-color: $background-color-white;
 					a{
 						text-transform: uppercase;
 						font-weight: fontWeight("bold");

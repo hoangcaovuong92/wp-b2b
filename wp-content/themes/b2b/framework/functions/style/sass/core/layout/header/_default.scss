@@ -13,14 +13,14 @@
     .wd-megamenu-wrap, .wd-menu-desktop{
         @include flex-grow(1);
     }
-    .wd-social-icons{
+    .wd-shortcode-social-icons{
         margin-right: 10px;
         +.wd-megamenu-wrap, + .wd-menu-desktop{
             text-align: center;
         }
     }
-
-    .wd-navUser-list{
+    
+    .wd-megamenu-wrap + .wd-desktop-screen .wd-navUser-list{
         margin-left: 10px;
     }
 

@@ -7,7 +7,7 @@
         top:0;
     }
     #TB_ajaxContent{
-    	background:#fff;
+    	background: $background-color-white;
         overflow: hidden;
     	@include breakpoint('max', 'tablet') {
 			padding-bottom:100px;
@@ -39,7 +39,7 @@
                 }
                 button.button{
                     width: 100%;
-                    @include button_style(1);
+                    @include button_style(primary);
                     height: 35px;
                     padding: 0;
                     margin-top: -15px;
@@ -80,7 +80,7 @@
                     background:none;
                     &:hover, &:focus{
                         .tb-close-icon {
-                            color: #282828;
+                            color: $text-color-dark;
                         }
                     }
                 } 
@@ -89,7 +89,7 @@
     }
     #TB_title{
     	border-bottom: none;
-    	background:#fff;
+    	background: $background-color-white;
         #TB_ajaxWindowTitle {
             text-align: center;
             margin:20px;

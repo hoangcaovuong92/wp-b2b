@@ -185,7 +185,7 @@ if ( ! function_exists( 'wd_product_by_category_tabs' ) ) {
 			$class_masonry_item = ($masonry_enable) ? 'wd-product-mansonry-item' : '';
 			?>
 			<div id="<?php echo esc_attr( $random_id ); ?>" class="<?php echo esc_attr( $class_masonry_wrap ); ?>">
-				<div class="wd-products-wrapper <?php echo esc_html($columns_product); ?> products-by-category-tabs-products">
+				<div class="wd-products-wrapper <?php echo esc_html($columns_product); ?> wd-products-by-category-tabs-products">
 
 					<?php if ($is_slider == '1') : ?>
 						<div class="products grid">
@@ -245,7 +245,7 @@ if ( ! function_exists( 'wd_product_by_category_tabs' ) ) {
 						</ul>
 					<?php endif ?>
 
-				</div><!-- .products-by-category-tabs-products -->
+				</div>
 				
 				<?php if( $show_nav && $is_slider ){ ?>
 					<div class="slider_control">

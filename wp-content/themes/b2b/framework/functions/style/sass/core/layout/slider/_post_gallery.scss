@@ -8,8 +8,8 @@
         &.slick-prev, &.slick-next{
             z-index: 2;
             &:before{
-                color: #282828;
-                background: #ffffff;
+                color: $text-color-dark;
+                background-color: $background-color-white;
                 padding: 10px 3px;
                 @include border-radius(2px);
             }

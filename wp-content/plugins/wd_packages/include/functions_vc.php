@@ -1,7 +1,8 @@
 <?php
 // Get Data Choose for visual composer
+// $value_type : id / slug
 if(!function_exists ('wd_vc_get_data_by_post_type')){
-	function wd_vc_get_data_by_post_type($post_type = 'post', $args = array()){
+	function wd_vc_get_data_by_post_type($post_type = 'post', $args = array(), $value_type = "id"){
 		$args_default = array(
 			'post_type'			=> $post_type,
 			'post_status'		=> 'publish',
@@ -9,14 +10,14 @@ if(!function_exists ('wd_vc_get_data_by_post_type')){
 		);
 		$args = wp_parse_args( $args, $args_default );
 		$data_array = array();
-		global $post;
 		$data = new WP_Query($args);
 		if( $data->have_posts() ){
 			while( $data->have_posts() ){
+				global $post;
 				$data->the_post();
 				$data_array[] = array(
 					'label' => html_entity_decode( $post->post_title, ENT_QUOTES, 'UTF-8' ).' ('.$post->ID.')',
-					'value' => $post->ID,	
+					'value' => ($value_type === "id") ? $post->ID : $post->post_name,
 				);
 			}
 		}else{
@@ -111,6 +112,24 @@ if(!function_exists ('wd_vc_get_list_flex_align_class')){
 			__( 'Left ', 'wd_package' ) 	=> 'wd-flex-justify-left',
 			__( 'Center', 'wd_package' )	=> 'wd-flex-justify-center',
 			__( 'Right', 'wd_package' ) 	=> 'wd-flex-justify-right',
+		);
+	}
+}
+
+// Get List Button Style
+if(!function_exists ('wd_vc_get_list_button_style')){
+	function wd_vc_get_list_button_style(){
+		//primary / primary-border / primary-reverse / primary-reverse-border / secondary / secondary-border / secondary-reverse / secondary-reverse-border / disabled
+		return array(
+			__( 'Primary', 'wd_package' ) 					=> 'wd-button-primary',
+			__( 'Primary Border ', 'wd_package' ) 			=> 'wd-button-primary-border',
+			__( 'Primary Reverse ', 'wd_package' ) 			=> 'wd-button-primary-reverse',
+			__( 'Primary Reverse Border ', 'wd_package' ) 	=> 'wd-button-primary-reverse-border',
+			__( 'Secondary', 'wd_package' ) 				=> 'wd-button-secondary',
+			__( 'Secondary Border ', 'wd_package' ) 		=> 'wd-button-secondary-border',
+			__( 'Secondary Reverse ', 'wd_package' ) 		=> 'wd-button-secondary-reverse',
+			__( 'Secondary Reverse Border ', 'wd_package' ) => 'wd-button-secondary-reverse-border',
+			__( 'Disabled', 'wd_package' ) 					=> 'wd-button-disabled',
 		);
 	}
 }
@@ -228,6 +247,10 @@ if ( ! function_exists( 'wd_vc_get_sort_by_values' ) ) {
 if ( ! function_exists( 'wd_vc_get_list_blog_special_layout' ) ) {
 	function wd_vc_get_list_blog_special_layout() {
 		return  array(
+			array(
+				0 => 'category',
+		      	1 =>  __( 'Category', 'wd_package' ),
+			),
 			array(
 				0 => 'title',
 		      	1 =>  __( 'Title', 'wd_package' ),

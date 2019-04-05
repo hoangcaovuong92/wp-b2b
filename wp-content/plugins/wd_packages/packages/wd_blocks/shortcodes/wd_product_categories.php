@@ -13,6 +13,7 @@ if (!function_exists('wd_product_categories_function')) {
 			'thumbnail'			=> '1',
 			'readmore'			=> '1',
 			'meta'				=> '1',
+			'fullwidth_mode' 	=> false,
 			'class'				=> ''
 
 		), $atts));
@@ -30,14 +31,17 @@ if (!function_exists('wd_product_categories_function')) {
 		$columns_product 	= 'wd-columns-'.$columns.' wd-tablet-columns-'.$columns_tablet.' wd-mobile-columns-'.$columns_mobile;
 		$product_categories = get_terms( 'product_cat', $args );
 		$num_count 			= count($product_categories);
-		$i 					= 0;
-		$random_id 			= 'wd-shortcode-product-category-'.rand(0, 1000);	
-		ob_start(); ?>
+		$random_id 			= 'wd-shortcode-product-category-'.rand(0, 1000);
 
+		//Fullwidth mode class (gutenberg)
+		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
+		ob_start(); ?>
 		<?php if( $num_count > 0 ) : ?>
-			<div id="<?php echo esc_html($random_id); ?>" class="wd-shortcode-product-category woocommerce <?php echo esc_html($columns_product); ?> <?php echo esc_html($style); ?>">
+			<div id="<?php echo esc_html($random_id); ?>" class="wd-shortcode wd-shortcode-product-category woocommerce <?php echo esc_html($columns_product); ?> <?php echo esc_html($style); ?> <?php echo esc_attr($class); ?>">
 				<ul class="wd-shortcode-product-category-content wd-columns-list-item" >
-				<?php foreach( $product_categories as $cat ) { ?>
+				<?php foreach( $product_categories as $cat ) {
+					$i = 0; ?>
 					<li class="item <?php if( $i == 0 || $i % $columns == 0 ) echo ' first';?><?php if( $i == $num_count-1 || $i % $columns == $columns-1 ) echo ' last';?>" >
 						<?php
 							$title_category 		= $cat->name;
@@ -67,7 +71,8 @@ if (!function_exists('wd_product_categories_function')) {
 				
 						</div>
 					</li>			
-				<?php $i++; } // End While ?>
+					<?php $i++; 
+				} // End While ?>
 				</ul>
 			</div>
 		<?php endif; ?>

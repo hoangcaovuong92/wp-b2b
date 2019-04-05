@@ -1,75 +1,73 @@
-/*================ CONTACT ================*/
-.contact-detail{
-    h5{margin-bottom:5px;}
-    p{margin-bottom:0;}
-}
-.wpcf7{
-    .wpcf7-form{
-        text-transform:uppercase;
-        color: $color-textBase;
-        .wpcf7-form-control{
-            width:100%;
-            margin-top: 3px;
-            margin-bottom: 13px;
-            @include border-radius(0);
-            &.wpcf7-submit{
-                font-size: 13px;
-                width:auto;
-                float: right;
-				border:solid 1px $border-color-dark;
-				@include text_color_hover(#fff, #282828);
-				@include background_color_hover(#282828, #fff);
-            }
-        }
-        p.col-sm-24{
-            .wpcf7-form-control.wpcf7-submit{width:100%;}
-        }
-    }
+.wd-shortcode-profile {
+	+.wd-shortcode-contact-form {
+		margin-top: 40px;
+	}
 }
 
-.contact-page{
-	span{
-		margin-bottom: 15px;
+.wd-shortcode-contact-form{
+	.wd-contact-form-message{
+		textarea{
+			margin: 0;
+		}
+	}
+	.wd-contact-form-info{
+		@include flexbox; 
+		@include flex-direction(column);
+		>*{
+			@include flex(1);
+		}
 		input{
-			width: 100%;
-		    height: 50px;
-		    margin-top: 15px;
-		    margin-bottom: 15px;
-			@include border-radius(0);
+			width:100%;
+			margin: 0;
+			border: 1px solid $border-color-light;
+			margin-bottom: 7px;
+			&:hover, &:active{
+				border-top-width: 1px;
+				border-right-width: 1px !important;
+				border-color: $border-color-dark;
+			}
+		}
+		@include breakpoint('min', 'tablet') {
+			margin-top: -7px;
+			@include flex-direction(row);
+			input{
+				margin-bottom: 0;
+				border-top-width: 0;
+				height: 50px;
+				line-height: 50px;
+			}
+			>*{
+				&:not(:last-child){
+					input{
+						border-right-width: 0;
+					}
+				}
+			}
 		}
 	}
-	.wpcf7 .wpcf7-form .wpcf7-form-control.wpcf7-submit {
-	    font-size: 13px;
-	    width: auto;
-	    float: left;
-	    padding:10px 20px;
-	    @include button_style(1);
-	}
-	.wpb_wrapper .wd-title.wd-title-section-style-1 .wd-title-description.text-center {
-	    text-align: left;
-	    margin:25px 0;
-	}
-	.feature_information{
-		.feature_excerpt{
-			margin-top: 15px;
-		}
-	}
-	div.wpcf7-validation-errors {
-	    border: 1px solid $border-color-alert;
-	    margin: 30px 0;
-	}
-	div.wpcf7 .ajax-loader {
-	    margin-top: 10px;
-	}
-}
 
-@include breakpoint('max', 'desktop') {
-    .contact-page span {
-        padding: 0;
+	//alert
+	.wpcf7-not-valid-tip{
+		color: $text-color-alert;
+		font-size: fontSize("tiny");
+		margin-top: 5px;
+		@include breakpoint('max', 'tablet') {
+			margin-bottom: 5px;
+		}
 	}
-	.page {
-        .contact-page {
-            margin: 0;
-        }
+	//notice
+	.wpcf7-response-output{
+		margin: 20px 0 0;
+	}
+
+	.wd-contact-form-alert{
+		margin-top: 30px;
+		color: $color-textBase;
+		.wd-icon{
+			margin-right: 5px;
+		}
+	}
+	.wd-contact-form-submit{
+		margin-top: 20px;
 	}
 }

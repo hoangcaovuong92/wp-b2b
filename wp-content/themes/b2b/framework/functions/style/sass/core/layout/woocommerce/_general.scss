@@ -15,7 +15,6 @@
 			}
 			span{
 				font-size: 13px;
-				color: #282828;
 				font-weight: fontWeight("semibold");
 			}
 		}
@@ -23,7 +22,6 @@
 			border-top-color: $border-color-dark;
 			&:before{
 			    content: '\e015';
-			    color: #212121;
 			}
 		}
 	}
@@ -32,7 +30,6 @@
 			float: left;
 			.woocommerce-Price-amount.amount{
 				font-size: 14px;
-				color: #000;
 				font-weight: fontWeight("semibold");
 			}
 			ins{
@@ -47,7 +44,6 @@
 				margin-left: 10px;
 				.amount{
 					font-weight: initial !important;
-					color: #8b8b8b !important;
 				}
 			}
 			&:after{
@@ -93,13 +89,7 @@
 					border:solid 1px $border-color-dark;
 					text-align:center;
 					font-size: 13px;
-					color: #000;
-					background:#fff;
 					@include border-radius(0);
-					&:hover{
-						background: #282828;
-						color: #fff;
-					}
 				}
 			}
 			input.woocommerce-form__input-checkbox{
@@ -136,7 +126,6 @@
 		    border:solid 1px $border-color-dark;
 		    padding:10px 100px;
 		    font-size: 13px;
-		    color: #282828;
 		    text-transform: uppercase;
 		}
 	}
@@ -150,12 +139,9 @@
 	}
 	#payment #place_order,&.woocommerce-page #payment #place_order {
 		&:hover,&:active,&:focus {
-			background-color: #fff;
-			color: #fff;
 		}
 	}
 	.cart-form form table.shop_table thead tr th {
-		background-color: #212121;
 	}
 
 	&.wd-columns-1{
@@ -167,15 +153,12 @@
 	.woocommerce-error {
 	    border-top-color: $border-color-dark !important;
 		.wc-backward {
-			color: #fff;
 		}
 		&::before {
-		    color: #282828 !important;
 		}
 	}
 	.woocommerce-info {
 		.showcoupon {
-			color: #212121;
 		}
 	}
 }

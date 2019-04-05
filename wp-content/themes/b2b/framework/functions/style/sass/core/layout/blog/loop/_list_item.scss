@@ -69,16 +69,16 @@
 	.wd-content-post-format--image{
 		&.wd-post-without-thumbnail {
 			.wd-blog-content-wrap .wd-title-blog-wrap .wd-title-blog a {
-				color: #fff;
+				color: $text-color-light;
 			}
 			.wd-blog-meta--date {
-				color: #fff;
+				color: $text-color-light;
 			}
 			.wd-date-post-my span{
-				color: #fff;
+				color: $text-color-light;
 			}
 			.readmore a{
-				color: #fff;
+				color: $text-color-light;
 			}
 		}
     }

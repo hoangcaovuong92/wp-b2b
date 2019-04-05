@@ -7,6 +7,7 @@ if( !function_exists('wd_is_woocommerce') ){
 	} 
 }
 
+//Check VC
 if( !function_exists('wd_is_visual_composer') ){
 	function wd_is_visual_composer(){
 		$_actived = apply_filters( 'active_plugins', get_option( 'active_plugins' )  );
@@ -21,6 +22,13 @@ if( !function_exists('wd_is_wishlist_active') ){
 		return ( !in_array( "yith-woocommerce-wishlist/init.php", $_actived ) ) ? false : true;
 	} 
 }
+
+if( !function_exists('wd_is_contact_form_7') ){
+	function wd_is_contact_form_7(){
+		$_actived = apply_filters( 'active_plugins', get_option( 'active_plugins' )  );
+		return ( !in_array( "contact-form-7/wp-contact-form-7.php", $_actived ) ) ? false : true;
+	} 
+} 
 
 // Custom Encode
 // use : $encoded = wd_encode("help me vanish" , "ticket_to_haven");
@@ -87,9 +95,27 @@ if(!function_exists ('wd_get_data')){
 	}
 }
 
+// Get post ID by post slug
+if(!function_exists ('wd_get_post_id_by_slug')){
+	function wd_get_post_id_by_slug($slug = '', $post_type = 'post'){
+		if (empty($slug)) return false;
+		$post = get_page_by_path($slug, OBJECT, $post_type);
+		return $post ? $post->ID : false;
+	}
+}
+
+// Get post title by post slug
+if(!function_exists ('wd_get_post_title_by_slug')){
+	function wd_get_post_title_by_slug($slug = '', $post_type = 'post'){
+		if (empty($slug)) return false;
+		$post = get_page_by_path($slug, OBJECT, $post_type);
+		return $post ? $post->post_title : false;
+	}
+}
+
 // Get Data Choose for visual composer
 if(!function_exists ('wd_get_data_by_post_type')){
-	function wd_get_data_by_post_type($post_type = 'post', $args = array()){
+	function wd_get_data_by_post_type($post_type = 'post', $args = array(), $value_type = "id"){
 		$args_default = array(
 			'post_type'			=> $post_type,
 			'post_status'		=> 'publish',
@@ -97,12 +123,16 @@ if(!function_exists ('wd_get_data_by_post_type')){
 		);
 		$args = wp_parse_args( $args, $args_default );
 		$data_array = array();
-		global $post;
 		$data = new WP_Query($args);
 		if( $data->have_posts() ){
 			while( $data->have_posts() ){
+				global $post;
 				$data->the_post();
-				$data_array[$post->ID] = html_entity_decode( $post->post_title, ENT_QUOTES, 'UTF-8' ).' ('.$post->ID.')';
+				if ($value_type === "id") {
+					$data_array[$post->ID] = html_entity_decode( $post->post_title, ENT_QUOTES, 'UTF-8' ).' ('.$post->ID.')';
+				} else {
+					$data_array[$post->post_name] = html_entity_decode( $post->post_title, ENT_QUOTES, 'UTF-8' ).' ('.$post->ID.')';
+				}
 			}
 		}else{
 			$data_array[] = sprintf(__( "Please add data for \"%s\" before", 'wd_package' ), $post_type);
@@ -206,7 +236,25 @@ if(!function_exists ('wd_get_list_flex_align_class')){
 		return array(
 			'wd-flex-justify-left'		=> __( 'Left ', 'wd_package' ),
 			'wd-flex-justify-center'	=> __( 'Center', 'wd_package' ),
-			'wd-flex-justify-right'	=> __( 'Right', 'wd_package' ),
+			'wd-flex-justify-right'		=> __( 'Right', 'wd_package' ),
+		);
+	}
+}
+
+// Get List Button Style
+if(!function_exists ('wd_get_list_button_style')){
+	function wd_get_list_button_style(){
+		//primary / primary-border / primary-reverse / primary-reverse-border / secondary / secondary-border / secondary-reverse / secondary-reverse-border / disabled
+		return array(
+			'wd-button-primary'					=> __( 'Primary', 'wd_package' ),
+			'wd-button-primary-border'			=> __( 'Primary Border ', 'wd_package' ),
+			'wd-button-primary-reverse'			=> __( 'Primary Reverse ', 'wd_package' ),
+			'wd-button-primary-reverse-border'	=> __( 'Primary Reverse Border ', 'wd_package' ),
+			'wd-button-secondary'				=> __( 'Secondary', 'wd_package' ),
+			'wd-button-secondary-border'		=> __( 'Secondary Border ', 'wd_package' ),
+			'wd-button-secondary-reverse'		=> __( 'Secondary Reverse ', 'wd_package' ),
+			'wd-button-secondary-reverse-border'=> __( 'Secondary Reverse Border ', 'wd_package' ),
+			'wd-button-disabled'				=> __( 'Disabled', 'wd_package' ),
 		);
 	}
 }
