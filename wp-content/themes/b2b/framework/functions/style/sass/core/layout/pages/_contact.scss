@@ -21,7 +21,7 @@
 			margin: 0;
 			border: 1px solid $border-color-light;
 			margin-bottom: 7px;
-			&:hover, &:active{
+			&:hover, &:active, &:focus{
 				border-top-width: 1px;
 				border-right-width: 1px !important;
 				border-color: $border-color-dark;

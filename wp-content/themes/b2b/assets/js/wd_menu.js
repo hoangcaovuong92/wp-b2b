@@ -295,6 +295,18 @@ if (typeof wd_fix_wpadminbar_position_on_mobile != 'function') {
 //Menu general
 if (typeof wd_menu_general_script != 'function') { 
 	function wd_menu_general_script(){
+		// smooth scroll to div id jquery
+		jQuery("a").click(function(e) {
+			var link = jQuery(this).attr("href");
+			//If link have an element id/class
+			if (jQuery(link).length) {
+				e.preventDefault();
+				jQuery('html, body').animate({
+					scrollTop: jQuery(link).offset().top
+				}, 1000);
+			}
+		});
+		
 		//Mega menu
 		jQuery('a.wd-mega-menu').next().addClass('wd-mega-menu-wrap');
 		if (jQuery('#header').length && jQuery('#wd-header-main-breadcrumb').length) {

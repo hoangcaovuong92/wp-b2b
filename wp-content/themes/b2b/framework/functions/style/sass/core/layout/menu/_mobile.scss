@@ -7,9 +7,9 @@
     > li.page_item{
         &:not(:last-child){
             border-bottom: solid 1px $navPages-subMenu-border-Color;
-            >a{
-                text-transform: uppercase;
-            }
+        }
+        >a{
+            text-transform: uppercase;
         }
     }
     li.menu-item,

@@ -153,11 +153,12 @@ aside {
     .wd-title-heading{
         width: 100%;
         font-family: $headings-font;
-        text-transform: uppercase;
+        //text-transform: uppercase;
         margin: 0;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.1em;
         font-weight: fontWeight("semibold");
-        font-size: fontSize("large") - 2;
+        //font-size: fontSize("large") - 2;
+        font-size: fontSize("largest");
     }
     .wd-title-description{
         color: $color-textHeading--desc;

@@ -22,7 +22,7 @@ if (!function_exists('wd_banner_image_plus_function')) {
 			'position_content'	=> 'center',
 			'border_content'	=> '1',
 			'show_button'		=> '1',
-			'button_style'		=> 'style-1',
+			'button_style'		=> 'wd-button-primary',
 			'link_type'			=> 'category_link',
 			'url'				=> '#',
 			'id_category' 		=> '',
@@ -45,7 +45,6 @@ if (!function_exists('wd_banner_image_plus_function')) {
 		}
 		
 		$position_content_class = 'wd-banner-image-position-content-'.$position_content;
-		$button_style_class 	= 'wd-banner-image-button-'.$button_style;
 		$border_content_class   = ($border_content == 1) ? 'wd-banner-plus-with-border_content' : '';
 		$image_attr				= array(
 			'alt' 		=> get_bloginfo('name').' - Banner Image Plus',
@@ -136,7 +135,7 @@ if (!function_exists('wd_banner_image_plus_function')) {
 
 							<?php if($show_button == '1'):?>
 								<div class="wd-banner-plus-button">
-									<a class="<?php echo esc_attr($button_style_class); ?> <?php echo esc_attr($button_class); ?>" href="<?php echo esc_url($link_url); ?>"><?php echo esc_attr($button_text); ?></a>
+									<a class="<?php echo esc_attr($button_style); ?> <?php echo esc_attr($button_class); ?>" href="<?php echo esc_url($link_url); ?>"><?php echo esc_attr($button_text); ?></a>
 								</div>
 							<?php endif;?>
 						</div>
@@ -393,12 +392,7 @@ if (!function_exists('wd_banner_image_plus_vc_map')) {
 					'heading' 		=> esc_html__( 'Button Style', 'wd_package' ),
 					'param_name' 	=> 'button_style',
 					'admin_label' 	=> true,
-					'value' 		=> array(
-						esc_html__( 'Style 1', 'wd_package' ) 	=> 'style-1',
-						esc_html__( 'Style 2', 'wd_package' ) 	=> 'style-2',
-						esc_html__( 'Style 3', 'wd_package' ) 	=> 'style-3',
-						esc_html__( 'Style 4', 'wd_package' ) 	=> 'style-4',
-					),
+					'value' 		=> wd_vc_get_list_button_style(),
 					'description' 	=> '',
 					'group'			=> esc_html__( 'Button Setting', 'wd_package' ),
 					'edit_field_class' => 'vc_col-sm-6',

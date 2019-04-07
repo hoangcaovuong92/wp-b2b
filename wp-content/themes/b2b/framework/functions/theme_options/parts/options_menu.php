@@ -130,5 +130,14 @@ Redux::setSection( $opt_name, array(
             'default'  => $wd_default_data['menu']['pushmenu']['default']['panel_positon'],
             /*'required' => array('wd_header_layout','=',''),*/
         ),
+        array(
+            'id'       => 'wd_pushmenu_form_user',
+            'type'     => 'switch',
+            'title'    => __( 'Display User Actions', 'feellio' ),
+            'subtitle' => __( 'Enable/Disable user-action form on pushmenu mobile.', 'feellio' ),
+            'default'  => $wd_default_data['menu']['pushmenu']['default']['form_user'],
+            'on'       => 'Show',
+            'off'      => 'Hide',
+        ),
     )
 ) );

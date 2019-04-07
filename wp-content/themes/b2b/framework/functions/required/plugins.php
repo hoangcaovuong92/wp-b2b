@@ -40,6 +40,10 @@ if (!class_exists('WD_Plugins')) {
             }
         }
 
+        public function plugins_list(){
+            return $this->framework_plugins();
+        }
+
         public function framework_plugins(){
             return array(
                 array(
@@ -98,6 +102,18 @@ if (!class_exists('WD_Plugins')) {
                     'name'                  => esc_html__('Loco Translate', 'feellio'), // The plugin name
                     'desc'                  => esc_html__('Provides in-browser editing of WordPress translation files.', 'feellio'), // The plugin description
                     'slug'                  => 'loco-translate', // The plugin slug (typically the folder name)
+                    'required'              => false, // If false, the plugin is only 'recommended' instead of required
+                ),
+                array(
+                    'name'                  => esc_html__('Contact Form 7', 'feellio'), // The plugin name
+                    'desc'                  => esc_html__('Just another contact form plugin. Simple but flexible.', 'feellio'), // The plugin description
+                    'slug'                  => 'contact-form-7', // The plugin slug (typically the folder name)
+                    'required'              => false, // If false, the plugin is only 'recommended' instead of required
+                ),
+                array(
+                    'name'                  => esc_html__('Email Subscribers', 'feellio'), // The plugin name
+                    'desc'                  => esc_html__('Add subscription forms on website, send HTML newsletters & automatically notify subscribers about new blog posts once it is published.', 'feellio'), // The plugin description
+                    'slug'                  => 'email-subscribers', // The plugin slug (typically the folder name)
                     'required'              => false, // If false, the plugin is only 'recommended' instead of required
                 ),
              ); //End plugins

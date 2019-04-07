@@ -19,41 +19,83 @@
 	text-align: justify;
 }
 
-//Button style
-.wd-button-primary{
-	@include button_style(primary);
+//Banner Hover style
+// border / flash / flash2 / maxzoom / gray / zoom / grayzoom
+.wd-banner-hover--border{
+    @include banner_style(border);
+}
+.wd-banner-hover--flash{
+    @include banner_style(flash);
+}
+.wd-banner-hover--flash2{
+    @include banner_style(flash2);
+}
+.wd-banner-hover--maxzoom{
+    @include banner_style(maxzoom);
+}
+.wd-banner-hover--gray{
+    @include banner_style(gray);
+}
+.wd-banner-hover--zoom{
+    @include banner_style(zoom);
+}
+.wd-banner-hover--grayzoom{
+    @include banner_style(grayzoom);
 }
 
-.wd-button-primary-border{
-	@include button_style(primary-border);
-}
+body {
+	//Button style
+	.wd-button-primary{
+		@include button_style(primary);
+	}
 
-.wd-button-primary-reverse{
-	@include button_style(primary-reverse);
-}
+	.wd-button-primary-border{
+		@include button_style(primary-border);
+	}
 
-.wd-button-primary-reverse-border{
-	@include button_style(primary-reverse-border);
-}
+	.wd-button-primary-reverse{
+		@include button_style(primary-reverse);
+	}
 
-.wd-button-secondary{
-	@include button_style(secondary);
-}
+	.wd-button-primary-reverse-border{
+		@include button_style(primary-reverse-border);
+	}
 
-.wd-button-secondary-border{
-	@include button_style(secondary-border);
-}
+	.wd-button-primary-outline{
+		@include button_style(primary-outline);
+	}
 
-.wd-button-secondary-reverse{
-	@include button_style(secondary-reverse);
-}
+	.wd-button-primary-text-only{
+		@include button_style(primary-text-only);
+	}
 
-.wd-button-secondary-reverse-border{
-	@include button_style(secondary-reverse-border);
-}
+	.wd-button-secondary{
+		@include button_style(secondary);
+	}
 
-.wd-button-disabled{
-	@include button_style(disabled);
+	.wd-button-secondary-border{
+		@include button_style(secondary-border);
+	}
+
+	.wd-button-secondary-reverse{
+		@include button_style(secondary-reverse);
+	}
+
+	.wd-button-secondary-reverse-border{
+		@include button_style(secondary-reverse-border);
+	}
+
+	.wd-button-secondary-outline{
+		@include button_style(secondary-outline);
+	}
+
+	.wd-button-secondary-text-only{
+		@include button_style(primary-text-only);
+	}
+
+	.wd-button-disabled{
+		@include button_style(disabled);
+	}
 }
 
 //Spacing

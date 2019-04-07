@@ -2,7 +2,7 @@
 if (!function_exists('wd_buttons_function')) {
 	function wd_buttons_function($atts) {
 		extract(shortcode_atts(array(
-			'button_style'		=> 'style-1',
+			'button_style'		=> 'wd-button-primary',
 			'link_type'			=> 'category_link',
 			'url'				=> '#',
 			'id_category' 		=> '-1',
@@ -27,15 +27,14 @@ if (!function_exists('wd_buttons_function')) {
 		}else{
 			$link_url = $url;
 		}
-		$button_style_class 	= 'wd-banner-image-button-'.$button_style;
-		$title_image			= get_bloginfo('name');
+		$title_image = get_bloginfo('name');
 
 		//Fullwidth mode class (gutenberg)
 		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 
 		ob_start(); ?>
 		<div class="wd-shortcode wd-shortcode-buttons <?php echo esc_attr($class); ?>">
-			<a class="<?php echo esc_attr($button_style_class); ?> <?php echo esc_attr($button_class); ?>" href="<?php echo esc_url($link_url); ?>" title="<?php echo esc_attr($title_image); ?>" <?php echo $color_style; ?>><?php echo esc_attr($button_text); ?></a>
+			<a class="<?php echo esc_attr($button_style); ?> <?php echo esc_attr($button_class); ?>" href="<?php echo esc_url($link_url); ?>" title="<?php echo esc_attr($title_image); ?>" <?php echo $color_style; ?>><?php echo esc_attr($button_text); ?></a>
 		</div>
 		<?php
 		$output = ob_get_clean();
@@ -62,7 +61,7 @@ if (!function_exists('wd_buttons_vc_map')) {
 					'heading' 		=> esc_html__( 'Button Style', 'wd_package' ),
 					'param_name' 	=> 'button_style',
 					'admin_label' 	=> true,
-					'value' 		=> wd_vc_get_list_style_class(10),
+					'value' 		=> wd_vc_get_list_button_style(),
 					'description' 	=> '',
 				),
 				array(

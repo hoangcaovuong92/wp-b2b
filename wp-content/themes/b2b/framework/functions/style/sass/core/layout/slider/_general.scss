@@ -65,9 +65,15 @@
     &.slick-slider{
         //overflow: hidden;
         ul.slick-dots{
-            bottom: 20px;
+            bottom: -40px;
             position: absolute;
-            z-index: 9;
+            z-index: zIndex("lower");
+            button{
+                min-height: unset;
+                &:before, &:after{
+                    font-size: fontSize("smaller");
+                }
+            }
         }
         .slick-up, .slick-down{
             left: 50%;

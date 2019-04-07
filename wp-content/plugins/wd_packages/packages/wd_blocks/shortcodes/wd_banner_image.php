@@ -4,7 +4,9 @@ if (!function_exists('wd_banner_image_function')) {
 		extract(shortcode_atts(array(
 			'image'			=> '',
 			'image_size'	=> 'full',
-			'hover_style'	=> 'style-1',
+			'hover_style'	=> 'wd-banner-hover--border',
+			'image_fullwidth'=> '1',
+			'show_button'	=> '1',
 			'button_text'	=> 'Shop Now',
 			'link_url'		=> "#",
 			'target'		=> '_blank',
@@ -25,17 +27,30 @@ if (!function_exists('wd_banner_image_function')) {
 			$button_style 	.= ($right != '') ? 'right:'. esc_attr($top) . ';' : '';
 		}
 
+		//Image fullwidth
+		$image_fullwidth_class = ($image_fullwidth) ? ' wd-image-fullwidth' : ' wd-image-width-auto'; 
+
 		//Fullwidth mode class (gutenberg)
 		$class .= ($fullwidth_mode) ? ' alignfull' : '';
+
+		//If link are blank or = '#", open full image in lightbox
+		$lightbox_class = '';
+		if (($link_url == '#' || !$link_url) && $image) {
+			$image_full = wp_get_attachment_image_src($image, 'full');
+			if (!empty($image_full) && is_array($image_full)) {
+				$link_url 	= $image_full[0];
+				$lightbox_class = 'wd-fancybox-image-gallery';
+			}
+		}
 		
 		ob_start(); ?>
 			<div class="wd-shortcode wd-shortcode-banner <?php echo esc_attr($class); ?>">	
-				<div class="wd-banner-image wd-banner-hover--<?php echo esc_attr($hover_style); ?>">
-					<a target="<?php echo esc_attr($target);?>" href="<?php echo esc_url($link_url)?>">
+				<div class="wd-banner-image <?php echo esc_attr($hover_style); ?><?php echo esc_attr($image_fullwidth_class); ?>">
+					<a class="<?php echo esc_attr($lightbox_class); ?>" target="<?php echo esc_attr($target);?>" href="<?php echo esc_url($link_url)?>">
 						<?php echo apply_filters('wd_filter_image_html', array('attachment' => $image, 'image_size' => $image_size)); ?>
 					</a>
 				</div>
-				<?php if($button_text !== '' ):?>
+				<?php if($show_button):?>
 					<div class="wd-banner-button wd-button-position--<?php echo esc_attr($button_position);?>"<?php echo $button_style ? ' style="'.$button_style.'"' : ''; ?>>
 						<a target="<?php echo esc_attr($target);?>" class="button" href="<?php echo esc_url($link_url)?>">
 							<?php echo esc_attr($button_text);?>
@@ -80,7 +95,25 @@ if (!function_exists('wd_banner_image_vc_map')) {
 					'heading' 		=> esc_html__( 'Hover Style', 'wd_package' ),
 					'param_name' 	=> 'hover_style',
 					'admin_label' 	=> true,
-					'value' 		=> wd_vc_get_list_style_class(3),
+					'value' 		=> wd_vc_get_list_banner_hover_style(),
+					'description' 	=> '',
+					'edit_field_class' => 'vc_col-sm-6',
+				),
+				array(
+					'type' 			=> 'dropdown',
+					'heading' 		=> esc_html__( 'Fullwidth', 'wd_package' ),
+					'param_name' 	=> 'image_fullwidth',
+					'admin_label' 	=> true,
+					'value' 		=> wd_vc_get_list_tvgiao_boolean(),
+					'description' 	=> '',
+					'edit_field_class' => 'vc_col-sm-6',
+				),
+				array(
+					'type' 			=> 'dropdown',
+					'heading' 		=> esc_html__( 'Show Button', 'wd_package' ),
+					'param_name' 	=> 'show_button',
+					'admin_label' 	=> true,
+					'value' 		=> wd_vc_get_list_tvgiao_boolean(),
 					'description' 	=> '',
 					'edit_field_class' => 'vc_col-sm-6',
 				),
@@ -92,6 +125,7 @@ if (!function_exists('wd_banner_image_vc_map')) {
 					'value' 		=> 'Shop Now',
 					"description" 	=> '',
 					'edit_field_class' => 'vc_col-sm-6',
+					'dependency'  	=> array('element' => "show_button", 'value' => array('1'))
 				),
 				array(
 					"type" 			=> "textfield",
@@ -101,7 +135,7 @@ if (!function_exists('wd_banner_image_vc_map')) {
 					'value' 		=> '#',
 					"description" 	=> '',
 					'edit_field_class' => 'vc_col-sm-6',
-					'dependency'  	=> array('element' => "button_text", 'not_empty' => true)
+					'dependency'  	=> array('element' => "show_button", 'value' => array('1'))
 				),
 				array(
 					"type" 			=> "dropdown",
@@ -113,7 +147,7 @@ if (!function_exists('wd_banner_image_vc_map')) {
 					"std" 			=> '_blank',
 					"description" 	=> "",
 					'edit_field_class' => 'vc_col-sm-6',
-					'dependency'  	=> array('element' => "button_text", 'not_empty' => true)
+					'dependency'  	=> array('element' => "show_button", 'value' => array('1'))
 				),
 				array(
 					"type" 				=> "dropdown",
@@ -128,7 +162,7 @@ if (!function_exists('wd_banner_image_vc_map')) {
 					),
 					"description" 		=> "",
 					'edit_field_class' 	=> 'vc_col-sm-6',
-					'dependency'  		=> array('element' => "button_text", 'not_empty' => true)
+					'dependency'  		=> array('element' => "show_button", 'value' => array('1'))
 				),
 				array(
 					"type" 			=> "textfield",

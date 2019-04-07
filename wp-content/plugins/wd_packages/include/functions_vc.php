@@ -116,19 +116,39 @@ if(!function_exists ('wd_vc_get_list_flex_align_class')){
 	}
 }
 
+// Get List Banner Hover Style
+if(!function_exists ('wd_vc_get_list_banner_hover_style')){
+	function wd_vc_get_list_banner_hover_style(){
+		//Style : border / flash / flash2 / maxzoom / gray / zoom / grayzoom
+		return array(
+			__( 'Border', 'wd_package' ) 		=> 'wd-banner-hover--border',
+			__( 'Flash', 'wd_package' ) 		=> 'wd-banner-hover--flash',
+			__( 'Flash Ver 2', 'wd_package' ) 	=> 'wd-banner-hover--flash2',
+			__( 'Max Zoom', 'wd_package' ) 		=> 'wd-banner-hover--maxzoom',
+			__( 'Gray', 'wd_package' ) 			=> 'wd-banner-hover--gray'	,
+			__( 'Zoom', 'wd_package' ) 			=> 'wd-banner-hover--zoom'	,
+			__( 'Gray Zoom', 'wd_package' ) 	=> 'wd-banner-hover--grayzoom',
+		);
+	}
+}
+
 // Get List Button Style
 if(!function_exists ('wd_vc_get_list_button_style')){
 	function wd_vc_get_list_button_style(){
-		//primary / primary-border / primary-reverse / primary-reverse-border / secondary / secondary-border / secondary-reverse / secondary-reverse-border / disabled
+		//Style : primary / primary-border / primary-reverse / primary-reverse-border /  primary-outline / primary-text-only / secondary / secondary-border / secondary-reverse / secondary-reverse-border / secondary-outline / secondary-text-only / disabled
 		return array(
 			__( 'Primary', 'wd_package' ) 					=> 'wd-button-primary',
-			__( 'Primary Border ', 'wd_package' ) 			=> 'wd-button-primary-border',
-			__( 'Primary Reverse ', 'wd_package' ) 			=> 'wd-button-primary-reverse',
-			__( 'Primary Reverse Border ', 'wd_package' ) 	=> 'wd-button-primary-reverse-border',
+			__( 'Primary Border', 'wd_package' ) 			=> 'wd-button-primary-border',
+			__( 'Primary Reverse', 'wd_package' ) 			=> 'wd-button-primary-reverse',
+			__( 'Primary Reverse Border', 'wd_package' ) 	=> 'wd-button-primary-reverse-border',
+			__( 'Primary Outline', 'wd_package' ) 			=> 'wd-button-primary-outline',
+			__( 'Primary Text Only', 'wd_package' ) 		=> 'wd-button-primary-text-only',
 			__( 'Secondary', 'wd_package' ) 				=> 'wd-button-secondary',
 			__( 'Secondary Border ', 'wd_package' ) 		=> 'wd-button-secondary-border',
 			__( 'Secondary Reverse ', 'wd_package' ) 		=> 'wd-button-secondary-reverse',
 			__( 'Secondary Reverse Border ', 'wd_package' ) => 'wd-button-secondary-reverse-border',
+			__( 'Secondary Outline', 'wd_package' ) 		=> 'wd-button-secondary-outline',
+			__( 'Secondary Text Only', 'wd_package' ) 		=> 'wd-button-secondary-text-only',
 			__( 'Disabled', 'wd_package' ) 					=> 'wd-button-disabled',
 		);
 	}

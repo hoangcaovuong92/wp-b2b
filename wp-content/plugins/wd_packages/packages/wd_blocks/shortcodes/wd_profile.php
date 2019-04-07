@@ -23,7 +23,7 @@ if (!function_exists('wd_profile_function')) {
 
 		ob_start(); ?>
 		<div class="wd-shortcode wd-shortcode-profile <?php echo esc_attr($class); ?>">	
-			<div class="wd-banner-image wd-banner-hover--style-1">
+			<div class="wd-banner-image wd-banner-hover--border">
 				<a target="<?php echo esc_attr($target);?>" href="<?php echo esc_url($website)?>">
 					<?php echo apply_filters('wd_filter_image_html', array('attachment' => $image, 'image_size' => $image_size)); ?>
 				</a>

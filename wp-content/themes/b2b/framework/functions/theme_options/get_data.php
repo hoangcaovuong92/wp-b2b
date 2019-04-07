@@ -194,7 +194,8 @@ if (!class_exists('WD_Get_Theme_Options')) {
 					'show_logo_title'	  	=> $this->get_option_value('header_show_site_title', $wd_default_data['header']['default']['site_title']),
 					'logo_default'	  		=> $this->get_option_value('logo', $wd_default_data['general']['default']['logo'], 'image'),
 					'logo_url'	  			=> $this->get_option_value('header_logo', $wd_default_data['general']['default']['logo'], 'image'),
-					'pushmenu_panel_position' => $this->get_option_value('pushmenu_panel_position', $wd_default_data['menu']['pushmenu']['default']['panel_positon']),
+					'panel_position' 		=> $this->get_option_value('pushmenu_panel_position', $wd_default_data['menu']['pushmenu']['default']['panel_positon']),
+					'form_user' 			=> $this->get_option_value('pushmenu_form_user', $wd_default_data['menu']['pushmenu']['default']['form_user']),
 				),
 	
 				'footer-default' => array(

@@ -79,7 +79,7 @@
     }
 } /* @include font_size_button($size); */
 
-//Style : primary / primary-border / primary-reverse / primary-reverse-border / secondary / secondary-border / secondary-reverse / secondary-reverse-border / disabled
+//Style : primary / primary-border / primary-reverse / primary-reverse-border /  primary-outline / primary-text-only / secondary / secondary-border / secondary-reverse / secondary-reverse-border / secondary-outline / secondary-text-only / disabled
 @mixin button_style($style: primary){
 	display: inline-block;
 	cursor: pointer;
@@ -107,14 +107,18 @@
 		@include text_color_hover($button--secondary-colorHover, $button--secondary-color);
 		@include background_color_hover($button--secondary-backgroundColorHover, $button--secondary-backgroundColor);
 		@include border_color_hover($button--secondary-borderColorHover, $button--secondary-borderColor);
+	}@else if $style == secondary-outline{
+		@include text_color_hover($button--secondary-colorHover, $button--secondary-color);
+		@include background_color_hover(transparent, transparent);
+		@include border_color_hover($button--secondary-borderColorHover, $button--secondary-borderColor);
+	}@else if $style == secondary-text-only{
+		@include text_color_hover($button--secondary-colorHover, $button--secondary-color);
+		@include background_color_hover(transparent, transparent);
+		@include border_color_hover(transparent, transparent);
 	}@else if $style == disabled{
 		@include text_color_hover($button--disabled-color, $button--disabled-color);
 		@include background_color_hover($button--disabled-backgroundColor, $button--disabled-backgroundColor);
 		@include border_color_hover($button--disabled-borderColor, $button--disabled-borderColor);
-	}@else if $style == transparent{
-		@include text_color_hover($button--default-colorHover, $button--default-color);
-		@include background_color_hover(transparent, transparent);
-		@include border_color_hover(transparent, transparent);
 	}@else if $style == primary-border{
 		@include text_color_hover($button--default-color, $button--default-colorHover);
 		@include background_color_hover($button--default-backgroundColor, $button--default-backgroundColorHover);
@@ -127,6 +131,14 @@
 		@include text_color_hover($button--default-colorHover, $button--default-color);
 		@include background_color_hover($button--default-backgroundColorHover, $button--default-backgroundColor);
 		@include border_color_hover($button--default-borderColorHover, $button--default-borderColor);
+	}@else if $style == primary-outline{
+		@include text_color_hover($button--default-colorHover, $button--default-color);
+		@include background_color_hover(transparent, transparent);
+		@include border_color_hover($button--default-borderColorHover, $button--default-borderColor);
+	}@else if $style == primary-text-only{
+		@include text_color_hover($button--default-colorHover, $button--default-color);
+		@include background_color_hover(transparent, transparent);
+		@include border_color_hover(transparent, transparent);
 	}@else{
 		@include text_color_hover($button--default-color, $button--default-colorHover);
 		@include background_color_hover($button--default-backgroundColor, $button--default-backgroundColorHover);
@@ -198,6 +210,7 @@
 		}
 	}@else if $style == flash2{
 		position: relative;
+		overflow: hidden;
 		&:before {
 			content: "";
 			position: absolute;

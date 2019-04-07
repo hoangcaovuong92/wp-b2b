@@ -378,14 +378,14 @@ if (!class_exists('WD_My_Account')) {
 			<div class="wd-login-user-action">
 				<?php $list_my_account_page  = $this->get_list_my_account_page(); ?>
 				<?php if(is_user_logged_in()): ?>	
-					<a href="<?php echo esc_url($list_my_account_page['login']); ?>" title="<?php esc_html_e('My Account', 'feellio');?>">
+					<a class="button wd-button-primary" href="<?php echo esc_url($list_my_account_page['login']); ?>" title="<?php esc_html_e('My Account', 'feellio');?>">
 						<span><?php esc_html_e('My Account', 'feellio');?></span> 
 					</a>
-					<a href="<?php echo esc_url($list_my_account_page['logout']); ?>" title="<?php esc_html_e('Logout', 'feellio');?>">
+					<a class="button wd-button-secondary" href="<?php echo esc_url($list_my_account_page['logout']); ?>" title="<?php esc_html_e('Logout', 'feellio');?>">
 						<span><?php esc_html_e('Logout', 'feellio');?></span> 
 					</a>
 				<?php else:?>
-					<a href="<?php echo esc_url($list_my_account_page['login']); ?>" title="<?php esc_html_e('Login or Register', 'feellio');?>">
+					<a class="button wd-button-primary" href="<?php echo esc_url($list_my_account_page['login']); ?>" title="<?php esc_html_e('Login or Register', 'feellio');?>">
 						<span><?php esc_html_e('Login / Register', 'feellio');?></span>
 					</a>
 				<?php endif;?>		

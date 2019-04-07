@@ -16,6 +16,8 @@ if (!function_exists('wd_do_shortcode_function')) {
 				<?php 
 				$shortcode = str_replace('`{`', '[', $shortcode);
 				$shortcode = str_replace('`}`', ']', $shortcode);
+				$shortcode = str_replace('``', '"', $shortcode);
+				$shortcode = str_replace('`', '\'', $shortcode);
 				echo do_shortcode( $shortcode ); ?>
 			<?php endif ?>
 		</div>

@@ -1,6 +1,6 @@
 #TB_window{
     border: 0px solid $border-color-dark;
-    background-color: rgba( 255, 255, 255, 1 );
+    background-color: rgba($background-color-white, 1 );
     @include border-radius(0);
     @include box-shadow(0, 3px, 2px, $border-color-dark);
     @include breakpoint('max', 'tablet') {
@@ -17,7 +17,7 @@
             text-align: center;
             margin-top: 0;
             h2{
-                color: #1a1a1a;
+                color: $text-color-dark;
                 font-size: 20px;
                 margin-top: 0;
             }
@@ -95,7 +95,7 @@
             margin:20px;
             padding: 0;
             span{
-                color: #1a1a1a;
+                color: $text-color-dark;
                 font-size: 20px;
             }
         }

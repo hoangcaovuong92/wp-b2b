@@ -49,6 +49,7 @@ if (!class_exists('WD_Compress_Images')) {
 		public function custom_upload_mimes($mimes = array()) {
 			// Add a key and value for the CSV file type
 			$mimes['csv'] = "text/csv";
+			$mimes['webp'] = "image/webp";
 			return $mimes;
 		}
 

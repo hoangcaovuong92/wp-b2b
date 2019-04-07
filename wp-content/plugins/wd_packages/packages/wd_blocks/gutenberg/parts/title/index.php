@@ -36,7 +36,6 @@ if (!class_exists('WD_Block_Title')) {
             $this->custom_style = false; //If set true, include editor.css and style.css
             $this->callback = 'wd_title_function';
 
-            $heading_type = wd_get_list_style_class(1, 'wd-title-style-');
             $heading_element = wd_get_list_heading_tag();
             $text_align = wd_get_list_text_align_bootstrap();
             $display_button = wd_get_list_tvgiao_boolean();
@@ -45,7 +44,9 @@ if (!class_exists('WD_Block_Title')) {
             $this->get_text_block('title', __('Title', 'wd_package'), '');
             $this->get_text_block('title_highlight', __('Title HighLight', 'wd_package'), '', array('title', '!=', ''));
             $this->get_textarea_block('description', __('Description', 'wd_package'), '');
-            $this->get_select_block('heading_type', $heading_type, __('Heading Style', 'wd_package'), 'full');
+            $this->get_text_block('title_size', __('Title Font Size', 'wd_package'), '', array('title', '!=', ''));
+            $this->get_text_block('highlight_size', __('Highlight Font Size', 'wd_package'), '', array('title_highlight', '!=', ''));
+            $this->get_text_block('desc_size', __('Description Font Size', 'wd_package'), '', array('description', '!=', ''));
             $this->get_select_block('heading_element', $heading_element, __('Heading Element', 'wd_package'), 'h2');
             $this->get_select_block('text_align', $text_align, __('Text Align', 'wd_package'), '');
             $this->get_select_block('display_button', $display_button, __('Display Button', 'wd_package'), 0);

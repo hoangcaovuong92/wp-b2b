@@ -11,9 +11,12 @@ if( !class_exists( 'wd_widget_title' ) ) {
                 'title'             => '',
                 'title_highlight'   => '',
                 'description'       => '',
-                'heading_type'      => 'wd-title-section-style-1',
-                'title_color'       => '',
-                'desc_color'        => '',
+                'title_color'		=> '',
+                'title_size'		=> '',
+                'highlight_color'	=> '',
+                'highlight_size'	=> '',
+                'desc_color'		=> '',
+                'desc_size'			=> '',
                 'heading_element'   => 'h2',
                 'text_align'        => '',
                 'display_button'    => '0',
@@ -33,7 +36,6 @@ if( !class_exists( 'wd_widget_title' ) ) {
 	    	}
 
 
-            $heading_type_arr     = wd_get_list_style_class(1, 'wd-title-section-style-');
 	    	$heading_element_arr  = wd_get_list_heading_tag();
             $text_align_arr 	  = wd_get_list_text_align_bootstrap();
             $display_button_arr   = wd_get_list_tvgiao_boolean();
@@ -70,26 +72,35 @@ if( !class_exists( 'wd_widget_title' ) ) {
                 esc_html__("", 'wd_package')
             );
 
-            $this->select_field(
-                esc_html__( 'Heading Style:', 'wd_package' ), 
-                $this->get_field_name( 'heading_type' ), 
-                $this->get_field_id( 'heading_type' ), 
-                $heading_type_arr, 
-                $heading_type
-            );
-            $this->color_field(
-                esc_html__( 'Custom Title Color:', 'wd_package' ), 
+            $this->hidden_field(
                 $this->get_field_name( 'title_color' ),
                 $this->get_field_id( 'title_color' ),
-                $title_color, 
-                esc_html__("", 'wd_package')
+                $title_color
             );
-            $this->color_field(
-                esc_html__( 'Custom Description Color:', 'wd_package' ), 
+            $this->hidden_field(
+                $this->get_field_name( 'title_size' ),
+                $this->get_field_id( 'title_size' ),
+                $title_size
+            );
+            $this->hidden_field(
+                $this->get_field_name( 'highlight_color' ),
+                $this->get_field_id( 'highlight_color' ),
+                $highlight_color
+            );
+            $this->hidden_field(
+                $this->get_field_name( 'highlight_size' ),
+                $this->get_field_id( 'highlight_size' ),
+                $highlight_size
+            );
+            $this->hidden_field(
                 $this->get_field_name( 'desc_color' ),
                 $this->get_field_id( 'desc_color' ),
-                $desc_color, 
-                esc_html__("", 'wd_package')
+                $desc_color
+            );
+            $this->hidden_field(
+                $this->get_field_name( 'desc_size' ),
+                $this->get_field_id( 'desc_size' ),
+                $desc_size
             );
 
             $this->select_field(

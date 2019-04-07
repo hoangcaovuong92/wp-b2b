@@ -37,24 +37,28 @@ if (!class_exists('WD_Block_Banner_Image')) {
             $this->callback = 'wd_banner_image_function';
 
             $image_size     = wd_get_list_image_size();
-            $hover_style 	= wd_get_list_style_class(3);
+            $hover_style 	= wd_get_list_banner_hover_style();
             $button_position = array(
                 'center' => esc_html__("Center", 'wd_package'),
                 'static' => esc_html__("Static", 'wd_package'),
                 'custom' => esc_html__("Custom", 'wd_package'),
             );
+            $image_fullwidth = wd_get_list_tvgiao_boolean();
+            $show_button = wd_get_list_tvgiao_boolean();
             $target = wd_get_list_link_target();
             
             $this->get_image_block('image', esc_html__("Image", 'wd_package'));
             $this->get_select_block('image_size', $image_size, esc_html__("Image Size", 'wd_package'), 'full');
-            $this->get_select_block('hover_style', $hover_style, esc_html__( 'Hover Style', 'wd_package' ), 'style-1');
+            $this->get_select_block('hover_style', $hover_style, esc_html__( 'Hover Style', 'wd_package' ), 'wd-banner-hover--border');
+            $this->get_select_block('image_fullwidth', $image_fullwidth, esc_html__( 'Fullwidth', 'wd_package' ), '1');
 
             $this->set_group_name(esc_html__("Button Settings", 'wd_package'));
 
-            $this->get_text_block('button_text', esc_html__("Button text", 'wd_package'), 'Shop Now');
-            $this->get_text_block('link_url', esc_html__("Link Button", 'wd_package'), '#', array('button_text', '!==', ''));
-            $this->get_select_block('target', $target, esc_html__( 'Link Target', 'wd_package' ), '_blank', array('button_text', '!==', ''));
-            $this->get_select_block('button_position', $button_position, esc_html__( 'Button Position', 'wd_package' ), 'style-1', array('button_text', '!==', ''));
+            $this->get_select_block('show_button', $show_button, esc_html__( 'Show Button', 'wd_package' ), '1');
+            $this->get_text_block('button_text', esc_html__("Button text", 'wd_package'), 'Shop Now', array('show_button', '==', '1'));
+            $this->get_text_block('link_url', esc_html__("Link Button", 'wd_package'), '#', array('show_button', '==', '1'));
+            $this->get_select_block('target', $target, esc_html__( 'Link Target', 'wd_package' ), '_blank', array('show_button', '==', '1'));
+            $this->get_select_block('button_position', $button_position, esc_html__( 'Button Position', 'wd_package' ), 'center', array('show_button', '==', '1'));
             $this->get_text_block('top', esc_html__("Top (ex: 5%, 5px...)", 'wd_package'), '', array('button_position', '==', 'custom'));
             $this->get_text_block('right', esc_html__("Right (ex: 5%, 5px...)", 'wd_package'), '', array('button_position', '==', 'custom'));
             $this->get_text_block('bottom', esc_html__("Bottom (ex: 5%, 5px...)", 'wd_package'), '', array('button_position', '==', 'custom'));

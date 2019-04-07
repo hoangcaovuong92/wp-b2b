@@ -26,6 +26,7 @@
 
     .wd-header-main-container--row1{
         border-bottom: solid 1px $border-color-light;
+        min-height: 50px;
     }
     .wd-header-main-container--row2{
         //@include transition(all 300ms ease);

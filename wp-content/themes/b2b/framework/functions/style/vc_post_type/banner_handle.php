@@ -104,7 +104,7 @@ if (class_exists('WD_Banners_Post_Type') && !class_exists('WD_Banner_Handle')) {
 					ob_start();
 					echo '<div class="wd-additional-banner-wrap wd-main-content">';
 					if ($banner_id) {
-						echo '<div class="wd-banner-image wd-banner-hover--style-1">';
+						echo '<div class="wd-banner-image wd-banner-hover--border">';
 						echo '<a target="'.$target.'" href="'.$link.'">';
 						echo wp_get_attachment_image($banner_id, 'full', false, array( 
 														'title' 	=> get_the_title(), 

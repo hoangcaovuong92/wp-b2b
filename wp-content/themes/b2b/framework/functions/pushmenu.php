@@ -50,12 +50,13 @@ if (!class_exists('WD_Push_Menu')) {
 			 * var: show_logo_title
 			 * var: logo_default
 			 * var: logo_url
-			 * var: pushmenu_panel_position
+			 * var: panel_position
+			 * var: form_user
 			 */
 			extract(apply_filters('wd_filter_get_data_package', 'pushmenu' ));
 			$current_user 	= wp_get_current_user();
 			$class_login	= ($current_user && $current_user->ID) ? "wp-user-login-mobile" : ''; ?>
-			<div id="wd-pushmenu-mobile" class="wd-panel-mobile-wrap wd-panel--<?php echo esc_attr($pushmenu_panel_position);?> <?php echo esc_attr($class_login);?>">
+			<div id="wd-pushmenu-mobile" class="wd-panel-mobile-wrap wd-panel--<?php echo esc_attr($panel_position);?> <?php echo esc_attr($class_login);?>">
 				<div class="wd-panel-title wd-panel-title--pushmenu">
 					<?php echo apply_filters('wd_filter_logo', array('logo_url' => $logo_url, 'logo_default' => $logo_default, 'show_logo_title' => $show_logo_title)); ?>
 					<?php 
@@ -82,12 +83,14 @@ if (!class_exists('WD_Push_Menu')) {
 				do_action('wd_hook_banner_pushmenu_after'); ?>
 
 				<?php 
-				/**
-				 * wd_hook_form_user_mobile hook.
-				 *
-				 * @hooked get_form_user_mobile - 5
-				 */
-				do_action('wd_hook_form_user_mobile'); ?>
+				if ($form_user) {
+					/**
+					 * wd_hook_form_user_mobile hook.
+					 *
+					 * @hooked get_form_user_mobile - 5
+					 */
+					do_action('wd_hook_form_user_mobile');
+				} ?>
 			</div>
 		<?php 
 		}

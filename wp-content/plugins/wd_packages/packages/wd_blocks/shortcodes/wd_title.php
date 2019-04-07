@@ -5,10 +5,12 @@ if (!function_exists('wd_title_function')) {
 			'title'				=> '',
 			'title_highlight'	=> '',
 			'description'		=> '',
-			'heading_type'		=> 'wd-title-style-1',
 			'title_color'		=> '',
+			'title_size'		=> '',
 			'highlight_color'	=> '',
+			'highlight_size'	=> '',
 			'desc_color'		=> '',
+			'desc_size'			=> '',
 			'heading_element'	=> 'h2',
 			'text_align'		=> '',
 			'display_button'	=> '0',
@@ -17,22 +19,43 @@ if (!function_exists('wd_title_function')) {
 			'fullwidth_mode' 	=> false,
 			'class' 			=> ''
 		), $atts));
-		$title_color 	= $title_color != '' ? 'style="color: '.$title_color.';"' : '';
-		$highlight_color 	= $highlight_color != '' ? 'style="color: '.$highlight_color.';"' : '';
-		$desc_color 	= $desc_color != '' ? 'style="color: '.$desc_color.';"' : '';
+		$title_class = '';
+		$highlight_class = '';
+		$desc_class = '';
+
+		if ($title_color || $title_size) {
+			$title_class .= 'style="';
+			$title_class .= $title_color != '' ? 'color: '.$title_color.';' : '';
+			$title_class .= $title_size != '' ? 'font-size: '.$title_size.';' : '';
+			$title_class .= '"';
+		}
+
+		if ($highlight_color || $highlight_size) {
+			$highlight_class .= 'style="';
+			$highlight_class .= $highlight_color != '' ? 'color: '.$highlight_color.';' : '';
+			$highlight_class .= $highlight_size != '' ? 'font-size: '.$highlight_size.';' : '';
+			$highlight_class .= '"';
+		}
+
+		if ($desc_color || $desc_size) {
+			$desc_class .= 'style="';
+			$desc_class .= $desc_color != '' ? 'color: '.$desc_color.';' : '';
+			$desc_class .= $desc_size != '' ? 'font-size: '.$desc_size.';' : '';
+			$desc_class .= '"';
+		}
 
 		//Fullwidth mode class (gutenberg)
 		$class .= ($fullwidth_mode) ? ' alignfull' : '';
 
 		ob_start(); ?>
 		<?php if($title != "" || $description != "" || $display_button) : ?>
-			<div class="wd-shortcode wd-shortcode-title wd-title <?php echo esc_attr($heading_type); ?> <?php echo esc_attr($class); ?>">
+			<div class="wd-shortcode wd-shortcode-title wd-title <?php echo esc_attr($class); ?>">
 				<?php if ($title != ''): ?>
-					<?php $title = ($title_highlight != '') ? str_replace($title_highlight, '<span class="wd-title-highlight" '.$highlight_color.'>'.$title_highlight.'</span>', $title) : esc_html($title); ?>
-					<<?php echo esc_html($heading_element); ?> class="wd-title-heading <?php echo esc_html($text_align); ?>" <?php echo $title_color; ?>><?php echo $title; ?></<?php echo esc_html($heading_element); ?>>		
+					<?php $title = ($title_highlight != '') ? str_replace($title_highlight, '<span class="wd-title-highlight" '.$highlight_class.'>'.$title_highlight.'</span>', $title) : esc_html($title); ?>
+					<<?php echo esc_html($heading_element); ?> class="wd-title-heading <?php echo esc_html($text_align); ?>" <?php echo $title_class; ?>><?php echo $title; ?></<?php echo esc_html($heading_element); ?>>		
 				<?php endif ?>		
 				<?php if($description != "" || $display_button) : ?>
-					<div class="wd-title-description <?php echo esc_attr($text_align); ?>" <?php echo $desc_color; ?>>
+					<div class="wd-title-description <?php echo esc_attr($text_align); ?>" <?php echo $desc_class; ?>>
 						<?php if ($description != ''): ?>
 							<?php echo $description; ?>
 						<?php endif ?>
@@ -91,20 +114,22 @@ if (!function_exists('wd_title_vc_map')) {
 					SETTING
 				-------------------------------------------------------------------------------------*/
 				array(
-					'type' 				=> 'dropdown',
-					'heading' 			=> esc_html__( 'Heading Style', 'wd_package' ),
-					'param_name' 		=> 'heading_type',
-					'admin_label' 		=> true,
-					'value' 			=> wd_vc_get_list_style_class(1, 'wd-title-style-'),
-					'description' 		=> '',
-				),
-				array(
 					"type" 			=> "colorpicker",
 					"class" 			=> "",
 					"heading" 		=> __( "Title Color", 'wd_package' ),
 					"param_name"		=> "title_color",
 					"value" 			=> '', 
 					"description" 	=> __( "Choose text color...", 'wd_package' ),
+					'edit_field_class' => 'vc_col-sm-6',
+					'dependency'  	=> array('element' => "title", 'not_empty' => true),
+				),
+				array(
+					"type" 			=> "textfield",
+					"class" 		=> "",
+					"heading" 		=> __( "Title Font Size", 'wd_package' ),
+					"param_name" 	=> "title_size",
+					"value" 		=> '', 
+					"description" 	=> __( "Ex: 14px", 'wd_package' ),
 					'edit_field_class' => 'vc_col-sm-6',
 					'dependency'  	=> array('element' => "title", 'not_empty' => true),
 				),
@@ -117,7 +142,17 @@ if (!function_exists('wd_title_vc_map')) {
 					"description" 	=> __( "Choose text highlight color...", 'wd_package' ),
 					'edit_field_class' => 'vc_col-sm-6',
 					'dependency'  	=> array('element' => "title_highlight", 'not_empty' => true),
-			  ),
+				  ),
+				  array(
+					"type" 			=> "textfield",
+					"class" 		=> "",
+					"heading" 		=> __( "Highlight Font Size", 'wd_package' ),
+					"param_name" 	=> "highlight_size",
+					"value" 		=> '', 
+					"description" 	=> __( "Ex: 14px", 'wd_package' ),
+					'edit_field_class' => 'vc_col-sm-6',
+					'dependency'  	=> array('element' => "title_highlight", 'not_empty' => true),
+				),
 				array(
 					"type" 			=> "colorpicker",
 					"class" 			=> "",
@@ -125,6 +160,16 @@ if (!function_exists('wd_title_vc_map')) {
 					"param_name"		=> "desc_color",
 					"value" 			=> '', 
 					"description" 	=> __( "Choose text color...", 'wd_package' ),
+					'edit_field_class' => 'vc_col-sm-6',
+					'dependency'  	=> array('element' => "description", 'not_empty' => true),
+				),
+				array(
+					"type" 			=> "textfield",
+					"class" 		=> "",
+					"heading" 		=> __( "Description Font Size", 'wd_package' ),
+					"param_name" 	=> "desc_size",
+					"value" 		=> '', 
+					"description" 	=> __( "Ex: 14px", 'wd_package' ),
 					'edit_field_class' => 'vc_col-sm-6',
 					'dependency'  	=> array('element' => "description", 'not_empty' => true),
 				),

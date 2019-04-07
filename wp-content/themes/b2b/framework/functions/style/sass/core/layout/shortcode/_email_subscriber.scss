@@ -1,0 +1,55 @@
+.widget_email_subscriber_widget, .widget_email-subscribers-form, .emaillist{
+	.es_subscription_form{
+		position: relative;
+	}
+	.es-field-wrap{
+		label{
+			font-size: 0;
+			width: 100%;
+			padding: 0;
+			margin-bottom: 0;
+		}
+		input[type="text"], input[type="email"]{
+			border: none;
+			padding: 0;
+			border-bottom: 1px solid $border-color-light;
+			font-size: fontSize("root");
+			font-weight: fontWeight("medium");
+		}
+		input[type="email"]{
+			padding-right: 100px;
+		}
+	}
+	input[type="submit"]{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background: none;
+		border: none;
+		padding: 0;
+		text-transform: uppercase;
+		border-bottom: 2px solid $border-color-dark;
+		font-size: fontSize("root");
+		@include link_style(primary);
+		&:hover, &:active, &:focus{
+			background: none;
+		}
+	}
+	.es_spinner_image{
+		position: absolute;
+		height: 100%;
+		padding: 5px;
+		right: 93px;
+		top: 50%;
+		@include transform(translateY(-50%));
+		img{
+			height: 100%;
+		}
+	}
+	.es_subscription_message{
+		font-size: fontSize("tiny");
+		&.error{
+			color: $text-color-alert;
+		}
+	}
+}

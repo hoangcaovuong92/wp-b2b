@@ -299,7 +299,8 @@ if (!class_exists('WD_Default_Data')) {
 						),
 					),
 					'default'        => array(
-						'panel_positon'    => 'left',
+						'panel_positon'    	=> 'left',
+						'form_user'			=> false,
 					),
 				),
 			);
@@ -536,14 +537,13 @@ if (!class_exists('WD_Default_Data')) {
 	                    'post'          	=> esc_html__( 'Blog', 'feellio' ),
 	                    'product'          	=> esc_html__( 'Product', 'feellio' ),
 	                    'page'      		=> esc_html__( 'Page', 'feellio' ),
-	                    'wd_business'      	=> esc_html__( 'Business', 'feellio' ),
 	                ),
 		        ),
 		        'default'       => array(
 		            'bg_style'     		=> 'bg_color',
 		            'bg_color'      	=> '#fff',
 		            'bg_image'      	=> WD_THEME_IMAGES.'/bg_404.jpg',
-		            'type'      		=> 'business',
+		            'type'      		=> 'post',
 		            'search_only_title' => false,
 		            'ajax'     			=> false,
 		            'show_thumbnail'    => true,
